@@ -6,5 +6,3 @@ tags: []
 ---
 
 Just take it off and put a new one on!
-
-Don't forget your spare
