@@ -24,7 +24,6 @@ export async function main(argv) {
   const tags = argv.slice(2).map(arg => arg.toLowerCase()).filter(arg => TAGS.includes(arg))
   const entry = template({ title, permalink, date, tags })
   const filename = path.resolve(ENTRIES, title.replace(/[\/:]/g, '-') + '.md')
-  const filenameSafe = filename.replace(/\"/g, '\\"')
   const fileExists = await exists(filename)
   if (fileExists) {
     console.log("editing existing til")
@@ -32,8 +31,10 @@ export async function main(argv) {
     await fs.writeFile(filename, entry, 'utf8')
   }
   await edit(filename)
-  await exec(`git -C "${TIL_PATH}" add "${filenameSafe}" && git commit -m "${fileExists ? 'add' : 'edit'} ${filenameSafe}" && git push`)
+  await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'add' : 'edit'}: ${quot(title)}" && git push`)
 }
+
+const quot = str => str.replace(/\"/g, '\\"')
 
 const exec = async (...args) => {
   const result = await util.promisify(child_process.exec)(...args)
