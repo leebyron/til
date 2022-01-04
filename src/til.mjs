@@ -29,16 +29,16 @@ export async function main(argv) {
     const date = now()
     const tags = argv.slice(2).map(arg => arg.toLowerCase()).filter(arg => TAGS.includes(arg))
     const entry = template({ title, permalink, date, tags })
+    const tmpFile = (await exec('mktemp')).trim()
     try {
-      const tmpFile = await exec('mktemp')
       await fs.writeFile(tmpFile, entry, 'utf8')
-      await edit(`+read "${tmpFile}" +8 +star "${quot(filename)}"`)
+      await edit(`"+read ${tmpFile}" +8 +star "${quot(filename)}"`)
     } finally {
       await fs.unlink(tmpFile)
     }
   }
 
-  await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" && git push || echo "Not committing"`)
+  await exec(`test -f "${quot(filename)}" && git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" && git push && echo "Published ${quot(filename)}" || echo "nothing to commit"`)
 }
 
 
@@ -47,19 +47,19 @@ const spin = async (doing) => {
   const SPINNER = [ '\u2808\u2801', '\u2800\u2811', '\u2800\u2830', '\u2800\u2860', '\u2880\u2840', '\u2884\u2800', '\u2806\u2800', '\u280A\u2800' ]
   const spinner = setInterval(() => {
     frame = (frame + 1) % SPINNER.length
-    process.stdout.write('  ' + SPINNER[frame] + '\x1B[3D\r')
+    process.stdout.write('  ' + SPINNER[frame] + '\r')// '\x1B[3D\r')
   }, 100)
   try {
     await doing()
   } finally {
     clearInterval(spinner)
-    process.stdout.write('\r')
+    process.stdout.write('    \r')
   }
 }
 
 const ready = async () => {
   if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
-    //throw "til repo is unclean"
+    throw "dirty repo"
   }
   await exec(`git -C "${TIL_PATH}" pull`, { timeout: 2000 }).catch(console.error)
 }
@@ -114,6 +114,5 @@ permalink: ${permalink}
 date: ${date}
 tags: [${tags.join()}]
 ---
-
 
 `
