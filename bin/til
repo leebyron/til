@@ -3,6 +3,6 @@
 import('../src/til.mjs')
   .then(({ main }) => main(process.argv))
   .catch(error => {
-    console.error(`Failed. ${error || ''}`)
+    console.error(error || 'Failed')
     process.exit(1)
   })
