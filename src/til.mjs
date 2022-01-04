@@ -13,6 +13,7 @@ export async function main(argv) {
   if (argv.length < 3) {
     return console.log('TIL!')
   }
+  console.log('making sure til is up to date...')
   if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
     console.error("til repo is unclean")
     return process.exit(1)
@@ -27,10 +28,11 @@ export async function main(argv) {
   const fileExists = await exists(filename)
   if (fileExists) {
     console.log("editing existing til")
+    await edit('+8', filename)
   } else {
     await fs.writeFile(filename, entry, 'utf8')
+    await edit('+8', '+star', filename)
   }
-  await edit(filename)
   await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'add' : 'edit'}: ${quot(title)}" && git push`)
 }
 
@@ -47,12 +49,8 @@ const exists = p => fs.stat(p).then(
   error => { if (error.code === 'ENOENT') return false; throw error }
 )
 
-const edit = file => new Promise((resolve, reject) => {
-  const shell = child_process.spawn(
-    process.env.EDITOR,
-    ['+normal GA', '+star', file],
-    { stdio: 'inherit' }
-  )
+const edit = (...args) => new Promise((resolve, reject) => {
+  const shell = child_process.spawn(process.env.EDITOR, args, { stdio: 'inherit' })
   shell.on('close', code => code ? reject() : resolve())
   shell.on('error', error => reject(error))
 })
@@ -78,5 +76,6 @@ permalink: ${permalink}
 date: ${date}
 tags: [${tags.join()}]
 ---
+
 
 `
