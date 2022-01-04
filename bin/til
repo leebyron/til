@@ -2,4 +2,4 @@
 
 import('../src/til.mjs')
   .then(({ main }) => main(process.argv))
-  .catch(console.error)
+  .catch(error => error && console.error(error))

@@ -50,7 +50,7 @@ const exists = p => fs.stat(p).then(
 const edit = file => new Promise((resolve, reject) => {
   const shell = child_process.spawn(
     process.env.EDITOR,
-    ['+normal Go', '+star', file],
+    ['+normal GA', '+star', file],
     { stdio: 'inherit' }
   )
   shell.on('close', code => code ? reject() : resolve())
