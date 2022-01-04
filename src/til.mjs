@@ -25,7 +25,7 @@ export async function main(argv) {
 
   // Either coerce the promptname to a filename, or show a fzf.
   const filename = title
-    ? title.replace(/[^\x20-\x2e\x30-\x39\x3b-\x7e]/g, '-')
+    ? title.replace(/(-[^\x20-\x2e\x30-\x39\x3b-\x7e])+/g, '-').replace(/^-+|-+$/g, '')
     : (await interactive(
         `ls | tr '\\n' '\\0' | xargs -0 basename -s .md |` +
         `fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}.md" --preview-window=right,70%,border-none`, 
@@ -40,7 +40,7 @@ export async function main(argv) {
   } else {
     // Write a template to a tmp file and fill it into the editor buffer.
     // This way you can quit without saving and not alter the repo state.
-    const permalink = title.replace(/[^0-9a-z]/gi, '-')
+    const permalink = title.replace(/(-|[^0-9a-z])+/gi, '-').replace(/^-+|-+$/g, '')
     const date = new Date()// now()
     const tags = title.toLowerCase().split(' ').filter(arg => TAGS.includes(arg))
     const entry = template({ title, permalink, date, tags })
@@ -61,7 +61,7 @@ export async function main(argv) {
   // Update the repo
   await spin(() => run(
     `git -C "${TIL_PATH}" add "${quot(filepath)}" &&` +
-    `git -C "${TIL_PATH}" commit -m "${isExisting ? 'edit' : 'add'}: ${quot(filename)}" &&` +
+    `git -C "${TIL_PATH}" commit -q -m "${isExisting ? 'edit' : 'add'}: ${quot(filename)}" &&` +
     `git -C "${TIL_PATH}" push -q &&` +
     `echo "Published ${quot(filename)}" ||` +
     `echo "Nothing to publish"`,
