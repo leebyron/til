@@ -1,0 +1,5 @@
+#!/usr/bin/env node --experimental-modules
+
+import('../src/til.mjs')
+  .then(({ main }) => main(process.argv))
+  .catch(console.error)
