@@ -33,7 +33,7 @@ export async function main(argv) {
     await fs.writeFile(filename, entry, 'utf8')
     await edit('+8', '+star', filename)
   }
-  await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'add' : 'edit'}: ${quot(title)}" && git push`)
+  await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'edit' : 'add'}: ${quot(title)}" && git push || echo "Not committing"`)
 }
 
 const quot = str => str.replace(/\"/g, '\\"')
