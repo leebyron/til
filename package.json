@@ -1,0 +1,25 @@
+{
+  "name": "til",
+  "version": "1.0.0",
+  "description": "`/bin/til` is symlinked into my `/.local/bin` dir, which is on `PATH`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leebyron/til.git"
+  },
+  "keywords": [],
+  "author": "Lee Byron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leebyron/til/issues"
+  },
+  "homepage": "https://github.com/leebyron/til#readme",
+  "dependencies": {
+    "hyperjsx": "^1.0.6",
+    "markdown-to-jsx": "^7.1.5",
+    "yaml": "^1.10.2"
+  }
+}
