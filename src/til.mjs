@@ -21,16 +21,14 @@ export async function main(argv) {
     )
   })
 
-  const filename = path.resolve(
-    ENTRIES, 
-    argv.length > 2
-      ? path.resolve(ENTRIES, argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md')
-      : (await interactive(`ls | fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}" --preview-window=right,70%,border-none`, { cwd: ENTRIES })).trim()
-  )
+  const filename = argv.length > 2
+    ? path.resolve(ENTRIES, argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md')
+    : (await interactive(`ls | fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}" --preview-window=right,70%,border-none`, { cwd: ENTRIES })).trim()
+  const filepath = path.resolve(ENTRIES, filename)
 
-  const fileExists = await exists(filename)
+  const fileExists = await exists(filepath)
   if (fileExists) {
-    await edit(`+8 "${quot(filename)}"`)
+    await edit(`+8 "${quot(filepath)}"`)
   } else {
     const title = argv.slice(2).join(' ')
     const permalink = title.replace(/[^0-9a-z]/gi, '-')
@@ -40,19 +38,19 @@ export async function main(argv) {
     const tmpFile = (await exec('mktemp')).trim()
     try {
       await fs.writeFile(tmpFile, entry, 'utf8')
-      await edit(`"+read ${tmpFile}" +8 +star "${quot(filename)}"`)
+      await edit(`"+read ${tmpFile}" +8 +star "${quot(filepath)}"`)
     } finally {
       await fs.unlink(tmpFile)
     }
   }
 
-  if (!await exists(filename)) {
+  if (!await exists(filepath)) {
     if (fileExists) return
     throw "aborted"
   }
 
   await spin(() => run(
-    `git -C "${TIL_PATH}" add "${quot(filename)}" &&` +
+    `git -C "${TIL_PATH}" add "${quot(filepath)}" &&` +
     `git -C "${TIL_PATH}" commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" &&` +
     `git -C "${TIL_PATH}" push &&` +
     `echo "Published ${quot(filename)}" ||` +
