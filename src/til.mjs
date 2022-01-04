@@ -13,21 +13,20 @@ export async function main(argv) {
   console.log('making sure til is up to date...')
   if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
     console.error("til repo is unclean")
-    //return process.exit(1)
+    return process.exit(1)
   }
-  await exec(`git -C "${TIL_PATH}" pull`)
+  await exec(`git -C "${TIL_PATH}" pull`, { timeout: 2000 }).catch(console.error)
 
   const filename = path.resolve(
     ENTRIES, 
     argv.length > 2
-      ? argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md'
-      : await interactive(`ls | fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}" --preview-window=right,70%,border-none`, { cwd: ENTRIES })
+      ? path.resolve(ENTRIES, argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md')
+      : (await interactive(`ls | fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}" --preview-window=right,70%,border-none`, { cwd: ENTRIES })).trim()
   )
 
   const fileExists = await exists(filename)
   if (fileExists) {
-    console.log("editing existing til")
-    await interactive(`$EDITOR +8 ${filename}`)
+    await edit(`+8 "${quot(filename)}"`)
   } else {
     const title = argv.slice(2).join(' ')
     const permalink = title.replace(/[^0-9a-z]/gi, '-')
@@ -35,9 +34,10 @@ export async function main(argv) {
     const tags = argv.slice(2).map(arg => arg.toLowerCase()).filter(arg => TAGS.includes(arg))
     const entry = template({ title, permalink, date, tags })
     await fs.writeFile(filename, entry, 'utf8')
-    await interactive(`$EDITOR +8 +star ${filename}`)
+    await edit(`+8 +star "${quot(filename)}"`)
   }
-  await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'edit' : 'add'}: ${quot(title)}" && git push || echo "Not committing"`)
+
+  await exec(`git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" && git push || echo "Not committing"`)
 }
 
 const quot = str => str.replace(/\"/g, '\\"')
@@ -48,11 +48,16 @@ const exec = async (...args) => {
   return result.stdout
 }
 
+const edit = (command) => new Promise((resolve, reject) => {
+  const shell = child_process.spawn(`$EDITOR ${command}`, { stdio: "inherit", shell: true })
+  shell.on('close', code => code ? reject() : resolve())
+  shell.on('error', error => reject(error))
+})
+
 const interactive = (command, opts) => new Promise((resolve, reject) => {
   const shell = child_process.spawn(command, { stdio: [0, null, 2], shell: true, ...opts })
   let results = ''
   shell.stdout.on('data', data => {
-    console.log('adding: ' + data)
     results += data
   })
   shell.on('close', code => code ? reject() : resolve(results))
