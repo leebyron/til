@@ -52,8 +52,7 @@ export async function main(argv) {
   await spin(() => run(
     `git -C "${TIL_PATH}" add "${quot(filepath)}" &&` +
     `git -C "${TIL_PATH}" commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" &&` +
-    `git -C "${TIL_PATH}" push &&` +
-    `echo "Published ${quot(filename)}" ||` +
+    `git -C "${TIL_PATH}" push ||` +
     `echo "Nothing to publish"`,
     { timeout: 5000 }
   ))
