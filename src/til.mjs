@@ -22,7 +22,7 @@ export async function main(argv) {
   })
 
   const filename = argv.length > 2
-    ? path.resolve(ENTRIES, argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md')
+    ? argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md'
     : (await interactive(`ls | fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}" --preview-window=right,70%,border-none`, { cwd: ENTRIES })).trim()
   const filepath = path.resolve(ENTRIES, filename)
 
