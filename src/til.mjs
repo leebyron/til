@@ -10,8 +10,16 @@ const ENTRIES = path.resolve(TIL_PATH, '../entries')
 const TAGS = ['vim']
 
 export async function main(argv) {
-  //console.log('making sure til is up to date...')
-  await spin(ready)
+  await spin(async () => {
+    if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
+      throw "dirty repo"
+    }
+    await run(
+      `git -C "${TIL_PATH}" fetch &&` +
+      `git -C "${TIL_PATH}" rebase -q`,
+      { timeout: 5000 }
+    )
+  })
 
   const filename = path.resolve(
     ENTRIES, 
@@ -38,38 +46,46 @@ export async function main(argv) {
     }
   }
 
-  await exec(`test -f "${quot(filename)}" && git -C "${TIL_PATH}" add "${quot(filename)}" && git commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" && git push && echo "Published ${quot(filename)}" || echo "nothing to commit"`)
-}
+  if (!await exists(filename)) {
+    if (fileExists) return
+    throw "aborted"
+  }
 
+  await spin(() => run(
+    `git -C "${TIL_PATH}" add "${quot(filename)}" &&` +
+    `git -C "${TIL_PATH}" commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" &&` +
+    `git -C "${TIL_PATH}" push &&` +
+    `echo "Published ${quot(filename)}" ||` +
+    `echo "Nothing to publish"`,
+    { timeout: 5000 }
+  ))
+}
 
 const spin = async (doing) => {
   let frame = 0
   const SPINNER = [ '\u2808\u2801', '\u2800\u2811', '\u2800\u2830', '\u2800\u2860', '\u2880\u2840', '\u2884\u2800', '\u2806\u2800', '\u280A\u2800' ]
   const spinner = setInterval(() => {
     frame = (frame + 1) % SPINNER.length
-    process.stdout.write('  ' + SPINNER[frame] + '\r')// '\x1B[3D\r')
+    process.stdout.write('  ' + SPINNER[frame] + '\r')
   }, 100)
   try {
     await doing()
   } finally {
     clearInterval(spinner)
-    process.stdout.write('    \r')
   }
-}
-
-const ready = async () => {
-  if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
-    throw "dirty repo"
-  }
-  await exec(`git -C "${TIL_PATH}" pull`, { timeout: 2000 }).catch(console.error)
 }
 
 const quot = str => str.replace(/\"/g, '\\"')
 
+const run = async (...args) => {
+  const result = await exec(...args)
+  if (result) console.log(result)
+}
+
 const exec = async (...args) => {
   const result = await util.promisify(child_process.exec)(...args)
-  if (result.stderr) console.error(result.stderr)
-  return result.stdout
+  if (result.stderr) console.error(result.stderr.trimEnd())
+  return result.stdout.trimEnd()
 }
 
 const edit = (command) => new Promise((resolve, reject) => {
