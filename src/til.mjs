@@ -1,15 +1,17 @@
 import * as child_process from 'child_process'
 import * as fs from 'fs/promises'
 import * as path from 'path'
-import * as url from 'url'
 import * as util from 'util'
 
-const TIL_PATH = path.dirname(url.fileURLToPath(import.meta.url))
-const ENTRIES = path.resolve(TIL_PATH, '../entries')
+import { TIL_PATH, ENTRIES_PATH, dateTo3339 } from './util.mjs'
 
 const TAGS = ['vim']
 
 export async function main(argv) {
+  // Use all arguments provided concatenated together as a title.
+  const title = argv.slice(2).join(' ')
+
+  // Make sure the repo is up to date before making any changes.
   await spin(async () => {
     if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
       throw "dirty repo"
@@ -21,19 +23,26 @@ export async function main(argv) {
     )
   })
 
-  const filename = argv.length > 2
-    ? argv.slice(2).join(' ').replace(/[\/:]/g, '-') + '.md'
-    : (await interactive(`ls | fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}" --preview-window=right,70%,border-none`, { cwd: ENTRIES })).trim()
-  const filepath = path.resolve(ENTRIES, filename)
+  // Either coerce the promptname to a filename, or show a fzf.
+  const filename = title
+    ? title.replace(/[^\x20-\x2e\x30-\x39\x3b-\x7e]/g, '-')
+    : (await interactive(
+        `ls | tr '\\n' '\\0' | xargs -0 basename -s .md |` +
+        `fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}.md" --preview-window=right,70%,border-none`, 
+        { cwd: ENTRIES_PATH }
+      )).trim()
+  const filepath = path.resolve(ENTRIES_PATH, filename + '.md')
 
-  const fileExists = await exists(filepath)
-  if (fileExists) {
+  // Either edit and existing file, or create a new one.
+  const isExisting = await exists(filepath)
+  if (isExisting) {
     await edit(`+8 "${quot(filepath)}"`)
   } else {
-    const title = argv.slice(2).join(' ')
+    // Write a template to a tmp file and fill it into the editor buffer.
+    // This way you can quit without saving and not alter the repo state.
     const permalink = title.replace(/[^0-9a-z]/gi, '-')
-    const date = now()
-    const tags = argv.slice(2).map(arg => arg.toLowerCase()).filter(arg => TAGS.includes(arg))
+    const date = new Date()// now()
+    const tags = title.toLowerCase().split(' ').filter(arg => TAGS.includes(arg))
     const entry = template({ title, permalink, date, tags })
     const tmpFile = (await exec('mktemp')).trim()
     try {
@@ -42,22 +51,25 @@ export async function main(argv) {
     } finally {
       await fs.unlink(tmpFile)
     }
+
+    // Check to see if the file exists after the edit session.
+    if (!await exists(filepath)) {
+      throw "aborted"
+    }
   }
 
-  if (!await exists(filepath)) {
-    if (fileExists) return
-    throw "aborted"
-  }
-
+  // Update the repo
   await spin(() => run(
     `git -C "${TIL_PATH}" add "${quot(filepath)}" &&` +
-    `git -C "${TIL_PATH}" commit -m "${fileExists ? 'edit' : 'add'}: ${quot(filename)}" &&` +
-    `git -C "${TIL_PATH}" push ||` +
+    `git -C "${TIL_PATH}" commit -m "${isExisting ? 'edit' : 'add'}: ${quot(filename)}" &&` +
+    `git -C "${TIL_PATH}" push -q &&` +
+    `echo "Published ${quot(filename)}" ||` +
     `echo "Nothing to publish"`,
     { timeout: 5000 }
   ))
 }
 
+// Show a spinner while running an async `doing` function.
 const spin = async (doing) => {
   let frame = 0
   const SPINNER = [ '\u2808\u2801', '\u2800\u2811', '\u2800\u2830', '\u2800\u2860', '\u2880\u2840', '\u2884\u2800', '\u2806\u2800', '\u280A\u2800' ]
@@ -72,25 +84,30 @@ const spin = async (doing) => {
   }
 }
 
+// Escape quotes
 const quot = str => str.replace(/\"/g, '\\"')
 
+// Run a command and print the results to stdout
 const run = async (...args) => {
   const result = await exec(...args)
   if (result) console.log(result)
 }
 
+// Execute a command and return the results.
 const exec = async (...args) => {
   const result = await util.promisify(child_process.exec)(...args)
   if (result.stderr) console.error(result.stderr.trimEnd())
   return result.stdout.trimEnd()
 }
 
+// Open an editor
 const edit = (command) => new Promise((resolve, reject) => {
   const shell = child_process.spawn(`$EDITOR ${command}`, { stdio: "inherit", shell: true })
   shell.on('close', code => code ? reject() : resolve())
   shell.on('error', error => reject(error))
 })
 
+// Run an interactive command, returning the results.
 const interactive = (command, opts) => new Promise((resolve, reject) => {
   const shell = child_process.spawn(command, { stdio: [0, null, 2], shell: true, ...opts })
   let results = ''
@@ -101,30 +118,17 @@ const interactive = (command, opts) => new Promise((resolve, reject) => {
   shell.on('error', error => reject(error))
 })
 
+// Check to see if a file exists.
 const exists = p => fs.stat(p).then(
   () => true,
   error => { if (error.code === 'ENOENT') return false; throw error }
 )
 
-function now() {
-  const date = new Date()
-  const p4 = n => (n < 0 ? '-' : '+') + String(Math.abs(n)).padStart(4, '0')
-  const p2 = n => String(n).padStart(2, '0')
-  const y = date.getFullYear()
-  const mo = p2(date.getMonth() + 1)
-  const d = p2(date.getDate())
-  const h = p2(date.getHours())
-  const mi = p2(date.getMinutes())
-  const s = p2(date.getSeconds())
-  const tz = p4(date.getTimezoneOffset())
-  return `${y}/${mo}/${d} ${h}:${mi}:${s} ${tz}`
-}
-
 const template = ({ title, permalink, date, tags }) =>
 `---
 title: ${title}
 permalink: ${permalink}
-date: ${date}
+date: ${dateTo3339(date)}
 tags: [${tags.join()}]
 ---
 
