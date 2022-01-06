@@ -2,7 +2,7 @@ import * as child_process from 'child_process'
 import * as fs from 'fs/promises'
 import * as path from 'path'
 import * as util from 'util'
-import { TIL_PATH, ENTRIES_PATH, dateTo3339 } from './util.mjs'
+import { TIL_PATH, ENTRIES_PATH, quot, dateTo3339, run, exec, spin } from './util.mjs'
 
 const TAGS = ['vim']
 
@@ -78,46 +78,6 @@ export async function main(argv) {
       { timeout: 5000 }
     )
   )
-}
-
-// Show a spinner while running an async `doing` function.
-const spin = async doing => {
-  let frame = 0
-  const SPINNER = [
-    '\u2808\u2801',
-    '\u2800\u2811',
-    '\u2800\u2830',
-    '\u2800\u2860',
-    '\u2880\u2840',
-    '\u2884\u2800',
-    '\u2806\u2800',
-    '\u280A\u2800',
-  ]
-  const spinner = setInterval(() => {
-    frame = (frame + 1) % SPINNER.length
-    process.stdout.write('  ' + SPINNER[frame] + '\r')
-  }, 100)
-  try {
-    await doing()
-  } finally {
-    clearInterval(spinner)
-  }
-}
-
-// Escape quotes
-const quot = str => str.replace(/\"/g, '\\"')
-
-// Run a command and print the results to stdout
-const run = async (...args) => {
-  const result = await exec(...args)
-  if (result) console.log(result)
-}
-
-// Execute a command and return the results.
-const exec = async (...args) => {
-  const result = await util.promisify(child_process.exec)(...args)
-  if (result.stderr) console.error(result.stderr.trimEnd())
-  return result.stdout.trimEnd()
 }
 
 // Open an editor

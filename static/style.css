@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Literata:ital,wght@0,300;0,500;1,300;1,500&display=block');
+
+:root {
+  --font-ratio: 0.5844907407;
+  --font-ideal-size: calc(66vw / (60 * var(--font-ratio)));
+  --font-size: clamp(14px, var(--font-ideal-size), 18px);
+  --col-width: calc(var(--font-size) * 60 * var(--font-ratio));
+}
+
+html,
+body {
+  background: #f0f0f6;
+  color: #202010;
+  font-family: Literata, serif;
+  font-kerning: normal;
+  font-size: var(--font-size);
+  font-weight: 300;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+strong {
+  font-weight: 500;
+}
+
+body > * {
+  margin: 2rem 0 2rem;
+  max-width: var(--col-width);
+  width: 100%;
+}
+
+footer {
+  font-size: max(13px, 80%);
+  margin-top: auto;
+}
+
+pre,
+code {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+a {
+  color: #0864a7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 2rem 4rem;
+  border: none;
+  border-bottom: solid 2px #00000011;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: solid 1px #dddddd;
+  padding: 0.25em 0.75em;
+}
+
+th {
+  background: #00000008;
+}
+
+/* Page specific */
+header img {
+  height: 1.15em;
+  position: absolute;
+  top: 2em;
+}
+
+@media (min-width: 1080px) {
+  header img {
+    left: 2em;
+  }
+}
+
+h1:first-child span:before {
+  content: '/';
+  color: #00000044;
+}
+
+/* Footnotes */
+a[data-footnote-ref] {
+  font-feature-settings: 'tnum';
+  font-size: 65%;
+  line-height: 0;
+  vertical-align: super;
+}
+
+a[data-footnote-ref]:before {
+  content: '[';
+}
+
+a[data-footnote-ref]:after {
+  content: ']';
+}
+
+a[data-footnote-ref]:target {
+  animation: 1s highlight;
+}
+
+section[data-footnotes] ol {
+  list-style-position: inside;
+  padding: 0;
+}
+
+section[data-footnotes] li:target {
+  animation: 1s highlight;
+}
+
+section[data-footnotes] li > p {
+  display: inline;
+}
+
+@keyframes highlight {
+  from {
+    background: rgb(255, 255, 0, 1);
+  }
+
+  to {
+    background: transparent;
+  }
+}
+
+/* License */
+
+.license {
+  margin-top: 4em;
+  line-height: 2;
+  text-align: center;
+}
+
+.license img {
+  height: 1.25em !important;
+  margin-left: 0.25em;
+  opacity: 0.75;
+  vertical-align: text-bottom;
+}
