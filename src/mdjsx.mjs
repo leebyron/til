@@ -4,6 +4,7 @@ export function mdjsx(ast, overrides) {
   return toJsx(ast)
 
   function toJsx(node) {
+    if (!node) return null
     if (node.type === 'text') return node.value
     if (node.type === 'html') return jsx('html', { outerHTML: node.value })
 
@@ -24,17 +25,6 @@ export function mdjsx(ast, overrides) {
 
     return jsx(type, props)
   }
-}
-
-export function footnotes(ast, overrides) {
-  if (!ast.footnotes) return null
-  return jsx('section', {
-    'data-footnotes': true,
-    'aria-label': 'footnotes',
-    children: jsx('ol', {
-      children: ast.footnotes.map(note => mdjsx(note, overrides)),
-    }),
-  })
 }
 
 const defaults = {
@@ -67,6 +57,12 @@ const defaults = {
   tableRow: 'tr',
   tableHeader: ({ align, children }) => jsx('th', { align, children }),
   tableCell: ({ align, children }) => jsx('td', { align, children }),
+  footnotes: ({ children }) =>
+    jsx('section', {
+      'data-footnotes': true,
+      'aria-label': 'footnotes',
+      children: jsx('ol', { children }),
+    }),
   footnoteReference: ({ identifier, referenceIdentifier, number }) =>
     jsx('a', {
       href: '#fn-' + identifier,

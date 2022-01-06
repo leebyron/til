@@ -14,6 +14,7 @@ export function parseMarkdown(markdown) {
   tableCells(ast)
   yamlFrontmatter(ast)
   linkReferences(ast)
+  footnotes(ast)
   return ast
 }
 
@@ -25,8 +26,10 @@ function yamlFrontmatter(ast) {
     ast.frontmatter = { ...node, value: yaml.parse(node.value) }
     // Parse date as luxon DateTime
     if (ast.frontmatter.value.date) {
-      ast.frontmatter.value.date =
-        DateTime.fromISO(ast.frontmatter.value.date, { setZone: true })
+      ast.frontmatter.value.date = DateTime.fromISO(
+        ast.frontmatter.value.date,
+        { setZone: true }
+      )
     }
   }
 }
@@ -48,8 +51,6 @@ function tableCells(ast) {
 
 function linkReferences(ast) {
   const definitions = new Map()
-  const footnoteDefinitions = new Map()
-  const footnoteReferences = new Map()
 
   // First pass, extract definitions and keep track of footnote order.
   editAST(ast, node => {
@@ -57,6 +58,23 @@ function linkReferences(ast) {
       definitions.set(node.identifier, node)
       return null
     }
+  })
+
+  // Second pass, replace references
+  editAST(ast, node => {
+    if (node.type === 'linkReference')
+      return { ...definitions.get(node.identifier), ...node, type: 'link' }
+    if (node.type === 'imageReference')
+      return { ...definitions.get(node.identifier), ...node, type: 'image' }
+  })
+}
+
+function footnotes(ast) {
+  const footnoteDefinitions = new Map()
+  const footnoteReferences = new Map()
+
+  // Extract definitions and keep track of footnote order.
+  editAST(ast, node => {
     if (node.type === 'footnoteDefinition') {
       footnoteDefinitions.set(node.identifier, node)
       return null
@@ -68,14 +86,6 @@ function linkReferences(ast) {
         footnoteReferences.set(node.identifier, [node])
       }
     }
-  })
-
-  // Second pass, replace references
-  editAST(ast, node => {
-    if (node.type === 'linkReference')
-      return { ...definitions.get(node.identifier), ...node, type: 'link' }
-    if (node.type === 'imageReference')
-      return { ...definitions.get(node.identifier), ...node, type: 'image' }
   })
 
   // Cross-link footnotes and give numbers/ids to all references.
@@ -93,9 +103,12 @@ function linkReferences(ast) {
 
   // Attach footnotes to AST
   if (footnoteReferences.size > 0) {
-    ast.footnotes = [...footnoteReferences.keys()].map(id =>
-      footnoteDefinitions.get(id)
-    )
+    ast.footnotes = {
+      type: 'footnotes',
+      children: [...footnoteReferences.keys()].map(id =>
+        footnoteDefinitions.get(id)
+      ),
+    }
   }
 }
 

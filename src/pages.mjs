@@ -1,7 +1,6 @@
 import { h } from 'hyperjsx'
-import { mdjsx, footnotes } from './mdjsx.mjs'
 
-export function Page({ filename, markdown, frontmatter }) {
+export function Page({ filename, frontmatter, Content, Footnotes }) {
   return (
     h('html',
       h('head',
@@ -19,10 +18,10 @@ export function Page({ filename, markdown, frontmatter }) {
             h('a', { href: '../' }, 'til'),
             h('span', frontmatter.title)
           ),
-          mdjsx(markdown)
+          h(Content),
         ),
         h('footer',
-          footnotes(markdown),
+          h(Footnotes),
           h(License, { filename, frontmatter }),
         )
       )

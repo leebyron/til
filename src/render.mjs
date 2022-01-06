@@ -26,7 +26,13 @@ for (const filename of entries) {
   fs.writeFileSync(
     path.resolve(entryDir, 'index.html'),
     render(
-      jsx(Page, { filename, markdown, frontmatter: markdown.frontmatter.value })
+      jsx(Page, {
+        filename,
+        frontmatter: markdown.frontmatter.value,
+        markdown,
+        Content: options => mdjsx(markdown, options),
+        Footnotes: options => mdjsx(markdown.footnotes, options),
+      })
     ),
     'utf8'
   )
