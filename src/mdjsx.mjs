@@ -26,6 +26,17 @@ export function mdjsx(ast, overrides) {
   }
 }
 
+export function footnotes(ast, overrides) {
+  if (!ast.footnotes) return null
+  return jsx('section', {
+    'data-footnotes': true,
+    'aria-label': 'footnotes',
+    children: jsx('ol', {
+      children: ast.footnotes.map(note => mdjsx(note, overrides)),
+    }),
+  })
+}
+
 const defaults = {
   root: Fragment,
   paragraph: 'p',

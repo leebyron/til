@@ -1,3 +1,4 @@
+import { DateTime } from 'luxon'
 import remarkParse from 'remark-parse'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
@@ -22,6 +23,11 @@ function yamlFrontmatter(ast) {
     const node = ast.children[index]
     ast.children.splice(index, 1)
     ast.frontmatter = { ...node, value: yaml.parse(node.value) }
+    // Parse date as luxon DateTime
+    if (ast.frontmatter.value.date) {
+      ast.frontmatter.value.date =
+        DateTime.fromISO(ast.frontmatter.value.date, { setZone: true })
+    }
   }
 }
 
