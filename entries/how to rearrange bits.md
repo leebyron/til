@@ -1,7 +1,7 @@
 ---
 title: how to rearrange bits
 permalink: how-to-rearrange-bits
-date: 2022/01/04 00:58:22 +0480
+date: 2022-01-04T00:58:22-08:00
 tags: []
 ---
 

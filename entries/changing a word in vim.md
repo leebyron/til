@@ -1,7 +1,7 @@
 ---
 title: changing a word in vim
 permalink: changing-a-word-in-vim
-date: 2022-01-03T16:34:57+08:00
+date: 2022-01-03T16:34:57-08:00
 tags: [vim]
 ---
 

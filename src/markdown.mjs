@@ -24,6 +24,12 @@ function yamlFrontmatter(ast) {
     const node = ast.children[index]
     ast.children.splice(index, 1)
     ast.frontmatter = { ...node, value: yaml.parse(node.value) }
+    // Parse tags as a list
+    ast.tags = Array.isArray(ast.tags)
+      ? ast.tags
+      : typeof ast.tags === 'string'
+      ? ast.tags.split(/\w+/g).filter(Boolean)
+      : []
     // Parse date as luxon DateTime
     if (ast.frontmatter.value.date) {
       ast.frontmatter.value.date = DateTime.fromISO(
@@ -101,14 +107,14 @@ function footnotes(ast) {
     })
   }
 
-  // Attach footnotes to AST
+  // Append footnotes to AST
   if (footnoteReferences.size > 0) {
-    ast.footnotes = {
+    ast.children.push({
       type: 'footnotes',
       children: [...footnoteReferences.keys()].map(id =>
         footnoteDefinitions.get(id)
       ),
-    }
+    })
   }
 }
 

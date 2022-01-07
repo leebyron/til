@@ -17,6 +17,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,12 +28,38 @@ body {
   margin: 0 2em;
 }
 
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 120%;
+}
+
+h3,
+h4,
+h5 {
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1.7em 0 0.85em;
+}
+
+h4,
+h5 {
+  margin: 1em 0 0.85em;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
 th,
 strong {
   font-weight: 500;
@@ -54,11 +81,11 @@ code {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-pre {
+pre[data-code-block] {
   background: #00000008;
   font-size: max(12px, 80%);
   width: fit-content;
-  min-width: 20ch;
+  min-width: 60%;
   max-width: min(100ch, 100vw - 5rem);
   padding: 0.5rem;
   margin: -0.25rem 0;
@@ -99,25 +126,6 @@ th {
   background: #00000008;
 }
 
-/* Page specific */
-header img {
-  height: 1.15em;
-  position: absolute;
-  top: 2em;
-}
-
-@media (min-width: 1080px) {
-  header img {
-    left: 2em;
-  }
-}
-
-h1:first-child span:before {
-  content: '/';
-  color: #00000044;
-}
-
-/* Footnotes */
 a[data-footnote-ref] {
   font-feature-settings: 'tnum';
   font-size: 65%;
@@ -134,16 +142,23 @@ a[data-footnote-ref]:after {
 }
 
 a[data-footnote-ref]:target {
-  animation: 1s highlight;
+  animation: 2s highlight;
+}
+
+section[data-footnotes] {
+  font-size: max(13px, 80%);
+  margin-top: 3rem;
 }
 
 section[data-footnotes] ol {
   list-style-position: inside;
+  margin: 0;
   padding: 0;
+  max-width: fit-content;
 }
 
 section[data-footnotes] li:target {
-  animation: 1s highlight;
+  animation: 2s highlight;
 }
 
 section[data-footnotes] li > p {
@@ -151,7 +166,7 @@ section[data-footnotes] li > p {
 }
 
 @keyframes highlight {
-  from {
+  50% {
     background: rgb(255, 255, 0, 1);
   }
 
@@ -160,17 +175,46 @@ section[data-footnotes] li > p {
   }
 }
 
-/* License */
+/* Page specific */
+header img {
+  height: 1.15em;
+  position: absolute;
+  top: 2em;
+}
+
+@media (min-width: 1100px) {
+  header img {
+    position: fixed;
+    left: 2em;
+  }
+}
+
+.entrylog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.entrylog pre {
+  margin: 0;
+  opacity: 0.5;
+  font-size: 85%;
+  line-height: 1.6rem;
+}
+
+h1:first-child span:before {
+  content: '/';
+  color: #00000044;
+}
 
 .license {
-  margin-top: 4em;
+  margin-top: 2rem;
   line-height: 2;
   text-align: center;
 }
 
 .license img {
   height: 1.25em !important;
-  margin-left: 0.25em;
+  margin: -0.25em 0 0 0.25em;
   opacity: 0.75;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }

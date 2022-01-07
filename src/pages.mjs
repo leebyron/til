@@ -1,11 +1,59 @@
+import { relative } from 'path'
 import { h } from 'hyperjsx'
 
-export function Page({ filename, frontmatter, Content, Footnotes }) {
+export function Index({ frontmatters, Content }) {
+  return (
+    h(Document, {
+      path: '/til',
+      title: 'today i learned - Lee Byron' },
+      h('section',
+        h(Content),
+        h('h2', 'entry log'),
+        frontmatters.map(frontmatter =>
+          h('div', { class: 'entrylog' },
+            h('a', { href: frontmatter.permalink }, frontmatter.title),
+            h('pre', frontmatter.date.toRFC2822())
+          )
+        )
+      ),
+      h('footer',
+        h(License, { year: '2022' })
+      )
+    )
+  )
+}
+
+export function Page({ filename, frontmatter, Content }) {
+  return (
+    h(Document, {
+      path: '/til/' + frontmatter.permalink,
+      title: frontmatter.title + ' — til by Lee Byron' },
+      h('article',
+        h('h1',
+          h('a', { href: '../' }, 'til'),
+          h('span', frontmatter.title)
+        ),
+        h(Content),
+      ),
+      h('footer',
+        h(License, { year: frontmatter.date.year },
+          h(Attribution, { filename, frontmatter })
+        )
+      )
+    )
+  )
+}
+
+function Document({ title, children, path }) {
   return (
     h('html',
       h('head',
+        h('title', title),
+        h('meta', { charset: 'UTF-8' }),
         h('meta', { name: 'viewport', content:'width=device-width, initial-scale=1'}),
-        h('link', { rel: 'stylesheet', href: '../style.css' }),
+        h('link', { rel: 'canonical', href: 'https://leebyron.com' + path }),
+        h('link', { rel: 'shortcut icon', href: relative(path, '/til/favicon.png') }),
+        h('link', { rel: 'stylesheet', href: relative(path, '/til/style.css') }),
       ),
       h('body',
         h('header',
@@ -13,28 +61,14 @@ export function Page({ filename, frontmatter, Content, Footnotes }) {
             h('img', { src: '../logo.svg', alt: 'Lee Byron' })
           )
         ),
-        h('section',
-          h('h1',
-            h('a', { href: '../' }, 'til'),
-            h('span', frontmatter.title)
-          ),
-          h(Content),
-        ),
-        h('footer',
-          h(Footnotes),
-          h(License, { filename, frontmatter }),
-        )
+        children
       )
     )
   )
 }
 
-function License({ filename, frontmatter: { permalink, date } }) {
-  return h('div', {
-    class: 'license',
-    'xmlns:cc': "http://creativecommons.org/ns",
-    'xmlns:dct': "http://purl.org/dc/terms/" },
-
+function Attribution({ filename, frontmatter: { permalink, date } }) {
+  return [
     // attribution
     'This ',
     h('a', {
@@ -58,18 +92,28 @@ function License({ filename, frontmatter: { permalink, date } }) {
     ' ⸱ ',
 
     // edit
-    h('a', { href: `https://github.com/leebyron/til/edit/main/entries/${encodeURIComponent(filename)}#L8` }, 'edit'),
+    h('a', { href: `https://github.com/leebyron/til/edit/main/entries/${encodeURIComponent(filename)}#L8` },
+      'edit'),
+  ]
+}
 
-    h('br'),
+function License({ year, children }) {
+  return h('div', {
+    class: 'license',
+    'xmlns:cc': "http://creativecommons.org/ns",
+    'xmlns:dct': "http://purl.org/dc/terms/" },
+
+    children,
+    children && h('br'),
 
     // copyright
     '© ',
-    h('span', { rel: 'dct:dateCopyrighted' }, date.year),
+    h('span', { rel: 'dct:dateCopyrighted' }, year),
     ' ',
     h('a', {
       rel: "cc:attributionURL dct:creator",
       property: "cc:attributionName",
-      href: "https://leebyron.com", },
+      href: "https://leebyron.com" },
       'Lee Byron'),
 
     ' ⸱ ',
@@ -79,8 +123,7 @@ function License({ filename, frontmatter: { permalink, date } }) {
     h('a', {
       href: "http://creativecommons.org/licenses/by/4.0/",
       target: "_blank",
-      rel: "cc:license license noopener noreferrer",
-      style: "display: inline-block" },
+      rel: "cc:license license noopener noreferrer" },
       'CC BY 4.0',
       h('img', { src: "https://mirrors.creativecommons.org/presskit/icons/cc.svg" }),
       h('img', { src: "https://mirrors.creativecommons.org/presskit/icons/by.svg" })

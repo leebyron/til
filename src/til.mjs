@@ -4,7 +4,8 @@ import * as path from 'path'
 import * as util from 'util'
 import { TIL_PATH, ENTRIES_PATH, quot, dateTo3339, run, exec, spin } from './util.mjs'
 
-const TAGS = ['vim']
+// TODO: better way to autotag
+const TAGS = ['vim', 'markdown']
 
 export async function main(argv) {
   // Use all arguments provided concatenated together as a title.
@@ -48,7 +49,7 @@ export async function main(argv) {
     const date = new Date()
     const tags = title
       .toLowerCase()
-      .split(' ')
+      .split(/\w+/g)
       .filter(arg => TAGS.includes(arg))
     const entry = template({ title, permalink, date, tags })
     const tmpFile = (await exec('mktemp')).trim()
@@ -122,7 +123,7 @@ const template = ({ title, permalink, date, tags }) =>
 title: ${title}
 permalink: ${permalink}
 date: ${dateTo3339(date)}
-tags: [${tags.join()}]
+tags: ${tags.length > 0 ? `[${tags.join()}]` : ''}
 ---
 
 `

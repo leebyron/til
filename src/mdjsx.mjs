@@ -38,12 +38,22 @@ const defaults = {
     jsx(ordered ? 'ol' : 'ul', { start, children }),
   listitem: 'li',
   code: ({ lang, children }) =>
-    jsx('pre', { 'data-lang': lang, children: jsx('code', { children }) }),
+    jsx('pre', {
+      'data-code-block': true,
+      'data-lang': lang,
+      children: jsx('code', { children }),
+    }),
   emphasis: 'em',
   strong: 'strong',
   inlineCode: 'code',
   break: 'br',
-  link: ({ url, title, children }) => jsx('a', { href: url, title, children }),
+  link: ({ url, title, children }) =>
+    jsx('a', {
+      href: url,
+      title,
+      target: /^(\w+:)?\/\//.test(url) ? '_blank' : null,
+      children,
+    }),
   image: ({ url, title, alt, children }) =>
     jsx('img', { src: url, title, children }),
   delete: 's',
