@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test — til by Lee Byron</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://leebyron.com/til/test">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>test</span>
+      </h1>
+      <p>
+        This is a paragraph with <em>italics</em>, and <strong>bold</strong> text, as well as
+<s>strikethrough</s>. Here is <code>inline *code*</code> and below is a block of typescript
+code:
+      </p>
+      <pre data-code-block data-lang="ts"><code>declare function foo(bar: string): number</code></pre>
+      <hr>
+      <p>
+        Here is a footnote<a href="#fn-note" id="fn-note.ref1" data-footnote-ref aria-label="note">1</a> and another footnote<a href="#fn-other" id="fn-other.ref" data-footnote-ref aria-label="note">2</a>.
+      </p>
+      <blockquote>
+        <p>
+          And here is a block quote which can also have both footnotes<a href="#fn-see" id="fn-see.ref" data-footnote-ref aria-label="note">3</a> and
+definitions of footnotes
+        </p>
+      </blockquote>
+      <hr>
+      <p>
+        Text can contain <a href="https://leebyron.com" title="go home" target="_blank">links</a> and auto-links, as well as images:
+      </p>
+      <p>
+        <a href="http://this.is/an/autolink" target="_blank">http://this.is/an/autolink</a>
+      </p>
+      <p>
+        <img src="https://uploads0.wikiart.org/images/sol-lewitt/lines-in-all-directions-1993.jpg" title="Lines in all directions">
+      </p>
+      <hr>
+      <p>
+        Here is a list starting with 2
+      </p>
+      <ol start="2">
+        <li>
+          <p>
+            item
+          </p>
+        </li>
+        <li>
+          <p>
+            item
+          </p>
+        </li>
+        <li>
+          <p>
+            item
+          </p>
+        </li>
+      </ol>
+      <p>
+        And an unordered list
+      </p>
+      <ul>
+        <li>
+          <p>
+            first item
+          </p>
+          <ul>
+            <li data-checked="true">
+              <input type="checkbox" disabled checked>
+              <p>
+                done
+              </p>
+            </li>
+            <li data-checked="false">
+              <input type="checkbox" disabled>
+              <p>
+                in progress
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            next item
+          </p>
+          <ul>
+            <li>
+              <p>
+                nested
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            final item
+          </p>
+          <ol start="1">
+            <li>
+              <p>
+                nested ordered
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ul>
+      <p>
+        And here is a table with various alignments
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th align="left">
+              left aligned
+            </th>
+            <th align="right">
+              right aligned
+            </th>
+            <th>
+              not aligned
+            </th>
+            <th align="center">
+              center aligned
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="left">
+              here
+            </td>
+            <td align="right">
+              there<a href="#fn-note" id="fn-note.ref2" data-footnote-ref aria-label="note">1</a>
+            </td>
+            <td>
+              anywhere
+            </td>
+            <td align="center">
+              over there
+            </td>
+          </tr>
+          <tr>
+            <td align="left">
+              1
+            </td>
+            <td align="right">
+              2
+            </td>
+            <td>
+              3
+            </td>
+            <td align="center">
+              4
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        And here is a block of HTML
+      </p>
+      <div style="text-align: center;"><span style="color: red;">Oh hi</span></div>
+      <section data-footnotes aria-label="footnotes">
+        <ol>
+          <li id="fn-note">
+            <p>
+              Another thing you need to know!
+            </p>
+            <a href="#fn-note.ref1" data-footnote-backref aria-label="return">↩</a><a href="#fn-note.ref2" data-footnote-backref aria-label="return">↩</a>
+          </li>
+          <li id="fn-other">
+            <p>
+              Another other other thing.
+            </p>
+            <a href="#fn-other.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+          <li id="fn-see">
+            <p>
+              This is inside the block quote.
+            </p>
+            <a href="#fn-see.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+        </ol>
+      </section>
+    </article>
+    <footer>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/test">til</a> was created <span property="dct:created" content="2022-01-01T01:01:01.000-08:00">Sat, Jan 1, 2022, 1:01 AM</span> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/test.md#L8">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg"></a>
+      </div>
+    </footer>
+  </body>
+</html>
