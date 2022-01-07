@@ -1,10 +1,10 @@
 {
+  "private": true,
   "name": "til",
+  "license": "MIT",
   "scripts": {
     "build": "./bin/build-til"
   },
-  "private": true,
-  "license": "MIT",
   "dependencies": {
     "hyperjsx": "^1.0.7",
     "luxon": "^2.3.0",
