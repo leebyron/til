@@ -15,7 +15,7 @@ body {
   font-kerning: normal;
   font-size: var(--font-size);
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.8;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
 }
@@ -85,6 +85,7 @@ code {
 pre[data-code-block] {
   background: #00000008;
   font-size: max(12px, 80%);
+  line-height: 1.4;
   width: fit-content;
   min-width: 60%;
   max-width: min(100ch, 100vw - 5rem);
@@ -136,7 +137,7 @@ li[data-checked] {
   position: relative;
 }
 
-li[data-checked] > input[type=checkbox] {
+li[data-checked] > input[type='checkbox'] {
   position: absolute;
   height: 1.8em;
   vertical-align: middle;
