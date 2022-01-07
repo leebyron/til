@@ -200,10 +200,9 @@ section[data-footnotes] {
 }
 
 section[data-footnotes] ol {
-  list-style-position: inside;
   margin: 0;
-  padding: 0;
   max-width: fit-content;
+  padding-inline-start: 1.5em;
 }
 
 section[data-footnotes] li {
