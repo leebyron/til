@@ -39,7 +39,7 @@ export function Index({ frontmatters, Content }) {
   )
 }
 
-export function Page({ filename, frontmatter, Content }) {
+export function Page({ filename, lastModified, frontmatter, Content }) {
   return (
     h(Document, { path: '/til/' + frontmatter.permalink },
       h('title', frontmatter.title + ' / til / Lee Byron'),
@@ -47,14 +47,15 @@ export function Page({ filename, frontmatter, Content }) {
         h('meta', { name: 'robots', content: 'noindex' }),
       JSONLD({
         '@context': 'https://schema.org/',
-        '@type': 'Article',
+        '@type': 'LearningResource',
         name: frontmatter.title,
         author: {
-          '@type': 'LearningResource',
+          '@type': 'Person',
           name: 'Lee Byron',
           url: 'http://leebyron.com' },
         url: 'https://leebyron.com/til/' + frontmatter.permalink,
-        dateCreated: frontmatter.date.toISO(),
+        datePublished: frontmatter.date.toISO(),
+        dateModified: lastModified.toISO(),
         keywords: frontmatter.tags.join(', ') || undefined,
         isPartOf: 'https://leebyron.com/til',
         license: 'https://creativecommons.org/licenses/by/4.0/',

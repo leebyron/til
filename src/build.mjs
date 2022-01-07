@@ -1,10 +1,19 @@
 import * as path from 'path'
 import * as fs from 'fs/promises'
 import { render, jsx } from 'hyperjsx'
+import { DateTime } from 'luxon'
 import { parseMarkdown } from './markdown.mjs'
 import { mdjsx } from './mdjsx.mjs'
 import { Index, Page } from './pages.mjs'
-import { TIL_PATH, ENTRIES_PATH, DIST_PATH, spin, quot, exec } from './util.mjs'
+import {
+  TIL_PATH,
+  ENTRIES_PATH,
+  DIST_PATH,
+  spin,
+  quot,
+  exec,
+  run,
+} from './util.mjs'
 
 export default async function build() {
   // Clean directory
@@ -18,11 +27,15 @@ export default async function build() {
   const entries = await Promise.all(
     filenames.map(async filename => {
       const filepath = path.resolve(ENTRIES_PATH, filename)
+      const lastModified = DateTime.fromISO(
+        await exec(`git log -1 --pretty="format:%cI" "${quot(filepath)}"`)
+      )
       const content = await fs.readFile(filepath, 'utf8')
       const markdown = parseMarkdown(content)
       return {
         filename,
         filepath,
+        lastModified,
         content,
         markdown,
         frontmatter: markdown.frontmatter.value,
@@ -59,18 +72,19 @@ export default async function build() {
   console.log(path.relative(DIST_PATH, indexFile))
 
   // Build all files
-  for (const { filename, markdown, frontmatter } of entries) {
+  for (const { filename, lastModified, markdown, frontmatter } of entries) {
     const entryDir = path.resolve(DIST_PATH, frontmatter.permalink)
     const entryFile = path.resolve(entryDir, 'index.html')
     const rendered = render(
       jsx(Page, {
         filename,
+        lastModified,
         frontmatter: markdown.frontmatter.value,
         markdown,
         Content: options => mdjsx(markdown, options),
       })
     )
-    await exec(`mkdir -p "${quot(entryDir)}"`)
+    await run(`mkdir -p "${quot(entryDir)}"`)
     await fs.writeFile(entryFile, rendered, 'utf8')
     console.log(path.relative(DIST_PATH, entryFile))
   }
