@@ -1,7 +1,7 @@
 ---
-title: markdown references
-permalink: markdown-references
-date: 2022-01-06T10:40:18-08:00
+title: markdown link references
+permalink: markdown-link-references
+date: 2022-01-05T10:40:18-08:00
 tags: markdown
 ---
 
