@@ -26,7 +26,9 @@ cursor (read: <em>c</em>hange <em>i</em>n <em>w</em>ord).
       <p>
         This, combined with other movements can lead to very quick changes. One I've
 found quite useful is <code>ci&quot;</code> which changes the contents of a quoted string, and
-<code>ca&quot;</code> (<em>c</em>hange <em>a</em>ll <i>&quot;</i>quoted) to include the quote marks themselves. Or
+<code>ca&quot;</code> (<em>c</em>hange <em>a</em>ll <!DOCTYPE html>
+<html></html>&quot;<!DOCTYPE html>
+<html></html>quoted) to include the quote marks themselves. Or
 when working in prose, <code>cis</code> will change the current sentence and <code>cip</code> the
 current paragraph.
       </p>
@@ -63,7 +65,10 @@ then press <code>c</code> to change.[^unref]
       </p>
       <pre data-code-block data-lang="vim"><code>:set example?</code></pre>
       <p>
-        test <div>&lt;Example x={y} d=&quot;s&quot; {...props}&gt;wat</Example></div>
+        test <!DOCTYPE html>
+<html></html>&lt;Example x={y} d=&quot;s&quot; {...props}&gt;wat<!DOCTYPE html>
+<html></html><!DOCTYPE html>
+<html></html>
       </p>
       <section data-footnotes aria-label="footnotes">
         <ol>
@@ -71,7 +76,7 @@ then press <code>c</code> to change.[^unref]
             <p>
               Another thing you need to know!
             </p>
-            <a href="#fn-note.ref" data-footnote-backref aria-label="return">↩</a>
+            <a href="#fn-note" data-footnote-backref aria-label="return">↩</a>
           </li>
         </ol>
       </section>

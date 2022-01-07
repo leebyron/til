@@ -20,37 +20,37 @@
         Much like <a href="../markdown-link-references">markdown link references</a>, footnotes are defined in one place and
 referenced in another, but it doesn't matter where the footnote is defined,
 they'll always be collected at the end of the document in the order in which
-they are referenced<a href="#fn-a note" id="fn-a note.ref" data-footnote-ref aria-label="note">1</a>.
+they are referenced<a href="#fn-a-note" id="fn-a-note.ref" data-footnote-ref aria-label="note">1</a>.
       </p>
       <p>
         Footnotes are created similar to shortcut reference links, but the identifier
 starts with a <code>^</code>.
       </p>
-      <pre data-code-block data-lang="markdown"><code>at the end of the document in the order in which they are referenced[^a note].</code></pre>
+      <pre data-code-block data-lang="markdown"><code>order in which they are referenced[^a note].</code></pre>
       <p>
         A footnote definition is formatted exactly like link reference
-definitions<a href="#fn-needs cr" id="fn-needs cr.ref" data-footnote-ref aria-label="note">2</a>: in a box followed by a comma.
+definitions<a href="#fn-needs-cr" id="fn-needs-cr.ref" data-footnote-ref aria-label="note">2</a>: in a box followed by a comma.
       </p>
       <pre data-code-block data-lang="markdown"><code>[^a note]: Despite footnotes appearing numbered, the identifier can be any text.
   This is helpful if you may add more notes later and don't want to be bothered
   to reorder them.</code></pre>
       <section data-footnotes aria-label="footnotes">
         <ol>
-          <li id="fn-a note">
+          <li id="fn-a-note">
             <p>
               Despite footnotes appearing numbered, the identifier can be any text.
 This is helpful if you may add more notes later and don't want to be bothered
 to reorder them.
             </p>
-            <a href="#fn-a note.ref" data-footnote-backref aria-label="return">↩</a>
+            <a href="#fn-a-note" data-footnote-backref aria-label="return">↩</a>
           </li>
-          <li id="fn-needs cr">
+          <li id="fn-needs-cr">
             <p>
               Unlike a link reference definition, a footnote definition needs
 an empty line immediately after it, otherwise content from multiple lines is
 joined into a single paragraph.
             </p>
-            <a href="#fn-needs cr.ref" data-footnote-backref aria-label="return">↩</a>
+            <a href="#fn-needs-cr" data-footnote-backref aria-label="return">↩</a>
           </li>
         </ol>
       </section>

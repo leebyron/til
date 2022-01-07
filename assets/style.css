@@ -157,6 +157,10 @@ section[data-footnotes] ol {
   max-width: fit-content;
 }
 
+section[data-footnotes] li {
+  margin: 1em 0;
+}
+
 section[data-footnotes] li:target {
   animation: 2s highlight;
 }
@@ -234,6 +238,6 @@ h1:first-child span:before {
 .license img {
   height: 1.25em !important;
   margin: -0.25em 0 0 0.25em;
-  opacity: 0.75;
+  opacity: 0.65;
   vertical-align: middle;
 }
