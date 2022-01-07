@@ -5,11 +5,10 @@ export function mdjsx(ast, overrides) {
 
   function toJsx(node) {
     if (!node) return null
-    if (node.type === 'text') return node.value
-    if (node.type === 'html') return jsx('html', { outerHTML: node.value })
 
     const type =
       (overrides && overrides[node.type]) || defaults[node.type] || node.type
+
     const props = {}
     if (typeof type === 'function') {
       for (let prop in node) {
@@ -29,8 +28,11 @@ export function mdjsx(ast, overrides) {
 
 const defaults = {
   root: Fragment,
+  text: node => node.children,
+  html: node => jsx('html', { outerHTML: node.value }),
   paragraph: 'p',
-  heading: ({ depth, children }) => jsx('h' + depth, { children }),
+  heading: ({ depth, slug, children }) =>
+    jsx('h' + depth, { id: slug, children }),
   thematicBreak: 'hr',
   blockquote: 'blockquote',
   list: ({ ordered, start, children }) =>
@@ -73,22 +75,22 @@ const defaults = {
       'aria-label': 'footnotes',
       children: jsx('ol', { children }),
     }),
-  footnoteReference: ({ identifier, referenceIdentifier, number }) =>
+  footnoteReference: ({ slug, referenceSlug, number }) =>
     jsx('a', {
-      href: '#fn-' + identifier,
-      id: 'fn-' + referenceIdentifier,
+      href: '#' + slug,
+      id: referenceSlug,
       'data-footnote-ref': true,
       'aria-label': 'note',
       children: number,
     }),
-  footnoteDefinition: ({ identifier, references, children }) =>
+  footnoteDefinition: ({ slug, references, children }) =>
     jsx('li', {
-      id: 'fn-' + identifier,
+      id: slug,
       children: [
         children,
         references.map(ref =>
           jsx('a', {
-            href: '#fn-' + ref.referenceIdentifier,
+            href: '#' + ref.slug,
             'data-footnote-backref': true,
             'aria-label': 'return',
             children: '\u21A9',

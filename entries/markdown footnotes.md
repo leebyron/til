@@ -14,7 +14,7 @@ Footnotes are created similar to shortcut reference links, but the identifier
 starts with a `^`.
 
 ```markdown
-at the end of the document in the order in which they are referenced[^a note].
+order in which they are referenced[^a note].
 ```
 
 A footnote definition is formatted exactly like link reference

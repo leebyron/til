@@ -11,8 +11,9 @@ export function parseMarkdown(markdown) {
     .use(remarkFrontmatter)
     .use(remarkGfm)
     .parse(markdown)
-  tableCells(ast)
   yamlFrontmatter(ast)
+  slugs(ast)
+  tableCells(ast)
   linkReferences(ast)
   footnotes(ast)
   return ast
@@ -40,10 +41,33 @@ function yamlFrontmatter(ast) {
   }
 }
 
+function slugs(ast) {
+  return visit(ast, node => {
+    if (node.type === 'heading') {
+      node.slug = slug(textContent(node))
+    }
+  })
+}
+
+function slug(str) {
+  return str
+    .toLowerCase()
+    .replace(/[^\p{Letter}\d\-_.!~*'()]+/gu, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function textContent(ast) {
+  let content = ''
+  visit(ast, node => {
+    if (node.type === 'text') content += node.value
+  })
+  return content
+}
+
 function tableCells(ast) {
   let align
   let isHeader
-  return editAST(ast, (node, index) => {
+  return visit(ast, (node, index) => {
     if (node.type === 'table') align = node.align
     else if (node.type === 'tableRow') isHeader = index === 0
     else if (node.type === 'tableCell')
@@ -59,7 +83,7 @@ function linkReferences(ast) {
   const definitions = new Map()
 
   // First pass, extract definitions and keep track of footnote order.
-  editAST(ast, node => {
+  visit(ast, node => {
     if (node.type === 'definition') {
       definitions.set(node.identifier, node)
       return null
@@ -67,7 +91,7 @@ function linkReferences(ast) {
   })
 
   // Second pass, replace references
-  editAST(ast, node => {
+  visit(ast, node => {
     if (node.type === 'linkReference')
       return { ...definitions.get(node.identifier), ...node, type: 'link' }
     if (node.type === 'imageReference')
@@ -80,7 +104,7 @@ function footnotes(ast) {
   const footnoteReferences = new Map()
 
   // Extract definitions and keep track of footnote order.
-  editAST(ast, node => {
+  visit(ast, node => {
     if (node.type === 'footnoteDefinition') {
       footnoteDefinitions.set(node.identifier, node)
       return null
@@ -98,11 +122,14 @@ function footnotes(ast) {
   let footnoteNumber = 0
   for (const [id, refs] of footnoteReferences) {
     const footnote = footnoteDefinitions.get(id)
+    const idSlug = 'fn-' + slug(id)
+    footnote.slug = idSlug
     footnote.number = ++footnoteNumber
     footnote.references = refs
     refs.forEach((ref, index) => {
+      ref.slug = idSlug
       ref.number = footnoteNumber
-      ref.referenceIdentifier = `${id}.ref` + (refs.length > 1 ? index + 1 : '')
+      ref.referenceSlug = `${idSlug}.ref` + (refs.length > 1 ? index + 1 : '')
       ref.footnote = footnote
     })
   }
@@ -118,7 +145,7 @@ function footnotes(ast) {
   }
 }
 
-function editAST(ast, mapFn) {
+function visit(ast, mapFn) {
   return dst(ast)[0]
   function dst(node, index) {
     const rtn = mapFn(node, index)

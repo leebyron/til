@@ -2,7 +2,15 @@ import * as child_process from 'child_process'
 import * as fs from 'fs/promises'
 import * as path from 'path'
 import * as util from 'util'
-import { TIL_PATH, ENTRIES_PATH, quot, dateTo3339, run, exec, spin } from './util.mjs'
+import {
+  TIL_PATH,
+  ENTRIES_PATH,
+  quot,
+  dateTo3339,
+  run,
+  exec,
+  spin,
+} from './util.mjs'
 
 // TODO: better way to autotag
 const TAGS = ['vim', 'markdown']
@@ -16,15 +24,15 @@ export default async function til(argv) {
     if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
       throw 'dirty repo'
     }
-    await run(
-      `git -C "${TIL_PATH}" fetch && git -C "${TIL_PATH}" rebase -q`,
-      { timeout: 5000 }
-    )
+    await run(`git -C "${TIL_PATH}" fetch && git -C "${TIL_PATH}" rebase -q`, {
+      timeout: 5000,
+    })
   })
 
   // Either coerce the promptname to a filename, or show a fzf.
   const filename = title
     ? title
+        .toLowerCase()
         .replace(/(-[^\x20-\x2e\x30-\x39\x3b-\x7e])+/g, '-')
         .replace(/^-+|-+$/g, '')
     : (
@@ -44,6 +52,7 @@ export default async function til(argv) {
     // Write a template to a tmp file and fill it into the editor buffer.
     // This way you can quit without saving and not alter the repo state.
     const permalink = title
+      .toLowerCase()
       .replace(/(-|[^0-9a-z])+/gi, '-')
       .replace(/^-+|-+$/g, '')
     const date = new Date()
