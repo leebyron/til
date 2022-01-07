@@ -15,7 +15,7 @@ following line):
 
 ```markdown
 [links]: https://spec.commonmark.org/0.30/#links
-[links]: https://spec.commonmark.org/0.30/#links "Nearly a hundred tests"
+[links]: https://spec.commonmark.org/0.30/#links 'Nearly a hundred tests'
 ```
 
 Then within prose, refer to them with typical link syntax, but with a trailing
@@ -40,12 +40,10 @@ same, but the image use itself starts with an `!`.
 ```markdown
 ![moebius]
 
-[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg
-"Bond of Union, M.C. Escher 1956"
+[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg 'Bond of Union, M.C. Escher 1956'
 ```
 
 ![moebius]
 
-[links]: https://spec.commonmark.org/0.30/#links "Nearly a hundred tests"
-[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg
-"Bond of Union, M.C. Escher 1956"
+[links]: https://spec.commonmark.org/0.30/#links 'Nearly a hundred tests'
+[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg 'Bond of Union, M.C. Escher 1956'
