@@ -2,7 +2,7 @@ import * as path from 'path'
 import * as fs from 'fs/promises'
 import { render, jsx } from 'hyperjsx'
 import { parseMarkdown } from './markdown.mjs'
-  import { mdjsx } from './mdjsx.mjs'
+import { mdjsx } from './mdjsx.mjs'
 import { Index, Page } from './pages.mjs'
 import { TIL_PATH, ENTRIES_PATH, DIST_PATH, spin, quot, exec } from './util.mjs'
 
@@ -42,7 +42,9 @@ export default async function build() {
   }
 
   // Sort entries in reverse-chrono order
-  const frontmatters = entries.map(entry => entry.frontmatter)
+  const frontmatters = entries
+    .map(entry => entry.frontmatter)
+    .filter(frontmatter => frontmatter.published !== false)
   frontmatters.sort((a, b) => b.date - a.date)
 
   // Build index
@@ -54,7 +56,7 @@ export default async function build() {
     })
   )
   await fs.writeFile(indexFile, rendered, 'utf8')
-  console.log(path.relative(process.env.PWD, indexFile))
+  console.log(path.relative(DIST_PATH, indexFile))
 
   // Build all files
   for (const { filename, markdown, frontmatter } of entries) {
@@ -70,6 +72,6 @@ export default async function build() {
     )
     await exec(`mkdir -p "${quot(entryDir)}"`)
     await fs.writeFile(entryFile, rendered, 'utf8')
-    console.log(path.relative(process.env.PWD, entryFile))
+    console.log(path.relative(DIST_PATH, entryFile))
   }
 }

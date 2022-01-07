@@ -29,16 +29,26 @@ export function mdjsx(ast, overrides) {
 const defaults = {
   root: Fragment,
   text: node => node.children,
-  html: node => jsx('html', { outerHTML: node.value }),
+  // Important: no sanitizing is being done here!
+  html: node => jsx('div', { outerHTML: node.children }),
   paragraph: 'p',
   heading: ({ depth, slug, children }) =>
     jsx('h' + depth, { id: slug, children }),
   thematicBreak: 'hr',
   blockquote: 'blockquote',
   list: ({ ordered, start, children }) =>
-    // TODO: checked
     jsx(ordered ? 'ol' : 'ul', { start, children }),
-  listitem: 'li',
+  listItem: ({ checked, children }) =>
+    jsx('li', {
+      'data-checked': checked != null && String(checked),
+      children:
+        checked != null
+          ? [
+              jsx('input', { type: 'checkbox', disabled: true, checked }),
+              ...children,
+            ]
+          : children,
+    }),
   code: ({ lang, children }) =>
     jsx('pre', {
       'data-code-block': true,

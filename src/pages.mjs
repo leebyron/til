@@ -33,6 +33,8 @@ export function Page({ filename, frontmatter, Content }) {
     h(Document, {
       path: '/til/' + frontmatter.permalink,
       title: frontmatter.title + ' — til by Lee Byron' },
+      frontmatter.published === false &&
+        h('meta', { name: 'robots', content: 'noindex' }),
       h('article',
         h('h1',
           h('a', { href: '../' }, 'til'),
@@ -56,6 +58,7 @@ function Document({ title, children, path }) {
         h('title', title),
         h('meta', { charset: 'UTF-8' }),
         h('meta', { name: 'viewport', content:'width=device-width, initial-scale=1'}),
+        children.filter(child => child.type === 'meta'),
         h('link', { rel: 'canonical', href: 'https://leebyron.com' + path }),
         h('link', { rel: 'shortcut icon', href: relative(path, '/til/assets/favicon.png') }),
         h('link', { rel: 'stylesheet', href: relative(path, '/til/assets/style.css') }),
@@ -67,7 +70,7 @@ function Document({ title, children, path }) {
             h('img', { src: relative(path, '/til/assets/logo.svg'), alt: 'Lee Byron' })
           )
         ),
-        children
+        children.filter(child => child.type !== 'meta'),
       )
     )
   )

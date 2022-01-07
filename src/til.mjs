@@ -76,8 +76,13 @@ export default async function til(argv) {
   }
 
   // Update the repo
-  await spin(() =>
-    run(
+  await spin(async () => {
+    // format the file first
+    const prettier = path.resolve(TIL_PATH, 'node_modules/.bin/prettier')
+    await run(`${prettier} -e --loglevel=silent "${quot(filepath)}"`)
+
+    // then stage and commit it
+    await run(
       `git -C "${TIL_PATH}" add "${quot(filepath)}" &&` +
         `git -C "${TIL_PATH}" commit -q -m "${
           isExisting ? 'edit' : 'add'
@@ -87,7 +92,7 @@ export default async function til(argv) {
         `echo "Nothing to publish"`,
       { timeout: 5000 }
     )
-  )
+  })
 }
 
 // Open an editor

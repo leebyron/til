@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Literata:ital,wght@0,300;0,500;1,300;1,500&display=block');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;1,400&family=Literata:ital,wght@0,300;0,500;1,300;1,500&display=block');
 
 :root {
   --font-ratio: 0.5844907407;
@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(1px + 100vh);
   margin: 0 2em;
 }
 
@@ -73,12 +73,13 @@ body > * {
 
 footer {
   font-size: max(13px, 80%);
-  margin-top: auto;
+  margin-block-start: auto;
 }
 
 pre,
 code {
   font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
 }
 
 pre[data-code-block] {
@@ -91,6 +92,14 @@ pre[data-code-block] {
   margin: -0.25rem 0;
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
+}
+
+:not(pre) > code {
+  color: #802040;
+  background: #80204008;
+  padding: 0 0.1em;
+  margin: 0 -0.1em;
+  border-radius: 0.4em;
 }
 
 a {
@@ -112,6 +121,44 @@ img {
   max-width: 100%;
 }
 
+ol,
+ul {
+  padding-inline-start: 2em;
+  margin: 1em 0;
+}
+
+ul > li::marker {
+  font-size: 70%;
+}
+
+li[data-checked] {
+  list-style: none;
+  position: relative;
+}
+
+li[data-checked] > input[type=checkbox] {
+  position: absolute;
+  height: 1.8em;
+  vertical-align: middle;
+  top: 0;
+  left: -2.1em;
+}
+
+li > p {
+  margin: 0.5em 0;
+}
+
+li > ol,
+li > ul {
+  margin: 0;
+}
+
+blockquote {
+  margin: 1em 0;
+  border-inline-start: solid 2px #00000011;
+  padding: 0 1em;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -127,6 +174,7 @@ th {
 }
 
 a[data-footnote-ref] {
+  font-variant: tabular-nums;
   font-feature-settings: 'tnum';
   font-size: 65%;
   line-height: 0;
@@ -147,7 +195,7 @@ a[data-footnote-ref]:target {
 
 section[data-footnotes] {
   font-size: max(13px, 80%);
-  margin-top: 3rem;
+  margin-block-start: 3rem;
 }
 
 section[data-footnotes] ol {
@@ -203,7 +251,7 @@ header img {
   margin: 0;
   opacity: 0.4;
   font-size: max(12px, 80%);
-  margin-left: 1rem;
+  margin-inline-start: 1rem;
 }
 
 @media (max-width: 530px) {
@@ -230,7 +278,7 @@ h1:first-child span:before {
 }
 
 .license {
-  margin-top: 2rem;
+  margin-block-start: 2rem;
   line-height: 2;
   text-align: center;
 }

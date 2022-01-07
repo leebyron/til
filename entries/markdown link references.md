@@ -35,7 +35,7 @@ group them together at the end of a section or end of the whole document.
 ---
 
 References can also be used for images. The syntax for the reference is the
-same, but images start with an `!`.
+same, but the image use itself starts with an `!`.
 
 ```markdown
 ![moebius]
