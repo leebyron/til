@@ -11,7 +11,27 @@ This is a paragraph with _italics_, and **bold** text, as well as
 code:
 
 ```ts
-declare function foo(bar: string): number
+function foo(bar: string): number {
+  return (bar + 'quote').length
+}
+```
+
+And another language
+
+```vim
+:set syntax
+```
+
+This has no language
+
+```
+Just a code block
+```
+
+And an unknown language
+
+```unknownlang
+who knows how to highlight this?
 ```
 
 ---
@@ -65,3 +85,5 @@ And here is a table with various alignments
 And here is a block of HTML
 
 <div style="text-align: center;"><span style="color: red;">Oh hi</span></div>
+
+<!-- And here is a comment -- it should not appear in the output -->

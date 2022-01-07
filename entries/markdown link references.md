@@ -37,13 +37,19 @@ group them together at the end of a section or end of the whole document.
 References can also be used for images. The syntax for the reference is the
 same, but the image use itself starts with an `!`.
 
+<!-- prettier-ignore-start -->
+
 ```markdown
 ![moebius]
 
-[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg 'Bond of Union, M.C. Escher 1956'
+[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg
+'Bond of Union, M.C. Escher 1956'
 ```
 
 ![moebius]
 
 [links]: https://spec.commonmark.org/0.30/#links 'Nearly a hundred tests'
-[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg 'Bond of Union, M.C. Escher 1956'
+[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg
+'Bond of Union, M.C. Escher 1956'
+
+<!-- prettier-ignore-end -->

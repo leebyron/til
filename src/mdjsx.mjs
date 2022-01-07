@@ -1,4 +1,5 @@
 import { jsx, Fragment } from 'hyperjsx'
+import shiki from 'shiki'
 
 export function mdjsx(ast, overrides) {
   return toJsx(ast)
@@ -28,9 +29,12 @@ export function mdjsx(ast, overrides) {
 
 const defaults = {
   root: Fragment,
-  text: node => node.children,
+  text: ({ children }) => children,
   // Important: no sanitizing is being done here!
-  html: node => jsx('div', { outerHTML: node.children }),
+  html: ({ children }) =>
+    /^<!--[\s\S]*?-->$/.test(children)
+      ? null
+      : jsx('div', { outerHTML: children }),
   paragraph: 'p',
   heading: ({ depth, slug, children }) =>
     jsx('h' + depth, { id: slug, children }),
@@ -53,7 +57,7 @@ const defaults = {
     jsx('pre', {
       'data-code-block': true,
       'data-lang': lang,
-      children: jsx('code', { children }),
+      children: jsx('code', { children: highlight(children, lang) }),
     }),
   emphasis: 'em',
   strong: 'strong',
@@ -108,4 +112,35 @@ const defaults = {
         ),
       ],
     }),
+}
+
+const highlighter = await shiki.getHighlighter({
+  theme: 'min-light',
+})
+
+function highlight(code, lang) {
+  if (lang) {
+    try {
+      const tokens = highlighter.codeToThemedTokens(code, lang)
+      return tokens.flatMap(line => [
+        ...line.map(token =>
+          /^\w*$/.test(token)
+            ? token
+            : jsx('span', {
+                style: {
+                  color: token.color,
+                  'font-style':
+                    token.fontStyle & shiki.FontStyle.Italic ? 'italic' : null,
+                },
+                children: token.content,
+              })
+        ),
+        '\n',
+      ])
+    } catch {
+      // Ignore
+    }
+  }
+  // Otherwise return unhighlighted code text
+  return code
 }
