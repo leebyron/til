@@ -79,7 +79,7 @@ export default async function til(argv) {
   await spin(async () => {
     // format the file first
     const prettier = path.resolve(TIL_PATH, 'node_modules/.bin/prettier')
-    await run(`${prettier} -e --loglevel=silent "${quot(filepath)}"`)
+    await run(`${prettier} -w --loglevel silent "${quot(filepath)}"`)
 
     // then stage and commit it
     await run(
