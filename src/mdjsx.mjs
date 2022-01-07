@@ -75,10 +75,10 @@ const defaults = {
       'aria-label': 'footnotes',
       children: jsx('ol', { children }),
     }),
-  footnoteReference: ({ slug, referenceSlug, number }) =>
+  footnoteReference: ({ slug, definition, number }) =>
     jsx('a', {
-      href: '#' + slug,
-      id: referenceSlug,
+      href: '#' + definition.slug,
+      id: slug,
       'data-footnote-ref': true,
       'aria-label': 'note',
       children: number,

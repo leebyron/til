@@ -44,16 +44,9 @@ function yamlFrontmatter(ast) {
 function slugs(ast) {
   return visit(ast, node => {
     if (node.type === 'heading') {
-      node.slug = slug(textContent(node))
+      node.slug = slugify(textContent(node))
     }
   })
-}
-
-function slug(str) {
-  return str
-    .toLowerCase()
-    .replace(/[^\p{Letter}\d\-_.!~*'()]+/gu, '-')
-    .replace(/^-+|-+$/g, '')
 }
 
 function textContent(ast) {
@@ -122,15 +115,14 @@ function footnotes(ast) {
   let footnoteNumber = 0
   for (const [id, refs] of footnoteReferences) {
     const footnote = footnoteDefinitions.get(id)
-    const idSlug = 'fn-' + slug(id)
-    footnote.slug = idSlug
+    const slug = 'fn-' + slugify(id)
+    footnote.slug = slug
     footnote.number = ++footnoteNumber
     footnote.references = refs
     refs.forEach((ref, index) => {
-      ref.slug = idSlug
+      ref.slug = `${slug}.ref` + (refs.length > 1 ? index + 1 : '')
       ref.number = footnoteNumber
-      ref.referenceSlug = `${idSlug}.ref` + (refs.length > 1 ? index + 1 : '')
-      ref.footnote = footnote
+      ref.definition = footnote
     })
   }
 
@@ -143,6 +135,13 @@ function footnotes(ast) {
       ),
     })
   }
+}
+
+function slugify(str) {
+  return str
+    .toLowerCase()
+    .replace(/[^\p{Letter}\d\-_.!~*'()]+/gu, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 function visit(ast, mapFn) {
