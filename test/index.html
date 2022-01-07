@@ -29,7 +29,23 @@
 <s>strikethrough</s>. Here is <code>inline *code*</code> and below is a block of typescript
 code:
       </p>
-      <pre data-code-block data-lang="ts"><code>declare function foo(bar: string): number</code></pre>
+      <pre data-code-block data-lang="ts"><code><span style="color:#D32F2F;">function</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">foo</span><span style="color:#24292EFF;">(bar</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">string</span><span style="color:#24292EFF;">)</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">number</span><span style="color:#24292EFF;"> {</span>
+<span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">return</span><span style="color:#24292EFF;"> (bar </span><span style="color:#D32F2F;">+</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'quote'</span><span style="color:#24292EFF;">).</span><span style="color:#1976D2;">length</span>
+<span style="color:#24292EFF;">}</span>
+</code></pre>
+      <p>
+        And another language
+      </p>
+      <pre data-code-block data-lang="vim"><code><span style="color:#24292EFF;">:set </span><span style="color:#1976D2;">syntax</span>
+</code></pre>
+      <p>
+        This has no language
+      </p>
+      <pre data-code-block><code>Just a code block</code></pre>
+      <p>
+        And an unknown language
+      </p>
+      <pre data-code-block data-lang="unknownlang"><code>who knows how to highlight this?</code></pre>
       <hr>
       <p>
         Here is a footnote<a href="#fn-note" id="fn-note.ref1" data-footnote-ref aria-label="note">1</a> and another footnote<a href="#fn-other" id="fn-other.ref" data-footnote-ref aria-label="note">2</a>.
