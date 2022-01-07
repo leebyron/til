@@ -2,20 +2,16 @@ import * as path from 'path'
 import * as fs from 'fs/promises'
 import { render, jsx } from 'hyperjsx'
 import { parseMarkdown } from './markdown.mjs'
-import { mdjsx } from './mdjsx.mjs'
+  import { mdjsx } from './mdjsx.mjs'
 import { Index, Page } from './pages.mjs'
 import { TIL_PATH, ENTRIES_PATH, DIST_PATH, spin, quot, exec } from './util.mjs'
 
-export async function main() {
-  await spin(renderDocs)
-}
-
-async function renderDocs() {
+export default async function build() {
   // Clean directory
   await exec(`rm -rf ${DIST_PATH} && mkdir -p ${DIST_PATH}`)
 
   // Copy all static content into /dist
-  await exec(`cp ${path.resolve(TIL_PATH, 'static/*')} ${DIST_PATH}`)
+  await exec(`cp -r ${path.resolve(TIL_PATH, 'assets')} ${DIST_PATH}`)
 
   // Parse all files
   const filenames = await fs.readdir(ENTRIES_PATH)

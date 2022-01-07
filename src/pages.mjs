@@ -57,13 +57,13 @@ function Document({ title, children, path }) {
         h('meta', { charset: 'UTF-8' }),
         h('meta', { name: 'viewport', content:'width=device-width, initial-scale=1'}),
         h('link', { rel: 'canonical', href: 'https://leebyron.com' + path }),
-        h('link', { rel: 'shortcut icon', href: relative(path, '/til/favicon.png') }),
-        h('link', { rel: 'stylesheet', href: relative(path, '/til/style.css') }),
+        h('link', { rel: 'shortcut icon', href: relative(path, '/til/assets/favicon.png') }),
+        h('link', { rel: 'stylesheet', href: relative(path, '/til/assets/style.css') }),
       ),
       h('body',
         h('header',
           h('a', { href: 'https://leebyron.com' },
-            h('img', { src: '../logo.svg', alt: 'Lee Byron' })
+            h('img', { src: relative(path, '/til/assets/logo.svg'), alt: 'Lee Byron' })
           )
         ),
         children

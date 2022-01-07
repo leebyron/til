@@ -1,7 +1,7 @@
 {
   "name": "til",
   "scripts": {
-    "build": "./bin/til-build"
+    "build": "./bin/build-til"
   },
   "private": true,
   "license": "MIT",

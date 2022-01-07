@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import('../src/til.mjs')
-  .then(({ main }) => main(process.argv))
+  .then(module => module.default(process.argv))
   .catch(error => {
     console.error(error || 'Failed')
     process.exit(1)

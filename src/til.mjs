@@ -7,7 +7,7 @@ import { TIL_PATH, ENTRIES_PATH, quot, dateTo3339, run, exec, spin } from './uti
 // TODO: better way to autotag
 const TAGS = ['vim', 'markdown']
 
-export async function main(argv) {
+export default async function til(argv) {
   // Use all arguments provided concatenated together as a title.
   const title = argv.slice(2).join(' ')
 
