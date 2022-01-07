@@ -3,7 +3,7 @@ import { h } from 'hyperjsx'
 
 export function Index({ frontmatters, Content }) {
   return (
-    h(Document, { path: '/til' },
+    h(Document, { path: '/til/' },
       h('title', 'Today I Learned / Lee Byron'),
       JSONLD({
         '@context': 'https://schema.org/',
@@ -13,7 +13,7 @@ export function Index({ frontmatters, Content }) {
           '@type': 'Person',
           name: 'Lee Byron',
           url: 'http://leebyron.com' },
-        url: 'https://leebyron.com/til',
+        url: 'https://leebyron.com/til/',
         collectionSize: frontmatters.length,
         license: 'https://creativecommons.org/licenses/by/4.0/',
       }),
@@ -22,7 +22,7 @@ export function Index({ frontmatters, Content }) {
         h('h2', 'entry log'),
         frontmatters.map(frontmatter =>
           h('div', { class: 'entrylog' },
-            h('a', { href: frontmatter.permalink }, frontmatter.title),
+            h('a', { href: `${frontmatter.permalink}/` }, frontmatter.title),
             h('pre', { class: 'timestamp' },
               h('span', { class: 'p2' }, frontmatter.date.toFormat('ccc, ')),
               h('span', { class: 'p0' }, frontmatter.date.toFormat('dd LLL yyyy')),
@@ -41,7 +41,7 @@ export function Index({ frontmatters, Content }) {
 
 export function Page({ filename, lastModified, frontmatter, Content }) {
   return (
-    h(Document, { path: '/til/' + frontmatter.permalink },
+    h(Document, { path: `/til/${frontmatter.permalink}/` },
       h('title', frontmatter.title + ' / til / Lee Byron'),
       frontmatter.published === false &&
         h('meta', { name: 'robots', content: 'noindex' }),
@@ -53,11 +53,11 @@ export function Page({ filename, lastModified, frontmatter, Content }) {
           '@type': 'Person',
           name: 'Lee Byron',
           url: 'http://leebyron.com' },
-        url: 'https://leebyron.com/til/' + frontmatter.permalink,
+        url: `https://leebyron.com/til/${frontmatter.permalink}/`,
         datePublished: frontmatter.date.toISO(),
         dateModified: lastModified.toISO(),
         keywords: frontmatter.tags.join(', ') || undefined,
-        isPartOf: 'https://leebyron.com/til',
+        isPartOf: 'https://leebyron.com/til/',
         license: 'https://creativecommons.org/licenses/by/4.0/',
       }),
       h('article',
@@ -137,7 +137,7 @@ function Attribution({ filename, frontmatter: { permalink, date } }) {
     h('a', {
       property: "dct:title",
       rel: "cc:attributionURL",
-      href: `https://leebyron.com/til/${permalink}` },
+      href: `https://leebyron.com/til/${permalink}/` },
       'til'),
 
     // time
