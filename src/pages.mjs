@@ -59,6 +59,7 @@ function Document({ title, children, path }) {
         h('link', { rel: 'canonical', href: 'https://leebyron.com' + path }),
         h('link', { rel: 'shortcut icon', href: relative(path, '/til/assets/favicon.png') }),
         h('link', { rel: 'stylesheet', href: relative(path, '/til/assets/style.css') }),
+        h(GTag),
       ),
       h('body',
         h('header',
@@ -70,6 +71,18 @@ function Document({ title, children, path }) {
       )
     )
   )
+}
+
+function GTag() {
+  return [
+    h('script', { async: true, src: "https://www.googletagmanager.com/gtag/js?id=UA-61714711-1" }),
+    h('script', { innerHTML: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    ` })
+  ]
 }
 
 function Attribution({ filename, frontmatter: { permalink, date } }) {
@@ -124,7 +137,7 @@ function License({ year, children }) {
     ' ⸱ ',
 
     // license
-    ' licensed under ',
+    'licensed under ',
     h('a', {
       href: "http://creativecommons.org/licenses/by/4.0/",
       target: "_blank",
