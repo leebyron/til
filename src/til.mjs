@@ -58,7 +58,7 @@ export default async function til(argv) {
     const date = new Date()
     const tags = title
       .toLowerCase()
-      .split(/\w+/g)
+      .split(/\s+/g)
       .filter(arg => TAGS.includes(arg))
     const entry = template({ title, permalink, date, tags })
     const tmpFile = (await exec('mktemp')).trim()

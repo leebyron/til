@@ -3,9 +3,20 @@ import { h } from 'hyperjsx'
 
 export function Index({ frontmatters, Content }) {
   return (
-    h(Document, {
-      path: '/til',
-      title: 'today i learned - Lee Byron' },
+    h(Document, { path: '/til' },
+      h('title', 'Today I Learned / Lee Byron'),
+      JSONLD({
+        '@context': 'https://schema.org/',
+        '@type': 'Collection',
+        name: 'Today I Learned',
+        author: {
+          '@type': 'Person',
+          name: 'Lee Byron',
+          url: 'http://leebyron.com' },
+        url: 'https://leebyron.com/til',
+        collectionSize: frontmatters.length,
+        license: 'https://creativecommons.org/licenses/by/4.0/',
+      }),
       h('section',
         h(Content),
         h('h2', 'entry log'),
@@ -30,11 +41,24 @@ export function Index({ frontmatters, Content }) {
 
 export function Page({ filename, frontmatter, Content }) {
   return (
-    h(Document, {
-      path: '/til/' + frontmatter.permalink,
-      title: frontmatter.title + ' — til by Lee Byron' },
+    h(Document, { path: '/til/' + frontmatter.permalink },
+      h('title', frontmatter.title + ' / til / Lee Byron'),
       frontmatter.published === false &&
         h('meta', { name: 'robots', content: 'noindex' }),
+      JSONLD({
+        '@context': 'https://schema.org/',
+        '@type': 'Article',
+        name: frontmatter.title,
+        author: {
+          '@type': 'LearningResource',
+          name: 'Lee Byron',
+          url: 'http://leebyron.com' },
+        url: 'https://leebyron.com/til/' + frontmatter.permalink,
+        dateCreated: frontmatter.date.toISO(),
+        keywords: frontmatter.tags.join(', ') || undefined,
+        isPartOf: 'https://leebyron.com/til',
+        license: 'https://creativecommons.org/licenses/by/4.0/',
+      }),
       h('article',
         h('h1',
           h('a', { href: '../' }, 'til'),
@@ -51,14 +75,13 @@ export function Page({ filename, frontmatter, Content }) {
   )
 }
 
-function Document({ title, children, path }) {
+function Document({ children, path }) {
   return (
     h('html',
       h('head',
-        h('title', title),
         h('meta', { charset: 'UTF-8' }),
+        children.filter(isHeadElement),
         h('meta', { name: 'viewport', content:'width=device-width, initial-scale=1'}),
-        children.filter(child => child.type === 'meta'),
         h('link', { rel: 'canonical', href: 'https://leebyron.com' + path }),
         h('link', { rel: 'shortcut icon', href: relative(path, '/til/assets/favicon.png') }),
         h('link', { rel: 'stylesheet', href: relative(path, '/til/assets/style.css') }),
@@ -70,10 +93,28 @@ function Document({ title, children, path }) {
             h('img', { src: relative(path, '/til/assets/logo.svg'), alt: 'Lee Byron' })
           )
         ),
-        children.filter(child => child.type !== 'meta'),
+        children.filter(child => !isHeadElement(child)),
       )
     )
   )
+}
+
+function isHeadElement(element) {
+  switch (element.type) {
+    case 'title':
+    case 'meta':
+    case 'link':
+    case 'script':
+      return true
+  }
+  return false
+}
+
+function JSONLD(data) {
+  return h('script', {
+    type: 'application/ld+json',
+    innerHTML: `\n${JSON.stringify(data, null, 2)}\n`
+  })
 }
 
 function GTag() {

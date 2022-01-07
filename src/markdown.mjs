@@ -25,20 +25,23 @@ function yamlFrontmatter(ast) {
     const node = ast.children[index]
     ast.children.splice(index, 1)
     ast.frontmatter = { ...node, value: yaml.parse(node.value) }
-    // Parse tags as a list
-    ast.tags = Array.isArray(ast.tags)
-      ? ast.tags
-      : typeof ast.tags === 'string'
-      ? ast.tags.split(/\w+/g).filter(Boolean)
-      : []
-    // Parse date as luxon DateTime
-    if (ast.frontmatter.value.date) {
-      ast.frontmatter.value.date = DateTime.fromISO(
-        ast.frontmatter.value.date,
-        { setZone: true }
-      )
-    }
+    ast.frontmatter.value.tags = yamlTags(ast.frontmatter.value.tags)
+    ast.frontmatter.value.date = yamlDate(ast.frontmatter.value.date)
   }
+}
+
+function yamlTags(tags) {
+  // Parse tags as a list
+    return Array.isArray(tags)
+      ? tags
+      : typeof tags === 'string'
+      ? tags.split(/\s+/g).filter(Boolean)
+      : []
+}
+
+function yamlDate(date) {
+  // Parse date as luxon DateTime
+  return DateTime.fromISO( date, { setZone: true })
 }
 
 function slugs(ast) {
