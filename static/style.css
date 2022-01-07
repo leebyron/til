@@ -190,15 +190,34 @@ header img {
 }
 
 .entrylog {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.entrylog pre {
+.timestamp {
   margin: 0;
-  opacity: 0.5;
-  font-size: 85%;
-  line-height: 1.6rem;
+  opacity: 0.4;
+  font-size: max(12px, 80%);
+  margin-left: 1rem;
+}
+
+@media (max-width: 530px) {
+  .timestamp .p3 {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .timestamp .p2 {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .timestamp .p1 {
+    display: none;
+  }
 }
 
 h1:first-child span:before {

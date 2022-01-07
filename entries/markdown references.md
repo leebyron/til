@@ -2,7 +2,7 @@
 title: markdown references
 permalink: markdown-references
 date: 2022-01-06T10:40:18-08:00
-tags: [markdown]
+tags: markdown
 ---
 
 Inline markdown links and images can be hard to read with long URLs. References
@@ -46,6 +46,6 @@ same, but images start with an `!`.
 
 ![moebius]
 
-[links]: https://spec.commonmark.org/0.30/#links
+[links]: https://spec.commonmark.org/0.30/#links "Nearly a hundred tests"
 [moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg
 "Bond of Union, M.C. Escher 1956"

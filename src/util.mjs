@@ -9,6 +9,8 @@ export const TIL_PATH = path.dirname(
 )
 export const ENTRIES_PATH = path.resolve(TIL_PATH, './entries')
 
+export const DIST_PATH = path.resolve(TIL_PATH, './dist')
+
 // Escape quotes
 export const quot = str => str.replace(/\"/g, '\\"')
 

@@ -12,7 +12,12 @@ export function Index({ frontmatters, Content }) {
         frontmatters.map(frontmatter =>
           h('div', { class: 'entrylog' },
             h('a', { href: frontmatter.permalink }, frontmatter.title),
-            h('pre', frontmatter.date.toRFC2822())
+            h('pre', { class: 'timestamp' },
+              h('span', { class: 'p2' }, frontmatter.date.toFormat('ccc, ')),
+              h('span', { class: 'p0' }, frontmatter.date.toFormat('dd LLL yyyy')),
+              h('span', { class: 'p1' }, frontmatter.date.toFormat(' HH:mm')),
+              h('span', { class: 'p3' }, frontmatter.date.toFormat(':ss ZZ')),
+            )
           )
         )
       ),
