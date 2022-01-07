@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>markdown references — til by Lee Byron</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/markdown-references">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>markdown references</span>
+      </h1>
+      <p>
+        Inline markdown links and images can be hard to read with long URLs. References
+are a great way to keep prose readable and keep a catalog of links. There are
+<a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">quite a few variations</a> of the syntax.
+      </p>
+      <p>
+        Write references with a box around the reference identifier followed by a colon
+and the URL, optionally include a trailing title in quotes (which may go on the
+following line):
+      </p>
+      <pre data-code-block data-lang="markdown"><code>[links]: https://spec.commonmark.org/0.30/#links
+[links]: https://spec.commonmark.org/0.30/#links &quot;Nearly a hundred tests&quot;</code></pre>
+      <p>
+        Then within prose, refer to them with typical link syntax, but with a trailing
+box instead of parentheses. If the linked text is the same as the identifier,
+just use a standalone box.
+      </p>
+      <pre data-code-block data-lang="markdown"><code>Here is a link about [markdown links][links]. What's the web without [links]?</code></pre>
+      <p>
+        Here is a link about <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">markdown links</a>. What's the web without <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">links</a>?
+      </p>
+      <p>
+        References can appear anywhere in a Markdown file. I often place them right
+after the paragraph where they're used. If they're used in multiple places, I'll
+group them together at the end of a section or end of the whole document.
+      </p>
+      <hr>
+      <p>
+        References can also be used for images. The syntax for the reference is the
+same, but images start with an <code>!</code>.
+      </p>
+      <pre data-code-block data-lang="markdown"><code>![moebius]
+
+[moebius]: https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg
+&quot;Bond of Union, M.C. Escher 1956&quot;</code></pre>
+      <p>
+        <img src="https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg" title="Bond of Union, M.C. Escher 1956">
+      </p>
+    </article>
+    <footer>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/markdown-references">til</a> was created <span property="dct:created" content="2022-01-06T10:40:18.000-08:00">Thu, Jan 6, 2022, 10:40 AM</span> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/markdown%20references.md#L8">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱  licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg"></a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>changing a word in vim — til by Lee Byron</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/changing-a-word-in-vim">
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>changing a word in vim</span>
+      </h1>
+      <p>
+        The <code>c</code> key starts a chord to change #something. This is super useful for
+changing the word under the cursor. <code>cw</code> will change from the current position
+until the end of the next word, and <code>ciw</code> will change the whole word under the
+cursor (read: <em>c</em>hange <em>i</em>n <em>w</em>ord).
+      </p>
+      <hr>
+      <p>
+        This, combined with other movements can lead to very quick changes. One I've
+found quite useful is <code>ci&quot;</code> which changes the contents of a quoted string, and
+<code>ca&quot;</code> (<em>c</em>hange <em>a</em>ll <i>&quot;</i>quoted) to include the quote marks themselves. Or
+when working in prose, <code>cis</code> will change the current sentence and <code>cip</code> the
+current paragraph.
+      </p>
+      <p>
+        Sometimes a change command is hard to think about first, or the area you want to
+change is subtly different from what the change command would do. Replace <code>c</code>
+with <code>v</code> to get a similar visual motion (like <code>v3w</code> for 3 words), muck about,
+then press <code>c</code> to change.[^unref]
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th align="left">
+              table
+            </th>
+            <th align="right">
+              example
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="left">
+              here
+            </td>
+            <td align="right">
+              there<a href="#fn-note" id="fn-note.ref" data-footnote-ref aria-label="note">1</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        this should be a <a href="http://google.com" target="_blank">link</a>.
+      </p>
+      <pre data-code-block data-lang="vim"><code>:set example?</code></pre>
+      <p>
+        test <div>&lt;Example x={y} d=&quot;s&quot; {...props}&gt;wat</Example></div>
+      </p>
+      <section data-footnotes aria-label="footnotes">
+        <ol>
+          <li id="fn-note">
+            <p>
+              Another thing you need to know!
+            </p>
+            <a href="#fn-note.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+        </ol>
+      </section>
+    </article>
+    <footer>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/changing-a-word-in-vim">til</a> was created <span property="dct:created" content="2022-01-03T16:34:57.000-08:00">Mon, Jan 3, 2022, 4:34 PM</span> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/changing%20a%20word%20in%20vim.md#L8">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱  licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg"></a>
+      </div>
+    </footer>
+  </body>
+</html>
