@@ -1,4 +1,5 @@
 import * as child_process from 'child_process'
+import * as fs from 'fs/promises'
 import * as path from 'path'
 import * as url from 'url'
 import * as util from 'util'
@@ -7,9 +8,9 @@ import { DateTime } from 'luxon'
 export const TIL_PATH = path.dirname(
   path.dirname(url.fileURLToPath(import.meta.url))
 )
-export const ENTRIES_PATH = path.resolve(TIL_PATH, './entries')
-
-export const DIST_PATH = path.resolve(TIL_PATH, './dist')
+export const ENTRIES_PATH = path.resolve(TIL_PATH, 'entries')
+export const MEDIA_PATH = path.resolve(TIL_PATH, 'media')
+export const DIST_PATH = path.resolve(TIL_PATH, 'dist')
 
 // Escape quotes
 export const quot = str => str.replace(/\"/g, '\\"')
@@ -36,6 +37,19 @@ export const exec = async (...args) => {
   if (result.stderr) console.error(result.stderr.trimEnd())
   return result.stdout.trimEnd()
 }
+
+// Check to see if a file exists.
+const exists = predicate => p =>
+  fs
+    .lstat(p)
+    .then(predicate)
+    .catch(error => {
+      if (error.code === 'ENOENT') return false
+      throw error
+    })
+
+export const fileExists = exists(stats => stats.isFile())
+export const directoryExists = exists(stats => stats.isDirectory())
 
 // Show a spinner while running an async `doing` function.
 export const spin = async doing => {

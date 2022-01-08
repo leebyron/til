@@ -8,19 +8,25 @@ import { Index, Page } from './pages.mjs'
 import {
   TIL_PATH,
   ENTRIES_PATH,
+  MEDIA_PATH,
   DIST_PATH,
   spin,
   quot,
-  exec,
   run,
+  exec,
+  directoryExists,
 } from './util.mjs'
 
-export default async function build() {
+export async function build() {
   // Clean directory
   await exec(`rm -rf ${DIST_PATH} && mkdir -p ${DIST_PATH}`)
 
   // Copy all static content into /dist
   await exec(`cp -r ${path.resolve(TIL_PATH, 'assets')} ${DIST_PATH}`)
+
+  // Copy all media into /dist
+  if (await directoryExists(MEDIA_PATH))
+    await exec(`cp -r ${MEDIA_PATH} ${DIST_PATH}`)
 
   // Parse all files
   const filenames = await fs.readdir(ENTRIES_PATH)

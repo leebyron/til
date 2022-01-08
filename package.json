@@ -3,7 +3,7 @@
   "name": "til",
   "license": "MIT",
   "scripts": {
-    "build": "./bin/build-til"
+    "build": "./bin/til --build"
   },
   "dependencies": {
     "hyperjsx": "^1.0.7",
