@@ -87,3 +87,5 @@ And here is a block of HTML
 <div style="text-align: center;"><span style="color: red;">Oh hi</span></div>
 
 <!-- And here is a comment -- it should not appear in the output -->
+
+![](../media/frame-1-f46113.png)
