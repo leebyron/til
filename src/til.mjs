@@ -95,21 +95,17 @@ open all in fzf.`)
   const mediaInfo = await Promise.all(
     media.map(async src => {
       const ext = path.extname(src)
-      const name = path.basename(src, ext)
-      const safeName = name
-        .toLowerCase()
-        .replace(/[^\w\-]/g, '-')
-        .replace(/^-+|-+$/g, '')
-      const sha = (await shaSum(src)).slice(0, 6)
-      const destName = `${safeName}-${sha}${ext}`
-      const dest = path.resolve(MEDIA_PATH, destName)
+      const sha = (await shaSum(src)).slice(0, 16)
+      const dest = path.resolve(MEDIA_PATH, `${sha}${ext}`)
       const rel = path.relative(ENTRIES_PATH, dest)
       return { src, dest, rel }
     })
   )
 
   // Create markdown template referencing media
-  const mediaMarkdown = mediaInfo.map(({ rel }) => `\n![](${rel})`).join('\n')
+  const mediaMarkdown = mediaInfo
+    .map(({ src, rel }) => `\n![${path.basename(src)}](${rel})`)
+    .join('\n')
 
   // Use all remaining arguments provided concatenated together as a title.
   const title = args.join(' ')
@@ -205,7 +201,7 @@ open all in fzf.`)
     // Optimize!
     await run(
       '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
-        mediaInfo.map(info => `"${quot(dest)}"`).join(' ')
+        mediaInfo.map(info => `"${quot(info.dest)}"`).join(' ')
     )
   }
 
