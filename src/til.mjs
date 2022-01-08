@@ -202,6 +202,11 @@ open all in fzf.`)
     for (const { src, dest } of mediaInfo) {
       await fs.cp(src, dest, { force: true })
     }
+    // Optimize!
+    await run(
+      '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
+        mediaInfo.map(info => `"${quot(dest)}"`).join(' ')
+    )
   }
 
   // Update the repo
