@@ -1,7 +1,7 @@
 ---
 title: setup a simple screencast
 permalink: setup-a-simple-screencast
-date: 2022-01-08T00:35:43-08:00
+date: 2022-01-07T22:35:43-08:00
 tags:
 ---
 
@@ -31,3 +31,9 @@ a pinch Quicktime Player does a solid job with a bit of prep.
    - Record! Press ⌘⌃esc to stop. Trim the resulting video.
 
 ![screencast-setup.jpg](../media/7f2cdba5d3c1f40e.jpg)
+
+---
+
+I did exactly this to record a screencast about this very tool!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iJn9kZw-hw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
