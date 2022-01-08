@@ -199,7 +199,7 @@ open all in fzf.`)
       await fs.cp(src, dest, { force: true })
     }
     // Optimize!
-    await run(
+    await exec(
       '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
         mediaInfo.map(info => `"${quot(info.dest)}"`).join(' ')
     )
