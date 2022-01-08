@@ -14,13 +14,13 @@ a pinch Quicktime Player does a solid job with a bit of prep.
    - Don't forget to increase font size in any terminals, browsers, or IDEs to
      increase visibility. 100 columns works okay.
 
-1. **File → New Movie Recording**
+1. File → New Movie Recording
 
    Don't actually record a movie. This just abuses the webcam preview so you can
    have your face in the screen cast. Resize the window down and position it in
    the corner of your desktop.
 
-1. **File → New Screen Recording**
+1. File → New Screen Recording
 
    - Choose the "Record Selected Portion" and resize the area to be 1280×720 (or
      a large size of the same aspect ratio if your screen allows).
@@ -36,4 +36,4 @@ a pinch Quicktime Player does a solid job with a bit of prep.
 
 I did exactly this to record a screencast about this very tool!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iJn9kZw-hw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" style="max-width:100%;" src="https://www.youtube.com/embed/iJn9kZw-hw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
