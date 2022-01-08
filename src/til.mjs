@@ -109,9 +109,7 @@ open all in fzf.`)
   )
 
   // Create markdown template referencing media
-  const mediaMarkdown = mediaInfo
-    .map(({ rel }) => `\n![](${rel})`)
-    .join('\n')
+  const mediaMarkdown = mediaInfo.map(({ rel }) => `\n![](${rel})`).join('\n')
 
   // Use all remaining arguments provided concatenated together as a title.
   const title = args.join(' ')
@@ -121,9 +119,13 @@ open all in fzf.`)
     if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
       throw 'dirty repo'
     }
-    await run(`git -C "${TIL_PATH}" fetch && git -C "${TIL_PATH}" rebase -q`, {
-      timeout: 5000,
-    })
+    await run(
+      `git -C "${TIL_PATH}" fetch origin main -q &&` +
+        `git -C "${TIL_PATH}" rebase -q`,
+      {
+        timeout: 5000,
+      }
+    )
   })
 
   // Either coerce the promptname to a filename, or show a fzf.
