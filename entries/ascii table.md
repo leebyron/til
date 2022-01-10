@@ -35,7 +35,7 @@ speed).
 | **`0x0F`** | [`␏`] `⌃O`      | [`␟`] `⌃_`      | `/`    | `?`    | `O`    | `_`    | `o`     | [`␡`] `⌃?` |
 </pre>
 
-Other fun facts about ASCII:
+## Other fun facts about ASCII:
 
 - The first 128 Unicode values are ASCII. UTF-8, the most common modern
   encoding, uses a variable number of bytes to cover the full Unicode spectrum,
@@ -44,7 +44,7 @@ Other fun facts about ASCII:
   This is a _beautiful_ hack and a major reason for the success of UTF-8.
 - The number digits are carefully placed so [BCD] can be converted to ASCII and
   vice-versa in one instruction: `ascii = bcd XOR 0x30`.
-- Many keys you still reach via Shift on a modern keyboard are either `0x10` or
+- Many keys you still reach via "shift" on a modern keyboard are either `0x10` or
   `0x20` above their standard key, a holdover from mechanical typewriters.
 - Lowercase letters are exactly `0x20` above uppercase.
 - Your "control" key has a `⌃` on it because its original purpose was to remap
