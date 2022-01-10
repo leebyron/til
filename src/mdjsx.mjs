@@ -64,11 +64,15 @@ export function mdjsx(ast, { components, overrides } = {}) {
       jsx('img', { src: url, title, children }),
     delete: 's',
     table: ({ children }) =>
-      jsx('table', {
-        children: [
-          jsx('thead', { children: children[0] }),
-          children.length > 1 && jsx('tbody', { children: children.slice(1) }),
-        ],
+      jsx('div', {
+        class: 'table-wrapper',
+        children: jsx('table', {
+          children: [
+            jsx('thead', { children: children[0] }),
+            children.length > 1 &&
+              jsx('tbody', { children: children.slice(1) }),
+          ],
+        }),
       }),
     tableRow: 'tr',
     tableHeader: ({ align, children }) => jsx('th', { align, children }),

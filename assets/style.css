@@ -2,9 +2,11 @@
 
 :root {
   --font-ratio: 0.5844907407;
-  --font-ideal-size: calc(66vw / (60 * var(--font-ratio)));
-  --font-size: clamp(14px, var(--font-ideal-size), 18px);
-  --col-width: calc(var(--font-size) * 60 * var(--font-ratio));
+  --ideal-font-size: calc(66vw / (60 * var(--font-ratio)));
+  --font-size: clamp(14px, var(--ideal-font-size), 18px);
+  --ideal-col-width: calc(var(--font-size) * 60 * var(--font-ratio));
+  --col-width: min(100vw - 4rem, var(--ideal-col-width));
+  --gutter: calc((100vw - var(--col-width)) / 2);
 }
 
 html,
@@ -98,8 +100,8 @@ pre[data-code-block] {
 :not(pre) > code {
   color: #802040;
   background: #80204008;
-  padding: 0 0.06em;
-  margin: 0 -0.06em;
+  padding: 0 0.1em;
+  margin: 0 -0.1em;
   border-radius: 0.4em;
 }
 
@@ -171,6 +173,16 @@ blockquote {
 
 table {
   border-collapse: collapse;
+}
+
+.table-wrapper {
+  width: fit-content;
+  max-width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  margin: 0 -2rem 0 calc(-1 * var(--gutter));
+  padding: 0 2rem 0 var(--gutter);
+  box-sizing: border-box;
 }
 
 th,
