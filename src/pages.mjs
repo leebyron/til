@@ -18,8 +18,10 @@ export function Index({ frontmatters, Content }) {
         license: 'https://creativecommons.org/licenses/by/4.0/',
       }),
       h('section',
-        h(Content),
-        h('h2', 'entry log'),
+        h(Content, { components }),
+        h('h2', { id: 'entry-log' },
+          h('a', { href: '#entry-log', 'data-anchor': true },
+             'entry log')),
         frontmatters.map(frontmatter =>
           h('div', { class: 'entrylog' },
             h('a', { href: `${frontmatter.permalink}/` }, frontmatter.title),
@@ -65,7 +67,7 @@ export function Page({ filename, lastModified, frontmatter, Content }) {
           h('a', { href: '../' }, 'til'),
           h('span', frontmatter.title)
         ),
-        h(Content),
+        h(Content, { components }),
       ),
       h('footer',
         h(License, { year: frontmatter.date.year },
@@ -191,5 +193,24 @@ function License({ year, children }) {
       h('img', { src: "https://mirrors.creativecommons.org/presskit/icons/cc.svg" }),
       h('img', { src: "https://mirrors.creativecommons.org/presskit/icons/by.svg" })
     )
+  )
+}
+
+// List of components to expose via MDX
+const components = {
+  YouTube,
+}
+
+function YouTube({ v, aspectRatio }) {
+  return h('div', {
+    class: 'yt-player',
+    style: { paddingTop: aspectRatio && `${100/aspectRatio}%` }},
+    h('iframe', {
+      src:`https://www.youtube.com/embed/${v}`,
+      title:"YouTube video player",
+      frameborder:"0",
+      allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+      allowfullscreen:true
+    })
   )
 }

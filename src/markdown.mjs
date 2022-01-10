@@ -1,13 +1,18 @@
 import { DateTime } from 'luxon'
+import remarkComment from 'remark-comment'
 import remarkParse from 'remark-parse'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
+import { mdx } from 'micromark-extension-mdx'
+import { mdxFromMarkdown } from 'mdast-util-mdx'
 import { unified } from 'unified'
 import yaml from 'yaml'
 
 export function parseMarkdown(markdown) {
   const ast = unified()
     .use(remarkParse)
+    .use(remarkMdx)
+    .use(remarkComment)
     .use(remarkFrontmatter)
     .use(remarkGfm)
     .parse(markdown)
@@ -17,6 +22,14 @@ export function parseMarkdown(markdown) {
   linkReferences(ast)
   footnotes(ast)
   return ast
+}
+
+function remarkMdx() {
+  const data = this.data()
+  const add = (field, value) =>
+    (data[field] ? data[field] : (data[field] = [])).push(value)
+  add('micromarkExtensions', mdx())
+  add('fromMarkdownExtensions', mdxFromMarkdown)
 }
 
 function yamlFrontmatter(ast) {
@@ -32,16 +45,16 @@ function yamlFrontmatter(ast) {
 
 function yamlTags(tags) {
   // Parse tags as a list
-    return Array.isArray(tags)
-      ? tags
-      : typeof tags === 'string'
-      ? tags.split(/\s+/g).filter(Boolean)
-      : []
+  return Array.isArray(tags)
+    ? tags
+    : typeof tags === 'string'
+    ? tags.split(/\s+/g).filter(Boolean)
+    : []
 }
 
 function yamlDate(date) {
   // Parse date as luxon DateTime
-  return DateTime.fromISO( date, { setZone: true })
+  return DateTime.fromISO(date, { setZone: true })
 }
 
 function slugs(ast) {
@@ -82,7 +95,6 @@ function linkReferences(ast) {
   visit(ast, node => {
     if (node.type === 'definition') {
       definitions.set(node.identifier, node)
-      return null
     }
   })
 

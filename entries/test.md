@@ -59,6 +59,8 @@ http://this.is/an/autolink
 
 ---
 
+## Here is a sub header
+
 Here is a list starting with 2
 
 2. item
@@ -87,3 +89,43 @@ And here is a block of HTML
 <div style="text-align: center;"><span style="color: red;">Oh hi</span></div>
 
 <!-- And here is a comment -- it should not appear in the output -->
+
+<!---- this
+
+multiline
+
+  big ol comment
+
+---->
+
+This paragraph is going
+to have a<!-- comment that
+  is multiple lines-->ok?
+
+---
+
+Here is an MDX component:
+
+<YouTube v="dQw4w9WgXcQ" />
+
+And one with an expression and fragment:
+
+<><div style={{ color: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})` }} /></>
+
+And here is an inline expression {3 + 4}!
+
+And a couple flow expressions:
+
+{10 * 42}
+
+{'abc'.length}
+
+{
+function MyComponent() {
+  return jsx('div', { style: {background: 'pink'}, children: 'wow' })
+}
+}
+
+{jsx(MyComponent, {})}
+
+<MyComponent />

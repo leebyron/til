@@ -36,4 +36,5 @@ a pinch Quicktime Player does a solid job with a bit of prep.
 
 I did exactly this to record a screencast about this very tool!
 
-<iframe width="560" height="315" style="max-width:100%;" src="https://www.youtube.com/embed/iJn9kZw-hw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- aspectRatio isn't required and 16/9 is the default, but I like it -->
+<YouTube v="iJn9kZw-hw8" aspectRatio={16/9} />

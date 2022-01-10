@@ -6,9 +6,13 @@
     "build": "./bin/til --build"
   },
   "dependencies": {
+    "context-eval": "^0.1.0",
     "hyperjsx": "^1.0.7",
     "luxon": "^2.3.0",
+    "mdast-util-mdx": "^1.1.0",
+    "micromark-extension-mdx": "^1.0.0",
     "prettier": "^2.5.1",
+    "remark-comment": "^1.0.0",
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
