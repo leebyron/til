@@ -98,9 +98,14 @@ pre[data-code-block] {
 :not(pre) > code {
   color: #802040;
   background: #80204008;
-  padding: 0 0.1em;
-  margin: 0 -0.1em;
+  padding: 0 0.06em;
+  margin: 0 -0.06em;
   border-radius: 0.4em;
+}
+
+a > code {
+  color: #204080;
+  background: #20408008;
 }
 
 a {

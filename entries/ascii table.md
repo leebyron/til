@@ -12,10 +12,12 @@ until 1986. ASCII was based on ITA2, a telegraph standard from 1924, which itsel
 derived from [Baudot code] from 1870—literally the beginning of digital
 communication (yes, this is where "baud" speed comes from).
 
+<style innerHTML=".ascii-table td:first-child { background: #00000008; }" />
+<pre class="ascii-table">
 |            | `0x00`          | `0x10`          | `0x20` | `0x30` | `0x40` | `0x50` | `0x60`  | `0x70`     |
 | ---------- | --------------- | --------------- | ------ | ------ | ------ | ------ | ------- | ---------- |
 | **`0x00`** | [`␀`] `^@` `\0` | [`␐`] `^P`      | Space  | `0`    | `@`    | `P`    | `` ` `` | `p`        |
-| **`0x01`** | [`␁`] `^A`      | [`␑`] `^O`      | `!`    | `1`    | `A`    | `Q`    | `a`     | `q`        |
+| **`0x01`** | [`␁`] `^A`      | [`␑`] `^Q`      | `!`    | `1`    | `A`    | `Q`    | `a`     | `q`        |
 | **`0x02`** | [`␂`] `^B`      | [`␒`] `^R`      | `"`    | `2`    | `B`    | `R`    | `b`     | `r`        |
 | **`0x03`** | [`␃`] `^C`      | [`␓`] `^S`      | `#`    | `3`    | `C`    | `S`    | `c`     | `s`        |
 | **`0x04`** | [`␄`] `^D`      | [`␔`] `^T`      | `$`    | `4`    | `D`    | `T`    | `d`     | `t`        |
@@ -30,6 +32,7 @@ communication (yes, this is where "baud" speed comes from).
 | **`0x0D`** | [`␍`] `^M` `\r` | [`␝`] `^]`      | `-`    | `=`    | `M`    | `]`    | `m`     | `}`        |
 | **`0x0E`** | [`␎`] `^N`      | [`␞`] `^^`      | `.`    | `>`    | `N`    | `^`    | `n`     | `~`        |
 | **`0x0F`** | [`␏`] `^O`      | [`␟`] `^_`      | `/`    | `?`    | `O`    | `_`    | `o`     | [`␡`] `^?` |
+</pre>
 
 Other fun facts about ASCII:
 
