@@ -306,7 +306,7 @@ tags: ${tags.length > 0 ? `[${tags.join()}]` : ''}
 function sanitizeFilename(name) {
   return name
     .toLowerCase()
-    .replace(/([^\w\- ])+/g, '-')
+    .replace(/([^\x20-\x21\x23-\x26\x28-\x29\x2b-\x2e\x30-\x39\x3b-\x7a])+/g, '-')
     .replace(/^-+|-+$/g, '')
 }
 
