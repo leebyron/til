@@ -2,6 +2,7 @@ import * as child_process from 'child_process'
 import * as fs from 'fs/promises'
 import * as path from 'path'
 import * as util from 'util'
+import { parseMarkdown } from './markdown.mjs'
 import {
   TIL_PATH,
   ENTRIES_PATH,
@@ -125,17 +126,14 @@ open all in fzf.`)
   })
 
   // Either coerce the promptname to a filename, or show a fzf.
-  const filename = title
-    ? title
-        .toLowerCase()
-        .replace(/(-[^\x20-\x2e\x30-\x39\x3b-\x7e])+/g, '-')
-        .replace(/^-+|-+$/g, '')
+  let filename = title
+    ? sanitizeFilename(title)
     : (
         await interactive(
           // Get all files in entries
           `git ls-files -z |` +
             // Sorted by git last modification time
-            `xargs -0 -n1 -I{} -- git log -1 --format="%at {}" {} | sort -sr | cut -d " " -f2- | tr '\\n' '\\0' |` +
+            `xargs -0 -n1 -I"{}" -- git log -1 --format="%at {}" "{}" | sort -sr | cut -d " " -f2- | tr '\\n' '\\0' |` +
             // Remove the extension
             `xargs -0 basename -s .md |` +
             // And read with fzf
@@ -143,7 +141,7 @@ open all in fzf.`)
           { cwd: ENTRIES_PATH }
         )
       ).trim()
-  const filepath = path.resolve(ENTRIES_PATH, filename + '.md')
+  let filepath = path.resolve(ENTRIES_PATH, filename + '.md')
   const isExisting = await fileExists(filepath)
 
   let tmpFile
@@ -198,21 +196,57 @@ open all in fzf.`)
     return
   }
 
-  // There are changes, add any media now.
-  if (mediaInfo.length > 0) {
-    await exec(`mkdir -p ${ENTRIES_PATH}`)
-    for (const { src, dest } of mediaInfo) {
-      await fs.cp(src, dest, { force: true })
+  // Ensure the file can parse
+  let ast
+  while (true) {
+    const contents = await fs.readFile(filepath, 'utf8')
+    try {
+      ast = parseMarkdown(contents)
+    } catch (error) {
+      let { line, column, reason } = error
+      if (line == null && reason) {
+        const match = /\((\d+):(\d+)/.exec(reason)
+        if (match) {
+          ;[, line, column] = match
+        }
+      }
+      if (line == null) throw error
+      await edit(`"+cal cursor(${line}, ${column})" "${quot(filepath)}"`)
+      continue
     }
-    // Optimize!
-    await exec(
-      '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
-        mediaInfo.map(info => `"${quot(info.dest)}"`).join(' ')
-    )
+    break
   }
 
   // Update the repo
   await spin(async () => {
+    // Ensure the file is named correctly after editing
+    const correctTitle = ast.frontmatter.value.title
+    if (correctTitle) {
+      const correctFilename = sanitizeFilename(correctTitle)
+      if (filename !== correctFilename) {
+        const correctFilepath = path.resolve(
+          ENTRIES_PATH,
+          correctFilename + '.md'
+        )
+        await fs.rename(filepath, correctFilepath)
+        filename = correctFilename
+        filepath = correctFilepath
+      }
+    }
+
+    // There are changes, add any media now.
+    if (mediaInfo.length > 0) {
+      await exec(`mkdir -p ${ENTRIES_PATH}`)
+      for (const { src, dest } of mediaInfo) {
+        await fs.cp(src, dest, { force: true })
+      }
+      // Optimize!
+      await exec(
+        '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
+          mediaInfo.map(info => `"${quot(info.dest)}"`).join(' ')
+      )
+    }
+
     // format the file first
     const prettier = path.resolve(TIL_PATH, 'node_modules/.bin/prettier')
     await run(`${prettier} -w --loglevel silent "${quot(filepath)}"`)
@@ -268,6 +302,13 @@ tags: ${tags.length > 0 ? `[${tags.join()}]` : ''}
 
 
 `
+
+function sanitizeFilename(name) {
+  return name
+    .toLowerCase()
+    .replace(/([^\w\- ])+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
 
 function shaSum(filepath) {
   return Promise.all([import('fs'), import('crypto'), import('stream')]).then(
