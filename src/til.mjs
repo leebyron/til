@@ -132,7 +132,13 @@ open all in fzf.`)
         .replace(/^-+|-+$/g, '')
     : (
         await interactive(
-          `ls | tr '\\n' '\\0' | xargs -0 basename -s .md |` +
+          // Get all files in entries
+          `git ls-files -z |` +
+            // Sorted by git last modification time
+            `xargs -0 -n1 -I{} -- git log -1 --format="%at {}" {} | sort -sr | cut -d " " -f2- | tr '\\n' '\\0' |` +
+            // Remove the extension
+            `xargs -0 basename -s .md |` +
+            // And read with fzf
             `fzf --no-multi --layout=reverse --margin 7% --border=none --preview "bat --color=always --style=plain --line-range=:500 {}.md" --preview-window=right,70%,border-none`,
           { cwd: ENTRIES_PATH }
         )
