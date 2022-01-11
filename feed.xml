@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us">
+  <id>https://leebyron.com/til/feed.xml</id>
+  <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
+  <updated>2022-01-10T23:09:25.000+00:00</updated>
+  <title>Today I Learned</title>
+  <author>
+    <name>Lee Byron</name>
+    <uri>https://leebyron.com</uri>
+  </author>
+  <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  <entry>
+    <id>https://leebyron.com/til/ascii-table/</id>
+    <published>2022-01-09T23:49:50.000-08:00</published>
+    <updated>2022-01-10T23:09:25.000+00:00</updated>
+    <title>ascii table</title>
+    <content type="text/html" src="https://leebyron.com/til/ascii-table/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>https://leebyron.com/til/changing-a-word-in-vim/</id>
+    <published>2022-01-03T16:34:57.000-08:00</published>
+    <updated>2022-01-07T20:35:39.000+00:00</updated>
+    <title>changing a word in vim</title>
+    <category term="vim"/>
+    <content type="text/html" src="https://leebyron.com/til/changing-a-word-in-vim/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>https://leebyron.com/til/how-to-rearrange-bits/</id>
+    <published>2022-01-04T00:58:22.000-08:00</published>
+    <updated>2022-01-07T01:11:37.000+00:00</updated>
+    <title>how to rearrange bits</title>
+    <content type="text/html" src="https://leebyron.com/til/how-to-rearrange-bits/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>https://leebyron.com/til/markdown-footnotes/</id>
+    <published>2022-01-06T22:58:33.000-08:00</published>
+    <updated>2022-01-07T20:33:29.000+00:00</updated>
+    <title>markdown footnotes</title>
+    <category term="markdown"/>
+    <content type="text/html" src="https://leebyron.com/til/markdown-footnotes/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>
+      https://leebyron.com/til/markdown-link-references/
+    </id>
+    <published>2022-01-05T10:40:18.000-08:00</published>
+    <updated>2022-01-07T21:34:42.000+00:00</updated>
+    <title>markdown link references</title>
+    <category term="markdown"/>
+    <content type="text/html" src="https://leebyron.com/til/markdown-link-references/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>
+      https://leebyron.com/til/setup-a-simple-screencast/
+    </id>
+    <published>2022-01-07T22:35:43.000-08:00</published>
+    <updated>2022-01-10T06:33:08.000+00:00</updated>
+    <title>setup a simple screencast</title>
+    <content type="text/html" src="https://leebyron.com/til/setup-a-simple-screencast/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>https://leebyron.com/til/test/</id>
+    <published>2022-01-01T01:01:01.000-08:00</published>
+    <updated>2022-01-10T06:33:08.000+00:00</updated>
+    <title>test</title>
+    <category term="testing"/>
+    <content type="text/html" src="https://leebyron.com/til/test/"/>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+</feed>
