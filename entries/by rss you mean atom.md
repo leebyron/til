@@ -31,5 +31,9 @@ sigh... open source is hard sometimes.
 Two decades later, please use [Atom] for your syndication feeds. It has been
 hardened by two decades of use and still works great.
 
+In fact, even this site [has one](https://leebyron.com/til/feed.xml)! Consider
+subscribing with [NetNewsWire], an open source feed reader.
+
 [rss]: https://www.rssboard.org/rss-specification
 [atom]: https://datatracker.ietf.org/doc/html/rfc4287
+[netnewswire]: https://netnewswire.com/
