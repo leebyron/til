@@ -1,5 +1,6 @@
 import { relative } from 'path'
-import { h, createContext, useContext } from 'hyperjsx'
+import { render, h, createContext, useContext } from 'hyperjsx'
+import { mdjsx } from './mdjsx.mjs'
 
 const Path = createContext()
 const usePath = () => useContext(Path)
@@ -54,17 +55,23 @@ export function Feed({ entries }) {
       h('link', { rel: 'self', type: 'application/atom+xml', href: 'https://leebyron.com/til/feed.xml' }),
       h('link', { rel: 'alternate', type: 'text/html', href: 'https://leebyron.com/til/' }),
       h('updated', entries.map(e => e.lastModified).sort((a, b) => a - b).pop().toISO()),
-      h('title', 'Today I Learned'),
+      h('title', 'Lee Byron / til'),
+      h('subtitle', 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.'),
       h('author', h('name', 'Lee Byron'), h('uri', 'https://leebyron.com')),
       h('rights', '© 2022 Lee Byron ⸱ licensed under CC BY 4.0'),
-      entries.map(({ frontmatter, lastModified }) =>
+      h('generator', { uri: 'https://github.com/leebyron/til' }, 'til'),
+      entries.map(({ markdown, frontmatter, lastModified }) =>
         h('entry',
           h('id', `https://leebyron.com/til/${frontmatter.permalink}/`),
+          h('link', { rel: 'alternate', type: 'text/html', href: `https://leebyron.com/til/${frontmatter.permalink}/` }),
           h('published', frontmatter.date.toISO()),
           h('updated', lastModified.toISO()),
           h('title', frontmatter.title),
+          h('author', h('name', 'Lee Byron'), h('uri', 'https://leebyron.com')),
           frontmatter.tags.map(tag => h('category', { term: tag })),
-          h('content', { type: 'text/html', src: `https://leebyron.com/til/${frontmatter.permalink}/` }),
+          h('content', { type: 'html', innerHTML: `<![CDATA[${
+            render(mdjsx(markdown, { components }))
+          }]]>` }),
           h('rights', `© ${frontmatter.date.year} Lee Byron ⸱ licensed under CC BY 4.0`)
         )
       )
@@ -248,7 +255,7 @@ const components = {
 function YouTube({ v, aspectRatio }) {
   return h('div', {
     class: 'yt-player',
-    style: { paddingTop: aspectRatio && `${100/aspectRatio}%` }},
+    style: { '--aspectRatio': aspectRatio }},
     h('iframe', {
       src:`https://www.youtube.com/embed/${v}`,
       title:"YouTube video player",

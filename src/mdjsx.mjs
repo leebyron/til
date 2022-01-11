@@ -89,7 +89,7 @@ export function mdjsx(ast, { components, overrides } = {}) {
         id: slug,
         'data-footnote-ref': true,
         'aria-label': 'note',
-        children: number,
+        children: jsx('sup', { children: number }),
       }),
     footnoteDefinition: ({ slug, references, children }) =>
       jsx('li', {

@@ -49,6 +49,9 @@ export async function build() {
     })
   )
 
+  // Sort entries in reverse-chrono order
+  entries.sort((a, b) => b.frontmatter.date - a.frontmatter.date)
+
   // Read the first portion of the readme, up until the first thematic break.
   const readmeFilepath = path.resolve(TIL_PATH, 'README.md')
   const readmeContent = await fs.readFile(readmeFilepath, 'utf8')
@@ -60,17 +63,17 @@ export async function build() {
     readmeMarkdown.children.splice(rule)
   }
 
-  // Sort entries in reverse-chrono order
-  const frontmatters = entries
-    .map(entry => entry.frontmatter)
-    .filter(frontmatter => frontmatter.published !== false)
-  frontmatters.sort((a, b) => b.date - a.date)
+  // Get published entries
+  const publishedEntries = entries.filter(entry => entry.frontmatter.published !== false)
+
+  // Get frontmatters
+  const frontmatters = publishedEntries.map(entry => entry.frontmatter)
 
   // Build feed
   const feedFile = path.resolve(DIST_PATH, 'feed.xml')
   const feedRendered =
     '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    render(jsx(Feed, { entries }), { xml: true })
+    render(jsx(Feed, { entries: publishedEntries }), { xml: true })
   await fs.writeFile(feedFile, feedRendered, 'utf8')
   console.log(path.relative(DIST_PATH, feedFile))
 
