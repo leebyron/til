@@ -198,16 +198,18 @@ th {
 a[data-footnote-ref] {
   font-variant: tabular-nums;
   font-feature-settings: 'tnum';
-  font-size: 65%;
   line-height: 0;
-  vertical-align: super;
 }
 
-a[data-footnote-ref]:before {
+a[data-footnote-ref] sup {
+  font-size: 65%;
+}
+
+a[data-footnote-ref] sup:before {
   content: '[';
 }
 
-a[data-footnote-ref]:after {
+a[data-footnote-ref] sup:after {
   content: ']';
 }
 
@@ -316,7 +318,7 @@ h1:first-child span:before {
 .yt-player {
   margin: 1rem 0;
   position: relative;
-  padding-top: 56.25%;
+  padding-top: calc(100% / var(--aspectRatio, calc(16 / 9)));
   width: 100%;
 }
 
