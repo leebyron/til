@@ -4,7 +4,7 @@ import { render, jsx } from 'hyperjsx'
 import { DateTime } from 'luxon'
 import { parseMarkdown } from './markdown.mjs'
 import { mdjsx } from './mdjsx.mjs'
-import { Index, Page } from './pages.mjs'
+import { Index, Feed, Page } from './pages.mjs'
 import {
   TIL_PATH,
   ENTRIES_PATH,
@@ -66,22 +66,30 @@ export async function build() {
     .filter(frontmatter => frontmatter.published !== false)
   frontmatters.sort((a, b) => b.date - a.date)
 
+  // Build feed
+  const feedFile = path.resolve(DIST_PATH, 'feed.xml')
+  const feedRendered =
+    '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    render(jsx(Feed, { entries }), { xml: true })
+  await fs.writeFile(feedFile, feedRendered, 'utf8')
+  console.log(path.relative(DIST_PATH, feedFile))
+
   // Build index
   const indexFile = path.resolve(DIST_PATH, 'index.html')
-  const rendered = render(
+  const indexRendered = render(
     jsx(Index, {
       frontmatters,
       Content: options => mdjsx(readmeMarkdown, options),
     })
   )
-  await fs.writeFile(indexFile, rendered, 'utf8')
+  await fs.writeFile(indexFile, indexRendered, 'utf8')
   console.log(path.relative(DIST_PATH, indexFile))
 
   // Build all files
   for (const { filename, lastModified, markdown, frontmatter } of entries) {
     const entryDir = path.resolve(DIST_PATH, frontmatter.permalink)
     const entryFile = path.resolve(entryDir, 'index.html')
-    const rendered = render(
+    const entryRendered = render(
       jsx(Page, {
         filename,
         lastModified,
@@ -91,7 +99,7 @@ export async function build() {
       })
     )
     await run(`mkdir -p "${quot(entryDir)}"`)
-    await fs.writeFile(entryFile, rendered, 'utf8')
+    await fs.writeFile(entryFile, entryRendered, 'utf8')
     console.log(path.relative(DIST_PATH, entryFile))
   }
 }

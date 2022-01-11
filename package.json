@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "context-eval": "^0.1.0",
-    "hyperjsx": "^1.0.7",
+    "hyperjsx": "^1.0.12",
     "luxon": "^2.3.0",
     "mdast-util-mdx": "^1.1.0",
     "micromark-extension-mdx": "^1.0.0",
