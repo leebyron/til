@@ -57,6 +57,7 @@ export function Feed({ entries }) {
       h('updated', entries.map(e => e.lastModified).sort((a, b) => a - b).pop().toISO()),
       h('title', 'Lee Byron / til'),
       h('subtitle', 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.'),
+      h('icon', 'https://leebyron.com/til/assets/favicon.png'),
       h('author', h('name', 'Lee Byron'), h('uri', 'https://leebyron.com')),
       h('rights', '© 2022 Lee Byron ⸱ licensed under CC BY 4.0'),
       h('generator', { uri: 'https://github.com/leebyron/til' }, 'til'),
