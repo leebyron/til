@@ -65,7 +65,7 @@ inconsistencies or other problems.
     attributes) because it can markup existing HTML files as opposed to
     requiring separate XML files. In fact, this site uses RDFa to embed
     licensing data in the footer! Check it out in the
-    [structured data linter](http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F)
+    [structured data linter](http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F).
 
 [^og deck]: Facebook made an interesting
 [deck on the design decisions](https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions)
