@@ -218,7 +218,7 @@ a[data-footnote-ref]:target {
 }
 
 section[data-footnotes] {
-  font-size: max(13px, 80%);
+  font-size: max(12px, 80%);
   margin-block-start: 3rem;
 }
 
