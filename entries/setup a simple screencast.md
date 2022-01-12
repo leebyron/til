@@ -5,8 +5,8 @@ date: 2022-01-07T22:35:43-08:00
 tags:
 ---
 
-There's plenty of good software out there for screencasting, but if you're in
-a pinch Quicktime Player does a solid job with a bit of prep.
+There's plenty of good software out there for screencasting, but if you're in a
+pinch Quicktime Player does a solid job with a bit of prep.
 
 1. Get a clear desktop and open all windows you want to screencast, not full
    screened. Also open Quicktime Player.
@@ -37,4 +37,5 @@ a pinch Quicktime Player does a solid job with a bit of prep.
 I did exactly this to record a screencast about this very tool!
 
 <!-- aspectRatio isn't required and 16/9 is the default, but I like it -->
-<YouTube v="iJn9kZw-hw8" aspectRatio={16/9} />
+
+<YouTube v="iJn9kZw-hw8" aspectRatio={16 / 9} />

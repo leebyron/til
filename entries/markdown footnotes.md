@@ -22,16 +22,16 @@ definitions[^needs cr]: in a box followed by a comma.
 
 ```markdown
 [^a note]: Despite footnotes appearing numbered, the identifier can be any text.
-This is helpful if you may add more notes later and don't want to be bothered
-to reorder them.
+This is helpful if you may add more notes later and don't want to be bothered to
+reorder them.
 ```
 
 [^a note]: Despite footnotes appearing numbered, the identifier can be any text.
-This is helpful if you may add more notes later and don't want to be bothered
-to reorder them.
+This is helpful if you may add more notes later and don't want to be bothered to
+reorder them.
 
-[^needs cr]: Unlike a link reference definition, a footnote definition needs
-an empty line immediately after it, otherwise content from multiple lines is
-joined into a single paragraph.
+[^needs cr]: Unlike a link reference definition, a footnote definition needs an
+empty line immediately after it, otherwise content from multiple lines is joined
+into a single paragraph.
 
 [markdown link references]: ../markdown-link-references

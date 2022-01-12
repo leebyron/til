@@ -14,9 +14,9 @@ cursor (read: `c`hange `i`n `w`ord).
 
 This, combined with other movements can lead to very quick changes. One I've
 found quite useful is `ci"` which changes the contents of a quoted string, and
-`ca"` (`c`hange `a`ll `"`quoted) to include the quote marks themselves. Or
-when working in prose, `cis` will change the current sentence and `cip` the
-current paragraph.
+`ca"` (`c`hange `a`ll `"`quoted) to include the quote marks themselves. Or when
+working in prose, `cis` will change the current sentence and `cip` the current
+paragraph.
 
 Sometimes a change command is hard to think about first, or the area you want to
 change is subtly different from what the change command would do. Replace `c`

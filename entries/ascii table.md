@@ -7,11 +7,10 @@ tags:
 
 The [ASCII] 7-bit character encoding is ubiquitous[^actually utf8] and
 foundational to how computers talk to each other. It has an absolutely
-fascinating history that dates surprisingly far back. The ASCII standard
-started in 1963, and was iterated until 1986. ASCII was based on ITA2, a
-telegraph standard from 1924, which itself derived from [Baudot code] from
-1870—literally the beginning of digital communication (the namesake for "baud"
-speed).
+fascinating history that dates surprisingly far back. The ASCII standard started
+in 1963, and was iterated until 1986. ASCII was based on ITA2, a telegraph
+standard from 1924, which itself derived from [Baudot code] from 1870—literally
+the beginning of digital communication (the namesake for "baud" speed).
 
 <style innerHTML=".ascii-table td:first-child { background: #00000008; }" />
 <pre class="ascii-table">
@@ -44,8 +43,8 @@ speed).
   This is a _beautiful_ hack and a major reason for the success of UTF-8.
 - The number digits are carefully placed so [BCD] can be converted to ASCII and
   vice-versa in one instruction: `ascii = bcd XOR 0x30`.
-- Many keys you still reach via "shift" on a modern keyboard are either `0x10` or
-  `0x20` above their standard key, a holdover from mechanical typewriters.
+- Many keys you still reach via "shift" on a modern keyboard are either `0x10`
+  or `0x20` above their standard key, a holdover from mechanical typewriters.
 - Lowercase letters are exactly `0x20` above uppercase.
 - Your "control" key has a `⌃` on it because its original purpose was to remap
   typical keys to control keys by xor'ing the highest bit `0x40` (`XOR` also
@@ -62,7 +61,9 @@ speed).
 [`␁`]: https://en.wikipedia.org/wiki/Start_of_Heading 'Start of Heading'
 [`␂`]: https://en.wikipedia.org/wiki/Start_of_Text 'Start of Text'
 [`␃`]: https://en.wikipedia.org/wiki/End-of-Text_character 'End of Text'
-[`␄`]: https://en.wikipedia.org/wiki/End-of-Transmission_character 'End of Transmission'
+[`␄`]:
+  https://en.wikipedia.org/wiki/End-of-Transmission_character
+  'End of Transmission'
 [`␅`]: https://en.wikipedia.org/wiki/Enquiry_character 'Enquiry'
 [`␆`]: https://en.wikipedia.org/wiki/Acknowledge_character 'Acknowledgement'
 [`␇`]: https://en.wikipedia.org/wiki/Bell_character 'Bell'
@@ -75,13 +76,21 @@ speed).
 [`␎`]: https://en.wikipedia.org/wiki/Shift_Out 'Shift Out'
 [`␏`]: https://en.wikipedia.org/wiki/Shift_In 'Shift In'
 [`␐`]: https://en.wikipedia.org/wiki/Data_Link_Escape 'Data Link Escape'
-[`␑`]: https://en.wikipedia.org/wiki/Device_Control_1 'Device Control 1 / XON / Resume'
+[`␑`]:
+  https://en.wikipedia.org/wiki/Device_Control_1
+  'Device Control 1 / XON / Resume'
 [`␒`]: https://en.wikipedia.org/wiki/Device_Control_2 'Device Control 2'
-[`␓`]: https://en.wikipedia.org/wiki/Device_Control_3 'Device Control 3 / XOFF / Pause'
+[`␓`]:
+  https://en.wikipedia.org/wiki/Device_Control_3
+  'Device Control 3 / XOFF / Pause'
 [`␔`]: https://en.wikipedia.org/wiki/Device_Control_4 'Device Control 4'
-[`␕`]: https://en.wikipedia.org/wiki/Negative-acknowledge_character 'Negative Acknowledgement'
+[`␕`]:
+  https://en.wikipedia.org/wiki/Negative-acknowledge_character
+  'Negative Acknowledgement'
 [`␖`]: https://en.wikipedia.org/wiki/Synchronous_Idle 'Synchronous Idle'
-[`␗`]: https://en.wikipedia.org/wiki/End-of-Transmission-Block_character 'End of Transmission Block'
+[`␗`]:
+  https://en.wikipedia.org/wiki/End-of-Transmission-Block_character
+  'End of Transmission Block'
 [`␘`]: https://en.wikipedia.org/wiki/Cancel_character 'Cancel'
 [`␙`]: https://en.wikipedia.org/wiki/End_of_Medium 'End of Medium'
 [`␚`]: https://en.wikipedia.org/wiki/Substitute_character 'Substitute'

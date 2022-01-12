@@ -108,9 +108,9 @@ export function mdjsx(ast, { components, overrides } = {}) {
       }),
     mdxJsxTextElement: mdxToJsx,
     mdxJsxFlowElement: mdxToJsx,
-    mdxTextExpression: ({ children }) => run(children),
+    mdxTextExpression: ({ children }) => run(unescapeMarkdown(children)),
     mdxFlowExpression: ({ children }) => {
-      const result = run(children)
+      const result = run(unescapeMarkdown(children))
       if (result == null) return null
       return result == null
         ? null
@@ -177,6 +177,10 @@ export function mdjsx(ast, { components, overrides } = {}) {
     if (!_runContext) _runContext = new Context({ jsx })
     return _runContext.evaluate(expression)
   }
+}
+
+function unescapeMarkdown(expression) {
+  return expression.replace(/\\([*_])/g, '$1')
 }
 
 const highlighter = await shiki.getHighlighter({

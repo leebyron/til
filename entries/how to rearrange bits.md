@@ -12,7 +12,7 @@ tool which writes this code for you!
 
 http://programming.sirrida.de/calcperm.php
 
-I just used this to map sprite binary data to Unicode [braille
-patterns](https://www.fileformat.info/info/unicode/block/braille_patterns/list.htm).
+I just used this to map sprite binary data to Unicode
+[braille patterns](https://www.fileformat.info/info/unicode/block/braille_patterns/list.htm).
 The 8 dots in a braille pattern can map to a byte, but perhaps not in the order
 you expect.

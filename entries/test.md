@@ -54,7 +54,9 @@ http://this.is/an/autolink
 
 ![image]
 
-[image]: https://uploads0.wikiart.org/images/sol-lewitt/lines-in-all-directions-1993.jpg 'Lines in all directions'
+[image]:
+  https://uploads0.wikiart.org/images/sol-lewitt/lines-in-all-directions-1993.jpg
+  'Lines in all directions'
 [links]: https://leebyron.com 'go home'
 
 ---
@@ -86,7 +88,9 @@ And here is a table with various alignments
 
 And here is a block of HTML
 
-<div style="text-align: center;"><span style="color: red;">Oh hi</span></div>
+<div style="text-align: center;">
+  <span style="color: red;">Oh hi</span>
+</div>
 
 <!-- And here is a comment -- it should not appear in the output -->
 
@@ -98,8 +102,7 @@ multiline
 
 ---->
 
-This paragraph is going
-to have a<!-- comment that
+This paragraph is going to have a<!-- comment that
   is multiple lines-->ok?
 
 ---
@@ -110,22 +113,29 @@ Here is an MDX component:
 
 And one with an expression and fragment:
 
-<><div style={{ color: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})` }} /></>
+<>
+  <div
+    style={{
+      color: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+        Math.random() * 255
+      })`
+    }}
+  />
+</>
 
-And here is an inline expression {3 + 4}!
+And here is an inline expression {3 \* 4}!
 
 And a couple flow expressions:
 
-{10 * 42}
+{10 \* 42}
 
-{'abc'.length}
+{'ab \* c'.length}
 
-{
-function MyComponent() {
-  return jsx('div', { style: {background: 'pink'}, children: 'wow' })
-}
-}
+{ function MyComponent() { return jsx('div', { style: {background: 'pink'},
+children: 'wow' }) } }
 
 {jsx(MyComponent, {})}
 
 <MyComponent />
+
+{"!\"#$%&'()\*+,-./:;<=>?@[\\]^\_`{|}~"}
