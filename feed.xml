@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T21:33:03.000+00:00</updated>
+  <updated>2022-01-12T21:49:45.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -21,7 +21,7 @@
     </id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/meta-tags-and-the-semantic-web/"/>
     <published>2022-01-11T22:53:30.000-08:00</published>
-    <updated>2022-01-12T21:33:03.000+00:00</updated>
+    <updated>2022-01-12T21:49:45.000+00:00</updated>
     <title>meta tags &amp; the semantic web</title>
     <author>
       <name>Lee Byron</name>
@@ -61,14 +61,16 @@ along the way:
   <li>
     <p>
       <a href="https://www.w3.org/RDF/" target="_blank">RDF</a> (Resource Description Language) and <a href="https://en.wikipedia.org/wiki/Web_Ontology_Language" target="_blank">OWL</a> (Web Ontology Language) were
-early standards that live on. They don't get a lot of practical use.
+early standards that live on. They don't get a lot of direct practical
+use<a href="#fn-rdfa" id="fn-rdfa.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. There is also <a href="https://microformats.io/" target="_blank">microformats</a> which still has some use, but is no
+longer preferred.
     </p>
   </li>
   <li>
     <p>
       <a href="https://ogp.me/" target="_blank">Open Graph</a> is a standard proposed by Facebook which addressed the mess that
-was the web at the time<a href="#fn-og-deck" id="fn-og-deck.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It has a surprisingly broad schema and some
-quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>.
+was the web at the time<a href="#fn-og-deck" id="fn-og-deck.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. It has a surprisingly broad schema and some
+quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>.
     </p>
   </li>
   <li>
@@ -121,8 +123,25 @@ Caveat caelator.
     </ul>
   </li>
 </ul>
+<p>
+  One last resource that I found very helpful was the <a href="http://linter.structured-data.org/" target="_blank">structured data linter</a>.
+This tool understands just about all of the above. It's not all that helpful for
+understanding how any one service will interpret your page, but is very useful
+to ensure the meta data you expect is being found, and that there are no
+inconsistencies or other problems.
+</p>
 <section data-footnotes aria-label="footnotes">
   <ol>
+    <li id="fn-rdfa">
+      <p>
+        RDF actually does get a fair amount of practical use via <a href="https://www.w3.org/TR/rdfa-primer/" target="_blank">RDFa</a> (RDF for
+attributes) because it can markup existing HTML files as opposed to
+requiring separate XML files. In fact, this site uses RDFa to embed
+licensing data in the footer! Check it out in the
+<a href="http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F" target="_blank">structured data linter</a>
+      </p>
+      <a href="#fn-rdfa.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
     <li id="fn-og-deck">
       <p>
         Facebook made an interesting
@@ -134,9 +153,9 @@ of Open Graph that details these problems. It's an interesting read.
     <li id="fn-og-non-standard">
       <p>
         Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses a
-<code>property=</code> attribute which is non standard. It ideally should have used
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a> (which Twitter cards does). Someone should have caught that in code
-review.
+<code>property=</code> attribute which was borrowed from RDF but is non standard for a
+<code>&lt;meta&gt;</code> tag. It ideally should have used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a> (which Twitter cards does).
+Someone should have caught that in code review.
       </p>
       <a href="#fn-og-non-standard.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
