@@ -1,6 +1,7 @@
 import { relative } from 'path'
 import { render, h, createContext, useContext } from 'hyperjsx'
 import { mdjsx } from './mdjsx.mjs'
+import { textContent, firstParagraph } from './markdown.mjs'
 
 const Path = createContext()
 const usePath = () => useContext(Path)
@@ -11,8 +12,15 @@ export function Index({ frontmatters, Content }) {
     h(Path, { value: '/' },
       h(Document,
         h('title', 'Today I Learned / Lee Byron'),
+        ...OpenGraph({
+          'og:url': 'https://leebyron.com/til/',
+          'og:title': 'Lee Byron / til',
+          'og:description': 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.',
+          'twitter:card': 'summary',
+          'twitter:title': 'Lee Byron / til: A bunch of brief blurbs on miscellaneous matter.',
+          'twitter:creator': '@leeb',
+        }),
         JSONLD({
-          '@context': 'https://schema.org/',
           '@type': 'Collection',
           name: 'Today I Learned',
           author: {
@@ -80,15 +88,26 @@ export function Feed({ entries }) {
   )
 }
 
-export function Page({ filename, lastModified, frontmatter, Content }) {
+export function Page({ filename, lastModified, frontmatter, markdown, Content }) {
   return (
     h(Path, { value: `/${frontmatter.permalink}/` },
       h(Document,
-        h('title', frontmatter.title + ' / til / Lee Byron'),
         frontmatter.published === false &&
-          h('meta', { name: 'robots', content: 'noindex' }),
+-          h('meta', { name: 'robots', content: 'noindex' }),
+        h('title', `til / ${frontmatter.title} — Lee Byron`),
+        ...OpenGraph({
+          'og:url': `https://leebyron.com/til/${frontmatter.permalink}/`,
+          'og:title': `til / ${frontmatter.title} — Lee Byron`,
+          'og:description': textContent(firstParagraph(markdown)).slice(0, 200),
+          'og:type': 'article',
+          'article:author:first_name': 'Lee',
+          'article:author:last_name': 'Byron',
+          'article:published_time': frontmatter.date.toISO(),
+          'article:modified_time': lastModified.toISO(),
+          'twitter:card': 'summary',
+          'twitter:creator': '@leeb',
+        }),
         JSONLD({
-          '@context': 'https://schema.org/',
           '@type': 'LearningResource',
           name: frontmatter.title,
           author: {
@@ -155,7 +174,15 @@ function isHeadElement(element) {
   return false
 }
 
+function OpenGraph(data) {
+  return Object.entries(data) .map(([name, content]) => content && h('meta', {
+    [name.startsWith('twitter:') ? 'name' : 'property']: name,
+    content
+  }))
+}
+
 function JSONLD(data) {
+  data = { '@context': 'https://schema.org/', ...data }
   return h('script', {
     type: 'application/ld+json',
     innerHTML: `\n${JSON.stringify(data, null, 2)}\n`
