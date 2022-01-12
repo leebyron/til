@@ -1,5 +1,5 @@
 ---
-title: meta tags and the semantic web
+title: meta tags & the semantic web
 permalink: meta-tags-and-the-semantic-web
 date: 2022-01-11T22:53:30-08:00
 tags: web
@@ -57,10 +57,9 @@ along the way:
 of Open Graph that details these problems. It's an interesting read.
 
 [^og non standard]: Open Graph uses `<meta>` tags, but annoyingly uses a
-`property="og:type"` attribute which is non standard. It ideally should have
-used
-[`name=`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name)
-(which Twitter cards does). Someone should have caught that in code review.
+`property=` attribute which is non standard. It ideally should have used
+[`name=`] (which Twitter cards does). Someone should have caught that in code
+review.
 
 [semantic web]:
   https://en.wikipedia.org/wiki/Semantic_Web
@@ -74,3 +73,5 @@ used
 [google]:
   https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
 [json-ld]: https://json-ld.org/
+[`name=`]:
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name
