@@ -33,7 +33,9 @@ along the way:
   longer preferred.
 - [Open Graph] is a standard proposed by Facebook which addressed the mess that
   was the web at the time[^og deck]. It has a surprisingly broad schema and some
-  quirks[^og non standard].
+  quirks[^og non standard]. Since then, [JSON-LD] has become the preferred tool.
+  JSON is way easier for representing data, and there's a huge set of
+  [available schema](https://schema.org/docs/schemas.html).
 - [Facebook] (and other Meta apps, like Messenger) use Open Graph with some
   minor Facebook specific additions.
   - Use the [share debugger](https://developers.facebook.com/tools/debug/) to
@@ -46,8 +48,6 @@ along the way:
     what a card will look like. This shows for desktop, I'm not aware of a
     mobile preview.
 - [Google] will also use Open Graph if it finds it, but prefers [JSON-LD].
-  JSON-LD is pretty nice to work with and there's a huge set of
-  [available schema](https://schema.org/docs/schemas.html).
   - There are
     [multiple validators](https://developers.google.com/search/docs/advanced/structured-data)
     for both generic JSON-LD and Google specific results. Despite being the most
