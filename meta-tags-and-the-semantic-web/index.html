@@ -12,7 +12,7 @@ Facebook, Twitter, Reddit, and Mastodon. When">
     <meta property="article:author:first_name" content="Lee">
     <meta property="article:author:last_name" content="Byron">
     <meta property="article:published_time" content="2022-01-11T22:53:30.000-08:00">
-    <meta property="article:modified_time" content="2022-01-12T07:51:20.000+00:00">
+    <meta property="article:modified_time" content="2022-01-12T08:47:25.000+00:00">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@leeb">
     <script type="application/ld+json">
@@ -27,7 +27,7 @@ Facebook, Twitter, Reddit, and Mastodon. When">
   },
   "url": "https://leebyron.com/til/meta-tags-and-the-semantic-web/",
   "datePublished": "2022-01-11T22:53:30.000-08:00",
-  "dateModified": "2022-01-12T07:51:20.000+00:00",
+  "dateModified": "2022-01-12T08:47:25.000+00:00",
   "keywords": "web",
   "isPartOf": "https://leebyron.com/til/",
   "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -62,23 +62,26 @@ platforms, they use available metadata to give as rich a preview as possible.
       </p>
       <p>
         This is the reality of the branch of the multiverse we find ourselves in tracing
-back to a quote from Sir Tim Berners Lee from <a href="https://youtu.be/vG8WpLr6y_U?" target="_blank">1999</a>:
+back to a quote from Sir Tim Berners Lee from
+<a href="https://youtu.be/vG8WpLr6y_U?" target="_blank">1999</a>:
       </p>
       <blockquote>
         <p>
-          I have a dream for the Web [in which computers] become capable of analyzing all
-the data on the Web – the content, links, and transactions between people and
-computers. A &quot;Semantic Web&quot;, which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines.
+          I have a dream for the Web [in which computers] become capable of analyzing
+all the data on the Web – the content, links, and transactions between people
+and computers. A &quot;Semantic Web&quot;, which makes this possible, has yet to emerge,
+but when it does, the day-to-day mechanisms of trade, bureaucracy and our
+daily lives will be handled by machines talking to machines.
         </p>
       </blockquote>
       <p>
         Some variation of this is is right...
       </p>
       <p>
-        However, for us Webmasters, it's tough to keep track of the peculiarities of
-how each platform would like to consume semantic information. Having just added
-some meta data to this very page, I'll drop some links and tl;dr of what
-I learned along the way:
+        However, for us Webmasters, it's tough to keep track of the peculiarities of how
+each platform would like to consume semantic information. Having just added some
+meta data to this very page, I'll drop some links and tl;dr of what I learned
+along the way:
       </p>
       <ul>
         <li>
@@ -96,15 +99,15 @@ quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-re
         </li>
         <li>
           <p>
-            <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup" target="_blank">Facebook</a> (and other Meta apps, like Messenger) use Open Graph with some minor Facebook specific additions.
+            <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup" target="_blank">Facebook</a> (and other Meta apps, like Messenger) use Open Graph with some
+minor Facebook specific additions.
           </p>
           <ul>
             <li>
               <p>
                 Use the <a href="https://developers.facebook.com/tools/debug/" target="_blank">share debugger</a> to
-see what information was parsed and any warnings. It shows a share
-preview based on an older version of their desktop site and can't be relied
-on.
+see what information was parsed and any warnings. It shows a share preview
+based on an older version of their desktop site and can't be relied on.
               </p>
             </li>
           </ul>
@@ -119,8 +122,8 @@ Facebook.
             <li>
               <p>
                 Use their <a href="https://cards-dev.twitter.com/validator" target="_blank">card validator</a> to see
-what a card will look like. This shows for desktop, I'm not aware of
-a mobile preview.
+what a card will look like. This shows for desktop, I'm not aware of a
+mobile preview.
               </p>
             </li>
           </ul>
@@ -128,12 +131,14 @@ a mobile preview.
         <li>
           <p>
             <a href="https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data" target="_blank">Google</a> will also use Open Graph if it finds it, but prefers <a href="https://json-ld.org/" target="_blank">JSON-LD</a>.
-JSON-LD is pretty nice to work with and there's a huge set of <a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
+JSON-LD is pretty nice to work with and there's a huge set of
+<a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
           </p>
           <ul>
             <li>
               <p>
-                There are <a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a>
+                There are
+<a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a>
 for both generic JSON-LD and Google specific results. Despite being the most
 mature of these tools, I've found it least helpful in giving error messages.
 Caveat caelator.
@@ -146,16 +151,18 @@ Caveat caelator.
         <ol>
           <li id="fn-og-deck">
             <p>
-              Facebook made an interesting <a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a>
+              Facebook made an interesting
+<a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a>
 of Open Graph that details these problems. It's an interesting read.
             </p>
             <a href="#fn-og-deck.ref" data-footnote-backref aria-label="return">↩</a>
           </li>
           <li id="fn-og-non-standard">
             <p>
-              Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses
-a <code>property=&quot;og:type&quot;</code> attribute which is non standard. It ideally should have
-used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a>
+              Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses a
+<code>property=&quot;og:type&quot;</code> attribute which is non standard. It ideally should have
+used
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a>
 (which Twitter cards does). Someone should have caught that in code review.
             </p>
             <a href="#fn-og-non-standard.ref" data-footnote-backref aria-label="return">↩</a>

@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T07:51:20.000+00:00</updated>
+  <updated>2022-01-12T08:47:25.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -21,7 +21,7 @@
     </id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/meta-tags-and-the-semantic-web/"/>
     <published>2022-01-11T22:53:30.000-08:00</published>
-    <updated>2022-01-12T07:51:20.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>meta tags and the semantic web</title>
     <author>
       <name>Lee Byron</name>
@@ -36,23 +36,26 @@ platforms, they use available metadata to give as rich a preview as possible.
 </p>
 <p>
   This is the reality of the branch of the multiverse we find ourselves in tracing
-back to a quote from Sir Tim Berners Lee from <a href="https://youtu.be/vG8WpLr6y_U?" target="_blank">1999</a>:
+back to a quote from Sir Tim Berners Lee from
+<a href="https://youtu.be/vG8WpLr6y_U?" target="_blank">1999</a>:
 </p>
 <blockquote>
   <p>
-    I have a dream for the Web [in which computers] become capable of analyzing all
-the data on the Web – the content, links, and transactions between people and
-computers. A &quot;Semantic Web&quot;, which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines.
+    I have a dream for the Web [in which computers] become capable of analyzing
+all the data on the Web – the content, links, and transactions between people
+and computers. A &quot;Semantic Web&quot;, which makes this possible, has yet to emerge,
+but when it does, the day-to-day mechanisms of trade, bureaucracy and our
+daily lives will be handled by machines talking to machines.
   </p>
 </blockquote>
 <p>
   Some variation of this is is right...
 </p>
 <p>
-  However, for us Webmasters, it's tough to keep track of the peculiarities of
-how each platform would like to consume semantic information. Having just added
-some meta data to this very page, I'll drop some links and tl;dr of what
-I learned along the way:
+  However, for us Webmasters, it's tough to keep track of the peculiarities of how
+each platform would like to consume semantic information. Having just added some
+meta data to this very page, I'll drop some links and tl;dr of what I learned
+along the way:
 </p>
 <ul>
   <li>
@@ -70,15 +73,15 @@ quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-re
   </li>
   <li>
     <p>
-      <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup" target="_blank">Facebook</a> (and other Meta apps, like Messenger) use Open Graph with some minor Facebook specific additions.
+      <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup" target="_blank">Facebook</a> (and other Meta apps, like Messenger) use Open Graph with some
+minor Facebook specific additions.
     </p>
     <ul>
       <li>
         <p>
           Use the <a href="https://developers.facebook.com/tools/debug/" target="_blank">share debugger</a> to
-see what information was parsed and any warnings. It shows a share
-preview based on an older version of their desktop site and can't be relied
-on.
+see what information was parsed and any warnings. It shows a share preview
+based on an older version of their desktop site and can't be relied on.
         </p>
       </li>
     </ul>
@@ -93,8 +96,8 @@ Facebook.
       <li>
         <p>
           Use their <a href="https://cards-dev.twitter.com/validator" target="_blank">card validator</a> to see
-what a card will look like. This shows for desktop, I'm not aware of
-a mobile preview.
+what a card will look like. This shows for desktop, I'm not aware of a
+mobile preview.
         </p>
       </li>
     </ul>
@@ -102,12 +105,14 @@ a mobile preview.
   <li>
     <p>
       <a href="https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data" target="_blank">Google</a> will also use Open Graph if it finds it, but prefers <a href="https://json-ld.org/" target="_blank">JSON-LD</a>.
-JSON-LD is pretty nice to work with and there's a huge set of <a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
+JSON-LD is pretty nice to work with and there's a huge set of
+<a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
     </p>
     <ul>
       <li>
         <p>
-          There are <a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a>
+          There are
+<a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a>
 for both generic JSON-LD and Google specific results. Despite being the most
 mature of these tools, I've found it least helpful in giving error messages.
 Caveat caelator.
@@ -120,16 +125,18 @@ Caveat caelator.
   <ol>
     <li id="fn-og-deck">
       <p>
-        Facebook made an interesting <a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a>
+        Facebook made an interesting
+<a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a>
 of Open Graph that details these problems. It's an interesting read.
       </p>
       <a href="#fn-og-deck.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn-og-non-standard">
       <p>
-        Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses
-a <code>property=&quot;og:type&quot;</code> attribute which is non standard. It ideally should have
-used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a>
+        Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses a
+<code>property=&quot;og:type&quot;</code> attribute which is non standard. It ideally should have
+used
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a>
 (which Twitter cards does). Someone should have caught that in code review.
       </p>
       <a href="#fn-og-non-standard.ref" data-footnote-backref aria-label="return">↩</a>
@@ -142,7 +149,7 @@ used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#att
     <id>https://leebyron.com/til/by-rss-you-mean-atom/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/by-rss-you-mean-atom/"/>
     <published>2022-01-10T21:50:17.000-08:00</published>
-    <updated>2022-01-12T06:27:57.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>by RSS you mean Atom</title>
     <author>
       <name>Lee Byron</name>
@@ -153,27 +160,28 @@ used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#att
   I set about adding an &quot;RSS feed&quot; for this til site, only to find that despite
 reader apps calling themselves &quot;RSS readers&quot;, that most &quot;RSS&quot; feeds out there
 are not actually written in <a href="https://www.rssboard.org/rss-specification" target="_blank">RSS</a>, they're mostly written in <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a>. There are
-actually a small handful of feed document formats out there, and RSS is sort
-of the &quot;Kleenex&quot; of the feed marketplace: all feeds find themselves called
-&quot;RSS&quot; when they may not be.
+actually a small handful of feed document formats out there, and RSS is sort of
+the &quot;Kleenex&quot; of the feed marketplace: all feeds find themselves called &quot;RSS&quot;
+when they may not be.
 </p>
 <p>
-  RSS was created in 1999 (the <a href="https://www.youtube.com/watch?v=vG8WpLr6y_U" target="_blank">best era of the web</a>
-if you ask me) by Netscape as a simplification of RDF. It was ...tossed over
-the wall. This was right about the time of the Netscape &amp; AOL merger, and RSS
-disappeared from netscape.com. Meanwhile RSS was <em>very popular</em> in the early
-days of the internet and adopted by many media companies figuring out this
-whole world wide web thing. In 2002 the version of RSS we mostly know was
-created by an independent group (retitled from &quot;Rich Site Summary&quot; to &quot;Really
-Simple Syndication&quot;) but under dubious legal circumstances and under the shadow
-of the AOL/Netflix conglomerate which technically owned the copyright.
+  RSS was created in 1999 (the
+<a href="https://www.youtube.com/watch?v=vG8WpLr6y_U" target="_blank">best era of the web</a> if you ask
+me) by Netscape as a simplification of RDF. It was ...tossed over the wall. This
+was right about the time of the Netscape &amp; AOL merger, and RSS disappeared from
+netscape.com. Meanwhile RSS was <em>very popular</em> in the early days of the internet
+and adopted by many media companies figuring out this whole world wide web
+thing. In 2002 the version of RSS we mostly know was created by an independent
+group (retitled from &quot;Rich Site Summary&quot; to &quot;Really Simple Syndication&quot;) but
+under dubious legal circumstances and under the shadow of the AOL/Netflix
+conglomerate which technically owned the copyright.
 </p>
 <p>
   Emerge <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a>, an open standard introduced in 2003 meant to replace RSS. It's
 vendor neutral and open, solves some of RSS's quirks, extensible,
-internationalized, championed by Google and other cool young tech companies,
-and even blessed by the IETF as RFC4287. And it still gets called &quot;RSS&quot;,
-sigh... open source is hard sometimes.
+internationalized, championed by Google and other cool young tech companies, and
+even blessed by the IETF as RFC4287. And it still gets called &quot;RSS&quot;, sigh...
+open source is hard sometimes.
 </p>
 <p>
   Two decades later, please use <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a> for your syndication feeds. It has been
@@ -189,7 +197,7 @@ subscribing with <a href="https://netnewswire.com/" target="_blank">NetNewsWire<
     <id>https://leebyron.com/til/ascii-table/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/ascii-table/"/>
     <published>2022-01-09T23:49:50.000-08:00</published>
-    <updated>2022-01-10T23:09:25.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>ascii table</title>
     <author>
       <name>Lee Byron</name>
@@ -198,11 +206,10 @@ subscribing with <a href="https://netnewswire.com/" target="_blank">NetNewsWire<
     <content type="html"><![CDATA[<p>
   The <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">ASCII</a> 7-bit character encoding is ubiquitous<a href="#fn-actually-utf8" id="fn-actually-utf8.ref" data-footnote-ref aria-label="note"><sup>1</sup></a> and
 foundational to how computers talk to each other. It has an absolutely
-fascinating history that dates surprisingly far back. The ASCII standard
-started in 1963, and was iterated until 1986. ASCII was based on ITA2, a
-telegraph standard from 1924, which itself derived from <a href="https://en.wikipedia.org/wiki/Baudot_code" target="_blank">Baudot code</a> from
-1870—literally the beginning of digital communication (the namesake for &quot;baud&quot;
-speed).
+fascinating history that dates surprisingly far back. The ASCII standard started
+in 1963, and was iterated until 1986. ASCII was based on ITA2, a telegraph
+standard from 1924, which itself derived from <a href="https://en.wikipedia.org/wiki/Baudot_code" target="_blank">Baudot code</a> from 1870—literally
+the beginning of digital communication (the namesake for &quot;baud&quot; speed).
 </p>
 <style>.ascii-table td:first-child { background: #00000008; }</style>
 <pre class="ascii-table"><div class="table-wrapper"><table><thead><tr><th></th><th><code>0x00</code></th><th><code>0x10</code></th><th><code>0x20</code></th><th><code>0x30</code></th><th><code>0x40</code></th><th><code>0x50</code></th><th><code>0x60</code></th><th><code>0x70</code></th></tr></thead><tbody><tr><td><strong><code>0x00</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Null_character" title="Null" target="_blank"><code>␀</code></a> <code>⌃@</code> <code>\0</code></td><td><a href="https://en.wikipedia.org/wiki/Data_Link_Escape" title="Data Link Escape" target="_blank"><code>␐</code></a> <code>⌃P</code></td><td>Space</td><td><code>0</code></td><td><code>@</code></td><td><code>P</code></td><td><code>`</code></td><td><code>p</code></td></tr><tr><td><strong><code>0x01</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Start_of_Heading" title="Start of Heading" target="_blank"><code>␁</code></a> <code>⌃A</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_1" title="Device Control 1 / XON / Resume" target="_blank"><code>␑</code></a> <code>⌃Q</code></td><td><code>!</code></td><td><code>1</code></td><td><code>A</code></td><td><code>Q</code></td><td><code>a</code></td><td><code>q</code></td></tr><tr><td><strong><code>0x02</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Start_of_Text" title="Start of Text" target="_blank"><code>␂</code></a> <code>⌃B</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_2" title="Device Control 2" target="_blank"><code>␒</code></a> <code>⌃R</code></td><td><code>&quot;</code></td><td><code>2</code></td><td><code>B</code></td><td><code>R</code></td><td><code>b</code></td><td><code>r</code></td></tr><tr><td><strong><code>0x03</code></strong></td><td><a href="https://en.wikipedia.org/wiki/End-of-Text_character" title="End of Text" target="_blank"><code>␃</code></a> <code>⌃C</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_3" title="Device Control 3 / XOFF / Pause" target="_blank"><code>␓</code></a> <code>⌃S</code></td><td><code>#</code></td><td><code>3</code></td><td><code>C</code></td><td><code>S</code></td><td><code>c</code></td><td><code>s</code></td></tr><tr><td><strong><code>0x04</code></strong></td><td><a href="https://en.wikipedia.org/wiki/End-of-Transmission_character" title="End of Transmission" target="_blank"><code>␄</code></a> <code>⌃D</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_4" title="Device Control 4" target="_blank"><code>␔</code></a> <code>⌃T</code></td><td><code>$</code></td><td><code>4</code></td><td><code>D</code></td><td><code>T</code></td><td><code>d</code></td><td><code>t</code></td></tr><tr><td><strong><code>0x05</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Enquiry_character" title="Enquiry" target="_blank"><code>␅</code></a> <code>⌃E</code></td><td><a href="https://en.wikipedia.org/wiki/Negative-acknowledge_character" title="Negative Acknowledgement" target="_blank"><code>␕</code></a> <code>⌃U</code></td><td><code>%</code></td><td><code>5</code></td><td><code>E</code></td><td><code>U</code></td><td><code>e</code></td><td><code>u</code></td></tr><tr><td><strong><code>0x06</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Acknowledge_character" title="Acknowledgement" target="_blank"><code>␆</code></a> <code>⌃F</code></td><td><a href="https://en.wikipedia.org/wiki/Synchronous_Idle" title="Synchronous Idle" target="_blank"><code>␖</code></a> <code>⌃V</code></td><td><code>&amp;</code></td><td><code>6</code></td><td><code>F</code></td><td><code>V</code></td><td><code>f</code></td><td><code>v</code></td></tr><tr><td><strong><code>0x07</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Bell_character" title="Bell" target="_blank"><code>␇</code></a> <code>⌃G</code> <code>\a</code></td><td><a href="https://en.wikipedia.org/wiki/End-of-Transmission-Block_character" title="End of Transmission Block" target="_blank"><code>␗</code></a> <code>⌃W</code></td><td><code>'</code></td><td><code>7</code></td><td><code>G</code></td><td><code>W</code></td><td><code>g</code></td><td><code>w</code></td></tr><tr><td><strong><code>0x08</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Backspace" title="Backspace" target="_blank"><code>␈</code></a> <code>⌃H</code> <code>\b</code></td><td><a href="https://en.wikipedia.org/wiki/Cancel_character" title="Cancel" target="_blank"><code>␘</code></a> <code>⌃X</code></td><td><code>(</code></td><td><code>8</code></td><td><code>H</code></td><td><code>X</code></td><td><code>h</code></td><td><code>x</code></td></tr><tr><td><strong><code>0x09</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Horizontal_Tab" title="Horizontal Tab" target="_blank"><code>␉</code></a> <code>⌃I</code> <code>\t</code></td><td><a href="https://en.wikipedia.org/wiki/End_of_Medium" title="End of Medium" target="_blank"><code>␙</code></a> <code>⌃Y</code></td><td><code>)</code></td><td><code>9</code></td><td><code>I</code></td><td><code>Y</code></td><td><code>i</code></td><td><code>y</code></td></tr><tr><td><strong><code>0x0A</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Line_Feed" title="Line Feed" target="_blank"><code>␊</code></a> <code>⌃J</code> <code>\n</code></td><td><a href="https://en.wikipedia.org/wiki/Substitute_character" title="Substitute" target="_blank"><code>␚</code></a> <code>⌃Z</code></td><td><code>*</code></td><td><code>:</code></td><td><code>J</code></td><td><code>Z</code></td><td><code>j</code></td><td><code>z</code></td></tr><tr><td><strong><code>0x0B</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Vertical_Tab" title="Vertical Tab" target="_blank"><code>␋</code></a> <code>⌃H</code> <code>\v</code></td><td><a href="https://en.wikipedia.org/wiki/Escape_character" title="Escape" target="_blank"><code>␛</code></a> <code>⌃[</code> <code>\e</code></td><td><code>+</code></td><td><code>;</code></td><td><code>K</code></td><td><code>[</code></td><td><code>k</code></td><td><code>{</code></td></tr><tr><td><strong><code>0x0C</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Form_Feed" title="Form Feed" target="_blank"><code>␌</code></a> <code>⌃L</code> <code>\f</code></td><td><a href="https://en.wikipedia.org/wiki/File_Separator" title="File Separator" target="_blank"><code>␜</code></a> <code>⌃\</code></td><td><code>,</code></td><td><code>&lt;</code></td><td><code>L</code></td><td><code>\</code></td><td><code>l</code></td><td><code>|</code></td></tr><tr><td><strong><code>0x0D</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Carriage_Return" title="Carriage Return" target="_blank"><code>␍</code></a> <code>⌃M</code> <code>\r</code></td><td><a href="https://en.wikipedia.org/wiki/Group_Separator" title="Group Separator" target="_blank"><code>␝</code></a> <code>⌃]</code></td><td><code>-</code></td><td><code>=</code></td><td><code>M</code></td><td><code>]</code></td><td><code>m</code></td><td><code>}</code></td></tr><tr><td><strong><code>0x0E</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Shift_Out" title="Shift Out" target="_blank"><code>␎</code></a> <code>⌃N</code></td><td><a href="https://en.wikipedia.org/wiki/Record_Separator" title="Record Separator" target="_blank"><code>␞</code></a> <code>⌃^</code></td><td><code>.</code></td><td><code>&gt;</code></td><td><code>N</code></td><td><code>^</code></td><td><code>n</code></td><td><code>~</code></td></tr><tr><td><strong><code>0x0F</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Shift_In" title="Shift In" target="_blank"><code>␏</code></a> <code>⌃O</code></td><td><a href="https://en.wikipedia.org/wiki/Unit_Separator" title="Unit Separator" target="_blank"><code>␟</code></a> <code>⌃_</code></td><td><code>/</code></td><td><code>?</code></td><td><code>O</code></td><td><code>_</code></td><td><code>o</code></td><td><a href="https://en.wikipedia.org/wiki/Delete_character" title="Delete" target="_blank"><code>␡</code></a> <code>⌃?</code></td></tr></tbody></table></div></pre>
@@ -227,8 +234,8 @@ vice-versa in one instruction: <code>ascii = bcd XOR 0x30</code>.
   </li>
   <li>
     <p>
-      Many keys you still reach via &quot;shift&quot; on a modern keyboard are either <code>0x10</code> or
-<code>0x20</code> above their standard key, a holdover from mechanical typewriters.
+      Many keys you still reach via &quot;shift&quot; on a modern keyboard are either <code>0x10</code>
+or <code>0x20</code> above their standard key, a holdover from mechanical typewriters.
     </p>
   </li>
   <li>
@@ -264,15 +271,15 @@ oriented backspace.
     </id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/setup-a-simple-screencast/"/>
     <published>2022-01-07T22:35:43.000-08:00</published>
-    <updated>2022-01-10T06:33:08.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>setup a simple screencast</title>
     <author>
       <name>Lee Byron</name>
       <uri>https://leebyron.com</uri>
     </author>
     <content type="html"><![CDATA[<p>
-  There's plenty of good software out there for screencasting, but if you're in
-a pinch Quicktime Player does a solid job with a bit of prep.
+  There's plenty of good software out there for screencasting, but if you're in a
+pinch Quicktime Player does a solid job with a bit of prep.
 </p>
 <ol start="1">
   <li>
@@ -346,7 +353,7 @@ lined up.
     <id>https://leebyron.com/til/markdown-footnotes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/markdown-footnotes/"/>
     <published>2022-01-06T22:58:33.000-08:00</published>
-    <updated>2022-01-07T20:33:29.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>markdown footnotes</title>
     <author>
       <name>Lee Byron</name>
@@ -370,24 +377,24 @@ starts with a <code>^</code>.
 definitions<a href="#fn-needs-cr" id="fn-needs-cr.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>: in a box followed by a comma.
 </p>
 <pre data-code-block data-lang="markdown"><code><span style="color:#24292EFF;">[^a note]: Despite footnotes appearing numbered, the identifier can be any text.</span>
-<span style="color:#24292EFF;">This is helpful if you may add more notes later and don't want to be bothered</span>
-<span style="color:#24292EFF;">to reorder them.</span>
+<span style="color:#24292EFF;">This is helpful if you may add more notes later and don't want to be bothered to</span>
+<span style="color:#24292EFF;">reorder them.</span>
 </code></pre>
 <section data-footnotes aria-label="footnotes">
   <ol>
     <li id="fn-a-note">
       <p>
         Despite footnotes appearing numbered, the identifier can be any text.
-This is helpful if you may add more notes later and don't want to be bothered
-to reorder them.
+This is helpful if you may add more notes later and don't want to be bothered to
+reorder them.
       </p>
       <a href="#fn-a-note.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn-needs-cr">
       <p>
-        Unlike a link reference definition, a footnote definition needs
-an empty line immediately after it, otherwise content from multiple lines is
-joined into a single paragraph.
+        Unlike a link reference definition, a footnote definition needs an
+empty line immediately after it, otherwise content from multiple lines is joined
+into a single paragraph.
       </p>
       <a href="#fn-needs-cr.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -455,7 +462,7 @@ same, but the image use itself starts with an <code>!</code>.
     <id>https://leebyron.com/til/how-to-rearrange-bits/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/how-to-rearrange-bits/"/>
     <published>2022-01-04T00:58:22.000-08:00</published>
-    <updated>2022-01-07T01:11:37.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>how to rearrange bits</title>
     <author>
       <name>Lee Byron</name>
@@ -471,8 +478,8 @@ tool which writes this code for you!
   <a href="http://programming.sirrida.de/calcperm.php" target="_blank">http://programming.sirrida.de/calcperm.php</a>
 </p>
 <p>
-  I just used this to map sprite binary data to Unicode <a href="https://www.fileformat.info/info/unicode/block/braille_patterns/list.htm" target="_blank">braille
-patterns</a>.
+  I just used this to map sprite binary data to Unicode
+<a href="https://www.fileformat.info/info/unicode/block/braille_patterns/list.htm" target="_blank">braille patterns</a>.
 The 8 dots in a braille pattern can map to a byte, but perhaps not in the order
 you expect.
 </p>]]></content>
@@ -482,7 +489,7 @@ you expect.
     <id>https://leebyron.com/til/changing-a-word-in-vim/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/changing-a-word-in-vim/"/>
     <published>2022-01-03T16:34:57.000-08:00</published>
-    <updated>2022-01-07T20:35:39.000+00:00</updated>
+    <updated>2022-01-12T08:47:25.000+00:00</updated>
     <title>changing a word in vim</title>
     <author>
       <name>Lee Byron</name>
@@ -499,9 +506,9 @@ cursor (read: <code>c</code>hange <code>i</code>n <code>w</code>ord).
 <p>
   This, combined with other movements can lead to very quick changes. One I've
 found quite useful is <code>ci&quot;</code> which changes the contents of a quoted string, and
-<code>ca&quot;</code> (<code>c</code>hange <code>a</code>ll <code>&quot;</code>quoted) to include the quote marks themselves. Or
-when working in prose, <code>cis</code> will change the current sentence and <code>cip</code> the
-current paragraph.
+<code>ca&quot;</code> (<code>c</code>hange <code>a</code>ll <code>&quot;</code>quoted) to include the quote marks themselves. Or when
+working in prose, <code>cis</code> will change the current sentence and <code>cip</code> the current
+paragraph.
 </p>
 <p>
   Sometimes a change command is hard to think about first, or the area you want to
