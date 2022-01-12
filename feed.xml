@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T06:27:57.000+00:00</updated>
+  <updated>2022-01-12T07:51:20.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,129 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>
+      https://leebyron.com/til/meta-tags-and-the-semantic-web/
+    </id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/meta-tags-and-the-semantic-web/"/>
+    <published>2022-01-11T22:53:30.000-08:00</published>
+    <updated>2022-01-12T07:51:20.000+00:00</updated>
+    <title>meta tags and the semantic web</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="web"/>
+    <content type="html"><![CDATA[<p>
+  For better or worse these days a lot of the web is consumed via an aggregator
+platform. Search engines like Google, or Duck Duck Go, and social media like
+Facebook, Twitter, Reddit, and Mastodon. When links are displayed on these
+platforms, they use available metadata to give as rich a preview as possible.
+</p>
+<p>
+  This is the reality of the branch of the multiverse we find ourselves in tracing
+back to a quote from Sir Tim Berners Lee from <a href="https://youtu.be/vG8WpLr6y_U?" target="_blank">1999</a>:
+</p>
+<blockquote>
+  <p>
+    I have a dream for the Web [in which computers] become capable of analyzing all
+the data on the Web – the content, links, and transactions between people and
+computers. A &quot;Semantic Web&quot;, which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines.
+  </p>
+</blockquote>
+<p>
+  Some variation of this is is right...
+</p>
+<p>
+  However, for us Webmasters, it's tough to keep track of the peculiarities of
+how each platform would like to consume semantic information. Having just added
+some meta data to this very page, I'll drop some links and tl;dr of what
+I learned along the way:
+</p>
+<ul>
+  <li>
+    <p>
+      <a href="https://www.w3.org/RDF/" target="_blank">RDF</a> (Resource Description Language) and <a href="https://en.wikipedia.org/wiki/Web_Ontology_Language" target="_blank">OWL</a> (Web Ontology Language) were
+early standards that live on. They don't get a lot of practical use.
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="https://ogp.me/" target="_blank">Open Graph</a> is a standard proposed by Facebook which addressed the mess that
+was the web at the time<a href="#fn-og-deck" id="fn-og-deck.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It has a surprisingly broad schema and some
+quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>.
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="https://developers.facebook.com/docs/sharing/webmasters/#markup" target="_blank">Facebook</a> (and other Meta apps, like Messenger) use Open Graph with some minor Facebook specific additions.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Use the <a href="https://developers.facebook.com/tools/debug/" target="_blank">share debugger</a> to
+see what information was parsed and any warnings. It shows a share
+preview based on an older version of their desktop site and can't be relied
+on.
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>
+      <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup" target="_blank">Twitter</a> uses Open Graph if it finds them, but adds &quot;Card Tags&quot;. This is most
+helpful when you want something to appear slightly differently on Twitter vs
+Facebook.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Use their <a href="https://cards-dev.twitter.com/validator" target="_blank">card validator</a> to see
+what a card will look like. This shows for desktop, I'm not aware of
+a mobile preview.
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>
+      <a href="https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data" target="_blank">Google</a> will also use Open Graph if it finds it, but prefers <a href="https://json-ld.org/" target="_blank">JSON-LD</a>.
+JSON-LD is pretty nice to work with and there's a huge set of <a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
+    </p>
+    <ul>
+      <li>
+        <p>
+          There are <a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a>
+for both generic JSON-LD and Google specific results. Despite being the most
+mature of these tools, I've found it least helpful in giving error messages.
+Caveat caelator.
+        </p>
+      </li>
+    </ul>
+  </li>
+</ul>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn-og-deck">
+      <p>
+        Facebook made an interesting <a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a>
+of Open Graph that details these problems. It's an interesting read.
+      </p>
+      <a href="#fn-og-deck.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+    <li id="fn-og-non-standard">
+      <p>
+        Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses
+a <code>property=&quot;og:type&quot;</code> attribute which is non standard. It ideally should have
+used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a>
+(which Twitter cards does). Someone should have caught that in code review.
+      </p>
+      <a href="#fn-og-non-standard.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/by-rss-you-mean-atom/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/by-rss-you-mean-atom/"/>
