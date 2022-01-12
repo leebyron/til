@@ -140,7 +140,7 @@ export function Page({ filename, lastModified, frontmatter, markdown, Content })
 
 function Document({ children }) {
   return (
-    h('html',
+    h('html', { lang: 'en-US' },
       h('head',
         h('meta', { charset: 'UTF-8' }),
         children.filter(isHeadElement),
@@ -226,13 +226,13 @@ function Attribution({ filename, frontmatter: { permalink, date } }) {
     ' ⸱ ',
 
     // edit
-    h('a', { href: `https://raw.githubusercontent.com/leebyron/til/main/entries/${encodeURIComponent(filename)}`, target: '__blank' },
+    h('a', { href: `https://raw.githubusercontent.com/leebyron/til/main/entries/${encodeURIComponent(filename)}`, target: '_blank' },
       'raw'),
 
     ' ⸱ ',
 
     // edit
-    h('a', { href: `https://github.com/leebyron/til/edit/main/entries/${encodeURIComponent(filename)}#L8`, target: '__blank' },
+    h('a', { href: `https://github.com/leebyron/til/edit/main/entries/${encodeURIComponent(filename)}#L8`, target: '_blank' },
       'edit'),
   ]
 }
@@ -265,8 +265,14 @@ function License({ year, children }) {
       target: "_blank",
       rel: "cc:license license noopener noreferrer" },
       'CC BY 4.0',
-      h('img', { src: "https://mirrors.creativecommons.org/presskit/icons/cc.svg" }),
-      h('img', { src: "https://mirrors.creativecommons.org/presskit/icons/by.svg" })
+      h('img', {
+        src: "https://mirrors.creativecommons.org/presskit/icons/cc.svg",
+        'aria-hidden': true
+      }),
+      h('img', {
+        src: "https://mirrors.creativecommons.org/presskit/icons/by.svg",
+        'aria-hidden': true
+      })
     ),
 
     ' ⸱ ',
