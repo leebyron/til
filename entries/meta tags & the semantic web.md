@@ -28,7 +28,9 @@ meta data to this very page, I'll drop some links and tl;dr of what I learned
 along the way:
 
 - [RDF] (Resource Description Language) and [OWL] (Web Ontology Language) were
-  early standards that live on. They don't get a lot of practical use.
+  early standards that live on. They don't get a lot of direct practical
+  use[^rdfa]. There is also [microformats] which still has some use, but is no
+  longer preferred.
 - [Open Graph] is a standard proposed by Facebook which addressed the mess that
   was the web at the time[^og deck]. It has a surprisingly broad schema and some
   quirks[^og non standard].
@@ -52,20 +54,35 @@ along the way:
     mature of these tools, I've found it least helpful in giving error messages.
     Caveat caelator.
 
+One last resource that I found very helpful was the [structured data linter].
+This tool understands just about all of the above. It's not all that helpful for
+understanding how any one service will interpret your page, but is very useful
+to ensure the meta data you expect is being found, and that there are no
+inconsistencies or other problems.
+
+[^rdfa]:
+    RDF actually does get a fair amount of practical use via [RDFa] (RDF for
+    attributes) because it can markup existing HTML files as opposed to
+    requiring separate XML files. In fact, this site uses RDFa to embed
+    licensing data in the footer! Check it out in the
+    [structured data linter](http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F)
+
 [^og deck]: Facebook made an interesting
 [deck on the design decisions](https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions)
 of Open Graph that details these problems. It's an interesting read.
 
 [^og non standard]: Open Graph uses `<meta>` tags, but annoyingly uses a
-`property=` attribute which is non standard. It ideally should have used
-[`name=`] (which Twitter cards does). Someone should have caught that in code
-review.
+`property=` attribute which was borrowed from RDF but is non standard for a
+`<meta>` tag. It ideally should have used [`name=`] (which Twitter cards does).
+Someone should have caught that in code review.
 
 [semantic web]:
   https://en.wikipedia.org/wiki/Semantic_Web
   'sometimes known as Web 3.0'
 [rdf]: https://www.w3.org/RDF/
+[rdfa]: https://www.w3.org/TR/rdfa-primer/
 [owl]: https://en.wikipedia.org/wiki/Web_Ontology_Language
+[microformats]: https://microformats.io/
 [open graph]: https://ogp.me/
 [facebook]: https://developers.facebook.com/docs/sharing/webmasters/#markup
 [twitter]:
@@ -73,5 +90,6 @@ review.
 [google]:
   https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
 [json-ld]: https://json-ld.org/
+[structured data linter]: http://linter.structured-data.org/
 [`name=`]:
   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name
