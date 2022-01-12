@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T08:47:25.000+00:00</updated>
+  <updated>2022-01-12T21:33:03.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -21,8 +21,8 @@
     </id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/meta-tags-and-the-semantic-web/"/>
     <published>2022-01-11T22:53:30.000-08:00</published>
-    <updated>2022-01-12T08:47:25.000+00:00</updated>
-    <title>meta tags and the semantic web</title>
+    <updated>2022-01-12T21:33:03.000+00:00</updated>
+    <title>meta tags &amp; the semantic web</title>
     <author>
       <name>Lee Byron</name>
       <uri>https://leebyron.com</uri>
@@ -134,10 +134,9 @@ of Open Graph that details these problems. It's an interesting read.
     <li id="fn-og-non-standard">
       <p>
         Open Graph uses <code>&lt;meta&gt;</code> tags, but annoyingly uses a
-<code>property=&quot;og:type&quot;</code> attribute which is non standard. It ideally should have
-used
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a>
-(which Twitter cards does). Someone should have caught that in code review.
+<code>property=</code> attribute which is non standard. It ideally should have used
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-name" target="_blank"><code>name=</code></a> (which Twitter cards does). Someone should have caught that in code
+review.
       </p>
       <a href="#fn-og-non-standard.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
