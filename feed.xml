@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T21:55:44.000+00:00</updated>
+  <updated>2022-01-12T21:57:12.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -21,7 +21,7 @@
     </id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/meta-tags-and-the-semantic-web/"/>
     <published>2022-01-11T22:53:30.000-08:00</published>
-    <updated>2022-01-12T21:55:44.000+00:00</updated>
+    <updated>2022-01-12T21:57:12.000+00:00</updated>
     <title>meta tags &amp; the semantic web</title>
     <author>
       <name>Lee Byron</name>
@@ -138,7 +138,7 @@ inconsistencies or other problems.
 attributes) because it can markup existing HTML files as opposed to
 requiring separate XML files. In fact, this site uses RDFa to embed
 licensing data in the footer! Check it out in the
-<a href="http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F" target="_blank">structured data linter</a>
+<a href="http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F" target="_blank">structured data linter</a>.
       </p>
       <a href="#fn-rdfa.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
