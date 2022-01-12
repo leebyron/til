@@ -1,5 +1,5 @@
 ---
-title: by rss you mean atom
+title: by RSS you mean Atom
 permalink: by-rss-you-mean-atom
 date: 2022-01-10T21:50:17-08:00
 tags: til
