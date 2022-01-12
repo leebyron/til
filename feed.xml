@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T21:49:45.000+00:00</updated>
+  <updated>2022-01-12T21:55:44.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -21,7 +21,7 @@
     </id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/meta-tags-and-the-semantic-web/"/>
     <published>2022-01-11T22:53:30.000-08:00</published>
-    <updated>2022-01-12T21:49:45.000+00:00</updated>
+    <updated>2022-01-12T21:55:44.000+00:00</updated>
     <title>meta tags &amp; the semantic web</title>
     <author>
       <name>Lee Byron</name>
@@ -70,7 +70,9 @@ longer preferred.
     <p>
       <a href="https://ogp.me/" target="_blank">Open Graph</a> is a standard proposed by Facebook which addressed the mess that
 was the web at the time<a href="#fn-og-deck" id="fn-og-deck.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. It has a surprisingly broad schema and some
-quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>.
+quirks<a href="#fn-og-non-standard" id="fn-og-non-standard.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>. Since then, <a href="https://json-ld.org/" target="_blank">JSON-LD</a> has become the preferred tool.
+JSON is way easier for representing data, and there's a huge set of
+<a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
     </p>
   </li>
   <li>
@@ -107,8 +109,6 @@ mobile preview.
   <li>
     <p>
       <a href="https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data" target="_blank">Google</a> will also use Open Graph if it finds it, but prefers <a href="https://json-ld.org/" target="_blank">JSON-LD</a>.
-JSON-LD is pretty nice to work with and there's a huge set of
-<a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
     </p>
     <ul>
       <li>
