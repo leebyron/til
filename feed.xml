@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-12T21:57:12.000+00:00</updated>
+  <updated>2022-01-13T05:15:12.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,149 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/leap/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/leap/"/>
+    <published>2022-01-12T20:01:10.000-08:00</published>
+    <updated>2022-01-13T05:15:12.000+00:00</updated>
+    <title>leap®</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="keyboards"/>
+    <content type="html"><![CDATA[<p>
+  The <a href="https://en.wikipedia.org/wiki/Canon_Cat" target="_blank">Canon Cat</a> was a computer designed by <a href="https://en.wikipedia.org/wiki/Jef_Raskin" target="_blank">Jef Raskin</a>, who also dreamed up the
+Apple Macintosh. Steve Jobs meddled too much in the Mac and Raskin left Apple to
+create the Cat. It was a commercial flop, but had some awesome ideas mostly lost
+to time.
+</p>
+<p>
+  Raskin was no fan of the computer mouse and thought keyboard driven UIs could be
+much more powerful, and the Cat has a couple tricks which show that he was truly
+onto something, most notably: LEAP.
+</p>
+<p>
+  The Cat keyboard is really unique. This computer has no mouse and no arrow
+keys<a href="#fn-creep" id="fn-creep.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. Instead it has &quot;Leap&quot; keys under the space bar. To move around you
+hold down a Leap key with your thumb (in the direction you want to move) and
+start typing the thing you want to move to. The cursor moves in real-time with
+each key press. If you got it wrong you can hit &quot;Undo&quot; to go back, or to keep
+looking for the same thing, use front to &quot;Leap Again&quot;. There's a dedicated
+&quot;Page&quot; button so you can Leap through page by page to rapidly move through a
+large file (or press it on its own to create a new blank page).
+</p>
+<p>
+  <img src="https://vintagecomputer.ca/wp-content/uploads/2016/04/Canon-Cat-keyboard.jpg">
+</p>
+<p>
+  This is so different from what we're used to that it seems like it might be
+frustrating to use and rightfully part of history instead of current kit, but I
+find this inspiring. I wish I could get my computer to work this way!
+</p>
+<p>
+  I've been using VIM exclusively the last few weeks and trying to get used to it.
+I'm realizing that I spend way more time <em>moving around</em> then I actually do
+typing new things. I've come to really appreciate the <code>/</code> and <code>?</code> commands which
+search ahead and back for some text to move towards. It's very powerful, but
+slightly awkward to use, so I find myself not using it as much as I should.
+Having that functionality under my thumbs would feel like a super power.
+</p>
+<p>
+  There aren't that many Canon Cats still floating around, but if you want to get
+a feel for what using one of these is like, you can run its
+<a href="https://archive.org/details/canoncat" target="_blank">software in emulation mode</a> thanks to the
+Internet Archive!
+</p>
+<p>
+  It's not all that clear, but here's what I figured out so far:
+</p>
+<ul>
+  <li>
+    <p>
+      option keys (left and right) are Jump
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>\</code> key is Undo
+    </p>
+  </li>
+  <li>
+    <p>
+      control is &quot;Use Front&quot;
+    </p>
+  </li>
+  <li>
+    <p>
+      Full screen the emulator to immerse yourself!
+    </p>
+  </li>
+</ul>
+<p>
+  Obviously, it's not quite the same as having the Cat keyboard in front of you,
+but I still found it very curious to use and gave me confidence that this could
+be an easily learned and very fun to use digital world to live in.
+</p>
+<p>
+  There are surprisingly few modern tools that reference back to Jump and the
+Canon Cat. One notable one is the <a href="https://100r.co/site/left.html" target="_blank">Left</a> text editor by 100 Rabbits, which very
+recently
+<a href="https://twitter.com/hundredrabbits/status/1466832328462790656?s=21" target="_blank">added Leap</a>.
+</p>
+<p>
+  Here are some resources with a lot more content, digitized instruction manuals,
+history, and other bits and bobs down this particular rabbit hole:
+</p>
+<ul>
+  <li>
+    <p>
+      <a href="http://www.canoncat.net/" target="_blank">canoncat.net</a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="https://www.canoncat.org/" target="_blank">canoncat.org</a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="https://www.old-computers.com/museum/computer.asp?st=1&amp;c=642" target="_blank">Canon Cat on old-computers.com</a>
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="https://en.wikipedia.org/wiki/The_Humane_Interface" target="_blank">The Humane Interface</a>
+    </p>
+  </li>
+</ul>
+<p>
+  Finally, I'll leave you with this convincing promotional video showing off the
+Cat in use, showing both more of what it can do<a href="#fn-calc" id="fn-calc.ref" data-footnote-ref aria-label="note"><sup>2</sup></a> as well as some truly
+excellent '80s hairstyles.
+</p>
+<Youtube video="o_TlE_U_X3c" aspectRatio="1.3333333333333333"></Youtube>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn-creep">
+      <p>
+        Arrow behavior is kinda still there. Tapping Leap on its own moves the
+cursor ahead by one (akin to an arrow key); they fittingly called this
+&quot;Creep&quot;. Shift+Leap would scroll the page up and down.
+      </p>
+      <a href="#fn-creep.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+    <li id="fn-calc">
+      <p>
+        Like running calculations (or code!) live in a document with a key press
+instead of having a dedicated calc app. Really cool ideas.
+      </p>
+      <a href="#fn-calc.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>
       https://leebyron.com/til/meta-tags-and-the-semantic-web/
