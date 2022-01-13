@@ -66,11 +66,12 @@ export const spin = async doing => {
   ]
   const spinner = setInterval(() => {
     frame = (frame + 1) % SPINNER.length
-    process.stdout.write('  ' + SPINNER[frame] + '\r')
+    process.stdout.write('\x1B[?25l' + SPINNER[frame] + '\r')
   }, 100)
   try {
     await doing()
   } finally {
+    process.stdout.write('\x1B[2K\x1B[?25h')
     clearInterval(spinner)
   }
 }
