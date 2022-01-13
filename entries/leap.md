@@ -79,7 +79,7 @@ but I still found it very curious to use and gave me confidence that this could
 be an easily learned and very fun to use digital world to live in.
 
 There are surprisingly almost no modern tools that reference back to Leap and
-the Canon Cat. One notable one is the [Left] text editor by Hundred Rabbits,
+the Canon Cat. One notable exception is the [Left] text editor by Hundred Rabbits,
 which very recently
 [added Leap](https://twitter.com/hundredrabbits/status/1466832328462790656?s=21).
 
