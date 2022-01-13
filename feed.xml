@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-13T06:57:59.000+00:00</updated>
+  <updated>2022-01-13T07:06:59.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/leap/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/leap/"/>
     <published>2022-01-12T20:01:10.000-08:00</published>
-    <updated>2022-01-13T06:57:59.000+00:00</updated>
+    <updated>2022-01-13T07:06:59.000+00:00</updated>
     <title>leap®</title>
     <author>
       <name>Lee Byron</name>
@@ -33,13 +33,13 @@ create the Cat<a href="#fn-swyft" id="fn-swyft.ref" data-footnote-ref aria-label
 mostly lost to time.
 </p>
 <p>
-  Raskin was no fan of the computer mouse and thought keyboard driven UIs could be
-much more powerful, and the Cat has a couple tricks which show that he was truly
-onto something, most notably: <em>Leap</em>.
+  Raskin was no fan of the computer mouse<a href="#fn-hth" id="fn-hth.ref" data-footnote-ref aria-label="note"><sup>2</sup></a> and thought keyboard driven UIs
+could be much more powerful, and the Cat has a couple tricks which show that he
+was truly onto something, most notably: <em>Leap</em>.
 </p>
 <p>
   The Cat keyboard is really unique. This computer has no mouse and no arrow
-keys<a href="#fn-creep" id="fn-creep.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. Instead it has &quot;Leap&quot; keys under the space bar.
+keys<a href="#fn-creep" id="fn-creep.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>. Instead it has &quot;Leap&quot; keys under the space bar.
 </p>
 <p>
   <img src="../media/32fbd2a67421bb0d.jpeg" title="Credit: https://vintagecomputer.ca/canon-cat/" alt="Canon Cat keyboard">
@@ -59,7 +59,7 @@ in real-time with each key press.
   </li>
   <li>
     <p>
-      To keep looking for the same thing, hold &quot;Use Front&quot;<a href="#fn-use-front" id="fn-use-front.ref" data-footnote-ref aria-label="note"><sup>3</sup></a> and &quot;Leap
+      To keep looking for the same thing, hold &quot;Use Front&quot;<a href="#fn-use-front" id="fn-use-front.ref" data-footnote-ref aria-label="note"><sup>4</sup></a> and &quot;Leap
 Again&quot;.
     </p>
   </li>
@@ -159,7 +159,7 @@ history, and other bits and bobs down this particular rabbit hole:
 </ul>
 <p>
   Finally, I'll leave you with this convincing promotional video showing off the
-Cat in use, showing both more of what it can do<a href="#fn-calc" id="fn-calc.ref" data-footnote-ref aria-label="note"><sup>4</sup></a> as well as some truly
+Cat in use, showing both more of what it can do<a href="#fn-calc" id="fn-calc.ref" data-footnote-ref aria-label="note"><sup>5</sup></a> as well as some truly
 excellent '80s hairstyles.
 </p>
 <div class="yt-player" style="--aspectRatio:1.3333333333333333;">
@@ -176,6 +176,14 @@ the name &quot;Cat.&quot; No idea if Apple intentionally took a pot-shot at Jef 
 Swift.
       </p>
       <a href="#fn-swyft.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+    <li id="fn-hth">
+      <p>
+        Jef Raskin briefly discussed the Canon Cat's Leap innovation in an
+<a href="https://youtu.be/1qvrOEExlps?t=1337" target="_blank">Feb 1992 episode</a> of High Tech Heros,
+a public access show from Los Altos.
+      </p>
+      <a href="#fn-hth.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn-creep">
       <p>
