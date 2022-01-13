@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-13T05:50:10.000+00:00</updated>
+  <updated>2022-01-13T05:59:48.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/leap/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/leap/"/>
     <published>2022-01-12T20:01:10.000-08:00</published>
-    <updated>2022-01-13T05:40:10.000+00:00</updated>
+    <updated>2022-01-13T05:59:48.000+00:00</updated>
     <title>leap®</title>
     <author>
       <name>Lee Byron</name>
@@ -39,20 +39,45 @@ onto something, most notably: <em>Leap</em>.
 </p>
 <p>
   The Cat keyboard is really unique. This computer has no mouse and no arrow
-keys<a href="#fn-creep" id="fn-creep.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. Instead it has &quot;Leap&quot; keys under the space bar. To move around you
-hold down a Leap key with your thumb (in the direction you want to move) and
-start typing the thing you want to move to. The cursor moves in real-time with
-each key press. If you got it wrong you can hit &quot;Undo&quot; to go back, or to keep
-looking for the same thing, Use Front<a href="#fn-use-front" id="fn-use-front.ref" data-footnote-ref aria-label="note"><sup>3</sup></a> to &quot;Leap Again&quot;. There's a
-dedicated &quot;Page&quot; button so you can Leap through page by page to rapidly move
-through a large file (or press it on its own to create a new blank page).
-Pressing both Leap keys highlights the text between the cursor and the
-previously leapt location. Leaping with highlighted text moves that text along
-with the cursor.
+keys<a href="#fn-creep" id="fn-creep.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. Instead it has &quot;Leap&quot; keys under the space bar.
 </p>
 <p>
   <img src="https://vintagecomputer.ca/wp-content/uploads/2016/04/Canon-Cat-keyboard.jpg">
 </p>
+<ul>
+  <li>
+    <p>
+      To move around you hold down a Leap key with your thumb (in the direction you
+want to move) and start typing the thing you want to move to. The cursor moves
+in real-time with each key press.
+    </p>
+  </li>
+  <li>
+    <p>
+      If you got it wrong you can hit &quot;Undo&quot; to go back.
+    </p>
+  </li>
+  <li>
+    <p>
+      To keep looking for the same thing, hold Use Front<a href="#fn-use-front" id="fn-use-front.ref" data-footnote-ref aria-label="note"><sup>3</sup></a> and &quot;Leap
+Again&quot;.
+    </p>
+  </li>
+  <li>
+    <p>
+      There's a dedicated &quot;Page&quot; button so you can Leap through page by page to
+rapidly move through a large file (or press it on its own to create a new
+blank page).
+    </p>
+  </li>
+  <li>
+    <p>
+      Pressing both Leap keys highlights the text between the cursor and the
+previously leapt location. Leaping with highlighted text moves that text along
+with the cursor.
+    </p>
+  </li>
+</ul>
 <p>
   This is so different from what we're used to that it seems like it might be
 frustrating to use and rightfully part of history instead of current kit, but I
@@ -70,10 +95,8 @@ Having that functionality under my thumbs would feel like a super power.
   There aren't that many Canon Cats still floating around, but if you want to get
 a feel for what using one of these is like, you can run its
 <a href="https://archive.org/details/canoncat" target="_blank">software in emulation mode</a> thanks to the
-Internet Archive!
-</p>
-<p>
-  It's not all that clear, but here's what I figured out so far:
+Internet Archive! How to use this is not very clear, but here's what I figured
+out so far:
 </p>
 <ul>
   <li>
