@@ -74,7 +74,6 @@ body > * {
 }
 
 footer {
-  font-size: max(12px, 80%);
   margin-block-start: auto;
 }
 
@@ -300,10 +299,34 @@ h1:first-child span:before {
   color: #00000044;
 }
 
+.linkedlist {
+  display: flex;
+  margin: 2em -1.18em;
+  flex-wrap: wrap-reverse;
+}
+
+.linkedlist > .prev {
+  margin-right: 1.18em;
+}
+
+.linkedlist > .next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.linkedlist > .prev:before {
+  content: '← ';
+}
+
+.linkedlist > .next:after {
+  content: ' →';
+}
+
 .license {
-  margin-block-start: 2rem;
+  font-size: max(12px, 80%);
   line-height: 2;
   text-align: center;
+  margin-block-start: 2rem;
 }
 
 .license img {
