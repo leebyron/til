@@ -94,7 +94,7 @@ excellent '80s hairstyles.
     Like running calculations (or code!) live in a document with a key press
     instead of having a dedicated calc app. Really cool ideas.
 
-<YouTube video="o_TlE_U_X3c" aspectRatio={4 / 3} />
+<YouTube v="o_TlE_U_X3c" aspectRatio={4 / 3} />
 
 [canon cat]: https://en.wikipedia.org/wiki/Canon_Cat
 [jef raskin]: https://en.wikipedia.org/wiki/Jef_Raskin
