@@ -17,9 +17,14 @@ mostly lost to time.
     the name "Cat." No idea if Apple intentionally took a pot-shot at Jef with
     Swift.
 
-Raskin was no fan of the computer mouse and thought keyboard driven UIs could be
-much more powerful, and the Cat has a couple tricks which show that he was truly
-onto something, most notably: _Leap_.
+Raskin was no fan of the computer mouse[^hth] and thought keyboard driven UIs
+could be much more powerful, and the Cat has a couple tricks which show that he
+was truly onto something, most notably: _Leap_.
+
+[^hth]:
+    Jef Raskin briefly discussed the Canon Cat's Leap innovation in an
+    [Feb 1992 episode](https://youtu.be/1qvrOEExlps?t=1337) of High Tech Heros,
+    a public access show from Los Altos.
 
 The Cat keyboard is really unique. This computer has no mouse and no arrow
 keys[^creep]. Instead it has "Leap" keys under the space bar.
