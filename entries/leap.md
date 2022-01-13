@@ -29,7 +29,7 @@ keys[^creep]. Instead it has "Leap" keys under the space bar.
     cursor ahead by one. they fittingly called this "Creep". Shift+Leap would
     scroll the page up and down.
 
-![Canon Cat keyboard](https://vintagecomputer.ca/wp-content/uploads/2016/04/Canon-Cat-keyboard.jpg)
+![Canon Cat keyboard](../media/32fbd2a67421bb0d.jpeg)
 
 - To move around you hold down a Leap key with your thumb (in the direction you
   want to move) and start typing the thing you want to move to. The cursor moves
