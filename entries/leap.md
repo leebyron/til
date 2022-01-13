@@ -7,26 +7,39 @@ tags: keyboards
 
 The [Canon Cat] was a computer designed by [Jef Raskin], who also dreamed up the
 Apple Macintosh. Steve Jobs meddled too much in the Mac and Raskin left Apple to
-create the Cat. It was a commercial flop, but had some awesome ideas mostly lost
-to time.
+create the Cat[^swyft]. It was a commercial flop, but had some awesome ideas
+mostly lost to time.
+
+[^swyft]:
+    Jef Raskin started the project by founding a company, Information
+    Appliances, and called the computer SWYFT: "Superb With Your Favorite
+    Typing". Canon acquired his company and their marketing team came up with
+    the name "Cat." No idea if Apple intentionally took a pot-shot at Jef with
+    Swift.
 
 Raskin was no fan of the computer mouse and thought keyboard driven UIs could be
 much more powerful, and the Cat has a couple tricks which show that he was truly
-onto something, most notably: LEAP.
+onto something, most notably: _Leap_.
 
 The Cat keyboard is really unique. This computer has no mouse and no arrow
 keys[^creep]. Instead it has "Leap" keys under the space bar. To move around you
 hold down a Leap key with your thumb (in the direction you want to move) and
 start typing the thing you want to move to. The cursor moves in real-time with
 each key press. If you got it wrong you can hit "Undo" to go back, or to keep
-looking for the same thing, use front to "Leap Again". There's a dedicated
-"Page" button so you can Leap through page by page to rapidly move through a
-large file (or press it on its own to create a new blank page).
+looking for the same thing, Use Front[^use front] to "Leap Again". There's a
+dedicated "Page" button so you can Leap through page by page to rapidly move
+through a large file (or press it on its own to create a new blank page).
+Pressing both Leap keys highlights the text between the cursor and the
+previously leapt location. Leaping with highlighted text moves that text along
+with the cursor.
 
 [^creep]:
     Arrow behavior is kinda still there. Tapping Leap on its own moves the
-    cursor ahead by one (akin to an arrow key); they fittingly called this
-    "Creep". Shift+Leap would scroll the page up and down.
+    cursor ahead by one. they fittingly called this "Creep". Shift+Leap would
+    scroll the page up and down.
+
+[^use front]: The "Use Front" key is essentially your "Command" key, but they
+printed the commands on the front of the key caps, hence "Use Front".
 
 ![Canon Cat keyboard](https://vintagecomputer.ca/wp-content/uploads/2016/04/Canon-Cat-keyboard.jpg)
 
@@ -57,9 +70,9 @@ Obviously, it's not quite the same as having the Cat keyboard in front of you,
 but I still found it very curious to use and gave me confidence that this could
 be an easily learned and very fun to use digital world to live in.
 
-There are surprisingly few modern tools that reference back to Jump and the
-Canon Cat. One notable one is the [Left] text editor by 100 Rabbits, which very
-recently
+There are surprisingly almost no modern tools that reference back to Leap and
+the Canon Cat. One notable one is the [Left] text editor by 100 Rabbits, which
+very recently
 [added Leap](https://twitter.com/hundredrabbits/status/1466832328462790656?s=21).
 
 Here are some resources with a lot more content, digitized instruction manuals,
@@ -78,7 +91,7 @@ excellent '80s hairstyles.
     Like running calculations (or code!) live in a document with a key press
     instead of having a dedicated calc app. Really cool ideas.
 
-<Youtube video="o_TlE_U_X3c" aspectRatio={4 / 3} />
+<YouTube video="o_TlE_U_X3c" aspectRatio={4 / 3} />
 
 [canon cat]: https://en.wikipedia.org/wiki/Canon_Cat
 [jef raskin]: https://en.wikipedia.org/wiki/Jef_Raskin
