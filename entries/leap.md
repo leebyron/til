@@ -22,26 +22,30 @@ much more powerful, and the Cat has a couple tricks which show that he was truly
 onto something, most notably: _Leap_.
 
 The Cat keyboard is really unique. This computer has no mouse and no arrow
-keys[^creep]. Instead it has "Leap" keys under the space bar. To move around you
-hold down a Leap key with your thumb (in the direction you want to move) and
-start typing the thing you want to move to. The cursor moves in real-time with
-each key press. If you got it wrong you can hit "Undo" to go back, or to keep
-looking for the same thing, Use Front[^use front] to "Leap Again". There's a
-dedicated "Page" button so you can Leap through page by page to rapidly move
-through a large file (or press it on its own to create a new blank page).
-Pressing both Leap keys highlights the text between the cursor and the
-previously leapt location. Leaping with highlighted text moves that text along
-with the cursor.
+keys[^creep]. Instead it has "Leap" keys under the space bar.
 
 [^creep]:
     Arrow behavior is kinda still there. Tapping Leap on its own moves the
     cursor ahead by one. they fittingly called this "Creep". Shift+Leap would
     scroll the page up and down.
 
+![Canon Cat keyboard](https://vintagecomputer.ca/wp-content/uploads/2016/04/Canon-Cat-keyboard.jpg)
+
+- To move around you hold down a Leap key with your thumb (in the direction you
+  want to move) and start typing the thing you want to move to. The cursor moves
+  in real-time with each key press.
+- If you got it wrong you can hit "Undo" to go back.
+- To keep looking for the same thing, hold Use Front[^use front] and "Leap
+  Again".
+- There's a dedicated "Page" button so you can Leap through page by page to
+  rapidly move through a large file (or press it on its own to create a new
+  blank page).
+- Pressing both Leap keys highlights the text between the cursor and the
+  previously leapt location. Leaping with highlighted text moves that text along
+  with the cursor.
+
 [^use front]: The "Use Front" key is essentially your "Command" key, but they
 printed the commands on the front of the key caps, hence "Use Front".
-
-![Canon Cat keyboard](https://vintagecomputer.ca/wp-content/uploads/2016/04/Canon-Cat-keyboard.jpg)
 
 This is so different from what we're used to that it seems like it might be
 frustrating to use and rightfully part of history instead of current kit, but I
@@ -57,9 +61,8 @@ Having that functionality under my thumbs would feel like a super power.
 There aren't that many Canon Cats still floating around, but if you want to get
 a feel for what using one of these is like, you can run its
 [software in emulation mode](https://archive.org/details/canoncat) thanks to the
-Internet Archive!
-
-It's not all that clear, but here's what I figured out so far:
+Internet Archive! How to use this is not very clear, but here's what I figured
+out so far:
 
 - option keys (left and right) are Jump
 - `\` key is Undo
