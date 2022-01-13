@@ -61,7 +61,7 @@ export function mdjsx(ast, { components, overrides } = {}) {
         children,
       }),
     image: ({ url, title, alt, children }) =>
-      jsx('img', { src: url, title, children }),
+      jsx('img', { src: url, title, alt, children }),
     delete: 's',
     table: ({ children }) =>
       jsx('div', {
