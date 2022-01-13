@@ -35,7 +35,7 @@ keys[^creep]. Instead it has "Leap" keys under the space bar.
   want to move) and start typing the thing you want to move to. The cursor moves
   in real-time with each key press.
 - If you got it wrong you can hit "Undo" to go back.
-- To keep looking for the same thing, hold Use Front[^use front] and "Leap
+- To keep looking for the same thing, hold "Use Front"[^use front] and "Leap
   Again".
 - There's a dedicated "Page" button so you can Leap through page by page to
   rapidly move through a large file (or press it on its own to create a new
