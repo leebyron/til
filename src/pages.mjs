@@ -1,11 +1,18 @@
 import { relative } from 'path'
+import { resolve } from 'url'
 import { render, h, createContext, useContext } from 'hyperjsx'
 import { mdjsx } from './mdjsx.mjs'
-import { textContent, firstParagraph } from './markdown.mjs'
+import { findNode, textContent } from './markdown.mjs'
 
+const relativeUrl =
+  // Adds back trailing / which resolve() removes.
+  (from, to) => relative(from, to) + (to.endsWith('/') ? '/' : '')
+
+const canonicalRoot = 'https://leebyron.com/til/'
+const canonicalPath = to => resolve(canonicalRoot, relativeUrl('/', to))
 const Path = createContext()
-const usePath = () => useContext(Path)
-const useRelPath = to => relative(usePath(), to)
+const useCanonical = () => canonicalPath(useContext(Path))
+const useRelPath = to => relativeUrl(useContext(Path), to)
 
 export function Index({ frontmatters, Content }) {
   return (
@@ -13,7 +20,7 @@ export function Index({ frontmatters, Content }) {
       h(Document,
         h('title', 'Today I Learned / Lee Byron'),
         ...OpenGraph({
-          'og:url': 'https://leebyron.com/til/',
+          'og:url': canonicalRoot,
           'og:title': 'Lee Byron / til',
           'og:description': 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.',
           'twitter:card': 'summary',
@@ -27,7 +34,7 @@ export function Index({ frontmatters, Content }) {
             '@type': 'Person',
             name: 'Lee Byron',
             url: 'http://leebyron.com' },
-          url: 'https://leebyron.com/til/',
+          url: canonicalRoot,
           collectionSize: frontmatters.length,
           license: 'https://creativecommons.org/licenses/by/4.0/',
         }),
@@ -59,20 +66,20 @@ export function Index({ frontmatters, Content }) {
 export function Feed({ entries }) {
   return (
     h('feed', { xmlns: 'http://www.w3.org/2005/Atom', 'xml:lang': 'en-us' },
-      h('id', 'https://leebyron.com/til/feed.xml' ),
-      h('link', { rel: 'self', type: 'application/atom+xml', href: 'https://leebyron.com/til/feed.xml' }),
-      h('link', { rel: 'alternate', type: 'text/html', href: 'https://leebyron.com/til/' }),
+      h('id', canonicalPath('/feed.xml')),
+      h('link', { rel: 'self', type: 'application/atom+xml', href: canonicalPath('/feed.xml') }),
+      h('link', { rel: 'alternate', type: 'text/html', href: canonicalRoot }),
       h('updated', entries.map(e => e.lastModified).sort((a, b) => a - b).pop().toISO()),
       h('title', 'Lee Byron / til'),
       h('subtitle', 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.'),
-      h('icon', 'https://leebyron.com/til/assets/favicon.png'),
+      h('icon', canonicalPath('/assets/favicon.png')),
       h('author', h('name', 'Lee Byron'), h('uri', 'https://leebyron.com')),
       h('rights', '© 2022 Lee Byron ⸱ licensed under CC BY 4.0'),
       h('generator', { uri: 'https://github.com/leebyron/til' }, 'til'),
       entries.map(({ markdown, frontmatter, lastModified }) =>
         h('entry',
-          h('id', `https://leebyron.com/til/${frontmatter.permalink}/`),
-          h('link', { rel: 'alternate', type: 'text/html', href: `https://leebyron.com/til/${frontmatter.permalink}/` }),
+          h('id', canonicalPath(`/${frontmatter.permalink}/`)),
+          h('link', { rel: 'alternate', type: 'text/html', href: canonicalPath(`/${frontmatter.permalink}/`) }),
           h('published', frontmatter.date.toISO()),
           h('updated', lastModified.toISO()),
           h('title', frontmatter.title),
@@ -89,36 +96,49 @@ export function Feed({ entries }) {
 }
 
 export function Page({ filename, lastModified, frontmatter, markdown, Content }) {
+  const path = `/${frontmatter.permalink}/`
+  const canonicalUrl = canonicalPath(path)
+  const pageTitle = `til / ${frontmatter.title} — Lee Byron`
+  const description = textContent(findNode(markdown, 'paragraph'))
+  const imageNode = findNode(markdown, 'image')
+  const image = imageNode && resolve(canonicalUrl, imageNode.url)
+  const datePublished = frontmatter.date.toISO()
+  const dateModified = lastModified.toISO()
+
   return (
-    h(Path, { value: `/${frontmatter.permalink}/` },
+    h(Path, { value: path },
       h(Document,
         frontmatter.published === false &&
--          h('meta', { name: 'robots', content: 'noindex' }),
-        h('title', `til / ${frontmatter.title} — Lee Byron`),
+          h('meta', { name: 'robots', content: 'noindex' }),
+        h('title', pageTitle),
         ...OpenGraph({
-          'og:url': `https://leebyron.com/til/${frontmatter.permalink}/`,
-          'og:title': `til / ${frontmatter.title} — Lee Byron`,
-          'og:description': textContent(firstParagraph(markdown)).slice(0, 200),
+          'og:url': canonicalUrl,
+          'og:title': pageTitle,
+          'og:description': description,
+          'og:image': image,
+          'og:image:alt': imageNode?.alt,
           'og:type': 'article',
           'article:author:first_name': 'Lee',
           'article:author:last_name': 'Byron',
-          'article:published_time': frontmatter.date.toISO(),
-          'article:modified_time': lastModified.toISO(),
+          'article:published_time': datePublished,
+          'article:modified_time': dateModified,
           'twitter:card': 'summary',
           'twitter:creator': '@leeb',
         }),
         JSONLD({
           '@type': 'LearningResource',
           name: frontmatter.title,
+          description,
+          image,
           author: {
             '@type': 'Person',
             name: 'Lee Byron',
             url: 'http://leebyron.com' },
-          url: `https://leebyron.com/til/${frontmatter.permalink}/`,
-          datePublished: frontmatter.date.toISO(),
-          dateModified: lastModified.toISO(),
+          url: canonicalUrl,
+          datePublished,
+          dateModified,
           keywords: frontmatter.tags.join(', ') || undefined,
-          isPartOf: 'https://leebyron.com/til/',
+          isPartOf: canonicalRoot,
           license: 'https://creativecommons.org/licenses/by/4.0/',
         }),
         h('article',
@@ -145,10 +165,10 @@ function Document({ children }) {
         h('meta', { charset: 'UTF-8' }),
         children.filter(isHeadElement),
         h('meta', { name: 'viewport', content:'width=device-width, initial-scale=1'}),
-        h('link', { rel: 'canonical', href: `https://leebyron.com/til${usePath()}`}),
+        h('link', { rel: 'canonical', href: useCanonical() }),
         h('link', { rel: 'shortcut icon', href: useRelPath('/assets/favicon.png') }),
         h('link', { rel: 'stylesheet', href: useRelPath('/assets/style.css') }),
-        h('link', { rel: 'alternate', type: 'application/atom+xml', title: 'Reader Feed', href: useRelPath('/feed.xml') }),
+        h('link', { rel: 'alternate', type: 'application/atom+xml', title: 'Reader Feed', href: canonicalPath('/feed.xml') }),
         h(GTag),
       ),
       h('body',
@@ -164,7 +184,7 @@ function Document({ children }) {
 }
 
 function isHeadElement(element) {
-  switch (element.type) {
+  switch (element?.type) {
     case 'title':
     case 'meta':
     case 'link':
@@ -208,7 +228,7 @@ function Attribution({ filename, frontmatter: { permalink, date } }) {
     h('a', {
       property: "dct:title",
       rel: "cc:attributionURL",
-      href: `https://leebyron.com/til/${permalink}/` },
+      href: useCanonical() },
       'til'),
 
     // time
@@ -277,7 +297,7 @@ function License({ year, children }) {
 
     ' ⸱ ',
 
-    h('a', { href: useRelPath('/feed.xml'), rel: 'alternate feed', type: 'application/atom+xml' }, 'feed')
+    h('a', { href: canonicalPath('/feed.xml'), rel: 'alternate feed', type: 'application/atom+xml' }, 'feed')
   )
 }
 

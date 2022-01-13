@@ -65,8 +65,14 @@ function slugs(ast) {
   })
 }
 
-export function firstParagraph(ast) {
-  return ast.children.find(node => node.type === 'paragraph')
+export function findNode(ast, type) {
+  let found;
+  visit(ast, node => {
+    if (!found && node.type === type) {
+      found = node
+    }
+  })
+  return found
 }
 
 export function textContent(ast) {
