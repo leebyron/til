@@ -95,7 +95,7 @@ export function Feed({ entries }) {
   )
 }
 
-export function Page({ filename, lastModified, frontmatter, markdown, Content }) {
+export function Page({ filename, lastModified, frontmatter, markdown, Content, prev, next }) {
   const path = `/${frontmatter.permalink}/`
   const canonicalUrl = canonicalPath(path)
   const pageTitle = `til / ${frontmatter.title} — Lee Byron`
@@ -149,6 +149,12 @@ export function Page({ filename, lastModified, frontmatter, markdown, Content })
           h(Content, { components }),
         ),
         h('footer',
+          (prev || next) && h('div', { class: 'linkedlist' },
+            prev && h('a', { href: `../${prev.permalink}/`, class: 'prev' },
+              prev.title),
+            next && h('a', { href: `../${next.permalink}/`, class: 'next' },
+              next.title)
+          ),
           h(License, { year: frontmatter.date.year },
             h(Attribution, { filename, frontmatter })
           )

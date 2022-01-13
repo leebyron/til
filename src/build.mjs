@@ -89,7 +89,13 @@ export async function build() {
   console.log(path.relative(DIST_PATH, indexFile))
 
   // Build all files
-  for (const { filename, lastModified, markdown, frontmatter } of entries) {
+  for (const entry of entries) {
+    const { filename, lastModified, markdown, frontmatter } = entry
+
+    const index = publishedEntries.indexOf(entry)
+    const prev = index >= 0 && publishedEntries[index + 1]?.frontmatter
+    const next = index >= 0 && publishedEntries[index - 1]?.frontmatter
+
     const entryDir = path.resolve(DIST_PATH, frontmatter.permalink)
     const entryFile = path.resolve(entryDir, 'index.html')
     const entryRendered = render(
@@ -99,6 +105,8 @@ export async function build() {
         frontmatter: markdown.frontmatter.value,
         markdown,
         Content: options => mdjsx(markdown, options),
+        prev,
+        next,
       })
     )
     await run(`mkdir -p "${quot(entryDir)}"`)
