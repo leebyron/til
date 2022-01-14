@@ -7,8 +7,9 @@ tags: mac
 
 After nearly two decades on a Mac, I've finally come to the conclusion that the
 Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me,
-it collects stuff, things get lost there, I'm done with it. Here's how to get
-rid of it.
+it collects stuff, things get lost there, I'm done with it.
+
+Here's how to get rid of it.
 
 - Remove everything from the Desktop folder.
 - Make sure nothing is being automatically saved to the desktop. The most likely
