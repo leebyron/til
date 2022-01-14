@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-14T06:13:38.000+00:00</updated>
+  <updated>2022-01-14T06:26:33.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -97,6 +97,75 @@ a number of seconds.
 and called &quot;Screenshot.app&quot;
       </p>
       <a href="#fn-finder.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
+  <entry>
+    <id>https://leebyron.com/til/remove-mac-desktop/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/remove-mac-desktop/"/>
+    <published>2022-01-13T21:32:26.000-08:00</published>
+    <updated>2022-01-14T06:26:33.000+00:00</updated>
+    <title>how to remove the mac desktop</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <content type="html"><![CDATA[<p>
+  After nearly two decades on a Mac, I've finally come to the conclusion that the
+Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me,
+it collects stuff, things get lost there, I'm done with it. Here's how to get
+rid of it.
+</p>
+<ul>
+  <li>
+    <p>
+      Remove everything from the Desktop folder.
+    </p>
+  </li>
+  <li>
+    <p>
+      Make sure nothing is being automatically saved to the desktop. The most likely
+culprit is <a href="../mac-screenshot/">Screenshot.app</a>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Disable the Desktop folder from the desktop, and restart Finder
+    </p>
+    <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
+<span style="color:#24292EFF;">Killall Finder</span>
+</code></pre>
+  </li>
+  <li>
+    <p>
+      Open Finder, right click Desktop in sidebar and &quot;Remove from Sidebar&quot;
+    </p>
+  </li>
+</ul>
+<p>
+  You can't actually delete the Desktop folder itself, because Finder will just
+recreate it upon finding it missing. You can instead render it useless by
+symlinking it back to your home directory<a href="#fn-symlink" id="fn-symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+</p>
+<pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+<span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+<span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</code></pre>
+<p>
+  This last step stops Finder from replacing the symlink with an empty directory.
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn-symlink">
+      <p>
+        As an aside, if you want to keep your Desktop but want to put it somewhere
+else (like within Dropbox), these same symlinking steps will achieve this,
+just change the linked location.
+      </p>
+      <a href="#fn-symlink.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
   </ol>
 </section>]]></content>

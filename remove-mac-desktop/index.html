@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / how to remove the mac desktop — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/remove-mac-desktop/">
+    <meta property="og:title" content="til / how to remove the mac desktop — Lee Byron">
+    <meta property="og:description" content="After nearly two decades on a Mac, I've finally come to the conclusion that the
+Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me,
+it collects stuff, things get lost there, I'm done with it. Here's how to get
+rid of it.">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-01-13T21:32:26.000-08:00">
+    <meta property="article:modified_time" content="2022-01-14T06:26:33.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "how to remove the mac desktop",
+  "description": "After nearly two decades on a Mac, I've finally come to the conclusion that the\nDesktop is actively harmful. It is the junk drawer of the Mac. It distracts me,\nit collects stuff, things get lost there, I'm done with it. Here's how to get\nrid of it.",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/remove-mac-desktop/",
+  "datePublished": "2022-01-13T21:32:26.000-08:00",
+  "dateModified": "2022-01-14T06:26:33.000+00:00",
+  "keywords": "mac",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/remove-mac-desktop/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>how to remove the mac desktop</span>
+      </h1>
+      <p>
+        After nearly two decades on a Mac, I've finally come to the conclusion that the
+Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me,
+it collects stuff, things get lost there, I'm done with it. Here's how to get
+rid of it.
+      </p>
+      <ul>
+        <li>
+          <p>
+            Remove everything from the Desktop folder.
+          </p>
+        </li>
+        <li>
+          <p>
+            Make sure nothing is being automatically saved to the desktop. The most likely
+culprit is <a href="../mac-screenshot/">Screenshot.app</a>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Disable the Desktop folder from the desktop, and restart Finder
+          </p>
+          <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
+<span style="color:#24292EFF;">Killall Finder</span>
+</code></pre>
+        </li>
+        <li>
+          <p>
+            Open Finder, right click Desktop in sidebar and &quot;Remove from Sidebar&quot;
+          </p>
+        </li>
+      </ul>
+      <p>
+        You can't actually delete the Desktop folder itself, because Finder will just
+recreate it upon finding it missing. You can instead render it useless by
+symlinking it back to your home directory<a href="#fn-symlink" id="fn-symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+      </p>
+      <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+<span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+<span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</code></pre>
+      <p>
+        This last step stops Finder from replacing the symlink with an empty directory.
+      </p>
+      <section data-footnotes aria-label="footnotes">
+        <ol>
+          <li id="fn-symlink">
+            <p>
+              As an aside, if you want to keep your Desktop but want to put it somewhere
+else (like within Dropbox), these same symlinking steps will achieve this,
+just change the linked location.
+            </p>
+            <a href="#fn-symlink.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+        </ol>
+      </section>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../leap/" class="prev">leap®</a><a href="../screenshot/" class="next">mac screenshot</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/remove-mac-desktop/">til</a> was created <span property="dct:created" content="2022-01-13T21:32:26.000-08:00">Thu, Jan 13, 2022, 9:32 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/how%20to%20remove%20the%20mac%20desktop.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/how%20to%20remove%20the%20mac%20desktop.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>
