@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / mac screenshot — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/screenshot/">
+    <meta property="og:title" content="til / mac screenshot — Lee Byron">
+    <meta property="og:description" content="Mac has some keyboard shortcuts for capturing your screen via an app called
+&quot;Screenshot.&quot;">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-01-13T21:39:49.000-08:00">
+    <meta property="article:modified_time" content="2022-01-14T06:04:52.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "mac screenshot",
+  "description": "Mac has some keyboard shortcuts for capturing your screen via an app called\n\"Screenshot.\"",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/screenshot/",
+  "datePublished": "2022-01-13T21:39:49.000-08:00",
+  "dateModified": "2022-01-14T06:04:52.000+00:00",
+  "keywords": "mac",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/screenshot/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>mac screenshot</span>
+      </h1>
+      <p>
+        Mac has some keyboard shortcuts for capturing your screen via an app called
+&quot;Screenshot.&quot;
+      </p>
+      <ul>
+        <li>
+          <p>
+            Capture your entire screen with Command+Shift+3
+          </p>
+        </li>
+        <li>
+          <p>
+            Capture a portion of the screen with Command+Shift+4, then drag and release a
+rectangle.
+          </p>
+          <ul>
+            <li>
+              <p>
+                Before dragging, press space bar to toggle on capture window mode, then
+click the window to capture. This has the nice benefit of including the
+window's drop shadow with image transparency.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            Pull up the Screenshot app with Command+Shift+5<a href="#fn-finder" id="fn-finder.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>, and access the three
+image capture modes as well as two video capture modes and an options menu.
+          </p>
+        </li>
+      </ul>
+      <p>
+        By default all screenshots are saved to the Desktop. To keep your Desktop from
+becoming a junk drawer, I highly recommend saving them in some other dedicated
+location. I personally create a folder called &quot;Screenshots&quot; that I put at the
+top level of my Dropbox folder. If you don't use Dropbox, consider a folder in
+your home directory.
+      </p>
+      <p>
+        Open the Screenshot app and in the bar that appears click &quot;Options&quot;, and under
+the &quot;Save to&quot; heading choose &quot;Other Location.&quot;
+      </p>
+      <p>
+        While you're at it, take a look at the other options. I like to disable &quot;Show
+Floating Thumbnail&quot; since that feature delays saving the screenshot to disk for
+a number of seconds.
+      </p>
+      <p>
+        Alternatively, you can use the <code>defaults</code> terminal command:
+      </p>
+      <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.screencapture location </span><span style="color:#22863A;">&quot;~/Dropbox/Screenshots&quot;</span>
+</code></pre>
+      <p>
+        To make sure it worked (and check your other settings):
+      </p>
+      <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults </span><span style="color:#6F42C1;">read</span><span style="color:#24292EFF;"> com.apple.screencapture</span>
+</code></pre>
+      <section data-footnotes aria-label="footnotes">
+        <ol>
+          <li id="fn-finder">
+            <p>
+              Or you can open it directly via Finder. It's in <code>/Applications/Utilities</code>
+and called &quot;Screenshot.app&quot;
+            </p>
+            <a href="#fn-finder.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+        </ol>
+      </section>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../leap/" class="prev">leap®</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/screenshot/">til</a> was created <span property="dct:created" content="2022-01-13T21:39:49.000-08:00">Thu, Jan 13, 2022, 9:39 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/mac%20screenshot.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/mac%20screenshot.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>

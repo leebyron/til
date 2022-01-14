@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-13T07:28:02.000+00:00</updated>
+  <updated>2022-01-14T06:04:52.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,88 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/screenshot/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/screenshot/"/>
+    <published>2022-01-13T21:39:49.000-08:00</published>
+    <updated>2022-01-14T06:04:52.000+00:00</updated>
+    <title>mac screenshot</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <content type="html"><![CDATA[<p>
+  Mac has some keyboard shortcuts for capturing your screen via an app called
+&quot;Screenshot.&quot;
+</p>
+<ul>
+  <li>
+    <p>
+      Capture your entire screen with Command+Shift+3
+    </p>
+  </li>
+  <li>
+    <p>
+      Capture a portion of the screen with Command+Shift+4, then drag and release a
+rectangle.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Before dragging, press space bar to toggle on capture window mode, then
+click the window to capture. This has the nice benefit of including the
+window's drop shadow with image transparency.
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>
+      Pull up the Screenshot app with Command+Shift+5<a href="#fn-finder" id="fn-finder.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>, and access the three
+image capture modes as well as two video capture modes and an options menu.
+    </p>
+  </li>
+</ul>
+<p>
+  By default all screenshots are saved to the Desktop. To keep your Desktop from
+becoming a junk drawer, I highly recommend saving them in some other dedicated
+location. I personally create a folder called &quot;Screenshots&quot; that I put at the
+top level of my Dropbox folder. If you don't use Dropbox, consider a folder in
+your home directory.
+</p>
+<p>
+  Open the Screenshot app and in the bar that appears click &quot;Options&quot;, and under
+the &quot;Save to&quot; heading choose &quot;Other Location.&quot;
+</p>
+<p>
+  While you're at it, take a look at the other options. I like to disable &quot;Show
+Floating Thumbnail&quot; since that feature delays saving the screenshot to disk for
+a number of seconds.
+</p>
+<p>
+  Alternatively, you can use the <code>defaults</code> terminal command:
+</p>
+<pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.screencapture location </span><span style="color:#22863A;">&quot;~/Dropbox/Screenshots&quot;</span>
+</code></pre>
+<p>
+  To make sure it worked (and check your other settings):
+</p>
+<pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults </span><span style="color:#6F42C1;">read</span><span style="color:#24292EFF;"> com.apple.screencapture</span>
+</code></pre>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn-finder">
+      <p>
+        Or you can open it directly via Finder. It's in <code>/Applications/Utilities</code>
+and called &quot;Screenshot.app&quot;
+      </p>
+      <a href="#fn-finder.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/leap/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/leap/"/>
