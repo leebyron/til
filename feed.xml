@@ -79,13 +79,13 @@ a number of seconds.
 <p>
   Alternatively, you can use the <code>defaults</code> terminal command:
 </p>
-<pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.screencapture location </span><span style="color:#22863A;">&quot;~/Dropbox/Screenshots&quot;</span>
-</code></pre>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.apple.screencapture location </span><span style="color:#22863A;">&quot;~/Dropbox/Screenshots&quot;</span>
+</span></code></pre>
 <p>
   To make sure it worked (and check your other settings):
 </p>
-<pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults </span><span style="color:#6F42C1;">read</span><span style="color:#24292EFF;"> com.apple.screencapture</span>
-</code></pre>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults </span><span style="color:#6F42C1;">read</span><span style="color:#24292EFF;"> com.apple.screencapture</span>
+</span></code></pre>
 <p>
   <img src="../media/5d29319e337e0664.png" alt="Screenshot.app Options">
 </p>
@@ -137,9 +137,9 @@ culprit is <a href="../mac-screenshot/">Screenshot.app</a>.
     <p>
       Disable the Desktop folder from the desktop, and restart Finder
     </p>
-    <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
-<span style="color:#24292EFF;">Killall Finder</span>
-</code></pre>
+    <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
+</span><span data-line="2"><span style="color:#24292EFF;">Killall Finder</span>
+</span></code></pre>
   </li>
   <li>
     <p>
@@ -152,10 +152,10 @@ culprit is <a href="../mac-screenshot/">Screenshot.app</a>.
 recreate it upon finding it missing. You can instead render it useless by
 symlinking it back to your home directory<a href="#fn-symlink" id="fn-symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
 </p>
-<pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-<span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-<span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-</code></pre>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</span><span data-line="2"><span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</span><span data-line="3"><span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</span></code></pre>
 <p>
   This last step stops Finder from replacing the symlink with an empty directory.
 </p>
@@ -742,16 +742,16 @@ they are referenced<a href="#fn-a-note" id="fn-a-note.ref" data-footnote-ref ari
   Footnotes are created similar to shortcut reference links, but the identifier
 starts with a <code>^</code>.
 </p>
-<pre data-code-block data-lang="markdown"><code><span style="color:#24292EFF;">order in which they are referenced[^a note].</span>
-</code></pre>
+<pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">order in which they are referenced[^a note].</span>
+</span></code></pre>
 <p>
   A footnote definition is formatted exactly like link reference
 definitions<a href="#fn-needs-cr" id="fn-needs-cr.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>: in a box followed by a comma.
 </p>
-<pre data-code-block data-lang="markdown"><code><span style="color:#24292EFF;">[^a note]: Despite footnotes appearing numbered, the identifier can be any text.</span>
-<span style="color:#24292EFF;">This is helpful if you may add more notes later and don't want to be bothered to</span>
-<span style="color:#24292EFF;">reorder them.</span>
-</code></pre>
+<pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">[^a note]: Despite footnotes appearing numbered, the identifier can be any text.</span>
+</span><span data-line="2"><span style="color:#24292EFF;">This is helpful if you may add more notes later and don't want to be bothered to</span>
+</span><span data-line="3"><span style="color:#24292EFF;">reorder them.</span>
+</span></code></pre>
 <section data-footnotes aria-label="footnotes">
   <ol>
     <li id="fn-a-note">
@@ -797,16 +797,16 @@ are a great way to keep prose readable and keep a catalog of links. There are
 and the URL, optionally include a trailing title in quotes (which may go on the
 following line):
 </p>
-<pre data-code-block data-lang="markdown"><code><span style="color:#24292EFF;">[links]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">https://spec.commonmark.org/0.30/#links</span>
-<span style="color:#24292EFF;">[links]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">https://spec.commonmark.org/0.30/#links</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">'</span><span style="color:#2B5581;">Nearly a hundred tests</span><span style="color:#D32F2F;">'</span>
-</code></pre>
+<pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">[links]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">https://spec.commonmark.org/0.30/#links</span>
+</span><span data-line="2"><span style="color:#24292EFF;">[links]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">https://spec.commonmark.org/0.30/#links</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">'</span><span style="color:#2B5581;">Nearly a hundred tests</span><span style="color:#D32F2F;">'</span>
+</span></code></pre>
 <p>
   Then within prose, refer to them with typical link syntax, but with a trailing
 box instead of parentheses. If the linked text is the same as the identifier,
 just use a standalone box.
 </p>
-<pre data-code-block data-lang="markdown"><code><span style="color:#24292EFF;">Here is a link about </span><span style="color:#D32F2F;">[markdown links]</span><span style="color:#24292EFF;">[links]. What's the web without </span><span style="color:#D32F2F;">[links]</span><span style="color:#24292EFF;">?</span>
-</code></pre>
+<pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">Here is a link about </span><span style="color:#D32F2F;">[markdown links]</span><span style="color:#24292EFF;">[links]. What's the web without </span><span style="color:#D32F2F;">[links]</span><span style="color:#24292EFF;">?</span>
+</span></code></pre>
 <p>
   Here is a link about <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">markdown links</a>. What's the web without <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">links</a>?
 </p>
@@ -820,11 +820,11 @@ group them together at the end of a section or end of the whole document.
   References can also be used for images. The syntax for the reference is the
 same, but the image use itself starts with an <code>!</code>.
 </p>
-<pre data-code-block data-lang="markdown"><code><span style="color:#24292EFF;">!</span><span style="color:#D32F2F;">[moebius]</span>
-
-<span style="color:#24292EFF;">[moebius]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg</span>
-<span style="color:#24292EFF;">'Bond of Union, M.C. Escher 1956'</span>
-</code></pre>
+<pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">!</span><span style="color:#D32F2F;">[moebius]</span>
+</span><span data-line="2">
+</span><span data-line="3"><span style="color:#24292EFF;">[moebius]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg</span>
+</span><span data-line="4"><span style="color:#24292EFF;">'Bond of Union, M.C. Escher 1956'</span>
+</span></code></pre>
 <p>
   <img src="https://uploads4.wikiart.org/images/m-c-escher/bond-of-union.jpg" title="Bond of Union, M.C. Escher 1956" alt="moebius">
 </p>]]></content>

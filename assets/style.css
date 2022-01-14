@@ -96,6 +96,12 @@ pre[data-code-block] {
   overflow: scroll;
 }
 
+pre[data-code-block][data-lang*="sh"] span[data-line]:before {
+  content: '❯ ';
+  color: #40102030;
+  user-select: none;
+}
+
 :not(pre) > code {
   color: #802040;
   background: #80204008;

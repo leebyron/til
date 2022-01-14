@@ -79,9 +79,9 @@ culprit is <a href="../mac-screenshot/">Screenshot.app</a>.
           <p>
             Disable the Desktop folder from the desktop, and restart Finder
           </p>
-          <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
-<span style="color:#24292EFF;">Killall Finder</span>
-</code></pre>
+          <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
+</span><span data-line="2"><span style="color:#24292EFF;">Killall Finder</span>
+</span></code></pre>
         </li>
         <li>
           <p>
@@ -94,10 +94,10 @@ culprit is <a href="../mac-screenshot/">Screenshot.app</a>.
 recreate it upon finding it missing. You can instead render it useless by
 symlinking it back to your home directory<a href="#fn-symlink" id="fn-symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
       </p>
-      <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-<span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-<span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-</code></pre>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</span><span data-line="2"><span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</span><span data-line="3"><span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+</span></code></pre>
       <p>
         This last step stops Finder from replacing the symlink with an empty directory.
       </p>
