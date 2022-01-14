@@ -14,6 +14,8 @@ Mac has some keyboard shortcuts for capturing your screen via an app called
   - Before dragging, press space bar to toggle on capture window mode, then
     click the window to capture. This has the nice benefit of including the
     window's drop shadow with image transparency.
+  - While dragging, hold space bar to change from sizing the capture area to
+    moving the capture area.
 - Pull up the Screenshot app with Command+Shift+5[^finder], and access the three
   image capture modes as well as two video capture modes and an options menu.
 
