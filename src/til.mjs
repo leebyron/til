@@ -131,9 +131,9 @@ open all in fzf.`)
     : (
         await interactive(
           // Get all files in entries
-          `git -C ${TIL_PATH} ls-files -z |` +
+          `git ls-files -z |` +
             // Sorted by git last modification time
-            `xargs -0 -n1 -I"{}" -- git -C ${TIL_PATH} log -1 --format="%at {}" "{}" | sort -sr | cut -d " " -f2- | tr '\\n' '\\0' |` +
+            `xargs -0 -n1 -I"{}" -- git log -1 --format="%at {}" "{}" | sort -sr | cut -d " " -f2- | tr '\\n' '\\0' |` +
             // Remove the extension
             `xargs -0 basename -s .md |` +
             // And read with fzf
