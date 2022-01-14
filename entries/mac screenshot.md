@@ -45,3 +45,5 @@ To make sure it worked (and check your other settings):
 ```sh
 defaults read com.apple.screencapture
 ```
+
+![Screenshot.app Options](../media/5d29319e337e0664.png)
