@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-14T06:04:52.000+00:00</updated>
+  <updated>2022-01-14T06:08:14.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/screenshot/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/screenshot/"/>
     <published>2022-01-13T21:39:49.000-08:00</published>
-    <updated>2022-01-14T06:04:52.000+00:00</updated>
+    <updated>2022-01-14T06:08:14.000+00:00</updated>
     <title>mac screenshot</title>
     <author>
       <name>Lee Byron</name>
@@ -84,6 +84,9 @@ a number of seconds.
 </p>
 <pre data-code-block data-lang="sh"><code><span style="color:#24292EFF;">defaults </span><span style="color:#6F42C1;">read</span><span style="color:#24292EFF;"> com.apple.screencapture</span>
 </code></pre>
+<p>
+  <img src="../media/5d29319e337e0664.png" alt="Screenshot.app Options">
+</p>
 <section data-footnotes aria-label="footnotes">
   <ol>
     <li id="fn-finder">
