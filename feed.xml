@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-14T06:08:14.000+00:00</updated>
+  <updated>2022-01-14T06:13:38.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/screenshot/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/screenshot/"/>
     <published>2022-01-13T21:39:49.000-08:00</published>
-    <updated>2022-01-14T06:08:14.000+00:00</updated>
+    <updated>2022-01-14T06:13:38.000+00:00</updated>
     <title>mac screenshot</title>
     <author>
       <name>Lee Byron</name>
@@ -67,7 +67,9 @@ your home directory.
 </p>
 <p>
   Open the Screenshot app and in the bar that appears click &quot;Options&quot;, and under
-the &quot;Save to&quot; heading choose &quot;Other Location.&quot;
+the &quot;Save to&quot; heading choose &quot;Other Location&quot; and choose or create the dedicated
+folder. Afterwards, I recommend adding your Screenshots folder to your Finder's
+sidebar for quick access.
 </p>
 <p>
   While you're at it, take a look at the other options. I like to disable &quot;Show
