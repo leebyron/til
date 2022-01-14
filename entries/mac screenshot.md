@@ -1,7 +1,7 @@
 ---
 title: mac screenshot
 permalink: mac-screenshot
-date: 2022-01-13T21:39:49-08:00
+date: 2022-01-13T17:39:49-08:00
 tags: mac
 ---
 
