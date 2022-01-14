@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-14T06:26:33.000+00:00</updated>
+  <updated>2022-01-14T06:44:48.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -106,7 +106,7 @@ and called &quot;Screenshot.app&quot;
     <id>https://leebyron.com/til/remove-mac-desktop/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/remove-mac-desktop/"/>
     <published>2022-01-13T21:32:26.000-08:00</published>
-    <updated>2022-01-14T06:26:33.000+00:00</updated>
+    <updated>2022-01-14T06:44:48.000+00:00</updated>
     <title>how to remove the mac desktop</title>
     <author>
       <name>Lee Byron</name>
@@ -116,8 +116,10 @@ and called &quot;Screenshot.app&quot;
     <content type="html"><![CDATA[<p>
   After nearly two decades on a Mac, I've finally come to the conclusion that the
 Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me,
-it collects stuff, things get lost there, I'm done with it. Here's how to get
-rid of it.
+it collects stuff, things get lost there, I'm done with it.
+</p>
+<p>
+  Here's how to get rid of it.
 </p>
 <ul>
   <li>
