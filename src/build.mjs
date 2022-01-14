@@ -34,7 +34,7 @@ export async function build() {
     filenames.map(async filename => {
       const filepath = path.resolve(ENTRIES_PATH, filename)
       const lastModified = DateTime.fromISO(
-        await exec(`git log -1 --pretty="format:%cI" "${quot(filepath)}"`)
+        await exec(`git -C ${TIL_PATH} log -1 --pretty="format:%cI" "${quot(filepath)}"`)
       )
       const content = await fs.readFile(filepath, 'utf8')
       const markdown = parseMarkdown(content)

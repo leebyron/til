@@ -191,21 +191,28 @@ function highlight(code, lang) {
   if (lang) {
     try {
       const tokens = highlighter.codeToThemedTokens(code, lang)
-      return tokens.flatMap(line => [
-        ...line.map(token =>
-          /^\w*$/.test(token)
-            ? token
-            : jsx('span', {
-                style: {
-                  color: token.color,
-                  'font-style':
-                    token.fontStyle & shiki.FontStyle.Italic ? 'italic' : null,
-                },
-                children: token.content,
-              })
-        ),
-        '\n',
-      ])
+      return tokens.map((line, num) =>
+        jsx('span', {
+          'data-line': num + 1,
+          children: [
+            ...line.map(token =>
+              /^\w*$/.test(token)
+                ? token
+                : jsx('span', {
+                    style: {
+                      color: token.color,
+                      'font-style':
+                        token.fontStyle & shiki.FontStyle.Italic
+                          ? 'italic'
+                          : null,
+                    },
+                    children: token.content,
+                  })
+            ),
+            '\n',
+          ],
+        })
+      )
     } catch {
       // Ignore
     }
