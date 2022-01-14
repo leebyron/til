@@ -28,7 +28,9 @@ top level of my Dropbox folder. If you don't use Dropbox, consider a folder in
 your home directory.
 
 Open the Screenshot app and in the bar that appears click "Options", and under
-the "Save to" heading choose "Other Location."
+the "Save to" heading choose "Other Location" and choose or create the dedicated
+folder. Afterwards, I recommend adding your Screenshots folder to your Finder's
+sidebar for quick access.
 
 While you're at it, take a look at the other options. I like to disable "Show
 Floating Thumbnail" since that feature delays saving the screenshot to disk for
