@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-14T06:44:48.000+00:00</updated>
+  <updated>2022-01-14T06:45:21.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -16,10 +16,10 @@
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
   <entry>
-    <id>https://leebyron.com/til/screenshot/</id>
-    <link rel="alternate" type="text/html" href="https://leebyron.com/til/screenshot/"/>
+    <id>https://leebyron.com/til/mac-screenshot/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/mac-screenshot/"/>
     <published>2022-01-13T21:39:49.000-08:00</published>
-    <updated>2022-01-14T06:13:38.000+00:00</updated>
+    <updated>2022-01-14T06:45:21.000+00:00</updated>
     <title>mac screenshot</title>
     <author>
       <name>Lee Byron</name>
