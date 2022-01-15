@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-14T18:12:04.000+00:00</updated>
+  <updated>2022-01-15T06:36:45.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,43 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/mac-find-buffer/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/mac-find-buffer/"/>
+    <published>2022-01-14T22:25:32.000-08:00</published>
+    <updated>2022-01-15T06:36:45.000+00:00</updated>
+    <title>mac find buffer</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <content type="html"><![CDATA[<p>
+  Most text based apps on the Mac have a find buffer accessed with ⌘F. A common
+workflow is to select some text, copy it with ⌘C, open find with ⌘F, paste the
+searched text with ⌘V, hit return to find the next instance, and hit return
+multiple times until you find the instance you're looking for, then hit escape
+to close the find overlay.
+</p>
+<p>
+  <em>There's a faster way.</em>
+</p>
+<p>
+  After selecting text, press ⌘E to fill that text into the find buffer. It may
+look like nothing happened, but now press ⌘G to find the next instance of that
+text (⌘⇧G to find the previous). Continue pressing ⌘G until you find the
+instance you're looking for.
+</p>
+<p>
+  This has a benefit of not changing modes; your cursor remains within the text
+document rather than being caught by the find input.
+</p>
+<p>
+  This works in Safari, Chrome, TextEdit, Notes, VSCode, Terminal (but not iTerm),
+and most other places you work with text in macOS.
+</p>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/remove-mac-desktop/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/remove-mac-desktop/"/>
