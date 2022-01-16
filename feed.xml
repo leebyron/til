@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-15T06:36:45.000+00:00</updated>
+  <updated>2022-01-16T04:49:14.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,46 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/remap-caps-lock/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/remap-caps-lock/"/>
+    <published>2022-01-15T20:41:11.000-08:00</published>
+    <updated>2022-01-16T04:49:14.000+00:00</updated>
+    <title>remap caps lock</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <content type="html"><![CDATA[<p>
+  The caps lock key is conveniently located next to your left pinkie on the home
+row, easier to press than almost all other modifiers despite being one I find
+least useful. Luckily, macOS makes it very easy to remap this key<a href="#fn-alternative" id="fn-alternative.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+</p>
+<p>
+  In System Preferences → Keyboard, press &quot;Modifier Keys...&quot; to open a menu
+mapping physical keys to the action they apply. I always remap my caps lock key
+to &quot;Control&quot;, since I spend a fair amount of time in Terminal, where Control is
+used a fair amount (like Control-C to send <code>SIGINT</code>, or Control-Z to send
+<code>SIGTSTP</code>).
+</p>
+<p>
+  <img src="../media/91e205164869e572.png" alt="Screen Shot 2022-01-15 at 8.39.01 PM.png">
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn-alternative">
+      <p>
+        There is other software for much more powerful key
+remapping, which I'll write about in the future. It's nice that this is an
+OS-provided preference, so you can quickly set it without installing anything.
+      </p>
+      <a href="#fn-alternative.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/mac-find-buffer/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/mac-find-buffer/"/>
