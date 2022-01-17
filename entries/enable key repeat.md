@@ -6,9 +6,9 @@ tags: mac
 ---
 
 In macOS, when you hold down a letter key you see a small popover with available
-alternates for that letter (for example by applying accents). The behavior can
-be disabled to return to an older behavior of key repeat—where holding a key
-repeats that letter until you release it.
+alternates for that letter (for example by applying accents). This behavior can
+be disabled, returning to the previous behavior where holding a key repeats that
+letter until you release it.
 
 To do so for a specific app:
 
@@ -22,8 +22,7 @@ Or to disable system wide:
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
-After changing this setting, you need to restart the app or whole sign in
-session.
+After changing this setting, you need to restart the app or sign in session.
 
 _I learned this TIL recently from [@rsms] care of his excellent [macOS Fixes]
 doc._
