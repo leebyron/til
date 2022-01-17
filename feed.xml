@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-17T07:20:53.000+00:00</updated>
+  <updated>2022-01-17T08:00:46.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/enable-key-repeat/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/enable-key-repeat/"/>
     <published>2022-01-16T23:09:29.000-08:00</published>
-    <updated>2022-01-17T07:20:53.000+00:00</updated>
+    <updated>2022-01-17T08:00:46.000+00:00</updated>
     <title>enable key repeat</title>
     <author>
       <name>Lee Byron</name>
@@ -28,9 +28,9 @@
     <category term="mac"/>
     <content type="html"><![CDATA[<p>
   In macOS, when you hold down a letter key you see a small popover with available
-alternates for that letter (for example by applying accents). The behavior can
-be disabled to return to an older behavior of key repeat—where holding a key
-repeats that letter until you release it.
+alternates for that letter (for example by applying accents). This behavior can
+be disabled, returning to the previous behavior where holding a key repeats that
+letter until you release it.
 </p>
 <p>
   To do so for a specific app:
@@ -43,8 +43,7 @@ repeats that letter until you release it.
 <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write -g ApplePressAndHoldEnabled -bool </span><span style="color:#6F42C1;">false</span>
 </span></code></pre>
 <p>
-  After changing this setting, you need to restart the app or whole sign in
-session.
+  After changing this setting, you need to restart the app or sign in session.
 </p>
 <p>
   <em>I learned this TIL recently from <a href="https://twitter.com/rsms" target="_blank">@rsms</a> care of his excellent <a href="https://gist.github.com/rsms/fb463396c95ad8d9efa338a8050a01dc" target="_blank">macOS Fixes</a>
