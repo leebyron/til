@@ -5,7 +5,7 @@ date: 2022-01-17T22:46:57-08:00
 tags: vim
 ---
 
-Vim, run from the terminal, does not make use the Command key. So most of my
+Vim, run from the terminal, does not make use of the Command key. So most of my
 muscle memory has been lost while learning it. However I found a shortcut:
 iTerm's key mapping.
 
@@ -18,5 +18,3 @@ Key Binding.
 
 Now within the terminal, hitting Command-Z (Undo) will map to Meta-U, which will
 perform Undo in Vim.
-
-More mappings can be added as necessary.
