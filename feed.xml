@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-18T06:56:12.000+00:00</updated>
+  <updated>2022-01-19T08:31:54.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,49 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>
+      https://leebyron.com/til/type-unicode-from-the-keyboard/
+    </id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/type-unicode-from-the-keyboard/"/>
+    <published>2022-01-18T23:14:26.000-08:00</published>
+    <updated>2022-01-19T08:31:54.000+00:00</updated>
+    <title>type unicode from the keyboard</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <category term="keyboard"/>
+    <content type="html"><![CDATA[<p>
+  I'm often looking up Unicode code points to use in various places. There are two
+ways I type them quickly from the keyboard.
+</p>
+<p>
+  The first way is a cheat. In the first tab of Keyboard preferences, ensure
+&quot;Press 🌐 to: &quot; is set to &quot;Show Emoji &amp; Symbols&quot;. Now tap the <code>fn</code> key to bring
+up the Symbols picker. The search does a half decent job of finding the symbol
+you need. Clicking it behaves as a key press.
+</p>
+<p>
+  The second way is best if you know the <em>code</em>. From the Keyboard preferences in
+the &quot;Input Sources&quot; tab, press the <code>+</code> button and add the &quot;Unicode Hex Input&quot;
+keyboard. When using this keyboard, <code>⌥+&lt;key&gt;</code> no longer produces an alternate
+symbol, but instead allows you to type in hex codes.
+</p>
+<p>
+  Now by holding ⌥ and typing <code>229b</code>, I can type: ⊛
+</p>
+<p>
+  One small caveat is that this only supports 4-digit UTF-16 codes, but it does
+support surrogate pairs. This is annoying to type, but does allow entering Emoji
+directly via keyboard.
+</p>
+<p>
+  For example holding ⌥ and typing <code>d83ddcbe</code>: 💾
+</p>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/command-z-in-vim/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/command-z-in-vim/"/>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / type unicode from the keyboard — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/type-unicode-from-the-keyboard/">
+    <meta property="og:title" content="til / type unicode from the keyboard — Lee Byron">
+    <meta property="og:description" content="I'm often looking up Unicode code points to use in various places. There are two
+ways I type them quickly from the keyboard.">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-01-18T23:14:26.000-08:00">
+    <meta property="article:modified_time" content="2022-01-19T08:31:54.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "type unicode from the keyboard",
+  "description": "I'm often looking up Unicode code points to use in various places. There are two\nways I type them quickly from the keyboard.",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/type-unicode-from-the-keyboard/",
+  "datePublished": "2022-01-18T23:14:26.000-08:00",
+  "dateModified": "2022-01-19T08:31:54.000+00:00",
+  "keywords": "mac, keyboard",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/type-unicode-from-the-keyboard/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>type unicode from the keyboard</span>
+      </h1>
+      <p>
+        I'm often looking up Unicode code points to use in various places. There are two
+ways I type them quickly from the keyboard.
+      </p>
+      <p>
+        The first way is a cheat. In the first tab of Keyboard preferences, ensure
+&quot;Press 🌐 to: &quot; is set to &quot;Show Emoji &amp; Symbols&quot;. Now tap the <code>fn</code> key to bring
+up the Symbols picker. The search does a half decent job of finding the symbol
+you need. Clicking it behaves as a key press.
+      </p>
+      <p>
+        The second way is best if you know the <em>code</em>. From the Keyboard preferences in
+the &quot;Input Sources&quot; tab, press the <code>+</code> button and add the &quot;Unicode Hex Input&quot;
+keyboard. When using this keyboard, <code>⌥+&lt;key&gt;</code> no longer produces an alternate
+symbol, but instead allows you to type in hex codes.
+      </p>
+      <p>
+        Now by holding ⌥ and typing <code>229b</code>, I can type: ⊛
+      </p>
+      <p>
+        One small caveat is that this only supports 4-digit UTF-16 codes, but it does
+support surrogate pairs. This is annoying to type, but does allow entering Emoji
+directly via keyboard.
+      </p>
+      <p>
+        For example holding ⌥ and typing <code>d83ddcbe</code>: 💾
+      </p>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../command-z-in-vim/" class="prev">command-z in vim</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/type-unicode-from-the-keyboard/">til</a> was created <span property="dct:created" content="2022-01-18T23:14:26.000-08:00">Tue, Jan 18, 2022, 11:14 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/type%20unicode%20from%20the%20keyboard.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/type%20unicode%20from%20the%20keyboard.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>
