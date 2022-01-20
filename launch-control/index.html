@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / launch control — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/launch-control/">
+    <meta property="og:title" content="til / launch control — Lee Byron">
+    <meta property="og:description" content="I need to run a command every time a particular file changed. In the past I've
+used tools like watchman to do this, and found them heavyweight. In this
+particular case, I could safely assume I was running on macOS and wanted to
+avoid the dependency of installed software. Then I learned about .">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-01-19T23:07:38.000-08:00">
+    <meta property="article:modified_time" content="2022-01-20T08:00:22.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "launch control",
+  "description": "I need to run a command every time a particular file changed. In the past I've\nused tools like watchman to do this, and found them heavyweight. In this\nparticular case, I could safely assume I was running on macOS and wanted to\navoid the dependency of installed software. Then I learned about .",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/launch-control/",
+  "datePublished": "2022-01-19T23:07:38.000-08:00",
+  "dateModified": "2022-01-20T08:00:22.000+00:00",
+  "keywords": "mac",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/launch-control/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>launch control</span>
+      </h1>
+      <p>
+        I need to run a command every time a particular file changed. In the past I've
+used tools like <a href="https://facebook.github.io/watchman/" target="_blank">watchman</a> to do this, and found them heavyweight. In this
+particular case, I could safely assume I was running on macOS and wanted to
+avoid the dependency of installed software. <em>Then I learned about <code>launchctl</code>.</em>
+      </p>
+      <p>
+        The man page for <a href="x-man-page://launchctl">launchctl</a> is not particularly helpful, so it required some
+searching and experimenting to understand. This, along with <a href="x-man-page://launchd">launchd</a>, are a
+powerful system for configuring services within the operating system. One way
+launchd determines that a service should be started is by watching for changes
+to a file. Perfect.
+      </p>
+      <p>
+        A &quot;service&quot; is any executable program (like a shell script or a JavaScript file)
+and a configuration plist file placed in a specific location. For example, lets
+set up a service that runs a website builder every time a source file is
+updated.
+      </p>
+      <p>
+        Here, <code>~/Library/LaunchAgents/com.leebyron.website-agent.plist</code> defines the name
+of my agent, the program to run, where to write standard output, and the path to
+watch. Changes to that path will run my program. Note that the program is not
+run inside a shell, so a node script needs to provide a full path to the node
+executable, rather than a executable &quot;hash bang&quot;.
+      </p>
+      <pre data-code-block data-lang="xml"><code><span data-line="1"><span style="color:#24292EFF;">&lt;?</span><span style="color:#22863A;">xml</span><span style="color:#6F42C1;"> version</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;1.0&quot;</span><span style="color:#6F42C1;"> encoding</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;UTF-8&quot;</span><span style="color:#24292EFF;">?&gt;</span>
+</span><span data-line="2"><span style="color:#24292EFF;">&lt;!</span><span style="color:#D32F2F;">DOCTYPE</span><span style="color:#24292EFF;"> plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+</span><span data-line="3"><span style="color:#24292EFF;">&lt;</span><span style="color:#22863A;">plist</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">version</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;1.0&quot;</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="4"><span style="color:#24292EFF;">&lt;</span><span style="color:#22863A;">dict</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="5"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;Label&lt;/</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="6"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;com.leebyron.website-agent&lt;/</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="7"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;ProgramArguments&lt;/</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="8"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">array</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="9"><span style="color:#24292EFF;">        &lt;</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;/Users/leebyron/.nvm/versions/node/v17.3.0/bin/node&lt;/</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="10"><span style="color:#24292EFF;">        &lt;</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;/Users/leebyron/projects/website/generate.js&lt;/</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="11"><span style="color:#24292EFF;">    &lt;/</span><span style="color:#22863A;">array</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="12"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;StandardOutPath&lt;/</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="13"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;/Users/leebyron/projects/website/output.log&lt;/</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="14"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;StandardErrorPath&lt;/</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="15"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;/Users/leebyron/projects/website/output.log&lt;/</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="16"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;WatchPaths&lt;/</span><span style="color:#22863A;">key</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="17"><span style="color:#24292EFF;">    &lt;</span><span style="color:#22863A;">array</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="18"><span style="color:#24292EFF;">        &lt;</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;/Users/leebyron/projects/website/src&lt;/</span><span style="color:#22863A;">string</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="19"><span style="color:#24292EFF;">    &lt;/</span><span style="color:#22863A;">array</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="20"><span style="color:#24292EFF;">&lt;/</span><span style="color:#22863A;">dict</span><span style="color:#24292EFF;">&gt;</span>
+</span><span data-line="21"><span style="color:#24292EFF;">&lt;/</span><span style="color:#22863A;">plist</span><span style="color:#24292EFF;">&gt;</span>
+</span></code></pre>
+      <p>
+        Finally, tell launch control about this service. You'll need to know your uid
+number (which you can find by running the <code>id</code> command). Replace &quot;500&quot; here with
+whatever your uid happens to be.
+      </p>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootstrap gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
+</span></code></pre>
+      <p>
+        To remove this service, replace <code>bootstrap</code> with <code>bootout</code>:
+      </p>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootout gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
+</span></code></pre>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../type-unicode-from-the-keyboard/" class="prev">type unicode from the keyboard</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/launch-control/">til</a> was created <span property="dct:created" content="2022-01-19T23:07:38.000-08:00">Wed, Jan 19, 2022, 11:07 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/launch%20control.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/launch%20control.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>
