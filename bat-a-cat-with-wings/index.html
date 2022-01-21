@@ -5,17 +5,17 @@
     <title>til / bat, a cat with wings — Lee Byron</title>
     <meta property="og:url" content="https://leebyron.com/til/bat-a-cat-with-wings/">
     <meta property="og:title" content="til / bat, a cat with wings — Lee Byron">
-    <meta property="og:description" content="On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit
-space bar to quickly take a look at the contents. In terminal things are
-a little different. There's  , and . Bash denizens will be familiar
-with the results.">
+    <meta property="og:description" content="On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit space
+bar to quickly take a look at the contents. In terminal things are a little
+different. There's  , and . Bash denizens will be familiar with
+the results.">
     <meta property="og:image" content="https://leebyron.com/til/media/37d23ef3d437ac42.png">
-    <meta property="og:image:alt" content="Screen Shot 2022-01-20 at 11.38.38 PM.png">
+    <meta property="og:image:alt" content="regular old cat">
     <meta property="og:type" content="article">
     <meta property="article:author:first_name" content="Lee">
     <meta property="article:author:last_name" content="Byron">
     <meta property="article:published_time" content="2022-01-20T23:42:20.000-08:00">
-    <meta property="article:modified_time" content="2022-01-21T08:01:27.000+00:00">
+    <meta property="article:modified_time" content="2022-01-21T08:07:39.000+00:00">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@leeb">
     <script type="application/ld+json">
@@ -23,7 +23,7 @@ with the results.">
   "@context": "https://schema.org/",
   "@type": "LearningResource",
   "name": "bat, a cat with wings",
-  "description": "On macOS there is the fantastic \"Preview\" utility. Select a file and hit\nspace bar to quickly take a look at the contents. In terminal things are\na little different. There's  , and . Bash denizens will be familiar\nwith the results.",
+  "description": "On macOS there is the fantastic \"Preview\" utility. Select a file and hit space\nbar to quickly take a look at the contents. In terminal things are a little\ndifferent. There's  , and . Bash denizens will be familiar with\nthe results.",
   "image": "https://leebyron.com/til/media/37d23ef3d437ac42.png",
   "author": {
     "@type": "Person",
@@ -32,7 +32,7 @@ with the results.">
   },
   "url": "https://leebyron.com/til/bat-a-cat-with-wings/",
   "datePublished": "2022-01-20T23:42:20.000-08:00",
-  "dateModified": "2022-01-21T08:01:27.000+00:00",
+  "dateModified": "2022-01-21T08:07:39.000+00:00",
   "keywords": "terminal",
   "isPartOf": "https://leebyron.com/til/",
   "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -60,13 +60,13 @@ with the results.">
         <a href="../">til</a><span>bat, a cat with wings</span>
       </h1>
       <p>
-        On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit
-space bar to quickly take a look at the contents. In terminal things are
-a little different. There's <code>tail</code> <code>cat</code>, and <code>less</code>. Bash denizens will be familiar
-with the results.
+        On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit space
+bar to quickly take a look at the contents. In terminal things are a little
+different. There's <code>tail</code> <code>cat</code>, and <code>less</code>. Bash denizens will be familiar with
+the results.
       </p>
       <p>
-        <img src="../media/37d23ef3d437ac42.png" alt="Screen Shot 2022-01-20 at 11.38.38 PM.png">
+        <img src="../media/37d23ef3d437ac42.png" alt="regular old cat">
       </p>
       <p>
         Good luck if you try taking a look at a massive file, a file with long lines, or
@@ -76,21 +76,23 @@ highlighting. There's a better way...
       </p>
       <p>
         Use <a href="https://github.com/sharkdp/bat" target="_blank"><code>bat</code></a>, it's just <code>cat</code> but with wings. It syntax highlights, it shows line
-numbers, it intelligently pipes to <code>less</code> (if it needs to), it even integrates with <code>git</code> to point out
-modified lines. It knows where its running and where its printing and falls back
-to the simple thing when you just need it to <code>cat</code> a file.
+numbers, it intelligently pipes to <code>less</code> (if it needs to), it even integrates
+with <code>git</code> to point out modified lines. It knows where its running and where its
+printing and falls back to the simple thing when you just need it to <code>cat</code> a
+file.
       </p>
       <p>
-        <img src="../media/76a2c219c5bdb4fc.png" alt="Screen Shot 2022-01-20 at 11.38.34 PM.png">
+        <img src="../media/76a2c219c5bdb4fc.png" alt="bat! it's got wings">
       </p>
       <p>
-        Learn more about <code>bat</code> at [github.com/sharkdp/bat][`bat'], and install with <a href="https://formulae.brew.sh/formula/bat" target="_blank">Homebrew</a>:
+        Learn more about <code>bat</code> at [github.com/sharkdp/bat][`bat'], and install with
+<a href="https://formulae.brew.sh/formula/bat" target="_blank">Homebrew</a>:
       </p>
       <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install bat</span>
 </span></code></pre>
       <p>
-        One more thing. Combine <code>bat</code> and <code>prettier</code> with <a href="https://github.com/eth-p/bat-extras/blob/master/doc/prettybat.md" target="_blank"><code>prettybat</code></a>, or <code>man</code> with <a href="https://github.com/eth-p/bat-extras/blob/master/doc/batman.md" target="_blank"><code>batman</code></a>, a few of many
-bonus tools that comes with <a href="https://github.com/eth-p/bat-extras/blob/master/README.md#installation" target="_blank"><code>bat-extras</code></a>.
+        One more thing. Combine <code>bat</code> and <code>prettier</code> with <a href="https://github.com/eth-p/bat-extras/blob/master/doc/prettybat.md" target="_blank"><code>prettybat</code></a>, or <code>man</code> with
+<a href="https://github.com/eth-p/bat-extras/blob/master/doc/batman.md" target="_blank"><code>batman</code></a>, a few of many bonus tools that comes with <a href="https://github.com/eth-p/bat-extras/blob/master/README.md#installation" target="_blank"><code>bat-extras</code></a>.
       </p>
     </article>
     <footer>

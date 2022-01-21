@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-21T08:01:27.000+00:00</updated>
+  <updated>2022-01-21T08:07:39.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/bat-a-cat-with-wings/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/bat-a-cat-with-wings/"/>
     <published>2022-01-20T23:42:20.000-08:00</published>
-    <updated>2022-01-21T08:01:27.000+00:00</updated>
+    <updated>2022-01-21T08:07:39.000+00:00</updated>
     <title>bat, a cat with wings</title>
     <author>
       <name>Lee Byron</name>
@@ -27,13 +27,13 @@
     </author>
     <category term="terminal"/>
     <content type="html"><![CDATA[<p>
-  On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit
-space bar to quickly take a look at the contents. In terminal things are
-a little different. There's <code>tail</code> <code>cat</code>, and <code>less</code>. Bash denizens will be familiar
-with the results.
+  On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit space
+bar to quickly take a look at the contents. In terminal things are a little
+different. There's <code>tail</code> <code>cat</code>, and <code>less</code>. Bash denizens will be familiar with
+the results.
 </p>
 <p>
-  <img src="../media/37d23ef3d437ac42.png" alt="Screen Shot 2022-01-20 at 11.38.38 PM.png">
+  <img src="../media/37d23ef3d437ac42.png" alt="regular old cat">
 </p>
 <p>
   Good luck if you try taking a look at a massive file, a file with long lines, or
@@ -43,21 +43,23 @@ highlighting. There's a better way...
 </p>
 <p>
   Use <a href="https://github.com/sharkdp/bat" target="_blank"><code>bat</code></a>, it's just <code>cat</code> but with wings. It syntax highlights, it shows line
-numbers, it intelligently pipes to <code>less</code> (if it needs to), it even integrates with <code>git</code> to point out
-modified lines. It knows where its running and where its printing and falls back
-to the simple thing when you just need it to <code>cat</code> a file.
+numbers, it intelligently pipes to <code>less</code> (if it needs to), it even integrates
+with <code>git</code> to point out modified lines. It knows where its running and where its
+printing and falls back to the simple thing when you just need it to <code>cat</code> a
+file.
 </p>
 <p>
-  <img src="../media/76a2c219c5bdb4fc.png" alt="Screen Shot 2022-01-20 at 11.38.34 PM.png">
+  <img src="../media/76a2c219c5bdb4fc.png" alt="bat! it's got wings">
 </p>
 <p>
-  Learn more about <code>bat</code> at [github.com/sharkdp/bat][`bat'], and install with <a href="https://formulae.brew.sh/formula/bat" target="_blank">Homebrew</a>:
+  Learn more about <code>bat</code> at [github.com/sharkdp/bat][`bat'], and install with
+<a href="https://formulae.brew.sh/formula/bat" target="_blank">Homebrew</a>:
 </p>
 <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install bat</span>
 </span></code></pre>
 <p>
-  One more thing. Combine <code>bat</code> and <code>prettier</code> with <a href="https://github.com/eth-p/bat-extras/blob/master/doc/prettybat.md" target="_blank"><code>prettybat</code></a>, or <code>man</code> with <a href="https://github.com/eth-p/bat-extras/blob/master/doc/batman.md" target="_blank"><code>batman</code></a>, a few of many
-bonus tools that comes with <a href="https://github.com/eth-p/bat-extras/blob/master/README.md#installation" target="_blank"><code>bat-extras</code></a>.
+  One more thing. Combine <code>bat</code> and <code>prettier</code> with <a href="https://github.com/eth-p/bat-extras/blob/master/doc/prettybat.md" target="_blank"><code>prettybat</code></a>, or <code>man</code> with
+<a href="https://github.com/eth-p/bat-extras/blob/master/doc/batman.md" target="_blank"><code>batman</code></a>, a few of many bonus tools that comes with <a href="https://github.com/eth-p/bat-extras/blob/master/README.md#installation" target="_blank"><code>bat-extras</code></a>.
 </p>]]></content>
     <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
