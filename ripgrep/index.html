@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / r.i.p. grep — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/ripgrep/">
+    <meta property="og:title" content="til / r.i.p. grep — Lee Byron">
+    <meta property="og:description" content="One of the oldest and most incredible tools in the terminal is . It
+was written overnight by the GOAT, Ken Thompson, back in the early 1970s. It
+allows you to search through a file (or stdin) for a regular expression
+pattern. Useful then, useful now. Incredible.">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-01-21T22:24:50.000-08:00">
+    <meta property="article:modified_time" content="2022-01-22T06:47:44.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "r.i.p. grep",
+  "description": "One of the oldest and most incredible tools in the terminal is . It\nwas written overnight by the GOAT, Ken Thompson, back in the early 1970s. It\nallows you to search through a file (or stdin) for a regular expression\npattern. Useful then, useful now. Incredible.",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/ripgrep/",
+  "datePublished": "2022-01-21T22:24:50.000-08:00",
+  "dateModified": "2022-01-22T06:47:44.000+00:00",
+  "keywords": "terminal",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/ripgrep/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>r.i.p. grep</span>
+      </h1>
+      <p>
+        One of the oldest and most incredible tools in the terminal is <code>grep</code><a href="#fn-grep" id="fn-grep.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It
+was written overnight by the GOAT, <a href="https://en.wikipedia.org/wiki/Ken_Thompson" target="_blank">Ken Thompson</a>, back in the early 1970s. It
+allows you to search through a file (or stdin) for a regular expression
+pattern<a href="#fn-regexp" id="fn-regexp.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. Useful then, useful now. Incredible.
+      </p>
+      <p>
+        However, it turns out that software written fifty years ago might start to show
+signs of age. Enter <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a>, or <code>rg</code> in your terminal. It is faster, it is
+aware of your <code>.gitignore</code> files, it prints results in color, it has a modern
+RegExp engine, it supports full Unicode, it searches compressed files, it has an
+easy to use and very powerful set of options, and of course it takes half as
+many letters to type.
+      </p>
+      <p>
+        Do yourself a favor and install it:
+      </p>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install ripgrep</span>
+</span></code></pre>
+      <p>
+        Want to learn more? Check out the <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a> project page, this very
+<a href="https://blog.burntsushi.net/ripgrep/" target="_blank">in depth article</a> explaining why it's
+fast and how it works, or this fantastic resource
+<a href="https://beyondgrep.com/feature-comparison/" target="_blank">comparing many grep replacements</a>.
+      </p>
+      <section data-footnotes aria-label="footnotes">
+        <ol>
+          <li id="fn-grep">
+            <p>
+              The name &quot;grep&quot; comes from <code>g/re/p</code> – globally run a regular expression and
+print. It was literally that exact command extracted from the <code>ed</code> text
+editor. There's a great
+<a href="https://www.youtube.com/watch?v=NTfOnGZUZDk" target="_blank">Computerphile</a> video which
+tells this story.
+            </p>
+            <a href="#fn-grep.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+          <li id="fn-regexp">
+            <p>
+              Ken Thompson didn't invent Regular Expressions, but did popularize their use
+in computers. One of many reasons he is one of the greatest of all time.
+            </p>
+            <a href="#fn-regexp.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+        </ol>
+      </section>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../bat-a-cat-with-wings/" class="prev">bat, a cat with wings</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/ripgrep/">til</a> was created <span property="dct:created" content="2022-01-21T22:24:50.000-08:00">Fri, Jan 21, 2022, 10:24 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/r.i.p.%20grep.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/r.i.p.%20grep.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>
