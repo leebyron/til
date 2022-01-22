@@ -307,15 +307,17 @@ h1:first-child span:before {
 
 .linkedlist {
   display: flex;
-  margin: 2em -1.18em;
+  margin: 1em -1.18em 2em;
   flex-wrap: wrap-reverse;
 }
 
 .linkedlist > .prev {
+  margin-top: 1em;
   margin-right: 1.18em;
 }
 
 .linkedlist > .next {
+  margin-top: 1em;
   margin-left: auto;
   text-align: right;
 }
