@@ -11,7 +11,7 @@ venn-diagram[^meme seeding]. It introduced the concept of honing in on a life's
 purpose by way of doing what you're good at, what you enjoy, what the world
 needs, and what you can be paid for. This really resonated with me.
 
-[^meme seeding]: Years later, Mark wrote a [follow up
+[^meme seeding]: Years later, Marc wrote a [follow up
 post][marc winn's follow up] on the origins of his article on Ikagai and
 addressed how it took on a life of its own.
 
