@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-23T21:10:21.000+00:00</updated>
+  <updated>2022-01-23T21:15:15.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/ikagai/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/ikagai/"/>
     <published>2022-01-23T11:31:22.000-08:00</published>
-    <updated>2022-01-23T21:10:21.000+00:00</updated>
+    <updated>2022-01-23T21:15:15.000+00:00</updated>
     <title>ikagai</title>
     <author>
       <name>Lee Byron</name>
@@ -87,7 +87,7 @@ venn-diagram and attempting to reclaim the term back to its original intent.
   <ol>
     <li id="fn-meme-seeding">
       <p>
-        Years later, Mark wrote a <a href="https://theviewinside.me/meme-seeding/" target="_blank">follow up
+        Years later, Marc wrote a <a href="https://theviewinside.me/meme-seeding/" target="_blank">follow up
 post</a> on the origins of his article on Ikagai and
 addressed how it took on a life of its own.
       </p>
