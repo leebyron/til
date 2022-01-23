@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-23T21:03:38.000+00:00</updated>
+  <updated>2022-01-23T21:10:21.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/ikagai/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/ikagai/"/>
     <published>2022-01-23T11:31:22.000-08:00</published>
-    <updated>2022-01-23T21:03:38.000+00:00</updated>
+    <updated>2022-01-23T21:10:21.000+00:00</updated>
     <title>ikagai</title>
     <author>
       <name>Lee Byron</name>
@@ -27,8 +27,8 @@
     </author>
     <category term="career"/>
     <content type="html"><![CDATA[<p>
-  Years ago I came across this philosophy of &quot;Ikagai&quot; (or &quot;reason for life&quot;) in [a
-blog post][marc winn's blog post], along with an explanatory four-axis
+  Years ago I came across this philosophy of &quot;Ikagai&quot; (or &quot;reason for life&quot;) in <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">a
+blog post</a>, along with an explanatory four-axis
 venn-diagram<a href="#fn-meme-seeding" id="fn-meme-seeding.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It introduced the concept of honing in on a life's
 purpose by way of doing what you're good at, what you enjoy, what the world
 needs, and what you can be paid for. This really resonated with me.
@@ -64,7 +64,7 @@ from?
 <p>
   These concerns turn out to be somewhat valid. In fact the origin of this
 venn-diagram concept is not Japanese at all, but instead comes from a book by
-Spanish Astrologist, <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga</a>. [Marc Winn's blog post] combined this
+Spanish Astrologist, <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga</a>. <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">Marc Winn's blog post</a> combined this
 graphic with the idea of Ikagai presented in <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">Dan Buettner's TED talk</a> and
 voilà.
 </p>
