@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-23T06:48:43.000+00:00</updated>
+  <updated>2022-01-23T21:03:38.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,88 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/ikagai/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/ikagai/"/>
+    <published>2022-01-23T11:31:22.000-08:00</published>
+    <updated>2022-01-23T21:03:38.000+00:00</updated>
+    <title>ikagai</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="career"/>
+    <content type="html"><![CDATA[<p>
+  Years ago I came across this philosophy of &quot;Ikagai&quot; (or &quot;reason for life&quot;) in [a
+blog post][marc winn's blog post], along with an explanatory four-axis
+venn-diagram<a href="#fn-meme-seeding" id="fn-meme-seeding.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It introduced the concept of honing in on a life's
+purpose by way of doing what you're good at, what you enjoy, what the world
+needs, and what you can be paid for. This really resonated with me.
+</p>
+<p>
+  I find this model a helpful tool in thinking about my own career, but it's
+important to remember that it's just that: a model. While I like the framework,
+as I've read more about Ikagai I also have some real concerns with it:
+</p>
+<ul>
+  <li>
+    <p>
+      It's mired in the pseudo-science of &quot;self help&quot; that I'm really suspicious of.
+Most books out there frame Ikagai as an elusive thing that you need to start
+searching for, won't find happiness without, and need coaching to achieve.
+    </p>
+  </li>
+  <li>
+    <p>
+      It feels like yet another foreign cultural fetishization. Ikagai is a Japanese
+concept but nearly all material written on it is English.
+    </p>
+  </li>
+  <li>
+    <p>
+      The origins of Ikagai's introduction to English readers is via a <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">TED
+talk</a> on the unusual lives of centenarians on Okinawa
+Island which don't seem to relate to the venn-diagram, where did that come
+from?
+    </p>
+  </li>
+</ul>
+<p>
+  These concerns turn out to be somewhat valid. In fact the origin of this
+venn-diagram concept is not Japanese at all, but instead comes from a book by
+Spanish Astrologist, <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga</a>. [Marc Winn's blog post] combined this
+graphic with the idea of Ikagai presented in <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">Dan Buettner's TED talk</a> and
+voilà.
+</p>
+<p>
+  Despite it's shortcomings and misappropriation I still really like this mental
+model for considering career progression and debugging gaps in a sense of
+fulfillment. Here's my translation of Andrés Zuzunaga's original graphic in
+English:
+</p>
+<p>
+  <img src="../media/82b332968f3e80ff.svg" alt="purpose.svg">
+</p>
+<p>
+  Ikagai is still a very real concept, just not the same one as presented by most
+of these blog posts and books. Japanese neuroscientist Ken Mogi (who has also
+written a book on Ikagai) has <a href="https://youtu.be/a_2RIydy_NQ" target="_blank">a video</a> addressing the
+venn-diagram and attempting to reclaim the term back to its original intent.
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn-meme-seeding">
+      <p>
+        Years later, Mark wrote a <a href="https://theviewinside.me/meme-seeding/" target="_blank">follow up
+post</a> on the origins of his article on Ikagai and
+addressed how it took on a life of its own.
+      </p>
+      <a href="#fn-meme-seeding.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>
       https://leebyron.com/til/multi-purpose-modifier-keys/
