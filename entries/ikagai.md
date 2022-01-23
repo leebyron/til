@@ -12,7 +12,7 @@ purpose by way of doing what you're good at, what you enjoy, what the world
 needs, and what you can be paid for. This really resonated with me.
 
 [^meme seeding]: Years later, Mark wrote a [follow up
-post][mark winn's follow up] on the origins of his article on Ikagai and
+post][marc winn's follow up] on the origins of his article on Ikagai and
 addressed how it took on a life of its own.
 
 I find this model a helpful tool in thinking about my own career, but it's
@@ -49,8 +49,8 @@ of these blog posts and books. Japanese neuroscientist Ken Mogi (who has also
 written a book on Ikagai) has [a video][ken mogi's video] addressing the
 venn-diagram and attempting to reclaim the term back to its original intent.
 
-[mark winn's blog post]: https://theviewinside.me/what-is-your-ikigai/
-[mark winn's follow up]: https://theviewinside.me/meme-seeding/
+[marc winn's blog post]: https://theviewinside.me/what-is-your-ikigai/
+[marc winn's follow up]: https://theviewinside.me/meme-seeding/
 [dan buettner's ted talk]:
   http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100
 [andrés zuzunaga]: https://www.cosmograma.com/proposito.php
