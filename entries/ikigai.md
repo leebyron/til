@@ -46,10 +46,10 @@ English:
 
 Ikigai is still a very real concept, just not the same one as presented by most
 of these blog posts and books. Japanese neuroscientist Ken Mogi (who has also
-written a book on Ikigai) has [a video][ken mogi's video] addressing this venn
-diagram with an attempt to bring the term back to an original intent. In the
-video he proposes a new (crude, hand-drawn) diagram to take its place with two
-distinct changes:
+written a book on Ikigai, mostly about food) has [a video][ken mogi's video]
+addressing this venn diagram with an attempt to bring the term back to an
+original intent. In the video he proposes a new (crude, hand-drawn) diagram to
+take its place with two distinct changes:
 
 - The four circles of the venn diagram are replaced with two axis: small to big
   and private to public.
