@@ -62,7 +62,8 @@ instead to cultivate a broad diversity of things big and small, public and
 private, to bring a rich multifaceted purpose to life.
 
 I also appreciate this very different model, and took the liberty to capture
-Ken's "true Ikigai diagram" with a few additions in a similar spirit:
+Ken's ["true Ikigai diagram"][ken mogi's video] with a few additions in a
+similar spirit:
 
 ![ikagai.svg](../media/2323a938a1a47935.svg)
 
