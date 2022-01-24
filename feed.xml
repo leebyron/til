@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-24T00:36:05.000+00:00</updated>
+  <updated>2022-01-24T00:47:04.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/ikigai/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/ikigai/"/>
     <published>2022-01-23T11:31:22.000-08:00</published>
-    <updated>2022-01-24T00:36:05.000+00:00</updated>
+    <updated>2022-01-24T00:47:04.000+00:00</updated>
     <title>ikigai</title>
     <author>
       <name>Lee Byron</name>
@@ -28,8 +28,8 @@
     <category term="career"/>
     <content type="html"><![CDATA[<p>
   Years ago I came across the concept of &quot;Ikigai&quot; (or &quot;life's reason&quot;) in <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">a blog
-post</a>, along with an explanatory four-axis
-venn-diagram<a href="#fn-meme-seeding" id="fn-meme-seeding.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It introduced the concept of honing in on a life's
+post</a>, along with an explanatory four-axis venn
+diagram<a href="#fn-meme-seeding" id="fn-meme-seeding.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It introduced the concept of honing in on a life's
 purpose by way of doing what you're good at, what you enjoy, what the world
 needs, and what you can be paid for. This really resonated with me.
 </p>
@@ -42,8 +42,8 @@ as I've read more about Ikigai I also have some real concerns with it:
   <li>
     <p>
       It's mired in the pseudo-science of &quot;self help&quot; that I'm really suspicious of.
-Most books out there frame Ikigai as an elusive thing that you need to start
-searching for, won't find happiness without, and need coaching to achieve.
+Most books frame Ikigai as an elusive thing to start searching for today, that
+you need to find happiness, and need coaching to achieve.
     </p>
   </li>
   <li>
@@ -55,18 +55,18 @@ concept but nearly all material written on it is English.
   <li>
     <p>
       The origins of Ikigai's introduction to English readers is via a <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">TED
-talk</a> on the unusual lives of centenarians on Okinawa
-Island which don't seem to relate to the venn-diagram, where did that come
-from?
+talk</a> on the unusual lives of centenarians in
+Okinawa, Japan which don't seem to relate to the venn diagram; where did that
+come from?
     </p>
   </li>
 </ul>
 <p>
-  These concerns turn out to be somewhat valid. In fact the origin of this
-venn-diagram concept is not Japanese at all, but instead comes from a book by
-Spanish Astrologist, Andrés Zuzunaga. <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">Marc Winn's blog post</a> combined <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés
+  These concerns turn out to be valid. In fact the origin of this venn diagram
+concept is not Japanese at all, but instead comes from a book by Spanish
+Astrologist, Andrés Zuzunaga. <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">Marc Winn's blog post</a> combined <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés
 Zuzunaga's original graphic</a> with the idea of Ikigai presented in <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">Dan
-Buettner's TED talk</a> and voilà.
+Buettner's TED talk</a> and voilà, a meme!
 </p>
 <p>
   Despite it's shortcomings and misappropriation I still really like this mental
@@ -80,15 +80,15 @@ English:
 <p>
   Ikigai is still a very real concept, just not the same one as presented by most
 of these blog posts and books. Japanese neuroscientist Ken Mogi (who has also
-written a book on Ikigai) has <a href="https://youtu.be/a_2RIydy_NQ" target="_blank">a video</a> addressing this
-venn-diagram and attempting to reclaim the term back to a more original intent.
-In the video he proposes a new (crude, hand-drawn) diagram to take its place
-with two distinct changes:
+written a book on Ikigai) has <a href="https://youtu.be/a_2RIydy_NQ" target="_blank">a video</a> addressing this venn
+diagram with an attempt to bring the term back to an original intent. In the
+video he proposes a new (crude, hand-drawn) diagram to take its place with two
+distinct changes:
 </p>
 <ul>
   <li>
     <p>
-      The four circles of the venn-diagram are replaced with two axis: small to big
+      The four circles of the venn diagram are replaced with two axis: small to big
 and private to public.
     </p>
   </li>
@@ -100,9 +100,9 @@ repeats that <em>all of it</em> is Ikigai.
   </li>
 </ul>
 <p>
-  The goal being not to find the one perfect thing which checks all boxes to
-define your life's reason but instead to cultivate a broad diversity of things
-big and small, public and private, to bring a rich multifaceted purpose to life.
+  The goal being not to find the one perfect thing which checks all boxes but
+instead to cultivate a broad diversity of things big and small, public and
+private, to bring a rich multifaceted purpose to life.
 </p>
 <p>
   I also appreciate this very different model, and took the liberty to capture
