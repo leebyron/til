@@ -7,9 +7,9 @@ tags: career
 
 Years ago I came across the concept of "Ikigai" (or "life's reason") in [a blog
 post][marc winn's blog post], along with an explanatory four-axis venn
-diagram[^meme seeding]. It introduced the concept of honing in on a life's
-purpose by way of doing what you're good at, what you enjoy, what the world
-needs, and what you can be paid for. This really resonated with me.
+diagram[^meme seeding]. It introduced the idea of honing in on a life's purpose
+by way of doing what you're good at, what you enjoy, what the world needs, and
+what you can be paid for. This really resonated with me.
 
 [^meme seeding]: Years later, Marc wrote a [follow up
 post][marc winn's follow up] on the origins of his article on Ikigai and
@@ -31,11 +31,11 @@ as I've read more about Ikigai I also have some real concerns with it:
   Okinawa, Japan which don't seem to relate to the venn diagram; where did that
   come from?
 
-These concerns turn out to be valid. In fact the origin of this venn diagram
-concept is not Japanese at all, but instead comes from a book by Spanish
-Astrologist, Andrés Zuzunaga. [Marc Winn's blog post] combined [Andrés
-Zuzunaga's original graphic] with the idea of Ikigai presented in [Dan
-Buettner's TED talk] and voilà, a meme!
+These concerns turn out to be valid. In fact the origin of this venn diagram is
+not Japanese at all, but instead comes from a book by Spanish Astrologist,
+Andrés Zuzunaga. [Marc Winn's blog post] combined [Andrés Zuzunaga's original
+graphic] with the idea of Ikigai presented in [Dan Buettner's TED talk] and
+voilà, a meme!
 
 Despite it's shortcomings and misappropriation I still really like this mental
 model for considering career progression and debugging gaps in a sense of
