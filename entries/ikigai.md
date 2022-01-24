@@ -60,8 +60,9 @@ with two distinct changes:
 The goal being not to find the one perfect thing which checks all boxes to
 define your life's reason but instead to cultivate a broad diversity of things
 big and small, public and private, to bring a rich multifaceted purpose to life.
-I took liberty in capturing Ken's "true Ikigai diagram" with a few additions in
-a similar spirit:
+
+I also appreciate this very different model, and took the liberty to capture
+Ken's "true Ikigai diagram" with a few additions in a similar spirit:
 
 ![ikagai.svg](../media/2323a938a1a47935.svg)
 
