@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-25T07:48:24.000+00:00</updated>
+  <updated>2022-01-25T07:58:10.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
     <published>2022-01-24T21:35:13.000-08:00</published>
-    <updated>2022-01-25T07:48:24.000+00:00</updated>
+    <updated>2022-01-25T07:58:10.000+00:00</updated>
     <title>staff eng archetypes</title>
     <author>
       <name>Lee Byron</name>
@@ -126,31 +126,31 @@ staffeng.com article describes four of these archetypes:
   <li>
     <p>
       The <strong>Tech Lead</strong> guides the technical execution of their team via day to day
-leadership. The most common Staff Eng archetype, and a natural extension of
-the expectations of a Senior Eng. This is such a common path to management,
-that there's a term &quot;TLM&quot; for the variant which also takes on some people
-management responsibility, furthering their autonomy.
+leadership. The most common Staff Eng archetype and a natural extension of the
+expectations of a Senior Eng. This is such a common path to management that
+there's a term &quot;TLM&quot; for the variant which also takes on some people
+management, furthering their autonomy.
     </p>
   </li>
   <li>
     <p>
       The <strong>Architect</strong> sets the vision for a domain, and is accountable for its
 success, often requiring many teams working together. This may be a purely
-technical vision or a product vision.
+technical vision or, more often for a front-end engineer, a product vision.
     </p>
   </li>
   <li>
     <p>
       The <strong>Solver</strong> goes deep to solve problems no one else can. Not purely
 technical, really tough problems are often equal part organizational and
-require good communication skills and &quot;bedside manner&quot;.
+require excellent communication skills and &quot;bedside manner&quot;.
     </p>
   </li>
   <li>
     <p>
       The <strong>Right Hand</strong> extends a leader's bandwidth by helping to operate a
 complex organization, converting inefficiencies into well run programs. They
-bounce between whatever is most urgent, be it tech, people, process, or
+bounce between whatever is most urgent be it tech, people, process, or
 business.
     </p>
   </li>
