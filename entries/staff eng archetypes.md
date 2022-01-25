@@ -46,7 +46,7 @@ reasons:
   exactly the same path.
 
 - The gamut of potential impact is so diverse that what is central to one Staff
-  Engineer's impact may be near absent from another. It can be hard to even
+  Engineer's impact may be near absent from another's. It can be hard to even
   define base expectations.
 
 A different approach is necessary. Rather than defining one set of expectations,
