@@ -16,16 +16,16 @@ these are often interchangeable. To grossly simplify:
 
 | Level                                                         | Scope                                                                                                                                                                          |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <span style="white-space: pre">New Grad</span>                | The first few years after joining the industry. Expected to learn quickly, complete tasks and small projects assigned with little guidance, and continue to learn and develop. |
-| <span style="white-space: pre">Junior Eng</span>              | Typically 2-6 years after joining the industry. Completes moderate projects with autonomy and contributes to the team in other ways.                                           |
+| <span style="white-space: pre">Junior Eng</span>              | The first few years after joining the industry. Expected to learn quickly, complete tasks and small projects assigned with little guidance, and continue to learn and develop. |
+| <span style="white-space: pre">Mid-level Eng</span>           | Typically 2-6 years after joining the industry. Completes moderate projects with autonomy and contributes to the team in other ways.                                           |
 | <span style="white-space: pre">Senior Eng</span>              | Typically 5 or more years of experience. Accountable for large projects requiring multiple teammates and external stakeholders. Mentors and improves their team.               |
 | <span style="white-space: pre">Staff+ Eng[^staff-plus]</span> | Typically 10 or more years of experience. Peer to managers, accountable for their team's roadmap and technical vision. Then... things get complicated.                         |
 
 [^staff-plus]:
     Some companies define titles beyond Staff Eng, like "Senior Staff Eng",
-    "Principle Eng", "Distinguished Eng", or "Technical Fellow". What I share
-    here is also true for these engineers, just further into the limit. These
-    are often collectively referred to as "Staff+ Eng".
+    "Principle Eng", "Distinguished Eng", "Architect", or "Technical Fellow".
+    What I share here is also true for these engineers, just further into the
+    limit. These are often collectively referred to as "Staff+ Eng".
 
 Most companies provide expectations guidelines alongside these levels, often
 breaking things down by technical skills, soft skills, leadership, etc. These
