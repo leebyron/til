@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-25T07:10:32.000+00:00</updated>
+  <updated>2022-01-25T07:14:32.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
     <published>2022-01-24T21:35:13.000-08:00</published>
-    <updated>2022-01-25T07:10:32.000+00:00</updated>
+    <updated>2022-01-25T07:14:32.000+00:00</updated>
     <title>staff eng archetypes</title>
     <author>
       <name>Lee Byron</name>
@@ -116,11 +116,11 @@ define base expectations.
 </ul>
 <p>
   A different approach is necessary. Rather than defining one set of expectations,
-describe [Staff Eng Archetypes]<a href="#fn-staffeng.com" id="fn-staffeng.com.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. Archetypes (or Personas) are a
-concept borrowed from literature, psychology and UX design, with the goal to
-simultaneously describe the diversity of the role by breaking it into different
-smaller groups, while also generalizing within each group. The staffeng.com
-article describes four of these Staff Eng archetypes:
+describe <a href="https://staffeng.com/guides/staff-archetypes" target="_blank">Staff Eng Archetypes</a><wbr><a href="#fn-staffeng.com" id="fn-staffeng.com.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. Archetypes (or Personas)
+are a concept borrowed from literature, psychology and UX design, with the goal
+to simultaneously describe the diversity of the role by breaking it into
+different smaller groups, while also generalizing within each group. The
+staffeng.com article describes four of these Staff Eng archetypes:
 </p>
 <ul>
   <li>
