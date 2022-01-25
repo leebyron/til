@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-25T07:58:10.000+00:00</updated>
+  <updated>2022-01-25T08:22:36.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
     <published>2022-01-24T21:35:13.000-08:00</published>
-    <updated>2022-01-25T07:58:10.000+00:00</updated>
+    <updated>2022-01-25T08:22:36.000+00:00</updated>
     <title>staff eng archetypes</title>
     <author>
       <name>Lee Byron</name>
@@ -28,7 +28,7 @@
     <category term="management"/>
     <content type="html"><![CDATA[<p>
   As I write this it's performance reviews season at my company, which means
-renewed interest on the expectations of engineers of each <em>level</em>. My role is to
+renewed interest in the expectations of engineers of each <em>level</em>. My role is to
 help define this for our front-end engineers and ensure fair outcomes. A common
 question I hear throughout this process is: <em>what is a staff engineer?</em>
 </p>
