@@ -5,14 +5,14 @@ date: 2022-01-24T21:35:13-08:00
 tags: management
 ---
 
-As I write this it's performance reviews season at my company, which means new
-interest and focus on the expectations of engineers of each _level_. My role is
-to help define this for our front-end engineers and ensure fair outcomes. A
-common question I hear throughout this process is: _what is a staff engineer?_
+As I write this it's performance reviews season at my company, which means
+renewed interest on the expectations of engineers of each _level_. My role is to
+help define this for our front-end engineers and ensure fair outcomes. A common
+question I hear throughout this process is: _what is a staff engineer?_
 
 My company, like many in the tech industry, defines a progression of [levels]
 for engineers, setting expectations for each. Others may use a set of titles,
-these are often interchangeable. To grossly simplify
+these are often interchangeable. To grossly simplify:
 
 | Level                                                         | Scope                                                                                                                                                                          |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -34,7 +34,7 @@ career, but I've found this often breaks down at the Staff Eng level, for a few
 reasons:
 
 - There just aren't that many Staff+ Eng to compare and generalize. Most
-  organizations will have less than 1 in 12 engineers at this level.
+  organizations will have less than 1 in 10 engineers at this level.
 
 - Every one of these engineers is a different person, who found a unique impact
   relative to what was needed and what they're good at. No two Staff+ Eng follow
@@ -44,13 +44,15 @@ reasons:
   Engineer's impact may be near absent from another. It can be hard to even
   define base expectations.
 
-A different approach is necessary. Rather than define one set of expectations
-for Staff Eng, describe [Staff Eng Archetypes] (one of many fantastic resources
-from [staffeng.com](https://staffeng.com/)). Archetypes, or Personas, is a
+A different approach is necessary. Rather than defining one set of expectations,
+describe [Staff Eng Archetypes][^staffeng.com]. Archetypes (or Personas) are a
 concept borrowed from literature, psychology and UX design, with the goal to
 simultaneously describe the diversity of the role by breaking it into different
 smaller groups, while also generalizing within each group. The staffeng.com
 article describes four of these Staff Eng archetypes:
+
+[^staffeng.com]:
+    One of many fantastic resources from [staffeng.com](https://staffeng.com/)!
 
 - The _Tech Lead_ guides the technical execution of a particular team via day to
   day leadership. The most common Staff Eng archetype, and a natural extension
