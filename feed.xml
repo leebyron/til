@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-25T07:36:34.000+00:00</updated>
+  <updated>2022-01-25T07:38:19.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
     <published>2022-01-24T21:35:13.000-08:00</published>
-    <updated>2022-01-25T07:36:34.000+00:00</updated>
+    <updated>2022-01-25T07:38:19.000+00:00</updated>
     <title>staff eng archetypes</title>
     <author>
       <name>Lee Byron</name>
@@ -34,8 +34,8 @@ question I hear throughout this process is: <em>what is a staff engineer?</em>
 </p>
 <p>
   My company, like many in the tech industry, defines a progression of <a href="https://www.levels.fyi/" target="_blank">levels</a>
-for engineers, setting expectations for each. Others may use a set of titles,
-these are often interchangeable. To grossly simplify:
+for engineers. Others may use a set of titles, these are often interchangeable.
+To grossly simplify:
 </p>
 <div class="table-wrapper">
   <table>
