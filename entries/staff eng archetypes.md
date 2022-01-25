@@ -49,7 +49,7 @@ describe [Staff Eng Archetypes]<wbr/>[^staffeng.com]. Archetypes (or Personas)
 are a concept borrowed from literature, psychology and UX design, with the goal
 to simultaneously describe the diversity of the role by breaking it into
 different smaller groups, while also generalizing within each group. The
-staffeng.com article describes four of these Staff Eng archetypes:
+staffeng.com article describes four of these archetypes:
 
 [^staffeng.com]:
     One of many fantastic resources from [staffeng.com](https://staffeng.com/)!
