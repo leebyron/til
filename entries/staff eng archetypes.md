@@ -6,7 +6,7 @@ tags: management
 ---
 
 As I write this it's performance reviews season at my company, which means
-renewed interest on the expectations of engineers of each _level_. My role is to
+renewed interest in the expectations of engineers of each _level_. My role is to
 help define this for our front-end engineers and ensure fair outcomes. A common
 question I hear throughout this process is: _what is a staff engineer?_
 
