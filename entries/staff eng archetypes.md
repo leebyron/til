@@ -54,21 +54,21 @@ staffeng.com article describes four of these archetypes:
 [^staffeng.com]:
     One of many fantastic resources from [staffeng.com](https://staffeng.com/)!
 
-- The **Tech Lead** guides the technical execution of a particular team via day
-  to day leadership. The most common Staff Eng archetype, and a natural
-  extension of the expectations of a Senior Eng. This is such a common path to
-  management, that there's a common term "TLM" for the variant of a Tech Lead
-  which also takes on some people management responsibility, furthering their
-  autonomy.
-- The **Architect** sets the vision for a domain, and are accountable for its
+- The **Tech Lead** guides the technical execution of their team via day to day
+  leadership. The most common Staff Eng archetype, and a natural extension of
+  the expectations of a Senior Eng. This is such a common path to management,
+  that there's a term "TLM" for the variant which also takes on some people
+  management responsibility, furthering their autonomy.
+- The **Architect** sets the vision for a domain, and is accountable for its
   success, often requiring many teams working together. This may be a purely
   technical vision or a product vision.
 - The **Solver** goes deep to solve problems no one else can. Not purely
   technical, really tough problems are often equal part organizational and
-  require good communication skill and "bedside manner".
-- The **Right Hand** extends a leader's bandwidth by helping operate a complex
-  organization, converting inefficiencies into well run programs, and bounce
-  between whatever is most urgent, be it tech, people, process, or business.
+  require good communication skills and "bedside manner".
+- The **Right Hand** extends a leader's bandwidth by helping to operate a
+  complex organization, converting inefficiencies into well run programs. They
+  bounce between whatever is most urgent, be it tech, people, process, or
+  business.
 
 If these all sound really different from each other, that's the idea! There are
 just as many ways to becoming a Staff Eng as there are engineers with that
