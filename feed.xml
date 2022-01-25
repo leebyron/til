@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-25T07:17:19.000+00:00</updated>
+  <updated>2022-01-25T07:36:34.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
     <published>2022-01-24T21:35:13.000-08:00</published>
-    <updated>2022-01-25T07:17:19.000+00:00</updated>
+    <updated>2022-01-25T07:36:34.000+00:00</updated>
     <title>staff eng archetypes</title>
     <author>
       <name>Lee Byron</name>
@@ -52,7 +52,7 @@ these are often interchangeable. To grossly simplify:
     <tbody>
       <tr>
         <td>
-          <span style="white-space: pre">New Grad</span>
+          <span style="white-space: pre">Junior Eng</span>
         </td>
         <td>
           The first few years after joining the industry. Expected to learn quickly, complete tasks and small projects assigned with little guidance, and continue to learn and develop.
@@ -60,7 +60,7 @@ these are often interchangeable. To grossly simplify:
       </tr>
       <tr>
         <td>
-          <span style="white-space: pre">Junior Eng</span>
+          <span style="white-space: pre">Mid-level Eng</span>
         </td>
         <td>
           Typically 2-6 years after joining the industry. Completes moderate projects with autonomy and contributes to the team in other ways.
@@ -175,9 +175,9 @@ lean into your own strengths.
     <li id="fn-staff-plus">
       <p>
         Some companies define titles beyond Staff Eng, like &quot;Senior Staff Eng&quot;,
-&quot;Principle Eng&quot;, &quot;Distinguished Eng&quot;, or &quot;Technical Fellow&quot;. What I share
-here is also true for these engineers, just further into the limit. These
-are often collectively referred to as &quot;Staff+ Eng&quot;.
+&quot;Principle Eng&quot;, &quot;Distinguished Eng&quot;, &quot;Architect&quot;, or &quot;Technical Fellow&quot;.
+What I share here is also true for these engineers, just further into the
+limit. These are often collectively referred to as &quot;Staff+ Eng&quot;.
       </p>
       <a href="#fn-staff-plus.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
