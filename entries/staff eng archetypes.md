@@ -11,8 +11,8 @@ help define this for our front-end engineers and ensure fair outcomes. A common
 question I hear throughout this process is: _what is a staff engineer?_
 
 My company, like many in the tech industry, defines a progression of [levels]
-for engineers, setting expectations for each. Others may use a set of titles,
-these are often interchangeable. To grossly simplify:
+for engineers. Others may use a set of titles, these are often interchangeable.
+To grossly simplify:
 
 | Level                                                         | Scope                                                                                                                                                                          |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
