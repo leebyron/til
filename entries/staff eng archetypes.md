@@ -80,7 +80,7 @@ these for all Staff Eng.
 I also appreciate that using archetypes is still flawed. Not everyone will fit
 into these four buckets, some may bridge between multiple, others will define
 their own path. For those with aspirations to become a Staff Eng and those that
-manage them, the most important advise is to not emulate others but find and
+manage them, the most important advice is to not emulate others but find and
 lean into your own strengths.
 
 [levels]: https://www.levels.fyi/
