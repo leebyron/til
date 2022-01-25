@@ -54,18 +54,19 @@ staffeng.com article describes four of these Staff Eng archetypes:
 [^staffeng.com]:
     One of many fantastic resources from [staffeng.com](https://staffeng.com/)!
 
-- The _Tech Lead_ guides the technical execution of a particular team via day to
-  day leadership. The most common Staff Eng archetype, and a natural extension
-  of the expectations of a Senior Eng. This is such a common path to management,
-  that there's a common term "TLM" for the variant of a Tech Lead which also
-  takes on some people management responsibility, furthering their autonomy.
-- The _Architect_ sets the vision for a domain, and are accountable for its
+- The **Tech Lead** guides the technical execution of a particular team via day
+  to day leadership. The most common Staff Eng archetype, and a natural
+  extension of the expectations of a Senior Eng. This is such a common path to
+  management, that there's a common term "TLM" for the variant of a Tech Lead
+  which also takes on some people management responsibility, furthering their
+  autonomy.
+- The **Architect** sets the vision for a domain, and are accountable for its
   success, often requiring many teams working together. This may be a purely
   technical vision or a product vision.
-- The _Solver_ goes deep to solve problems no one else can. Not purely
+- The **Solver** goes deep to solve problems no one else can. Not purely
   technical, really tough problems are often equal part organizational and
   require good communication skill and "bedside manner".
-- The _Right Hand_ extends a leader's bandwidth by helping operate a complex
+- The **Right Hand** extends a leader's bandwidth by helping operate a complex
   organization, converting inefficiencies into well run programs, and bounce
   between whatever is most urgent, be it tech, people, process, or business.
 
