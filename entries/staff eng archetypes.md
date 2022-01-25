@@ -11,8 +11,8 @@ help define this for our front-end engineers and ensure fair outcomes. A common
 question I hear throughout this process is: _what is a staff engineer?_
 
 My company, like many in the tech industry, defines a progression of [levels]
-for engineers. Others may use a set of titles, these are often interchangeable.
-To grossly simplify:
+for engineers[^and-designers]. Others may use a set of titles, these are often
+interchangeable. To grossly simplify:
 
 | Level                                                         | Scope                                                                                                                                            |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -20,6 +20,11 @@ To grossly simplify:
 | <span style="white-space: pre">Mid-level Eng</span>           | 2-6 years in industry. Completes moderate projects with autonomy and contributes to the team in other ways.                                      |
 | <span style="white-space: pre">Senior Eng</span>              | 5 or more years experience. Accountable for large projects requiring a team and external stakeholders. Mentors and improves their team.          |
 | <span style="white-space: pre">Staff+ Eng[^staff-plus]</span> | Typically over 10 years experience. Peer to managers, accountable for their team's roadmap and technical vision. Then... things get complicated. |
+
+[^and-designers]:
+    Designers often have a very similar career progression. You can generally
+    replace "engineer" with "designer" throughout this entire post. A fantastic
+    comparable resource for designers is [staff.design](https://staff.design).
 
 [^staff-plus]:
     Some companies define titles beyond Staff Eng, like "Senior Staff Eng",
@@ -48,8 +53,8 @@ A different approach is necessary. Rather than defining one set of expectations,
 describe [Staff Eng Archetypes]<wbr/>[^staffeng.com]. Archetypes (or Personas)
 are a concept borrowed from literature, psychology and UX design, with the goal
 of simultaneously describing the diversity of the role by breaking it into
-smaller groups, while also generalizing within each group. The
-staffeng.com article describes four of these archetypes:
+smaller groups, while also generalizing within each group. The staffeng.com
+article describes four of these archetypes:
 
 [^staffeng.com]:
     One of many fantastic resources from [staffeng.com](https://staffeng.com/)!
