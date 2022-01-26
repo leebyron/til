@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-25T19:23:51.000+00:00</updated>
+  <updated>2022-01-26T07:12:42.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,112 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/opaque-types/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/opaque-types/"/>
+    <published>2022-01-25T22:09:05.000-08:00</published>
+    <updated>2022-01-26T07:12:42.000+00:00</updated>
+    <title>opaque types</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="typescript"/>
+    <content type="html"><![CDATA[<p>
+  One of my favorite features from Flow is <a href="https://flow.org/en/docs/types/opaque-types/" target="_blank">opaque types</a>. This allows a separation between interface and implementation that’s incredibly helpful as a type API designer, and a rare example of a “nominal type” in an otherwise “structural type” environment. Unfortunately, TypeScript still does not support this functionality.
+</p>
+<ol start="1">
+  <li>
+    <p>
+      I use this as a much simpler version of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields" target="_blank">private fields</a> that doesn’t require a whole class interface and is scoped to a whole module rather than just a single class (fantastically helpful for a more functional programming style).
+    </p>
+  </li>
+  <li>
+    <p>
+      This is a great way to generate “subtypes” of a primitive like a string or number, which is particularly useful for representing things like URLs, UUIDs, and other things which are string-like but not strings.
+    </p>
+  </li>
+</ol>
+<p>
+  You can emulate this behavior in TypeScript by lying to the compiler. For example, let’s build a UUID type:
+</p>
+<pre data-code-block data-lang="typescript"><code><span data-line="1"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">type</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">string</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">&amp;</span><span style="color:#24292EFF;"> { [$uuid]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">true</span><span style="color:#24292EFF;"> }</span>
+</span><span data-line="2"><span style="color:#D32F2F;">declare</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">const</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">$uuid</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">unique</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">symbol</span>
+</span><span data-line="3">
+</span><span data-line="4"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">function</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">isUUID</span><span style="color:#24292EFF;">(value</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">unknown</span><span style="color:#24292EFF;">)</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> value </span><span style="color:#D32F2F;">is</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span><span style="color:#24292EFF;"> {</span>
+</span><span data-line="5"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">return</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">uuid</span><span style="color:#6F42C1;">.validate</span><span style="color:#24292EFF;">(value)</span>
+</span><span data-line="6"><span style="color:#24292EFF;">}</span>
+</span><span data-line="7">
+</span><span data-line="8"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">function</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">createUUID</span><span style="color:#24292EFF;">()</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span><span style="color:#24292EFF;"> {</span>
+</span><span data-line="9"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">return</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">uuid</span><span style="color:#6F42C1;">.v4</span><span style="color:#24292EFF;">() </span><span style="color:#D32F2F;">as</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span>
+</span><span data-line="10"><span style="color:#24292EFF;">}</span>
+</span></code></pre>
+<p>
+  This introduces the type <code>UUID</code> which you can use anywhere you use a string, but you can also write functions that accept only a <code>UUID</code> and not just any string.
+</p>
+<p>
+  This works by telling TypeScript that there exists a variable called <code>$uuid</code> that is a <a href="https://www.typescriptlang.org/docs/handbook/symbols.html#unique-symbol" target="_blank">unique symbol</a> (the result of calling <code>Symbol()</code>) and that the type <code>UUID</code> is both a <code>string</code> and (<code>&amp;</code>) an object with a required property of that unique symbol. However none of this exists at runtime, there is no variable or unique symbol, so there’s no way of actually creating a <code>UUID</code> type outside of casting, which we only do in this bit of library code.
+</p>
+<p>
+  Perhaps you don’t actually want to expose that <code>UUID</code> is implemented as a <code>string</code>, that should be opaque as well, just remove the <code>string &amp;</code>:
+</p>
+<pre data-code-block data-lang="typescript"><code><span data-line="1"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">type</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> { [$uuid]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">true</span><span style="color:#24292EFF;"> }</span>
+</span></code></pre>
+<p>
+  This version cannot be used where a <code>string</code> is expected, even though it’s still a string value at runtime.
+</p>
+<p>
+  This works surprisingly well, but there are shortcomings:
+</p>
+<ul>
+  <li>
+    <p>
+      Errors are not always particularly helpful. Providing the wrong value where <code>UUID</code> is expected will expose the details of this hack.
+    </p>
+  </li>
+  <li>
+    <p>
+      This pattern is a bit inscruitble, compared to Flow’s slightly more clear explicit syntax. Don’t forget to include a comment explaining what this does.
+    </p>
+  </li>
+  <li>
+    <p>
+      There’s still no concept of “module private” fields without going around the type compiler again.
+    </p>
+  </li>
+</ul>
+<p>
+  More examples of where opaque types are useful:
+</p>
+<ul>
+  <li>
+    <p>
+      <code>URL</code>, <code>Email</code>, <code>Username</code>, <code>ID</code> or anything else you might want to validate before using and offer a guarantee that if you have a value of that type, it has been validated.
+    </p>
+  </li>
+  <li>
+    <p>
+      HTML sanitization, to type a string which has been HTML sanitized, while having unsafe functions that accept only sanitized strings.
+    </p>
+  </li>
+  <li>
+    <p>
+      Subtypes of number, like integers or positive values.
+    </p>
+  </li>
+  <li>
+    <p>
+      Opaque types for numeric or string database IDs which may be used alongside other strings or numbers.
+    </p>
+  </li>
+  <li>
+    <p>
+      Unique types for overlapping identifiers such as classic MySQL auto increments that you’d hate to mix up, like <code>UserID</code> and <code>MessageID</code>
+    </p>
+  </li>
+</ul>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
