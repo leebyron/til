@@ -3,6 +3,8 @@ import remarkComment from 'remark-comment'
 import remarkParse from 'remark-parse'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
+import { retext } from 'retext'
+import retextSmartypants from 'retext-smartypants'
 import { mdx } from 'micromark-extension-mdx'
 import { mdxFromMarkdown } from 'mdast-util-mdx'
 import { unified } from 'unified'
@@ -17,6 +19,7 @@ export function parseMarkdown(markdown) {
     .use(remarkGfm)
     .parse(markdown)
   yamlFrontmatter(ast)
+  smartypants(ast)
   collapseWhitespace(ast)
   slugs(ast)
   tableCells(ast)
@@ -58,17 +61,30 @@ function yamlDate(date) {
   return DateTime.fromISO(date, { setZone: true })
 }
 
+function smartypants(ast) {
+  const processor = retext().use(retextSmartypants)
+  visit(ast, (node, _, parent) => {
+    if (isProseText(node, parent)) {
+      node.value = String(processor.processSync(node.value))
+    }
+  })
+}
+
 function collapseWhitespace(ast) {
-  return visit(ast, (node, _, parent) => {
-    if (
-      node.type === 'text' &&
-      parent &&
-      parent.type !== 'code' &&
-      parent.type !== 'inlineCode'
-    ) {
+  visit(ast, (node, _, parent) => {
+    if (isProseText(node, parent)) {
       node.value = node.value.replace(/\s+/g, ' ')
     }
   })
+}
+
+function isProseText(node, parent) {
+  return (
+    node.type === 'text' &&
+    parent &&
+    parent.type !== 'code' &&
+    parent.type !== 'inlineCode'
+  )
 }
 
 function slugs(ast) {
