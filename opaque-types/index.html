@@ -10,7 +10,7 @@
     <meta property="article:author:first_name" content="Lee">
     <meta property="article:author:last_name" content="Byron">
     <meta property="article:published_time" content="2022-01-25T22:09:05.000-08:00">
-    <meta property="article:modified_time" content="2022-01-26T17:18:35.000+00:00">
+    <meta property="article:modified_time" content="2022-01-26T17:35:29.000+00:00">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@leeb">
     <script type="application/ld+json">
@@ -26,7 +26,7 @@
   },
   "url": "https://leebyron.com/til/opaque-types/",
   "datePublished": "2022-01-25T22:09:05.000-08:00",
-  "dateModified": "2022-01-26T17:18:35.000+00:00",
+  "dateModified": "2022-01-26T17:35:29.000+00:00",
   "keywords": "typescript",
   "isPartOf": "https://leebyron.com/til/",
   "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -86,7 +86,7 @@
         This introduces the type <code>UUID</code> which you can use anywhere you use a string, but you can also write functions that accept only a <code>UUID</code> and not just any string.
       </p>
       <p>
-        This works by telling TypeScript that there exists a variable called <code>$uuid</code> that is a <a href="https://www.typescriptlang.org/docs/handbook/symbols.html#unique-symbol" target="_blank">unique symbol</a> (the result of calling <code>Symbol()</code>) and that the type <code>UUID</code> is both a <code>string</code> and (<code>&amp;</code>) an object with a required property of that unique symbol. However none of this exists at runtime, there is no variable or unique symbol, so there’s no way of actually creating a <code>UUID</code> type outside of casting, which we only do in this bit of library code.
+        This works by telling TypeScript that there exists a variable called <code>$uuid</code> that is a <a href="https://www.typescriptlang.org/docs/handbook/symbols.html#unique-symbol" target="_blank">unique symbol</a> (the result of calling <code>Symbol()</code>) and that the type <code>UUID</code> is both a <code>string</code> and (<code>&amp;</code>) an object with a required property of that unique symbol<a href="#fn:why" id="fn:why.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. However none of this exists at runtime, there is no variable or unique symbol, so there’s no way of actually creating a <code>UUID</code> type outside of casting, which we only do in this bit of library code.
       </p>
       <p>
         Perhaps you don’t actually want to expose that <code>UUID</code> is implemented as a <code>string</code>, just remove the <code>string &amp;</code>:
@@ -146,6 +146,16 @@
           </p>
         </li>
       </ul>
+      <section data-footnotes aria-label="footnotes">
+        <ol>
+          <li id="fn:why">
+            <p>
+              There are variants of this technique, a common alternative being <code>{_brand: typeof $uuid}</code> but I like this one the best for a couple reasons. I don’t like the IDE will showing <code>._brand</code> in the typeahead completion, where it will not show a symbol property. When encountering an error, I find it slightly more helpful to see the name of the symbol shown; <a href="https://www.typescriptlang.org/play?#code/PTAEFkE9QBwJwKYDMF0QE1AFwQYwBYB2AlgI4CuCAUAgB4wD2cW2kMCoAqpwJIAioALygAzljjFCAc1AAyUAG9QAbQAk5csXQBdAFzY4lUAF8q6PABsAholC4GhMaHWb0+8iQocRkALYAjBgszSxsOJA9cLGIHUGIRbn4ACgA3KwtKd0IAa0IGAHdCAEp9NIyOeK5ePioqEFAAQTsGX19Y9Jw4QitolOo6RmZWdlAAUV8rYgshUXFJGXklAH0l-zgrQnQV-Sw2BAYkZwQJqZMQ3Gtbe0cWVWPJiyyyIx8AoPPL8Mjo2Pjxh9S6UyoA8uQKxVKQIqIjGJ2CdTAAGEWjAwth8BxUHAmKBfAgRCIrFJ8VRrk48lgGok+PpqTMAOQARgATABmemkhzkhiUwj-Kb6fnTYRMtn0oA" target="_blank">playground</a>.
+            </p>
+            <a href="#fn:why.ref" data-footnote-backref aria-label="return">↩</a>
+          </li>
+        </ol>
+      </section>
     </article>
     <footer>
       <div class="linkedlist">
