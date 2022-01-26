@@ -17,6 +17,7 @@ export function parseMarkdown(markdown) {
     .use(remarkGfm)
     .parse(markdown)
   yamlFrontmatter(ast)
+  collapseWhitespace(ast)
   slugs(ast)
   tableCells(ast)
   linkReferences(ast)
@@ -57,6 +58,19 @@ function yamlDate(date) {
   return DateTime.fromISO(date, { setZone: true })
 }
 
+function collapseWhitespace(ast) {
+  return visit(ast, (node, _, parent) => {
+    if (
+      node.type === 'text' &&
+      parent &&
+      parent.type !== 'code' &&
+      parent.type !== 'inlineCode'
+    ) {
+      node.value = node.value.replace(/\s+/g, ' ')
+    }
+  })
+}
+
 function slugs(ast) {
   return visit(ast, node => {
     if (node.type === 'heading') {
@@ -66,7 +80,7 @@ function slugs(ast) {
 }
 
 export function findNode(ast, type) {
-  let found;
+  let found
   visit(ast, node => {
     if (!found && node.type === type) {
       found = node
@@ -140,7 +154,7 @@ function footnotes(ast) {
   let footnoteNumber = 0
   for (const [id, refs] of footnoteReferences) {
     const footnote = footnoteDefinitions.get(id)
-    const slug = 'fn-' + slugify(id)
+    const slug = 'fn:' + slugify(id)
     footnote.slug = slug
     footnote.number = ++footnoteNumber
     footnote.references = refs
@@ -171,10 +185,14 @@ function slugify(str) {
 
 function visit(ast, mapFn) {
   return dst(ast)[0]
-  function dst(node, index) {
-    const rtn = mapFn(node, index)
+  function dst(node, index, parent) {
+    const rtn = mapFn(node, index, parent)
     if (rtn === undefined) {
-      if (node.children) node.children = node.children.flatMap(dst)
+      if (node.children) {
+        node.children = node.children.flatMap((child, index) =>
+          dst(child, index, node)
+        )
+      }
       return [node]
     }
     return rtn === null ? [] : Array.isArray(rtn) ? rtn : [rtn]
