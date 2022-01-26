@@ -27,7 +27,7 @@
     </author>
     <category term="management"/>
     <content type="html"><![CDATA[<p>
-  As I write this it's performance reviews season at my company, which means renewed interest in the expectations of engineers of each <em>level</em>. My role is to help define this for our front-end engineers and ensure fair outcomes. A common question I hear throughout this process is: <em>what is a staff engineer?</em>
+  As I write this it’s performance reviews season at my company, which means renewed interest in the expectations of engineers of each <em>level</em>. My role is to help define this for our front-end engineers and ensure fair outcomes. A common question I hear throughout this process is: <em>what is a staff engineer?</em>
 </p>
 <p>
   My company, like many in the tech industry, defines a progression of <a href="https://www.levels.fyi/" target="_blank">levels</a> for engineers<a href="#fn:and-designers" id="fn:and-designers.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. Others may use a set of titles, these are often interchangeable. To grossly simplify:
@@ -74,29 +74,29 @@
           <span style="white-space: pre">Staff+ Eng<a href="#fn:staff-plus" id="fn:staff-plus.ref" data-footnote-ref aria-label="note"><sup>2</sup></a></span>
         </td>
         <td>
-          Typically over 10 years experience. Peer to managers, accountable for their team's roadmap and technical vision. Then... things get complicated.
+          Typically over 10 years experience. Peer to managers, accountable for their team’s roadmap and technical vision. Then… things get complicated.
         </td>
       </tr>
     </tbody>
   </table>
 </div>
 <p>
-  Most companies provide expectations guidelines alongside these levels, often breaking things down by technical skills, soft skills, leadership, etc. These can be helpful tools for both engineers and managers to guide them in their career, but I've found this often breaks down at the Staff Eng level, for a few reasons:
+  Most companies provide expectations guidelines alongside these levels, often breaking things down by technical skills, soft skills, leadership, etc. These can be helpful tools for both engineers and managers to guide them in their career, but I’ve found this often breaks down at the Staff Eng level, for a few reasons:
 </p>
 <ul>
   <li>
     <p>
-      There just aren't that many Staff+ Eng to compare and generalize. Most organizations will have less than 1 in 10 engineers at this level.
+      There just aren’t that many Staff+ Eng to compare and generalize. Most organizations will have less than 1 in 10 engineers at this level.
     </p>
   </li>
   <li>
     <p>
-      Every one of these engineers is a different person, who found a unique impact relative to what was needed and what they're good at. No two Staff+ Eng follow exactly the same path.
+      Every one of these engineers is a different person, who found a unique impact relative to what was needed and what they’re good at. No two Staff+ Eng follow exactly the same path.
     </p>
   </li>
   <li>
     <p>
-      The gamut of potential impact is so diverse that what is central to one Staff Engineer's impact may be near absent from another's. It can be hard to even define base expectations.
+      The gamut of potential impact is so diverse that what is central to one Staff Engineer’s impact may be near absent from another’s. It can be hard to even define base expectations.
     </p>
   </li>
 </ul>
@@ -106,7 +106,7 @@
 <ul>
   <li>
     <p>
-      The <strong>Tech Lead</strong> guides the technical execution of their team via day to day leadership. The most common Staff Eng archetype and a natural extension of the expectations of a Senior Eng. This is such a common path to management that there's a term &quot;TLM&quot; for the variant which also takes on some people management, furthering their autonomy.
+      The <strong>Tech Lead</strong> guides the technical execution of their team via day to day leadership. The most common Staff Eng archetype and a natural extension of the expectations of a Senior Eng. This is such a common path to management that there’s a term “TLM” for the variant which also takes on some people management, furthering their autonomy.
     </p>
   </li>
   <li>
@@ -116,17 +116,17 @@
   </li>
   <li>
     <p>
-      The <strong>Solver</strong> goes deep to solve problems no one else can. Not purely technical, really tough problems are often equal part organizational and require excellent communication skills and &quot;bedside manner&quot;.
+      The <strong>Solver</strong> goes deep to solve problems no one else can. Not purely technical, really tough problems are often equal part organizational and require excellent communication skills and “bedside manner”.
     </p>
   </li>
   <li>
     <p>
-      The <strong>Right Hand</strong> extends a leader's bandwidth by helping to operate a complex organization, converting inefficiencies into well run programs. They bounce between whatever is most urgent be it tech, people, process, or business.
+      The <strong>Right Hand</strong> extends a leader’s bandwidth by helping to operate a complex organization, converting inefficiencies into well run programs. They bounce between whatever is most urgent be it tech, people, process, or business.
     </p>
   </li>
 </ul>
 <p>
-  If these all sound really different from each other, that's the idea! There are just as many ways to becoming a Staff Eng as there are engineers with that title. I love that these four archetypes each highlight a very different core competency: tactical leadership, vision setting, technical excellence, and organized execution. It wouldn't be possible to define base expectations across these for all Staff Eng.
+  If these all sound really different from each other, that’s the idea! There are just as many ways to becoming a Staff Eng as there are engineers with that title. I love that these four archetypes each highlight a very different core competency: tactical leadership, vision setting, technical excellence, and organized execution. It wouldn’t be possible to define base expectations across these for all Staff Eng.
 </p>
 <p>
   I also appreciate that using archetypes is still flawed. Not everyone will fit into these four buckets, some may bridge between multiple, others will define their own path. For those with aspirations to become a Staff Eng and those that manage them, my advice is to not emulate others but find and lean into your own strengths.
@@ -135,13 +135,13 @@
   <ol>
     <li id="fn:and-designers">
       <p>
-        Designers often have a very similar career progression. You can generally replace &quot;engineer&quot; with &quot;designer&quot; throughout this entire post. A fantastic comparable resource for designers is <a href="https://staff.design" target="_blank">staff.design</a>.
+        Designers often have a very similar career progression. You can generally replace “engineer” with “designer” throughout this entire post. A fantastic comparable resource for designers is <a href="https://staff.design" target="_blank">staff.design</a>.
       </p>
       <a href="#fn:and-designers.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn:staff-plus">
       <p>
-        Some companies define titles beyond Staff Eng, like &quot;Senior Staff Eng&quot;, &quot;Principle Eng&quot;, &quot;Distinguished Eng&quot;, &quot;Architect&quot;, or &quot;Technical Fellow&quot;. What I share here is also true for these engineers, just further into the limit. These are often collectively referred to as &quot;Staff+ Eng&quot;.
+        Some companies define titles beyond Staff Eng, like “Senior Staff Eng”, “Principle Eng”, “Distinguished Eng”, “Architect”, or “Technical Fellow”. What I share here is also true for these engineers, just further into the limit. These are often collectively referred to as “Staff+ Eng”.
       </p>
       <a href="#fn:staff-plus.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -167,15 +167,15 @@
     </author>
     <category term="career"/>
     <content type="html"><![CDATA[<p>
-  Years ago I came across the concept of &quot;Ikigai&quot; (or &quot;life's reason&quot;) in <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">a blog post</a>, along with an explanatory four-axis venn diagram<a href="#fn:meme-seeding" id="fn:meme-seeding.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It introduced the idea of honing in on a life's purpose by way of doing what you're good at, what you enjoy, what the world needs, and what you can be paid for. This really resonated with me.
+  Years ago I came across the concept of “Ikigai” (or “life’s reason”) in <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">a blog post</a>, along with an explanatory four-axis venn diagram<a href="#fn:meme-seeding" id="fn:meme-seeding.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. It introduced the idea of honing in on a life’s purpose by way of doing what you’re good at, what you enjoy, what the world needs, and what you can be paid for. This really resonated with me.
 </p>
 <p>
-  I find this model a helpful tool in thinking about my own career, but it's important to remember that it's just that: a model. While I like the framework, as I've read more about Ikigai I also have some real concerns with it:
+  I find this model a helpful tool in thinking about my own career, but it’s important to remember that it’s just that: a model. While I like the framework, as I’ve read more about Ikigai I also have some real concerns with it:
 </p>
 <ul>
   <li>
     <p>
-      It's mired in the pseudo-science of &quot;self help&quot; that I'm really suspicious of. Most books frame Ikigai as an elusive thing to start searching for today, that you need to find happiness, and need coaching to achieve.
+      It’s mired in the pseudo-science of “self help” that I’m really suspicious of. Most books frame Ikigai as an elusive thing to start searching for today, that you need to find happiness, and need coaching to achieve.
     </p>
   </li>
   <li>
@@ -185,15 +185,15 @@
   </li>
   <li>
     <p>
-      The origins of Ikigai's introduction to English readers is via a <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">TED talk</a> on the unusual lives of centenarians in Okinawa, Japan which don't seem to relate to the venn diagram; where did that come from?
+      The origins of Ikigai’s introduction to English readers is via a <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">TED talk</a> on the unusual lives of centenarians in Okinawa, Japan which don’t seem to relate to the venn diagram; where did that come from?
     </p>
   </li>
 </ul>
 <p>
-  These concerns turn out to be valid. In fact the origin of this venn diagram is not Japanese at all, but instead comes from a book by Spanish Astrologist, Andrés Zuzunaga. <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">Marc Winn's blog post</a> combined <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga's original graphic</a> with the idea of Ikigai presented in <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">Dan Buettner's TED talk</a> and voilà, a meme!
+  These concerns turn out to be valid. In fact the origin of this venn diagram is not Japanese at all, but instead comes from a book by Spanish Astrologist, Andrés Zuzunaga. <a href="https://theviewinside.me/what-is-your-ikigai/" target="_blank">Marc Winn’s blog post</a> combined <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga’s original graphic</a> with the idea of Ikigai presented in <a href="http://www.ted.com/talks/dan_buettner_how_to_live_to_be_100" target="_blank">Dan Buettner’s TED talk</a> and voilà, a meme!
 </p>
 <p>
-  Despite it's shortcomings and misappropriation I still really like this mental model for considering career progression and debugging gaps in a sense of fulfillment. Here's my translation of <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga's original graphic</a> in English:
+  Despite it’s shortcomings and misappropriation I still really like this mental model for considering career progression and debugging gaps in a sense of fulfillment. Here’s my translation of <a href="https://www.cosmograma.com/proposito.php" target="_blank">Andrés Zuzunaga’s original graphic</a> in English:
 </p>
 <p>
   <img src="../media/82b332968f3e80ff.svg" alt="purpose.svg">
@@ -217,7 +217,7 @@
   The goal being not to find the one perfect thing which checks all boxes but instead to cultivate a broad diversity of things big and small, public and private, to bring a rich multifaceted purpose to life.
 </p>
 <p>
-  I also appreciate this very different model, and took the liberty to capture Ken's <a href="https://youtu.be/a_2RIydy_NQ" target="_blank">&quot;true Ikigai diagram&quot;</a> with a few additions in a similar spirit:
+  I also appreciate this very different model, and took the liberty to capture Ken’s <a href="https://youtu.be/a_2RIydy_NQ" target="_blank">“true Ikigai diagram”</a> with a few additions in a similar spirit:
 </p>
 <p>
   <img src="../media/2323a938a1a47935.svg" alt="ikagai.svg">
@@ -251,16 +251,16 @@
   I spent a very long time not thinking too hard about customizing my keyboard beyond <a href="https://leebyron.com/til/remap-caps-lock/" target="_blank">remapping caps lock</a>. That is not until recently when I started playing around with the custom keyboard firmware <a href="https://qmk.fm" target="_blank">QMK</a> and macOS keyboard customization software <a href="https://karabiner-elements.pqrs.org" target="_blank">Karabiner</a>. The most immediately useful thing I discovered was leveraging modifier keys to have multiple purposes.
 </p>
 <p>
-  Modifier keys are held down so that other key presses result in a different symbol or command. But what if they're pressed alone? Nothing happens? That's an opportunity.
+  Modifier keys are held down so that other key presses result in a different symbol or command. But what if they’re pressed alone? Nothing happens? That’s an opportunity.
 </p>
 <p>
-  The first I tried was the &quot;Vim key&quot;. Caps lock is remapped to the much more useful control key when held. When pressed alone, it is escape. This key is really easy to reach from the home row and this made getting in and out of Vim insert mode feel much easier. However I found myself falling back to muscle memory to reach for escape or use the equivalent and now easier to press control+c.
+  The first I tried was the “Vim key”. Caps lock is remapped to the much more useful control key when held. When pressed alone, it is escape. This key is really easy to reach from the home row and this made getting in and out of Vim insert mode feel much easier. However I found myself falling back to muscle memory to reach for escape or use the equivalent and now easier to press control+c.
 </p>
 <p>
-  Much more ergonomically offensive is backspace. I'm a terrible typist so backspace is probably one of my most pressed keys and far enough from the home row that my whole hand must move. So the next mapping I've tried is Caps lock as control and backspace. This muscle memory has been hard to unwire, so I've disabled my true backspace key.
+  Much more ergonomically offensive is backspace. I’m a terrible typist so backspace is probably one of my most pressed keys and far enough from the home row that my whole hand must move. So the next mapping I’ve tried is Caps lock as control and backspace. This muscle memory has been hard to unwire, so I’ve disabled my true backspace key.
 </p>
 <p>
-  Here's a small part of my Karabiner &quot;complex_modifications&quot; configuration:
+  Here’s a small part of my Karabiner “complex_modifications” configuration:
 </p>
 <pre data-code-block data-lang="json"><code><span data-line="1"><span style="color:#22863A;">&quot;manipulators&quot;</span><span style="color:#24292EFF;">: [</span>
 </span><span data-line="2"><span style="color:#24292EFF;">    {</span>
@@ -278,7 +278,7 @@
 </span><span data-line="14"><span style="color:#24292EFF;">        </span><span style="color:#D32F2F;">&quot;to&quot;</span><span style="color:#212121;">:</span><span style="color:#24292EFF;"> [ { </span><span style="color:#D32F2F;">&quot;key_code&quot;</span><span style="color:#212121;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;vk_none&quot;</span><span style="color:#24292EFF;"> } ] }</span><span style="color:#212121;">,</span>
 </span></code></pre>
 <p>
-  Also, this works both ways! Not only can you provide a behavior for pressing modifier keys on their own, but also consider making a typical key a modifier when held. As an example, I map the return key to behave as &quot;right control&quot; when held.
+  Also, this works both ways! Not only can you provide a behavior for pressing modifier keys on their own, but also consider making a typical key a modifier when held. As an example, I map the return key to behave as “right control” when held.
 </p>]]></content>
     <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
@@ -305,19 +305,19 @@
 <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install ripgrep</span>
 </span></code></pre>
 <p>
-  Want to learn more? Check out the <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a> project page, this very <a href="https://blog.burntsushi.net/ripgrep/" target="_blank">in depth article</a> explaining why it's fast and how it works, or this fantastic resource <a href="https://beyondgrep.com/feature-comparison/" target="_blank">comparing many grep replacements</a>.
+  Want to learn more? Check out the <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a> project page, this very <a href="https://blog.burntsushi.net/ripgrep/" target="_blank">in depth article</a> explaining why it’s fast and how it works, or this fantastic resource <a href="https://beyondgrep.com/feature-comparison/" target="_blank">comparing many grep replacements</a>.
 </p>
 <section data-footnotes aria-label="footnotes">
   <ol>
     <li id="fn:grep">
       <p>
-        The name &quot;grep&quot; comes from <code>g/re/p</code> – globally run a regular expression and print. It was literally that exact command extracted from the <code>ed</code> text editor. There's a great <a href="https://www.youtube.com/watch?v=NTfOnGZUZDk" target="_blank">Computerphile</a> video which tells this story.
+        The name “grep” comes from <code>g/re/p</code> – globally run a regular expression and print. It was literally that exact command extracted from the <code>ed</code> text editor. There’s a great <a href="https://www.youtube.com/watch?v=NTfOnGZUZDk" target="_blank">Computerphile</a> video which tells this story.
       </p>
       <a href="#fn:grep.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn:regexp">
       <p>
-        Ken Thompson didn't invent Regular Expressions, but did popularize their use in computers. One of many reasons he is one of the greatest of all time.
+        Ken Thompson didn’t invent Regular Expressions, but did popularize their use in computers. One of many reasons he is one of the greatest of all time.
       </p>
       <a href="#fn:regexp.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -337,7 +337,7 @@
     </author>
     <category term="terminal"/>
     <content type="html"><![CDATA[<p>
-  On macOS there is the fantastic &quot;Preview&quot; utility. Select a file and hit space bar to quickly take a look at the contents. In terminal things are a little different. There's <code>tail</code>, <code>cat</code>, and <code>less</code>. Bash denizens will be familiar with the results.
+  On macOS there is the fantastic “Preview” utility. Select a file and hit space bar to quickly take a look at the contents. In terminal things are a little different. There’s <code>tail</code>, <code>cat</code>, and <code>less</code>. Bash denizens will be familiar with the results.
 </p>
 <p>
   <img src="../media/76a2c219c5bdb4fc.png" alt="regular old cat">
@@ -346,10 +346,10 @@
   Good luck if you try taking a look at a massive file, a file with long lines, or to get a quick read on some code. Maybe your habit is to open files in Vim or another editor so you can at least move around quickly and get some basic syntax highlighting.
 </p>
 <p>
-  There's a better way...
+  There’s a better way…
 </p>
 <p>
-  Use <a href="https://github.com/sharkdp/bat" target="_blank"><code>bat</code></a>, it's just <code>cat</code> but with wings. It syntax highlights, it shows line numbers, it intelligently pipes to <code>less</code> (if it needs to), it even integrates with <code>git</code> to point out modified lines. It knows where its running and where its printing and falls back to the simple thing when you just need it to <code>cat</code> a file.
+  Use <a href="https://github.com/sharkdp/bat" target="_blank"><code>bat</code></a>, it’s just <code>cat</code> but with wings. It syntax highlights, it shows line numbers, it intelligently pipes to <code>less</code> (if it needs to), it even integrates with <code>git</code> to point out modified lines. It knows where its running and where its printing and falls back to the simple thing when you just need it to <code>cat</code> a file.
 </p>
 <p>
   <img src="../media/37d23ef3d437ac42.png" alt="bat! it's got wings">
@@ -376,16 +376,16 @@
     </author>
     <category term="mac"/>
     <content type="html"><![CDATA[<p>
-  I need to run a command every time a particular file changed. In the past I've used tools like <a href="https://facebook.github.io/watchman/" target="_blank">watchman</a> to do this, and found them heavyweight. In this particular case, I could safely assume I was running on macOS and wanted to avoid the dependency of installed software. <em>Then I learned about <code>launchctl</code>.</em>
+  I need to run a command every time a particular file changed. In the past I’ve used tools like <a href="https://facebook.github.io/watchman/" target="_blank">watchman</a> to do this, and found them heavyweight. In this particular case, I could safely assume I was running on macOS and wanted to avoid the dependency of installed software. <em>Then I learned about <code>launchctl</code>.</em>
 </p>
 <p>
   The man page for <a href="x-man-page://launchctl">launchctl</a> is not particularly helpful, so it required some searching and experimenting to understand. This, along with <a href="x-man-page://launchd">launchd</a>, are a powerful system for configuring services within the operating system. One way launchd determines that a service should be started is by watching for changes to a file. Perfect.
 </p>
 <p>
-  A &quot;service&quot; is any executable program (like a shell script or a JavaScript file) and a configuration plist file placed in a specific location. For example, lets set up a service that runs a website builder every time a source file is updated.
+  A “service” is any executable program (like a shell script or a JavaScript file) and a configuration plist file placed in a specific location. For example, lets set up a service that runs a website builder every time a source file is updated.
 </p>
 <p>
-  Here, <code>~/Library/LaunchAgents/com.leebyron.website-agent.plist</code> defines the name of my agent, the program to run, where to write standard output, and the path to watch. Changes to that path will run my program. Note that the program is not run inside a shell, so a node script needs to provide a full path to the node executable, rather than a executable &quot;hash bang&quot;.
+  Here, <code>~/Library/LaunchAgents/com.leebyron.website-agent.plist</code> defines the name of my agent, the program to run, where to write standard output, and the path to watch. Changes to that path will run my program. Note that the program is not run inside a shell, so a node script needs to provide a full path to the node executable, rather than a executable “hash bang”.
 </p>
 <pre data-code-block data-lang="xml"><code><span data-line="1"><span style="color:#24292EFF;">&lt;?</span><span style="color:#22863A;">xml</span><span style="color:#6F42C1;"> version</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;1.0&quot;</span><span style="color:#6F42C1;"> encoding</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;UTF-8&quot;</span><span style="color:#24292EFF;">?&gt;</span>
 </span><span data-line="2"><span style="color:#24292EFF;">&lt;!</span><span style="color:#D32F2F;">DOCTYPE</span><span style="color:#24292EFF;"> plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
@@ -410,7 +410,7 @@
 </span><span data-line="21"><span style="color:#24292EFF;">&lt;/</span><span style="color:#22863A;">plist</span><span style="color:#24292EFF;">&gt;</span>
 </span></code></pre>
 <p>
-  Finally, tell launch control about this service. You'll need to know your uid number (which you can find by running the <code>id</code> command). Replace &quot;500&quot; here with whatever your uid happens to be.
+  Finally, tell launch control about this service. You’ll need to know your uid number (which you can find by running the <code>id</code> command). Replace “500” here with whatever your uid happens to be.
 </p>
 <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootstrap gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
 </span></code></pre>
@@ -436,13 +436,13 @@
     <category term="mac"/>
     <category term="keyboard"/>
     <content type="html"><![CDATA[<p>
-  I'm often looking up Unicode code points to use in various places. There are two ways I type them quickly from the keyboard.
+  I’m often looking up Unicode code points to use in various places. There are two ways I type them quickly from the keyboard.
 </p>
 <p>
-  The first way is a cheat. In the first tab of Keyboard preferences, ensure &quot;Press 🌐 to: &quot; is set to &quot;Show Emoji &amp; Symbols&quot;. Now tap the <code>fn</code> key to bring up the Symbols picker. The search does a half decent job of finding the symbol you need. Clicking it behaves as a key press.
+  The first way is a cheat. In the first tab of Keyboard preferences, ensure “Press 🌐 to: ” is set to “Show Emoji &amp; Symbols”. Now tap the <code>fn</code> key to bring up the Symbols picker. The search does a half decent job of finding the symbol you need. Clicking it behaves as a key press.
 </p>
 <p>
-  The second way is best if you know the <em>code</em>. From the Keyboard preferences in the &quot;Input Sources&quot; tab, press the <code>+</code> button and add the &quot;Unicode Hex Input&quot; keyboard. When using this keyboard, <code>⌥+&lt;key&gt;</code> no longer produces an alternate symbol, but instead allows you to type in hex codes.
+  The second way is best if you know the <em>code</em>. From the Keyboard preferences in the “Input Sources” tab, press the <code>+</code> button and add the “Unicode Hex Input” keyboard. When using this keyboard, <code>⌥+&lt;key&gt;</code> no longer produces an alternate symbol, but instead allows you to type in hex codes.
 </p>
 <p>
   Now by holding ⌥ and typing <code>229b</code>, I can type: ⊛
@@ -467,7 +467,7 @@
     </author>
     <category term="vim"/>
     <content type="html"><![CDATA[<p>
-  Vim, run from the terminal, does not make use of the Command key. So most of my muscle memory has been lost while learning it. However I found a shortcut: iTerm's key mapping.
+  Vim, run from the terminal, does not make use of the Command key. So most of my muscle memory has been lost while learning it. However I found a shortcut: iTerm’s key mapping.
 </p>
 <p>
   In iTerm, open Preferences (or press <code>Command-,</code> and in the Keys tab add a new Key Binding.
@@ -480,7 +480,7 @@
   </li>
   <li>
     <p>
-      Action: Send text with &quot;vim&quot; Special Chars
+      Action: Send text with “vim” Special Chars
     </p>
   </li>
   <li>
@@ -541,7 +541,7 @@
   The caps lock key is conveniently located next to your left pinkie on the home row, easier to press than almost all other modifiers despite being one I find least useful. Luckily, macOS makes it very easy to remap this key<a href="#fn:alternative" id="fn:alternative.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
 </p>
 <p>
-  In System Preferences → Keyboard, press &quot;Modifier Keys...&quot; to open a menu mapping physical keys to the action they apply. I always remap my caps lock key to &quot;Control&quot;, since I spend a fair amount of time in Terminal, where Control is used a fair amount (like Control-C to send <code>SIGINT</code>, or Control-Z to send <code>SIGTSTP</code>).
+  In System Preferences → Keyboard, press “Modifier Keys…” to open a menu mapping physical keys to the action they apply. I always remap my caps lock key to “Control”, since I spend a fair amount of time in Terminal, where Control is used a fair amount (like Control-C to send <code>SIGINT</code>, or Control-Z to send <code>SIGTSTP</code>).
 </p>
 <p>
   <img src="../media/91e205164869e572.png" alt="Screen Shot 2022-01-15 at 8.39.01 PM.png">
@@ -550,7 +550,7 @@
   <ol>
     <li id="fn:alternative">
       <p>
-        There is other software for much more powerful key remapping, which I'll write about in the future. It's nice that this is an OS-provided preference, so you can quickly set it without installing anything.
+        There is other software for much more powerful key remapping, which I’ll write about in the future. It’s nice that this is an OS-provided preference, so you can quickly set it without installing anything.
       </p>
       <a href="#fn:alternative.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -570,13 +570,13 @@
     </author>
     <category term="mac"/>
     <content type="html"><![CDATA[<p>
-  Most text based apps on the Mac have a find buffer accessed with ⌘F. A common workflow is to select some text, copy it with ⌘C, open find with ⌘F, paste the searched text with ⌘V, hit return to find the next instance, and hit return multiple times until you find the instance you're looking for, then hit escape to close the find overlay.
+  Most text based apps on the Mac have a find buffer accessed with ⌘F. A common workflow is to select some text, copy it with ⌘C, open find with ⌘F, paste the searched text with ⌘V, hit return to find the next instance, and hit return multiple times until you find the instance you’re looking for, then hit escape to close the find overlay.
 </p>
 <p>
-  <em>There's a faster way.</em>
+  <em>There’s a faster way.</em>
 </p>
 <p>
-  After selecting text, press ⌘E to fill that text into the find buffer. It may look like nothing happened, but now press ⌘G to find the next instance of that text (⌘⇧G to find the previous). Continue pressing ⌘G until you find the instance you're looking for.
+  After selecting text, press ⌘E to fill that text into the find buffer. It may look like nothing happened, but now press ⌘G to find the next instance of that text (⌘⇧G to find the previous). Continue pressing ⌘G until you find the instance you’re looking for.
 </p>
 <p>
   This has a benefit of not changing modes; your cursor remains within the text document rather than being caught by the find input.
@@ -598,10 +598,10 @@
     </author>
     <category term="mac"/>
     <content type="html"><![CDATA[<p>
-  After nearly two decades on a Mac, I've finally come to the conclusion that the Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me, it collects stuff, things get lost there, I'm done with it.
+  After nearly two decades on a Mac, I’ve finally come to the conclusion that the Desktop is actively harmful. It is the junk drawer of the Mac. It distracts me, it collects stuff, things get lost there, I’m done with it.
 </p>
 <p>
-  <strong>Here's how to get rid of it.</strong>
+  <strong>Here’s how to get rid of it.</strong>
 </p>
 <ul>
   <li>
@@ -624,12 +624,12 @@
   </li>
   <li>
     <p>
-      Open Finder, right click Desktop in sidebar and &quot;Remove from Sidebar&quot;
+      Open Finder, right click Desktop in sidebar and “Remove from Sidebar”
     </p>
   </li>
 </ul>
 <p>
-  You can't actually delete the Desktop folder itself, because Finder will just recreate it upon finding it missing. You can instead render it useless by symlinking it back to your home directory<a href="#fn:symlink" id="fn:symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+  You can’t actually delete the Desktop folder itself, because Finder will just recreate it upon finding it missing. You can instead render it useless by symlinking it back to your home directory<a href="#fn:symlink" id="fn:symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
 </p>
 <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
 </span><span data-line="2"><span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
@@ -662,7 +662,7 @@
     </author>
     <category term="mac"/>
     <content type="html"><![CDATA[<p>
-  Mac has some keyboard shortcuts for capturing your screen via an app called &quot;Screenshot.&quot;
+  Mac has some keyboard shortcuts for capturing your screen via an app called “Screenshot.”
 </p>
 <ul>
   <li>
@@ -677,7 +677,7 @@
     <ul>
       <li>
         <p>
-          Before dragging, press space bar to toggle on capture window mode, then click the window to capture. This has the nice benefit of including the window's drop shadow with image transparency.
+          Before dragging, press space bar to toggle on capture window mode, then click the window to capture. This has the nice benefit of including the window’s drop shadow with image transparency.
         </p>
       </li>
       <li>
@@ -694,13 +694,13 @@
   </li>
 </ul>
 <p>
-  By default all screenshots are saved to the Desktop. To keep your Desktop from becoming a junk drawer, I highly recommend saving them in some other dedicated location. I personally create a folder called &quot;Screenshots&quot; that I put at the top level of my Dropbox folder. If you don't use Dropbox, consider a folder in your home directory.
+  By default all screenshots are saved to the Desktop. To keep your Desktop from becoming a junk drawer, I highly recommend saving them in some other dedicated location. I personally create a folder called “Screenshots” that I put at the top level of my Dropbox folder. If you don’t use Dropbox, consider a folder in your home directory.
 </p>
 <p>
-  Open the Screenshot app and in the bar that appears click &quot;Options&quot;, and under the &quot;Save to&quot; heading choose &quot;Other Location&quot; and choose or create the dedicated folder. Afterwards, I recommend adding your Screenshots folder to your Finder's sidebar for quick access.
+  Open the Screenshot app and in the bar that appears click “Options”, and under the “Save to” heading choose “Other Location” and choose or create the dedicated folder. Afterwards, I recommend adding your Screenshots folder to your Finder’s sidebar for quick access.
 </p>
 <p>
-  While you're at it, take a look at the other options. I like to disable &quot;Show Floating Thumbnail&quot; since that feature delays saving the screenshot to disk for a number of seconds.
+  While you’re at it, take a look at the other options. I like to disable “Show Floating Thumbnail” since that feature delays saving the screenshot to disk for a number of seconds.
 </p>
 <p>
   Alternatively, you can use the <code>defaults</code> terminal command:
@@ -719,7 +719,7 @@
   <ol>
     <li id="fn:finder">
       <p>
-        Or you can open it directly via Finder. It's in <code>/Applications/Utilities</code> and called &quot;Screenshot.app&quot;
+        Or you can open it directly via Finder. It’s in <code>/Applications/Utilities</code> and called “Screenshot.app”
       </p>
       <a href="#fn:finder.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -745,7 +745,7 @@
   Raskin was no fan of the computer mouse<a href="#fn:hth" id="fn:hth.ref" data-footnote-ref aria-label="note"><sup>2</sup></a> and thought keyboard driven UIs could be much more powerful, and the Cat has a couple tricks which show that he was truly onto something, most notably: <em>Leap</em>.
 </p>
 <p>
-  The Cat keyboard is really unique. This computer has no mouse and no arrow keys<a href="#fn:creep" id="fn:creep.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>. Instead it has &quot;Leap&quot; keys under the space bar.
+  The Cat keyboard is really unique. This computer has no mouse and no arrow keys<a href="#fn:creep" id="fn:creep.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>. Instead it has “Leap” keys under the space bar.
 </p>
 <p>
   <img src="../media/32fbd2a67421bb0d.jpeg" title="Credit: https://vintagecomputer.ca/canon-cat/" alt="Canon Cat keyboard">
@@ -758,17 +758,17 @@
   </li>
   <li>
     <p>
-      If you got it wrong you can hit &quot;Undo&quot; to go back.
+      If you got it wrong you can hit “Undo” to go back.
     </p>
   </li>
   <li>
     <p>
-      To keep looking for the same thing, hold &quot;Use Front&quot;<a href="#fn:use-front" id="fn:use-front.ref" data-footnote-ref aria-label="note"><sup>4</sup></a> and &quot;Leap Again&quot;.
+      To keep looking for the same thing, hold “Use Front”<a href="#fn:use-front" id="fn:use-front.ref" data-footnote-ref aria-label="note"><sup>4</sup></a> and “Leap Again”.
     </p>
   </li>
   <li>
     <p>
-      There's a dedicated &quot;Page&quot; button so you can Leap through page by page to rapidly move through a large file (or press it on its own to create a new blank page).
+      There’s a dedicated “Page” button so you can Leap through page by page to rapidly move through a large file (or press it on its own to create a new blank page).
     </p>
   </li>
   <li>
@@ -778,13 +778,13 @@
   </li>
 </ul>
 <p>
-  This is so different from what we're used to that it seems like it might be frustrating to use and rightfully part of history instead of current kit, but I find this inspiring. I wish I could get my computer to work this way!
+  This is so different from what we’re used to that it seems like it might be frustrating to use and rightfully part of history instead of current kit, but I find this inspiring. I wish I could get my computer to work this way!
 </p>
 <p>
-  I've been using VIM exclusively the last few weeks and trying to get used to it. I'm realizing that I spend way more time <em>moving around</em> then I actually do typing new things. I've come to really appreciate the <code>/</code> and <code>?</code> commands which search ahead and back for some text to move towards. It's very powerful, but slightly awkward to use, so I find myself not using it as much as I should. Having that functionality under my thumbs would feel like a super power.
+  I’ve been using VIM exclusively the last few weeks and trying to get used to it. I’m realizing that I spend way more time <em>moving around</em> then I actually do typing new things. I’ve come to really appreciate the <code>/</code> and <code>?</code> commands which search ahead and back for some text to move towards. It’s very powerful, but slightly awkward to use, so I find myself not using it as much as I should. Having that functionality under my thumbs would feel like a super power.
 </p>
 <p>
-  There aren't that many Canon Cats still floating around, but if you want to get a feel for what using one of these is like, you can run its <a href="https://archive.org/details/canoncat" target="_blank">software in emulation mode</a> thanks to the Internet Archive! How to use this is not very clear, but here's what I figured out so far:
+  There aren’t that many Canon Cats still floating around, but if you want to get a feel for what using one of these is like, you can run its <a href="https://archive.org/details/canoncat" target="_blank">software in emulation mode</a> thanks to the Internet Archive! How to use this is not very clear, but here’s what I figured out so far:
 </p>
 <ul>
   <li>
@@ -799,7 +799,7 @@
   </li>
   <li>
     <p>
-      control is &quot;Use Front&quot;
+      control is “Use Front”
     </p>
   </li>
   <li>
@@ -809,7 +809,7 @@
   </li>
 </ul>
 <p>
-  Obviously, it's not quite the same as having the Cat keyboard in front of you, but I still found it very curious to use and gave me confidence that this could be an easily learned and very fun to use digital world to live in.
+  Obviously, it’s not quite the same as having the Cat keyboard in front of you, but I still found it very curious to use and gave me confidence that this could be an easily learned and very fun to use digital world to live in.
 </p>
 <p>
   There are surprisingly almost no modern tools that reference back to Leap and the Canon Cat. One notable exception is the <a href="https://100r.co/site/left.html" target="_blank">Left</a> text editor by Hundred Rabbits, which very recently <a href="https://twitter.com/hundredrabbits/status/1466832328462790656?s=21" target="_blank">added Leap</a>.
@@ -840,7 +840,7 @@
   </li>
 </ul>
 <p>
-  Finally, I'll leave you with this convincing promotional video showing off the Cat in use, showing both more of what it can do<a href="#fn:calc" id="fn:calc.ref" data-footnote-ref aria-label="note"><sup>5</sup></a> as well as some truly excellent '80s hairstyles.
+  Finally, I’ll leave you with this convincing promotional video showing off the Cat in use, showing both more of what it can do<a href="#fn:calc" id="fn:calc.ref" data-footnote-ref aria-label="note"><sup>5</sup></a> as well as some truly excellent ’80s hairstyles.
 </p>
 <div class="yt-player" style="--aspectRatio:1.3333333333333333;">
   <iframe src="https://www.youtube.com/embed/o_TlE_U_X3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -849,25 +849,25 @@
   <ol>
     <li id="fn:swyft">
       <p>
-        Jef Raskin started the project by founding a company, Information Appliances, and called the computer SWYFT: &quot;Superb With Your Favorite Typing&quot;. Canon acquired his company and their marketing team came up with the name &quot;Cat.&quot; No idea if Apple intentionally took a pot-shot at Jef with Swift.
+        Jef Raskin started the project by founding a company, Information Appliances, and called the computer SWYFT: “Superb With Your Favorite Typing”. Canon acquired his company and their marketing team came up with the name “Cat.” No idea if Apple intentionally took a pot-shot at Jef with Swift.
       </p>
       <a href="#fn:swyft.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn:hth">
       <p>
-        Jef Raskin briefly discussed the Canon Cat's Leap innovation in an <a href="https://youtu.be/1qvrOEExlps?t=1337" target="_blank">Feb 1992 episode</a> of High Tech Heros, a public access show from Los Altos.
+        Jef Raskin briefly discussed the Canon Cat’s Leap innovation in an <a href="https://youtu.be/1qvrOEExlps?t=1337" target="_blank">Feb 1992 episode</a> of High Tech Heros, a public access show from Los Altos.
       </p>
       <a href="#fn:hth.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn:creep">
       <p>
-        Arrow behavior is kinda still there. Tapping Leap on its own moves the cursor ahead by one. they fittingly called this &quot;Creep&quot;. Shift+Leap would scroll the page up and down.
+        Arrow behavior is kinda still there. Tapping Leap on its own moves the cursor ahead by one. they fittingly called this “Creep”. Shift+Leap would scroll the page up and down.
       </p>
       <a href="#fn:creep.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
     <li id="fn:use-front">
       <p>
-        The &quot;Use Front&quot; key is essentially your &quot;Command&quot; key, but they printed the commands on the front of the key caps, hence &quot;Use Front&quot;.
+        The “Use Front” key is essentially your “Command” key, but they printed the commands on the front of the key caps, hence “Use Front”.
       </p>
       <a href="#fn:use-front.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -902,24 +902,24 @@
 </p>
 <blockquote>
   <p>
-    I have a dream for the Web [in which computers] become capable of analyzing all the data on the Web – the content, links, and transactions between people and computers. A &quot;Semantic Web&quot;, which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines.
+    I have a dream for the Web [in which computers] become capable of analyzing all the data on the Web – the content, links, and transactions between people and computers. A “Semantic Web”, which makes this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines.
   </p>
 </blockquote>
 <p>
-  Some variation of this is is right...
+  Some variation of this is is right…
 </p>
 <p>
-  However, for us Webmasters, it's tough to keep track of the peculiarities of how each platform would like to consume semantic information. Having just added some meta data to this very page, I'll drop some links and tl;dr of what I learned along the way:
+  However, for us Webmasters, it’s tough to keep track of the peculiarities of how each platform would like to consume semantic information. Having just added some meta data to this very page, I’ll drop some links and tl;dr of what I learned along the way:
 </p>
 <ul>
   <li>
     <p>
-      <a href="https://www.w3.org/RDF/" target="_blank">RDF</a> (Resource Description Language) and <a href="https://en.wikipedia.org/wiki/Web_Ontology_Language" target="_blank">OWL</a> (Web Ontology Language) were early standards that live on. They don't get a lot of direct practical use<a href="#fn:rdfa" id="fn:rdfa.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. There is also <a href="https://microformats.io/" target="_blank">microformats</a> which still has some use, but is no longer preferred.
+      <a href="https://www.w3.org/RDF/" target="_blank">RDF</a> (Resource Description Language) and <a href="https://en.wikipedia.org/wiki/Web_Ontology_Language" target="_blank">OWL</a> (Web Ontology Language) were early standards that live on. They don’t get a lot of direct practical use<a href="#fn:rdfa" id="fn:rdfa.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>. There is also <a href="https://microformats.io/" target="_blank">microformats</a> which still has some use, but is no longer preferred.
     </p>
   </li>
   <li>
     <p>
-      <a href="https://ogp.me/" target="_blank">Open Graph</a> is a standard proposed by Facebook which addressed the mess that was the web at the time<a href="#fn:og-deck" id="fn:og-deck.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. It has a surprisingly broad schema and some quirks<a href="#fn:og-non-standard" id="fn:og-non-standard.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>. Since then, <a href="https://json-ld.org/" target="_blank">JSON-LD</a> has become the preferred tool. JSON is way easier for representing data, and there's a huge set of <a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
+      <a href="https://ogp.me/" target="_blank">Open Graph</a> is a standard proposed by Facebook which addressed the mess that was the web at the time<a href="#fn:og-deck" id="fn:og-deck.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>. It has a surprisingly broad schema and some quirks<a href="#fn:og-non-standard" id="fn:og-non-standard.ref" data-footnote-ref aria-label="note"><sup>3</sup></a>. Since then, <a href="https://json-ld.org/" target="_blank">JSON-LD</a> has become the preferred tool. JSON is way easier for representing data, and there’s a huge set of <a href="https://schema.org/docs/schemas.html" target="_blank">available schema</a>.
     </p>
   </li>
   <li>
@@ -929,19 +929,19 @@
     <ul>
       <li>
         <p>
-          Use the <a href="https://developers.facebook.com/tools/debug/" target="_blank">share debugger</a> to see what information was parsed and any warnings. It shows a share preview based on an older version of their desktop site and can't be relied on.
+          Use the <a href="https://developers.facebook.com/tools/debug/" target="_blank">share debugger</a> to see what information was parsed and any warnings. It shows a share preview based on an older version of their desktop site and can’t be relied on.
         </p>
       </li>
     </ul>
   </li>
   <li>
     <p>
-      <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup" target="_blank">Twitter</a> uses Open Graph if it finds them, but adds &quot;Card Tags&quot;. This is most helpful when you want something to appear slightly differently on Twitter vs Facebook.
+      <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup" target="_blank">Twitter</a> uses Open Graph if it finds them, but adds “Card Tags”. This is most helpful when you want something to appear slightly differently on Twitter vs Facebook.
     </p>
     <ul>
       <li>
         <p>
-          Use their <a href="https://cards-dev.twitter.com/validator" target="_blank">card validator</a> to see what a card will look like. This shows for desktop, I'm not aware of a mobile preview.
+          Use their <a href="https://cards-dev.twitter.com/validator" target="_blank">card validator</a> to see what a card will look like. This shows for desktop, I’m not aware of a mobile preview.
         </p>
       </li>
     </ul>
@@ -953,14 +953,14 @@
     <ul>
       <li>
         <p>
-          There are <a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a> for both generic JSON-LD and Google specific results. Despite being the most mature of these tools, I've found it least helpful in giving error messages. Caveat caelator.
+          There are <a href="https://developers.google.com/search/docs/advanced/structured-data" target="_blank">multiple validators</a> for both generic JSON-LD and Google specific results. Despite being the most mature of these tools, I’ve found it least helpful in giving error messages. Caveat caelator.
         </p>
       </li>
     </ul>
   </li>
 </ul>
 <p>
-  One last resource that I found very helpful was the <a href="http://linter.structured-data.org/" target="_blank">structured data linter</a>. This tool understands just about all of the above. It's not all that helpful for understanding how any one service will interpret your page, but is very useful to ensure the meta data you expect is being found, and that there are no inconsistencies or other problems.
+  One last resource that I found very helpful was the <a href="http://linter.structured-data.org/" target="_blank">structured data linter</a>. This tool understands just about all of the above. It’s not all that helpful for understanding how any one service will interpret your page, but is very useful to ensure the meta data you expect is being found, and that there are no inconsistencies or other problems.
 </p>
 <section data-footnotes aria-label="footnotes">
   <ol>
@@ -972,7 +972,7 @@
     </li>
     <li id="fn:og-deck">
       <p>
-        Facebook made an interesting <a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a> of Open Graph that details these problems. It's an interesting read.
+        Facebook made an interesting <a href="https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions" target="_blank">deck on the design decisions</a> of Open Graph that details these problems. It’s an interesting read.
       </p>
       <a href="#fn:og-deck.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -998,13 +998,13 @@
     </author>
     <category term="til"/>
     <content type="html"><![CDATA[<p>
-  I set about adding an &quot;RSS feed&quot; for this til site, only to find that despite reader apps calling themselves &quot;RSS readers&quot;, that most &quot;RSS&quot; feeds out there are not actually written in <a href="https://www.rssboard.org/rss-specification" target="_blank">RSS</a>, they're mostly written in <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a>. There are actually a small handful of feed document formats out there, and RSS is sort of the &quot;Kleenex&quot; of the feed marketplace: all feeds find themselves called &quot;RSS&quot; when they may not be.
+  I set about adding an “RSS feed” for this til site, only to find that despite reader apps calling themselves “RSS readers”, that most “RSS” feeds out there are not actually written in <a href="https://www.rssboard.org/rss-specification" target="_blank">RSS</a>, they’re mostly written in <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a>. There are actually a small handful of feed document formats out there, and RSS is sort of the “Kleenex” of the feed marketplace: all feeds find themselves called “RSS” when they may not be.
 </p>
 <p>
-  RSS was created in 1999 (the <a href="https://www.youtube.com/watch?v=vG8WpLr6y_U" target="_blank">best era of the web</a> if you ask me) by Netscape as a simplification of RDF. It was ...tossed over the wall. This was right about the time of the Netscape &amp; AOL merger, and RSS disappeared from netscape.com. Meanwhile RSS was <em>very popular</em> in the early days of the internet and adopted by many media companies figuring out this whole world wide web thing. In 2002 the version of RSS we mostly know was created by an independent group (retitled from &quot;Rich Site Summary&quot; to &quot;Really Simple Syndication&quot;) but under dubious legal circumstances and under the shadow of the AOL/Netflix conglomerate which technically owned the copyright.
+  RSS was created in 1999 (the <a href="https://www.youtube.com/watch?v=vG8WpLr6y_U" target="_blank">best era of the web</a> if you ask me) by Netscape as a simplification of RDF. It was …tossed over the wall. This was right about the time of the Netscape &amp; AOL merger, and RSS disappeared from netscape.com. Meanwhile RSS was <em>very popular</em> in the early days of the internet and adopted by many media companies figuring out this whole world wide web thing. In 2002 the version of RSS we mostly know was created by an independent group (retitled from “Rich Site Summary” to “Really Simple Syndication”) but under dubious legal circumstances and under the shadow of the AOL/Netflix conglomerate which technically owned the copyright.
 </p>
 <p>
-  Emerge <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a>, an open standard introduced in 2003 meant to replace RSS. It's vendor neutral and open, solves some of RSS's quirks, extensible, internationalized, championed by Google and other cool young tech companies, and even blessed by the IETF as RFC4287. And it still gets called &quot;RSS&quot;, sigh... open source is hard sometimes.
+  Emerge <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a>, an open standard introduced in 2003 meant to replace RSS. It’s vendor neutral and open, solves some of RSS’s quirks, extensible, internationalized, championed by Google and other cool young tech companies, and even blessed by the IETF as RFC4287. And it still gets called “RSS”, sigh… open source is hard sometimes.
 </p>
 <p>
   Two decades later, please use <a href="https://datatracker.ietf.org/doc/html/rfc4287" target="_blank">Atom</a> for your syndication feeds. It has been hardened by two decades of use and still works great.
@@ -1025,7 +1025,7 @@
       <uri>https://leebyron.com</uri>
     </author>
     <content type="html"><![CDATA[<p>
-  The <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">ASCII</a> 7-bit character encoding is ubiquitous<a href="#fn:actually-utf8" id="fn:actually-utf8.ref" data-footnote-ref aria-label="note"><sup>1</sup></a> and foundational to how computers talk to each other. It has an absolutely fascinating history that dates surprisingly far back. The ASCII standard started in 1963, and was iterated until 1986. ASCII was based on ITA2, a telegraph standard from 1924, which itself derived from <a href="https://en.wikipedia.org/wiki/Baudot_code" target="_blank">Baudot code</a> from 1870—literally the beginning of digital communication (the namesake for &quot;baud&quot; speed).
+  The <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">ASCII</a> 7-bit character encoding is ubiquitous<a href="#fn:actually-utf8" id="fn:actually-utf8.ref" data-footnote-ref aria-label="note"><sup>1</sup></a> and foundational to how computers talk to each other. It has an absolutely fascinating history that dates surprisingly far back. The ASCII standard started in 1963, and was iterated until 1986. ASCII was based on ITA2, a telegraph standard from 1924, which itself derived from <a href="https://en.wikipedia.org/wiki/Baudot_code" target="_blank">Baudot code</a> from 1870—literally the beginning of digital communication (the namesake for “baud” speed).
 </p>
 <style>.ascii-table td:first-child { background: #00000008; }</style>
 <pre class="ascii-table"><div class="table-wrapper"><table><thead><tr><th></th><th><code>0x00</code></th><th><code>0x10</code></th><th><code>0x20</code></th><th><code>0x30</code></th><th><code>0x40</code></th><th><code>0x50</code></th><th><code>0x60</code></th><th><code>0x70</code></th></tr></thead><tbody><tr><td><strong><code>0x00</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Null_character" title="Null" target="_blank"><code>␀</code></a> <code>⌃@</code> <code>\0</code></td><td><a href="https://en.wikipedia.org/wiki/Data_Link_Escape" title="Data Link Escape" target="_blank"><code>␐</code></a> <code>⌃P</code></td><td>Space</td><td><code>0</code></td><td><code>@</code></td><td><code>P</code></td><td><code>`</code></td><td><code>p</code></td></tr><tr><td><strong><code>0x01</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Start_of_Heading" title="Start of Heading" target="_blank"><code>␁</code></a> <code>⌃A</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_1" title="Device Control 1 / XON / Resume" target="_blank"><code>␑</code></a> <code>⌃Q</code></td><td><code>!</code></td><td><code>1</code></td><td><code>A</code></td><td><code>Q</code></td><td><code>a</code></td><td><code>q</code></td></tr><tr><td><strong><code>0x02</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Start_of_Text" title="Start of Text" target="_blank"><code>␂</code></a> <code>⌃B</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_2" title="Device Control 2" target="_blank"><code>␒</code></a> <code>⌃R</code></td><td><code>&quot;</code></td><td><code>2</code></td><td><code>B</code></td><td><code>R</code></td><td><code>b</code></td><td><code>r</code></td></tr><tr><td><strong><code>0x03</code></strong></td><td><a href="https://en.wikipedia.org/wiki/End-of-Text_character" title="End of Text" target="_blank"><code>␃</code></a> <code>⌃C</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_3" title="Device Control 3 / XOFF / Pause" target="_blank"><code>␓</code></a> <code>⌃S</code></td><td><code>#</code></td><td><code>3</code></td><td><code>C</code></td><td><code>S</code></td><td><code>c</code></td><td><code>s</code></td></tr><tr><td><strong><code>0x04</code></strong></td><td><a href="https://en.wikipedia.org/wiki/End-of-Transmission_character" title="End of Transmission" target="_blank"><code>␄</code></a> <code>⌃D</code></td><td><a href="https://en.wikipedia.org/wiki/Device_Control_4" title="Device Control 4" target="_blank"><code>␔</code></a> <code>⌃T</code></td><td><code>$</code></td><td><code>4</code></td><td><code>D</code></td><td><code>T</code></td><td><code>d</code></td><td><code>t</code></td></tr><tr><td><strong><code>0x05</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Enquiry_character" title="Enquiry" target="_blank"><code>␅</code></a> <code>⌃E</code></td><td><a href="https://en.wikipedia.org/wiki/Negative-acknowledge_character" title="Negative Acknowledgement" target="_blank"><code>␕</code></a> <code>⌃U</code></td><td><code>%</code></td><td><code>5</code></td><td><code>E</code></td><td><code>U</code></td><td><code>e</code></td><td><code>u</code></td></tr><tr><td><strong><code>0x06</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Acknowledge_character" title="Acknowledgement" target="_blank"><code>␆</code></a> <code>⌃F</code></td><td><a href="https://en.wikipedia.org/wiki/Synchronous_Idle" title="Synchronous Idle" target="_blank"><code>␖</code></a> <code>⌃V</code></td><td><code>&amp;</code></td><td><code>6</code></td><td><code>F</code></td><td><code>V</code></td><td><code>f</code></td><td><code>v</code></td></tr><tr><td><strong><code>0x07</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Bell_character" title="Bell" target="_blank"><code>␇</code></a> <code>⌃G</code> <code>\a</code></td><td><a href="https://en.wikipedia.org/wiki/End-of-Transmission-Block_character" title="End of Transmission Block" target="_blank"><code>␗</code></a> <code>⌃W</code></td><td><code>'</code></td><td><code>7</code></td><td><code>G</code></td><td><code>W</code></td><td><code>g</code></td><td><code>w</code></td></tr><tr><td><strong><code>0x08</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Backspace" title="Backspace" target="_blank"><code>␈</code></a> <code>⌃H</code> <code>\b</code></td><td><a href="https://en.wikipedia.org/wiki/Cancel_character" title="Cancel" target="_blank"><code>␘</code></a> <code>⌃X</code></td><td><code>(</code></td><td><code>8</code></td><td><code>H</code></td><td><code>X</code></td><td><code>h</code></td><td><code>x</code></td></tr><tr><td><strong><code>0x09</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Horizontal_Tab" title="Horizontal Tab" target="_blank"><code>␉</code></a> <code>⌃I</code> <code>\t</code></td><td><a href="https://en.wikipedia.org/wiki/End_of_Medium" title="End of Medium" target="_blank"><code>␙</code></a> <code>⌃Y</code></td><td><code>)</code></td><td><code>9</code></td><td><code>I</code></td><td><code>Y</code></td><td><code>i</code></td><td><code>y</code></td></tr><tr><td><strong><code>0x0A</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Line_Feed" title="Line Feed" target="_blank"><code>␊</code></a> <code>⌃J</code> <code>\n</code></td><td><a href="https://en.wikipedia.org/wiki/Substitute_character" title="Substitute" target="_blank"><code>␚</code></a> <code>⌃Z</code></td><td><code>*</code></td><td><code>:</code></td><td><code>J</code></td><td><code>Z</code></td><td><code>j</code></td><td><code>z</code></td></tr><tr><td><strong><code>0x0B</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Vertical_Tab" title="Vertical Tab" target="_blank"><code>␋</code></a> <code>⌃K</code> <code>\v</code></td><td><a href="https://en.wikipedia.org/wiki/Escape_character" title="Escape" target="_blank"><code>␛</code></a> <code>⌃[</code> <code>\e</code></td><td><code>+</code></td><td><code>;</code></td><td><code>K</code></td><td><code>[</code></td><td><code>k</code></td><td><code>{</code></td></tr><tr><td><strong><code>0x0C</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Form_Feed" title="Form Feed" target="_blank"><code>␌</code></a> <code>⌃L</code> <code>\f</code></td><td><a href="https://en.wikipedia.org/wiki/File_Separator" title="File Separator" target="_blank"><code>␜</code></a> <code>⌃\</code></td><td><code>,</code></td><td><code>&lt;</code></td><td><code>L</code></td><td><code>\</code></td><td><code>l</code></td><td><code>|</code></td></tr><tr><td><strong><code>0x0D</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Carriage_Return" title="Carriage Return" target="_blank"><code>␍</code></a> <code>⌃M</code> <code>\r</code></td><td><a href="https://en.wikipedia.org/wiki/Group_Separator" title="Group Separator" target="_blank"><code>␝</code></a> <code>⌃]</code></td><td><code>-</code></td><td><code>=</code></td><td><code>M</code></td><td><code>]</code></td><td><code>m</code></td><td><code>}</code></td></tr><tr><td><strong><code>0x0E</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Shift_Out" title="Shift Out" target="_blank"><code>␎</code></a> <code>⌃N</code></td><td><a href="https://en.wikipedia.org/wiki/Record_Separator" title="Record Separator" target="_blank"><code>␞</code></a> <code>⌃^</code></td><td><code>.</code></td><td><code>&gt;</code></td><td><code>N</code></td><td><code>^</code></td><td><code>n</code></td><td><code>~</code></td></tr><tr><td><strong><code>0x0F</code></strong></td><td><a href="https://en.wikipedia.org/wiki/Shift_In" title="Shift In" target="_blank"><code>␏</code></a> <code>⌃O</code></td><td><a href="https://en.wikipedia.org/wiki/Unit_Separator" title="Unit Separator" target="_blank"><code>␟</code></a> <code>⌃_</code></td><td><code>/</code></td><td><code>?</code></td><td><code>O</code></td><td><code>_</code></td><td><code>o</code></td><td><a href="https://en.wikipedia.org/wiki/Delete_character" title="Delete" target="_blank"><code>␡</code></a> <code>⌃?</code></td></tr></tbody></table></div></pre>
@@ -1045,7 +1045,7 @@
   </li>
   <li>
     <p>
-      Many keys you still reach via &quot;shift&quot; on a modern keyboard are either <code>0x10</code> or <code>0x20</code> above their standard key, a holdover from mechanical typewriters.
+      Many keys you still reach via “shift” on a modern keyboard are either <code>0x10</code> or <code>0x20</code> above their standard key, a holdover from mechanical typewriters.
     </p>
   </li>
   <li>
@@ -1055,7 +1055,7 @@
   </li>
   <li>
     <p>
-      Your &quot;control&quot; key has a <code>⌃</code> on it because its original purpose was to remap typical keys to control keys by xor'ing the highest bit <code>0x40</code> (<code>XOR</code> also happens to be <code>^</code> in C). Some of these vestiges of the past still work everywhere, and all should work in your terminal! Try <code>⌃H</code> for a home-row oriented backspace.
+      Your “control” key has a <code>⌃</code> on it because its original purpose was to remap typical keys to control keys by xor’ing the highest bit <code>0x40</code> (<code>XOR</code> also happens to be <code>^</code> in C). Some of these vestiges of the past still work everywhere, and all should work in your terminal! Try <code>⌃H</code> for a home-row oriented backspace.
     </p>
   </li>
 </ul>
@@ -1063,7 +1063,7 @@
   <ol>
     <li id="fn:actually-utf8">
       <p>
-        These days it's really UTF-8 thats ubiquitous.
+        These days it’s really UTF-8 thats ubiquitous.
       </p>
       <a href="#fn:actually-utf8.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -1084,7 +1084,7 @@
       <uri>https://leebyron.com</uri>
     </author>
     <content type="html"><![CDATA[<p>
-  There's plenty of good software out there for screencasting, but if you're in a pinch Quicktime Player does a solid job with a bit of prep.
+  There’s plenty of good software out there for screencasting, but if you’re in a pinch Quicktime Player does a solid job with a bit of prep.
 </p>
 <ol start="1">
   <li>
@@ -1094,7 +1094,7 @@
     <ul>
       <li>
         <p>
-          Don't forget to increase font size in any terminals, browsers, or IDEs to increase visibility. 100 columns works okay.
+          Don’t forget to increase font size in any terminals, browsers, or IDEs to increase visibility. 100 columns works okay.
         </p>
       </li>
     </ul>
@@ -1104,7 +1104,7 @@
       File → New Movie Recording
     </p>
     <p>
-      Don't actually record a movie. This just abuses the webcam preview so you can have your face in the screen cast. Resize the window down and position it in the corner of your desktop.
+      Don’t actually record a movie. This just abuses the webcam preview so you can have your face in the screen cast. Resize the window down and position it in the corner of your desktop.
     </p>
   </li>
   <li>
@@ -1114,12 +1114,12 @@
     <ul>
       <li>
         <p>
-          Choose the &quot;Record Selected Portion&quot; and resize the area to be 1280×720 (or a large size of the same aspect ratio if your screen allows).
+          Choose the “Record Selected Portion” and resize the area to be 1280×720 (or a large size of the same aspect ratio if your screen allows).
         </p>
       </li>
       <li>
         <p>
-          You can't move windows around while resizing the recording area, but you can during recording. If necessary, start a recording to get windows all lined up.
+          You can’t move windows around while resizing the recording area, but you can during recording. If necessary, start a recording to get windows all lined up.
         </p>
       </li>
       <li>
@@ -1159,7 +1159,7 @@
     </author>
     <category term="markdown"/>
     <content type="html"><![CDATA[<p>
-  Much like <a href="../markdown-link-references">markdown link references</a>, footnotes are defined in one place and referenced in another, but it doesn't matter where the footnote is defined, they'll always be collected at the end of the document in the order in which they are referenced<a href="#fn:a-note" id="fn:a-note.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+  Much like <a href="../markdown-link-references">markdown link references</a>, footnotes are defined in one place and referenced in another, but it doesn’t matter where the footnote is defined, they’ll always be collected at the end of the document in the order in which they are referenced<a href="#fn:a-note" id="fn:a-note.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
 </p>
 <p>
   Footnotes are created similar to shortcut reference links, but the identifier starts with a <code>^</code>.
@@ -1177,7 +1177,7 @@
   <ol>
     <li id="fn:a-note">
       <p>
-        Despite footnotes appearing numbered, the identifier can be any text. This is helpful if you may add more notes later and don't want to be bothered to reorder them.
+        Despite footnotes appearing numbered, the identifier can be any text. This is helpful if you may add more notes later and don’t want to be bothered to reorder them.
       </p>
       <a href="#fn:a-note.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
@@ -1219,10 +1219,10 @@
 <pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">Here is a link about </span><span style="color:#D32F2F;">[markdown links]</span><span style="color:#24292EFF;">[links]. What's the web without </span><span style="color:#D32F2F;">[links]</span><span style="color:#24292EFF;">?</span>
 </span></code></pre>
 <p>
-  Here is a link about <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">markdown links</a>. What's the web without <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">links</a>?
+  Here is a link about <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">markdown links</a>. What’s the web without <a href="https://spec.commonmark.org/0.30/#links" title="Nearly a hundred tests" target="_blank">links</a>?
 </p>
 <p>
-  References can appear anywhere in a Markdown file. I often place them right after the paragraph where they're used. If they're used in multiple places, I'll group them together at the end of a section or end of the whole document.
+  References can appear anywhere in a Markdown file. I often place them right after the paragraph where they’re used. If they’re used in multiple places, I’ll group them together at the end of a section or end of the whole document.
 </p>
 <hr>
 <p>
@@ -1249,7 +1249,7 @@
       <uri>https://leebyron.com</uri>
     </author>
     <content type="html"><![CDATA[<p>
-  If you have a bit-powered display where the elements don't align to the bits in the byte, you may want to remap bits from the source byte to the destination byte. Manually writing a bunch of shifts is frustrating, and I found a great tool which writes this code for you!
+  If you have a bit-powered display where the elements don’t align to the bits in the byte, you may want to remap bits from the source byte to the destination byte. Manually writing a bunch of shifts is frustrating, and I found a great tool which writes this code for you!
 </p>
 <p>
   <a href="http://programming.sirrida.de/calcperm.php" target="_blank">http://programming.sirrida.de/calcperm.php</a>
@@ -1275,7 +1275,7 @@
 </p>
 <hr>
 <p>
-  This, combined with other movements can lead to very quick changes. One I've found quite useful is <code>ci&quot;</code> which changes the contents of a quoted string, and <code>ca&quot;</code> (<code>c</code>hange <code>a</code>ll <code>&quot;</code>quoted) to include the quote marks themselves. Or when working in prose, <code>cis</code> will change the current sentence and <code>cip</code> the current paragraph.
+  This, combined with other movements can lead to very quick changes. One I’ve found quite useful is <code>ci&quot;</code> which changes the contents of a quoted string, and <code>ca&quot;</code> (<code>c</code>hange <code>a</code>ll <code>&quot;</code>quoted) to include the quote marks themselves. Or when working in prose, <code>cis</code> will change the current sentence and <code>cip</code> the current paragraph.
 </p>
 <p>
   Sometimes a change command is hard to think about first, or the area you want to change is subtly different from what the change command would do. Replace <code>c</code> with <code>v</code> to get a similar visual motion (like <code>v3w</code> for 3 words), muck about, then press <code>c</code> to change.

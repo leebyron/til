@@ -57,16 +57,16 @@
         I spent a very long time not thinking too hard about customizing my keyboard beyond <a href="https://leebyron.com/til/remap-caps-lock/" target="_blank">remapping caps lock</a>. That is not until recently when I started playing around with the custom keyboard firmware <a href="https://qmk.fm" target="_blank">QMK</a> and macOS keyboard customization software <a href="https://karabiner-elements.pqrs.org" target="_blank">Karabiner</a>. The most immediately useful thing I discovered was leveraging modifier keys to have multiple purposes.
       </p>
       <p>
-        Modifier keys are held down so that other key presses result in a different symbol or command. But what if they're pressed alone? Nothing happens? That's an opportunity.
+        Modifier keys are held down so that other key presses result in a different symbol or command. But what if they’re pressed alone? Nothing happens? That’s an opportunity.
       </p>
       <p>
-        The first I tried was the &quot;Vim key&quot;. Caps lock is remapped to the much more useful control key when held. When pressed alone, it is escape. This key is really easy to reach from the home row and this made getting in and out of Vim insert mode feel much easier. However I found myself falling back to muscle memory to reach for escape or use the equivalent and now easier to press control+c.
+        The first I tried was the “Vim key”. Caps lock is remapped to the much more useful control key when held. When pressed alone, it is escape. This key is really easy to reach from the home row and this made getting in and out of Vim insert mode feel much easier. However I found myself falling back to muscle memory to reach for escape or use the equivalent and now easier to press control+c.
       </p>
       <p>
-        Much more ergonomically offensive is backspace. I'm a terrible typist so backspace is probably one of my most pressed keys and far enough from the home row that my whole hand must move. So the next mapping I've tried is Caps lock as control and backspace. This muscle memory has been hard to unwire, so I've disabled my true backspace key.
+        Much more ergonomically offensive is backspace. I’m a terrible typist so backspace is probably one of my most pressed keys and far enough from the home row that my whole hand must move. So the next mapping I’ve tried is Caps lock as control and backspace. This muscle memory has been hard to unwire, so I’ve disabled my true backspace key.
       </p>
       <p>
-        Here's a small part of my Karabiner &quot;complex_modifications&quot; configuration:
+        Here’s a small part of my Karabiner “complex_modifications” configuration:
       </p>
       <pre data-code-block data-lang="json"><code><span data-line="1"><span style="color:#22863A;">&quot;manipulators&quot;</span><span style="color:#24292EFF;">: [</span>
 </span><span data-line="2"><span style="color:#24292EFF;">    {</span>
@@ -84,7 +84,7 @@
 </span><span data-line="14"><span style="color:#24292EFF;">        </span><span style="color:#D32F2F;">&quot;to&quot;</span><span style="color:#212121;">:</span><span style="color:#24292EFF;"> [ { </span><span style="color:#D32F2F;">&quot;key_code&quot;</span><span style="color:#212121;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;vk_none&quot;</span><span style="color:#24292EFF;"> } ] }</span><span style="color:#212121;">,</span>
 </span></code></pre>
       <p>
-        Also, this works both ways! Not only can you provide a behavior for pressing modifier keys on their own, but also consider making a typical key a modifier when held. As an example, I map the return key to behave as &quot;right control&quot; when held.
+        Also, this works both ways! Not only can you provide a behavior for pressing modifier keys on their own, but also consider making a typical key a modifier when held. As an example, I map the return key to behave as “right control” when held.
       </p>
     </article>
     <footer>
