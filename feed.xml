@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-26T07:12:42.000+00:00</updated>
+  <updated>2022-01-26T07:13:12.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -125,7 +125,7 @@
     <id>https://leebyron.com/til/staff-eng-archetypes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/staff-eng-archetypes/"/>
     <published>2022-01-24T21:35:13.000-08:00</published>
-    <updated>2022-01-25T19:23:51.000+00:00</updated>
+    <updated>2022-01-26T07:13:12.000+00:00</updated>
     <title>staff eng archetypes</title>
     <author>
       <name>Lee Byron</name>
@@ -156,7 +156,7 @@
           <span style="white-space: pre">Junior Eng</span>
         </td>
         <td>
-          First few years in industry. Expected to learn quickly, complete assigned small projects with little guidance, and continue to learn.
+          First few years in industry. Expected to learn quickly, complete assigned small projects with little guidance, and continue to grow.
         </td>
       </tr>
       <tr>
