@@ -20,7 +20,7 @@ this functionality.
    UUIDs, and other things which are string-like but not strings.
 
 You can emulate this behavior in TypeScript by lying to the compiler. For
-example, let's build a UUID type:
+example, let's create a `UUID` type:
 
 ```typescript
 export type UUID = string & { [$uuid]: true }
@@ -46,7 +46,7 @@ unique symbol, so there's no way of actually creating a `UUID` type outside of
 casting, which we only do in this bit of library code.
 
 Perhaps you don't actually want to expose that `UUID` is implemented as a
-`string`, that should be opaque as well, just remove the `string &`:
+`string`, just remove the `string &`:
 
 ```typescript
 export type UUID = { [$uuid]: true }
@@ -57,12 +57,12 @@ a string value at runtime.
 
 This works surprisingly well, but there are shortcomings:
 
-- Errors are not always particularly helpful. Providing the wrong value where
-  `UUID` is expected will expose the details of this hack.
-- This pattern is a bit inscruitble, compared to Flow's slightly more clear
-  explicit syntax. Don't forget to include a comment explaining what this does.
+- Errors are not specifically helpful. Provide the wrong value where `UUID` is
+  expected and see the details of this hack exposed.
+- This pattern is a bit inscrutable compared to Flow's clearer explicit syntax.
+  Don't forget to include a comment explaining what this does.
 - There's still no concept of "module private" fields without going around the
-  type compiler again.
+  type compiler yet again.
 
 More examples of where opaque types are useful:
 
