@@ -12,7 +12,7 @@ type API designer, and a rare example of a "nominal type" in an otherwise
 this functionality.
 
 1. I use this as a much simpler version of [private fields] that doesn't require
-   a whole class interface and is scoped to a whole module rather than just a
+   a class interface and is scoped to a whole module rather than just a
    single class (fantastically helpful for a more functional programming style).
 
 2. This is a great way to generate "subtypes" of a primitive like a string or
