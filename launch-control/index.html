@@ -5,10 +5,7 @@
     <title>til / launch control — Lee Byron</title>
     <meta property="og:url" content="https://leebyron.com/til/launch-control/">
     <meta property="og:title" content="til / launch control — Lee Byron">
-    <meta property="og:description" content="I need to run a command every time a particular file changed. In the past I've
-used tools like watchman to do this, and found them heavyweight. In this
-particular case, I could safely assume I was running on macOS and wanted to
-avoid the dependency of installed software. Then I learned about .">
+    <meta property="og:description" content="I need to run a command every time a particular file changed. In the past I've used tools like watchman to do this, and found them heavyweight. In this particular case, I could safely assume I was running on macOS and wanted to avoid the dependency of installed software. Then I learned about .">
     <meta property="og:type" content="article">
     <meta property="article:author:first_name" content="Lee">
     <meta property="article:author:last_name" content="Byron">
@@ -21,7 +18,7 @@ avoid the dependency of installed software. Then I learned about .">
   "@context": "https://schema.org/",
   "@type": "LearningResource",
   "name": "launch control",
-  "description": "I need to run a command every time a particular file changed. In the past I've\nused tools like watchman to do this, and found them heavyweight. In this\nparticular case, I could safely assume I was running on macOS and wanted to\navoid the dependency of installed software. Then I learned about .",
+  "description": "I need to run a command every time a particular file changed. In the past I've used tools like watchman to do this, and found them heavyweight. In this particular case, I could safely assume I was running on macOS and wanted to avoid the dependency of installed software. Then I learned about .",
   "author": {
     "@type": "Person",
     "name": "Lee Byron",
@@ -57,30 +54,16 @@ avoid the dependency of installed software. Then I learned about .">
         <a href="../">til</a><span>launch control</span>
       </h1>
       <p>
-        I need to run a command every time a particular file changed. In the past I've
-used tools like <a href="https://facebook.github.io/watchman/" target="_blank">watchman</a> to do this, and found them heavyweight. In this
-particular case, I could safely assume I was running on macOS and wanted to
-avoid the dependency of installed software. <em>Then I learned about <code>launchctl</code>.</em>
+        I need to run a command every time a particular file changed. In the past I've used tools like <a href="https://facebook.github.io/watchman/" target="_blank">watchman</a> to do this, and found them heavyweight. In this particular case, I could safely assume I was running on macOS and wanted to avoid the dependency of installed software. <em>Then I learned about <code>launchctl</code>.</em>
       </p>
       <p>
-        The man page for <a href="x-man-page://launchctl">launchctl</a> is not particularly helpful, so it required some
-searching and experimenting to understand. This, along with <a href="x-man-page://launchd">launchd</a>, are a
-powerful system for configuring services within the operating system. One way
-launchd determines that a service should be started is by watching for changes
-to a file. Perfect.
+        The man page for <a href="x-man-page://launchctl">launchctl</a> is not particularly helpful, so it required some searching and experimenting to understand. This, along with <a href="x-man-page://launchd">launchd</a>, are a powerful system for configuring services within the operating system. One way launchd determines that a service should be started is by watching for changes to a file. Perfect.
       </p>
       <p>
-        A &quot;service&quot; is any executable program (like a shell script or a JavaScript file)
-and a configuration plist file placed in a specific location. For example, lets
-set up a service that runs a website builder every time a source file is
-updated.
+        A &quot;service&quot; is any executable program (like a shell script or a JavaScript file) and a configuration plist file placed in a specific location. For example, lets set up a service that runs a website builder every time a source file is updated.
       </p>
       <p>
-        Here, <code>~/Library/LaunchAgents/com.leebyron.website-agent.plist</code> defines the name
-of my agent, the program to run, where to write standard output, and the path to
-watch. Changes to that path will run my program. Note that the program is not
-run inside a shell, so a node script needs to provide a full path to the node
-executable, rather than a executable &quot;hash bang&quot;.
+        Here, <code>~/Library/LaunchAgents/com.leebyron.website-agent.plist</code> defines the name of my agent, the program to run, where to write standard output, and the path to watch. Changes to that path will run my program. Note that the program is not run inside a shell, so a node script needs to provide a full path to the node executable, rather than a executable &quot;hash bang&quot;.
       </p>
       <pre data-code-block data-lang="xml"><code><span data-line="1"><span style="color:#24292EFF;">&lt;?</span><span style="color:#22863A;">xml</span><span style="color:#6F42C1;"> version</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;1.0&quot;</span><span style="color:#6F42C1;"> encoding</span><span style="color:#24292EFF;">=</span><span style="color:#22863A;">&quot;UTF-8&quot;</span><span style="color:#24292EFF;">?&gt;</span>
 </span><span data-line="2"><span style="color:#24292EFF;">&lt;!</span><span style="color:#D32F2F;">DOCTYPE</span><span style="color:#24292EFF;"> plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
@@ -105,9 +88,7 @@ executable, rather than a executable &quot;hash bang&quot;.
 </span><span data-line="21"><span style="color:#24292EFF;">&lt;/</span><span style="color:#22863A;">plist</span><span style="color:#24292EFF;">&gt;</span>
 </span></code></pre>
       <p>
-        Finally, tell launch control about this service. You'll need to know your uid
-number (which you can find by running the <code>id</code> command). Replace &quot;500&quot; here with
-whatever your uid happens to be.
+        Finally, tell launch control about this service. You'll need to know your uid number (which you can find by running the <code>id</code> command). Replace &quot;500&quot; here with whatever your uid happens to be.
       </p>
       <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootstrap gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
 </span></code></pre>

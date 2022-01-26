@@ -5,10 +5,7 @@
     <title>til / markdown footnotes — Lee Byron</title>
     <meta property="og:url" content="https://leebyron.com/til/markdown-footnotes/">
     <meta property="og:title" content="til / markdown footnotes — Lee Byron">
-    <meta property="og:description" content="Much like markdown link references, footnotes are defined in one place and
-referenced in another, but it doesn't matter where the footnote is defined,
-they'll always be collected at the end of the document in the order in which
-they are referenced.">
+    <meta property="og:description" content="Much like markdown link references, footnotes are defined in one place and referenced in another, but it doesn't matter where the footnote is defined, they'll always be collected at the end of the document in the order in which they are referenced.">
     <meta property="og:type" content="article">
     <meta property="article:author:first_name" content="Lee">
     <meta property="article:author:last_name" content="Byron">
@@ -21,7 +18,7 @@ they are referenced.">
   "@context": "https://schema.org/",
   "@type": "LearningResource",
   "name": "markdown footnotes",
-  "description": "Much like markdown link references, footnotes are defined in one place and\nreferenced in another, but it doesn't matter where the footnote is defined,\nthey'll always be collected at the end of the document in the order in which\nthey are referenced.",
+  "description": "Much like markdown link references, footnotes are defined in one place and referenced in another, but it doesn't matter where the footnote is defined, they'll always be collected at the end of the document in the order in which they are referenced.",
   "author": {
     "@type": "Person",
     "name": "Lee Byron",
@@ -57,20 +54,15 @@ they are referenced.">
         <a href="../">til</a><span>markdown footnotes</span>
       </h1>
       <p>
-        Much like <a href="../markdown-link-references">markdown link references</a>, footnotes are defined in one place and
-referenced in another, but it doesn't matter where the footnote is defined,
-they'll always be collected at the end of the document in the order in which
-they are referenced<a href="#fn-a-note" id="fn-a-note.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+        Much like <a href="../markdown-link-references">markdown link references</a>, footnotes are defined in one place and referenced in another, but it doesn't matter where the footnote is defined, they'll always be collected at the end of the document in the order in which they are referenced<a href="#fn:a-note" id="fn:a-note.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
       </p>
       <p>
-        Footnotes are created similar to shortcut reference links, but the identifier
-starts with a <code>^</code>.
+        Footnotes are created similar to shortcut reference links, but the identifier starts with a <code>^</code>.
       </p>
       <pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">order in which they are referenced[^a note].</span>
 </span></code></pre>
       <p>
-        A footnote definition is formatted exactly like link reference
-definitions<a href="#fn-needs-cr" id="fn-needs-cr.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>: in a box followed by a comma.
+        A footnote definition is formatted exactly like link reference definitions<a href="#fn:needs-cr" id="fn:needs-cr.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>: in a box followed by a comma.
       </p>
       <pre data-code-block data-lang="markdown"><code><span data-line="1"><span style="color:#24292EFF;">[^a note]: Despite footnotes appearing numbered, the identifier can be any text.</span>
 </span><span data-line="2"><span style="color:#24292EFF;">This is helpful if you may add more notes later and don't want to be bothered to</span>
@@ -78,21 +70,17 @@ definitions<a href="#fn-needs-cr" id="fn-needs-cr.ref" data-footnote-ref aria-la
 </span></code></pre>
       <section data-footnotes aria-label="footnotes">
         <ol>
-          <li id="fn-a-note">
+          <li id="fn:a-note">
             <p>
-              Despite footnotes appearing numbered, the identifier can be any text.
-This is helpful if you may add more notes later and don't want to be bothered to
-reorder them.
+              Despite footnotes appearing numbered, the identifier can be any text. This is helpful if you may add more notes later and don't want to be bothered to reorder them.
             </p>
-            <a href="#fn-a-note.ref" data-footnote-backref aria-label="return">↩</a>
+            <a href="#fn:a-note.ref" data-footnote-backref aria-label="return">↩</a>
           </li>
-          <li id="fn-needs-cr">
+          <li id="fn:needs-cr">
             <p>
-              Unlike a link reference definition, a footnote definition needs an
-empty line immediately after it, otherwise content from multiple lines is joined
-into a single paragraph.
+              Unlike a link reference definition, a footnote definition needs an empty line immediately after it, otherwise content from multiple lines is joined into a single paragraph.
             </p>
-            <a href="#fn-needs-cr.ref" data-footnote-backref aria-label="return">↩</a>
+            <a href="#fn:needs-cr.ref" data-footnote-backref aria-label="return">↩</a>
           </li>
         </ol>
       </section>
