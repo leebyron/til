@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-26T07:13:12.000+00:00</updated>
+  <updated>2022-01-26T07:19:19.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/opaque-types/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/opaque-types/"/>
     <published>2022-01-25T22:09:05.000-08:00</published>
-    <updated>2022-01-26T07:12:42.000+00:00</updated>
+    <updated>2022-01-26T07:19:19.000+00:00</updated>
     <title>opaque types</title>
     <author>
       <name>Lee Byron</name>
@@ -42,7 +42,7 @@
   </li>
 </ol>
 <p>
-  You can emulate this behavior in TypeScript by lying to the compiler. For example, let’s build a UUID type:
+  You can emulate this behavior in TypeScript by lying to the compiler. For example, let’s create a <code>UUID</code> type:
 </p>
 <pre data-code-block data-lang="typescript"><code><span data-line="1"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">type</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">string</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">&amp;</span><span style="color:#24292EFF;"> { [$uuid]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">true</span><span style="color:#24292EFF;"> }</span>
 </span><span data-line="2"><span style="color:#D32F2F;">declare</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">const</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">$uuid</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">unique</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">symbol</span>
@@ -62,7 +62,7 @@
   This works by telling TypeScript that there exists a variable called <code>$uuid</code> that is a <a href="https://www.typescriptlang.org/docs/handbook/symbols.html#unique-symbol" target="_blank">unique symbol</a> (the result of calling <code>Symbol()</code>) and that the type <code>UUID</code> is both a <code>string</code> and (<code>&amp;</code>) an object with a required property of that unique symbol. However none of this exists at runtime, there is no variable or unique symbol, so there’s no way of actually creating a <code>UUID</code> type outside of casting, which we only do in this bit of library code.
 </p>
 <p>
-  Perhaps you don’t actually want to expose that <code>UUID</code> is implemented as a <code>string</code>, that should be opaque as well, just remove the <code>string &amp;</code>:
+  Perhaps you don’t actually want to expose that <code>UUID</code> is implemented as a <code>string</code>, just remove the <code>string &amp;</code>:
 </p>
 <pre data-code-block data-lang="typescript"><code><span data-line="1"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">type</span><span style="color:#24292EFF;"> </span><span style="color:#6F42C1;">UUID</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> { [$uuid]</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">true</span><span style="color:#24292EFF;"> }</span>
 </span></code></pre>
@@ -75,17 +75,17 @@
 <ul>
   <li>
     <p>
-      Errors are not always particularly helpful. Providing the wrong value where <code>UUID</code> is expected will expose the details of this hack.
+      Errors are not specifically helpful. Provide the wrong value where <code>UUID</code> is expected and see the details of this hack exposed.
     </p>
   </li>
   <li>
     <p>
-      This pattern is a bit inscruitble, compared to Flow’s slightly more clear explicit syntax. Don’t forget to include a comment explaining what this does.
+      This pattern is a bit inscrutable compared to Flow’s clearer explicit syntax. Don’t forget to include a comment explaining what this does.
     </p>
   </li>
   <li>
     <p>
-      There’s still no concept of “module private” fields without going around the type compiler again.
+      There’s still no concept of “module private” fields without going around the type compiler yet again.
     </p>
   </li>
 </ul>
