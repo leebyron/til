@@ -16,7 +16,7 @@ interchangeable. To grossly simplify:
 
 | Level                                                         | Scope                                                                                                                                            |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <span style="white-space: pre">Junior Eng</span>              | First few years in industry. Expected to learn quickly, complete assigned small projects with little guidance, and continue to learn.            |
+| <span style="white-space: pre">Junior Eng</span>              | First few years in industry. Expected to learn quickly, complete assigned small projects with little guidance, and continue to grow.             |
 | <span style="white-space: pre">Mid-level Eng</span>           | 2-6 years in industry. Completes moderate projects with autonomy and contributes to the team in other ways.                                      |
 | <span style="white-space: pre">Senior Eng</span>              | 5 or more years experience. Accountable for large projects requiring a team and external stakeholders. Mentors and improves their team.          |
 | <span style="white-space: pre">Staff+ Eng[^staff-plus]</span> | Typically over 10 years experience. Peer to managers, accountable for their team's roadmap and technical vision. Then... things get complicated. |
