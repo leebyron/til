@@ -83,7 +83,7 @@ More examples of where opaque types are useful:
 - Opaque types for numeric or string database IDs which may be used alongside
   other strings or numbers.
 - Unique types for overlapping identifiers such as classic MySQL auto increments
-  that you'd hate to mix up, like `UserID` and `MessageID`
+  that you'd hate to mix up, like `UserID` and `MessageID`.
 
 [opaque types]: https://flow.org/en/docs/types/opaque-types/
 [private fields]:
