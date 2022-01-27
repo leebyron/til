@@ -91,7 +91,7 @@ pre[data-code-block] {
   min-width: 60%;
   max-width: min(100ch, 100vw - 5rem);
   padding: 0.5rem;
-  margin: -0.25rem 0;
+  margin: 1rem 0;
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
 }
