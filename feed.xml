@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-27T06:34:45.000+00:00</updated>
+  <updated>2022-01-27T06:54:25.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,53 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/vim-time-travel/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/vim-time-travel/"/>
+    <published>2022-01-26T22:35:11.000-08:00</published>
+    <updated>2022-01-27T06:54:25.000+00:00</updated>
+    <title>vim time travel</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="vim"/>
+    <content type="html"><![CDATA[<p>
+  To undo and redo in Vim, use <code>u</code> and <code>⌃⇧R</code> (“CTRL-R” in Vim lingo, note the capital R) respectively. This works as you’d expect, but there are a few shortcomings:
+</p>
+<ul>
+  <li>
+    <p>
+      It is very easy to undo, but dexterously challenging to redo.
+    </p>
+  </li>
+  <li>
+    <p>
+      If you undo, then accidentally make an edit, you can’t redo.
+    </p>
+  </li>
+</ul>
+<p>
+  Fortunately Vim has a very powerful undo feature called “undo trees” which you might understand as similar to git branching. Undoing and then starting a new change is just a separate branch in the undo tree. There are a number of ways of interacting with the undo tree<a href="#fn:undo-redo" id="fn:undo-redo.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>, but a comparatively simple one is undo time travel.
+</p>
+<p>
+  To go to an earlier state, use <code>g-</code>, to go to a later state, <code>g+</code>. If you mess up with undo and redo, you can usually just try <code>g-</code> repeatedly until you’re back where you want to be. While this is not quite as easy to remember as <code>u</code> for undo, I find “go earlier” and “go later” as pretty great mnemonics and really appreciate the symmetry.
+</p>
+<p>
+  These are shorthand for the <code>:earlier</code> and <code>:later</code> commands, which are quite flexible. As an example, <code>:earlier 5m</code> will go to whatever version you were looking at five minutes ago. Amazing.
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn:undo-redo">
+      <p>
+        Another example of interacting with the undo tree is <code>:undolist</code>, which shows all leafs in the tree. To learn more about undo, try <code>:help undo-redo</code>.
+      </p>
+      <a href="#fn:undo-redo.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/numeric-string-type/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/numeric-string-type/"/>
