@@ -47,7 +47,7 @@ function yamlFrontmatter(ast) {
   }
 }
 
-function yamlTags(tags) {
+export function yamlTags(tags) {
   // Parse tags as a list
   return Array.isArray(tags)
     ? tags

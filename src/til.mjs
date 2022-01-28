@@ -2,7 +2,8 @@ import * as child_process from 'child_process'
 import * as fs from 'fs/promises'
 import * as path from 'path'
 import * as util from 'util'
-import { parseMarkdown } from './markdown.mjs'
+import yaml from 'yaml'
+import { parseMarkdown, yamlTags } from './markdown.mjs'
 import {
   TIL_PATH,
   ENTRIES_PATH,
@@ -14,9 +15,6 @@ import {
   fileExists,
   spin,
 } from './util.mjs'
-
-// TODO: better way to autotag
-const TAGS = ['vim', 'markdown']
 
 export default async function til(args) {
   // Handle other commands first
@@ -164,6 +162,28 @@ open all in fzf.`)
       // Ensure the entries path exists
       await exec(`mkdir -p ${ENTRIES_PATH}`)
 
+      // Get all existing tags
+      const allTags = new Set(
+        (
+          await Promise.all(
+            (
+              await fs.readdir(ENTRIES_PATH)
+            ).map(async filename =>
+              yamlTags(
+                yaml.parse(
+                  (
+                    await fs.readFile(
+                      path.resolve(ENTRIES_PATH, filename),
+                      'utf8'
+                    )
+                  ).match(/---\n(.+?)\n---\n/s)?.[1] || ''
+                )?.tags
+              )
+            )
+          )
+        ).flat()
+      )
+
       // Write a template to a tmp file and fill it into the editor buffer.
       // This way you can quit without saving and not alter the repo state.
       const permalink = title
@@ -174,7 +194,7 @@ open all in fzf.`)
       const tags = title
         .toLowerCase()
         .split(/\s+/g)
-        .filter(arg => TAGS.includes(arg))
+        .filter(arg => allTags.includes(arg))
       const entry = template({ title, permalink, date, tags }) + mediaMarkdown
       tmpFile = await exec('mktemp')
       await fs.writeFile(tmpFile, entry, 'utf8')
@@ -249,7 +269,11 @@ open all in fzf.`)
 
     // format the file first
     const prettier = path.resolve(TIL_PATH, 'node_modules/.bin/prettier')
-    await run(`${prettier} -w --loglevel silent --parser mdx --prose-wrap always --trailing-comma none "${quot(filepath)}"`)
+    await run(
+      `${prettier} -w --loglevel silent --parser mdx --prose-wrap always --trailing-comma none "${quot(
+        filepath
+      )}"`
+    )
 
     // then stage and commit it
     await run(
@@ -306,7 +330,10 @@ tags: ${tags.length > 0 ? `[${tags.join()}]` : ''}
 function sanitizeFilename(name) {
   return name
     .toLowerCase()
-    .replace(/([^\x20-\x21\x23-\x26\x28-\x29\x2b-\x2e\x30-\x39\x3b-\x7a])+/g, '-')
+    .replace(
+      /([^\x20-\x21\x23-\x26\x28-\x29\x2b-\x2e\x30-\x39\x3b-\x7a])+/g,
+      '-'
+    )
     .replace(/^-+|-+$/g, '')
 }
 
