@@ -70,10 +70,22 @@ export const spin = async (name, doing) => {
     const title = name ? name + ' ' : ''
     process.stdout.write('\x1B[?25l' + title + SPINNER[frame] + '\r')
   }, 100)
+  process.on('SIGINT', handleInterrupt)
+  process.on('exit', clearSpinner)
   try {
     return await doing()
   } finally {
-    process.stdout.write('\x1B[2K\x1B[?25h')
+    process.off('SIGINT', handleInterrupt)
+    process.off('exit', clearSpinner)
+    clearSpinner()
     clearInterval(spinner)
   }
+}
+
+function handleInterrupt(event, code) {
+  process.exit(code)
+}
+
+function clearSpinner() {
+  process.stdout.write('\x1B[2K\x1B[?25h')
 }
