@@ -52,7 +52,8 @@ export const fileExists = exists(stats => stats.isFile())
 export const directoryExists = exists(stats => stats.isDirectory())
 
 // Show a spinner while running an async `doing` function.
-export const spin = async doing => {
+export const spin = async (name, doing) => {
+  if (!doing) [name, doing] = [doing, name]
   let frame = 0
   const SPINNER = [
     '\u2808\u2801',
@@ -66,10 +67,11 @@ export const spin = async doing => {
   ]
   const spinner = setInterval(() => {
     frame = (frame + 1) % SPINNER.length
-    process.stdout.write('\x1B[?25l' + SPINNER[frame] + '\r')
+    const title = name ? name + ' ' : ''
+    process.stdout.write('\x1B[?25l' + title + SPINNER[frame] + '\r')
   }, 100)
   try {
-    await doing()
+    return await doing()
   } finally {
     process.stdout.write('\x1B[2K\x1B[?25h')
     clearInterval(spinner)

@@ -110,7 +110,7 @@ open all in fzf.`)
   const title = args.join(' ')
 
   // Make sure the repo is up to date before making any changes.
-  await spin(async () => {
+  await spin('Updating', async () => {
     if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
       throw 'dirty repo'
     }
@@ -163,25 +163,29 @@ open all in fzf.`)
       await exec(`mkdir -p ${ENTRIES_PATH}`)
 
       // Get all existing tags
-      const allTags = new Set(
-        (
-          await Promise.all(
+      const allTags = await spin(
+        'Tagging',
+        async () =>
+          new Set(
             (
-              await fs.readdir(ENTRIES_PATH)
-            ).map(async filename =>
-              yamlTags(
-                yaml.parse(
-                  (
-                    await fs.readFile(
-                      path.resolve(ENTRIES_PATH, filename),
-                      'utf8'
-                    )
-                  ).match(/---\n(.+?)\n---\n/s)?.[1] || ''
-                )?.tags
+              await Promise.all(
+                (
+                  await fs.readdir(ENTRIES_PATH)
+                ).map(async filename =>
+                  yamlTags(
+                    yaml.parse(
+                      (
+                        await fs.readFile(
+                          path.resolve(ENTRIES_PATH, filename),
+                          'utf8'
+                        )
+                      ).match(/---\n(.+?)\n---\n/s)?.[1] || ''
+                    )?.tags
+                  )
+                )
               )
-            )
+            ).flat()
           )
-        ).flat()
       )
 
       // Write a template to a tmp file and fill it into the editor buffer.
@@ -194,7 +198,7 @@ open all in fzf.`)
       const tags = title
         .toLowerCase()
         .split(/\s+/g)
-        .filter(arg => allTags.includes(arg))
+        .filter(arg => allTags.has(arg))
       const entry = template({ title, permalink, date, tags }) + mediaMarkdown
       tmpFile = await exec('mktemp')
       await fs.writeFile(tmpFile, entry, 'utf8')
@@ -238,7 +242,7 @@ open all in fzf.`)
   }
 
   // Update the repo
-  await spin(async () => {
+  await spin('Publish', async () => {
     // Ensure the file is named correctly after editing
     const correctTitle = ast.frontmatter.value.title
     if (correctTitle) {
