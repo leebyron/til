@@ -91,20 +91,42 @@ open all in fzf.`)
   }
 
   // Construct all metadata
-  const mediaInfo = await Promise.all(
-    media.map(async src => {
-      const ext = path.extname(src)
-      const sha = (await shaSum(src)).slice(0, 16)
-      const dest = path.resolve(MEDIA_PATH, `${sha}${ext}`)
-      const rel = path.relative(ENTRIES_PATH, dest)
-      return { src, dest, rel }
+  let mediaInfo
+  if (media.length > 0) {
+    await spin('Compressing Media', async () => {
+      // Move to temporary directory
+      const tmpDir = await exec('mktemp -d')
+      const tmpFilenames = await Promise.all(
+        media.map(async src => {
+          const mediaFilename = path.basename(src)
+          const tmpFilename = path.resolve(tmpDir, src)
+          await fs.copyFile(src, tmpFilename)
+          return tmpFilename
+        })
+      )
+      // Optimize!
+      await exec(
+        '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
+          tmpFilenames.map(tmpFilename => `"${quot(tmpFilename)}"`).join(' ')
+      )
+      // Create info
+      mediaInfo = await Promise.all(
+        tmpFilenames.map(async src => {
+          const ext = path.extname(src)
+          const title = path.basename(src, ext)
+          const sha = (await shaSum(src)).slice(0, 16)
+          const dest = path.resolve(MEDIA_PATH, `${sha}${ext}`)
+          const rel = path.relative(ENTRIES_PATH, dest)
+          return { src, dest, title, rel }
+        })
+      )
     })
-  )
+  }
 
   // Create markdown template referencing media
-  const mediaMarkdown = mediaInfo
-    .map(({ src, rel }) => `\n![${path.basename(src)}](${rel})`)
-    .join('\n')
+  const mediaMarkdown =
+    mediaInfo &&
+    mediaInfo.map(({ title, rel }) => `\n![${title}](${rel})`).join('\n')
 
   // Use all remaining arguments provided concatenated together as a title.
   const title = args.join(' ')
@@ -259,16 +281,11 @@ open all in fzf.`)
     }
 
     // There are changes, add any media now.
-    if (mediaInfo.length > 0) {
+    if (mediaInfo) {
       await exec(`mkdir -p ${ENTRIES_PATH}`)
       for (const { src, dest } of mediaInfo) {
-        await fs.cp(src, dest, { force: true })
+        await fs.copyFile(src, dest)
       }
-      // Optimize!
-      await exec(
-        '/Applications/ImageOptim.app/Contents/MacOS/ImageOptim ' +
-          mediaInfo.map(info => `"${quot(info.dest)}"`).join(' ')
-      )
     }
 
     // format the file first
