@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / community git aliases — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/community-git-aliases/">
+    <meta property="og:title" content="til / community git aliases — Lee Byron">
+    <meta property="og:description" content="After writing about git aliases I asked my Twitter followers for their favorite custom aliases, and learned about a number of new ones!">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-01-28T22:18:48.000-08:00">
+    <meta property="article:modified_time" content="2022-01-29T07:11:01.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "community git aliases",
+  "description": "After writing about git aliases I asked my Twitter followers for their favorite custom aliases, and learned about a number of new ones!",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/community-git-aliases/",
+  "datePublished": "2022-01-28T22:18:48.000-08:00",
+  "dateModified": "2022-01-29T07:11:01.000+00:00",
+  "keywords": "git",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/community-git-aliases/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>community git aliases</span>
+      </h1>
+      <p>
+        After writing about <a href="../git-alias/">git aliases</a> I asked my Twitter followers for their favorite custom aliases, and learned about a number of new ones!
+      </p>
+      <p>
+        To list them here, I’ll show them in git configfile syntax. You can find yours at either <code>~/.gitconfig</code> or <code>~/.config/git/config</code>.
+      </p>
+      <pre data-code-block data-lang="ini"><code><span data-line="1"><span style="color:#24292EFF;">[alias]</span>
+</span><span data-line="2"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># My MVPs (@leeb)</span>
+</span><span data-line="3"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">s</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!git add -A; git status -s&quot;</span>
+</span><span data-line="4"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">sl</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> log --graph --simplify-by-decoration --</span><span style="color:#D32F2F;">pretty=</span><span style="color:#24292EFF;">format:</span><span style="color:#22863A;">'%D %C(dim)(%cr)'</span><span style="color:#24292EFF;"> --all --not --tags</span>
+</span><span data-line="5"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">last</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> log -1 HEAD</span>
+</span><span data-line="6"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">addremove</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> add --all</span>
+</span><span data-line="7"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fixup</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { TARGET=$(git rev-parse &quot;</span><span style="color:#24292EFF;">$1</span><span style="color:#22863A;">&quot;); git commit --fixup=$TARGET ${@:2} &amp;&amp; EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f&quot;</span>
+</span><span data-line="8"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">unstage</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> restore --staged</span>
+</span><span data-line="9"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">discard</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> restore</span>
+</span><span data-line="10">
+</span><span data-line="11"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Find the ancestor and merge bases of sets of commits (@leeb)</span>
+</span><span data-line="12"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">oldest-ancestor</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !zsh -c </span><span style="color:#22863A;">'diff --old-line-format='' --new-line-format='' &lt;(git rev-list --first-parent &quot;${1:-master}&quot;) &lt;(git rev-list --first-parent &quot;${2:-HEAD}&quot;) | head -1'</span>
+</span><span data-line="13"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">all-merge-bases</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { eval $(git for-each-ref --shell --format='git merge-base master %(refname);' refs/heads) | sort | uniq; }; f&quot;</span>
+</span><span data-line="14"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">common-merge-base</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git rev-list --no-walk $(git all-merge-bases) | tail -n1; }; f&quot;</span>
+</span><span data-line="15">
+</span><span data-line="16"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Replace &quot;git git&quot; with &quot;git&quot; (@jkreeftmeijer)</span>
+</span><span data-line="17"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">git</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !git</span>
+</span><span data-line="18">
+</span><span data-line="19"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Nice shortcuts (@mathias)</span>
+</span><span data-line="20"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">st</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> status -s</span>
+</span><span data-line="21">
+</span><span data-line="22"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Show the diff between the latest commit and the current state (@mathias)</span>
+</span><span data-line="23"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">d</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !</span><span style="color:#22863A;">&quot;git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat&quot;</span>
+</span><span data-line="24">
+</span><span data-line="25"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Show different kinds of things (@mathias)</span>
+</span><span data-line="26"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">tags</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> tag -l</span>
+</span><span data-line="27"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">branches</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> branch --all</span>
+</span><span data-line="28"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">aliases</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> config --get-regexp alias</span>
+</span><span data-line="29"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">remotes</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> remote --verbose</span>
+</span><span data-line="30"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">contributors</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> shortlog --summary --numbered --email</span>
+</span><span data-line="31">
+</span><span data-line="32"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Credit an author on the latest commit: git credit &quot;Lee Byron&quot; lee@leebyron.com (@mathias)</span>
+</span><span data-line="33"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">credit</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git commit --amend --author \&quot;</span><span style="color:#24292EFF;">$1 &lt;$2&gt;\</span><span style="color:#22863A;">&quot; -C HEAD; }; f&quot;</span>
+</span><span data-line="34">
+</span><span data-line="35"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Show the user email for the current repository. (@mathias)</span>
+</span><span data-line="36"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">whoami</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> config user.email</span>
+</span><span data-line="37">
+</span><span data-line="38"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Remove branches that have already been merged with main, &quot;delete merged&quot; (@mathias)</span>
+</span><span data-line="39"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">dm</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d&quot;</span>
+</span><span data-line="40">
+</span><span data-line="41"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Find branches with commit, tags with commit, comments with code, and commits with message (@mathias)</span>
+</span><span data-line="42"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fb</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git branch -a --contains $1; }; f&quot;</span>
+</span><span data-line="43"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">ft</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git describe --always --contains $1; }; f&quot;</span>
+</span><span data-line="44"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fc</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f&quot;</span>
+</span><span data-line="45"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fm</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f&quot;</span>
+</span><span data-line="46">
+</span><span data-line="47"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Stage commits by chunk (@skwp)</span>
+</span><span data-line="48"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">chunkyadd</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> add --patch</span>
+</span><span data-line="49">
+</span><span data-line="50"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Alternative to &quot;git stash&quot; (@skwp)</span>
+</span><span data-line="51"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># via http://philjackson.github.io/2013/04/07/handy-git-tips-to-stop-you-getting-fired.html</span>
+</span><span data-line="52"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">snapshot</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !git stash save </span><span style="color:#22863A;">&quot;snapshot: $(date)&quot;</span><span style="color:#24292EFF;"> &amp;&amp; git stash apply </span><span style="color:#22863A;">&quot;stash@{0}&quot;</span>
+</span><span data-line="53"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">snapshots</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !git stash list --grep snapshot</span>
+</span><span data-line="54">
+</span><span data-line="55"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Nice shortcuts (@DLX)</span>
+</span><span data-line="56"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">cl</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> clone --recursive</span>
+</span><span data-line="57"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">co</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> checkout --quiet</span>
+</span><span data-line="58"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">subup</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> submodule update --recursive --init</span>
+</span><span data-line="59">
+</span><span data-line="60"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Pretty log (@4lb0)</span>
+</span><span data-line="61"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">l</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> log --graph --decorate --</span><span style="color:#D32F2F;">pretty=</span><span style="color:#24292EFF;">format:</span><span style="color:#22863A;">'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'</span><span style="color:#24292EFF;"> --abbrev-commit</span>
+</span><span data-line="62"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Undo last commit (@4lb0)</span>
+</span><span data-line="63"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">undo</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> reset --soft HEAD~</span>
+</span><span data-line="64"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Add and commit: git c &quot;message&quot; (@4lb0)</span>
+</span><span data-line="65"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">c</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!f() { git add --all &amp;&amp; git commit -m \&quot;</span><span style="color:#24292EFF;">$1\</span><span style="color:#22863A;">&quot;; } f&quot;</span>
+</span><span data-line="66">
+</span><span data-line="67"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Force push less likely to clobber your coworker's work (@HostileUX)</span>
+</span><span data-line="68"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">pushf</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> push --force-with-lease</span>
+</span><span data-line="69">
+</span><span data-line="70"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Add changed files into the existing commit (@samhogy)</span>
+</span><span data-line="71"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">whoops</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> commit --amend --no-edit</span>
+</span><span data-line="72"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Push a new branch to origin</span>
+</span><span data-line="73"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">pushu</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !git push -u origin $(git symbolic-ref --short HEAD)</span>
+</span><span data-line="74">
+</span><span data-line="75"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Another prettier but more verbose log (@_angelmm)</span>
+</span><span data-line="76"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">ll</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> log --graph --abbrev-commit --decorate --</span><span style="color:#D32F2F;">format=</span><span style="color:#24292EFF;">format:</span><span style="color:#22863A;">'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold red)- %an%C(reset)'</span><span style="color:#24292EFF;"> --all</span>
+</span><span data-line="77">
+</span><span data-line="78"><span style="color:#24292EFF;">  </span><span style="color:#C2C3C5;"># Use fzf to add, restore, restore staged, fix previous commit (@mattorb)</span>
+</span><span data-line="79"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fza</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!git ls-files -m -o --exclude-standard | fzf --print0 -m --preview 'git diff {}' --preview-window=top:10:wrap | xargs -0 -t -o git add --all&quot;</span>
+</span><span data-line="80"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fzr</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!git ls-files -m --exclude-standard | fzf --print0 -m --preview 'git diff {}' --preview-window=top:10:wrap | xargs -0 -t -o git restore&quot;</span>
+</span><span data-line="81"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">fzrs</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;!git diff --name-only --staged | fzf --print0 -m --preview 'git diff {}' --preview-window=top:10:wrap | xargs -0 -t -o git restore --staged&quot;</span>
+</span><span data-line="82"><span style="color:#24292EFF;">  </span><span style="color:#D32F2F;">ffix</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">=</span><span style="color:#24292EFF;"> !</span><span style="color:#D32F2F;">HASH=</span><span style="color:#24292EFF;">`git log --</span><span style="color:#D32F2F;">pretty=</span><span style="color:#24292EFF;">oneline | head -n 100 | fzf` &amp;&amp; git fixit `echo ${HASH} | awk </span><span style="color:#22863A;">'{ print $1 }'</span><span style="color:#24292EFF;">`</span>
+</span></code></pre>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../git-alias/" class="prev">git alias</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/community-git-aliases/">til</a> was created <span property="dct:created" content="2022-01-28T22:18:48.000-08:00">Fri, Jan 28, 2022, 10:18 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/community%20git%20aliases.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/community%20git%20aliases.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>
