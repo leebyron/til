@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-01-29T07:11:01.000+00:00</updated>
+  <updated>2022-01-31T05:37:08.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,38 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/smooth-scrolling/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/smooth-scrolling/"/>
+    <published>2022-01-30T21:27:10.000-08:00</published>
+    <updated>2022-01-31T05:37:08.000+00:00</updated>
+    <title>smooth scrolling</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="css"/>
+    <content type="html"><![CDATA[<p>
+  Browser’s automatic scrolling behavior has traditionally been very jumpy, with developers needing to write custom JavaScript code to simulate a smooth scroll. However thanks to the <a href="https://www.w3.org/TR/cssom-view-1/#smooth-scrolling" target="_blank">smooth scrolling</a> specification, browsers over the years have adopted an API for CSS and JavaScript to natively smooth scroll.
+</p>
+<p>
+  When clicking an anchor link, the transition be can be smoothed by adding the <code>scroll-behavior</code> rule to the root element.
+</p>
+<pre data-code-block data-lang="css"><code><span data-line="1"><span style="color:#6F42C1;">:root</span><span style="color:#24292EFF;"> {</span>
+</span><span data-line="2"><span style="color:#24292EFF;">  </span><span style="color:#1976D2;">scroll-behavior</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">smooth</span><span style="color:#24292EFF;">;</span>
+</span><span data-line="3"><span style="color:#24292EFF;">}</span>
+</span></code></pre>
+<p>
+  For navigating to a specific page location using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo" target="_blank"><code>window.scrollTo()</code></a> or similar methods, provide an options object instead of explicit coordinates.
+</p>
+<pre data-code-block data-lang="js"><code><span data-line="1"><span style="color:#C2C3C5;">// Old way</span>
+</span><span data-line="2"><span style="color:#1976D2;">window</span><span style="color:#6F42C1;">.scrollTo</span><span style="color:#24292EFF;">(</span><span style="color:#1976D2;">0</span><span style="color:#212121;">,</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">100</span><span style="color:#24292EFF;">)</span>
+</span><span data-line="3">
+</span><span data-line="4"><span style="color:#C2C3C5;">// Smooth way</span>
+</span><span data-line="5"><span style="color:#1976D2;">window</span><span style="color:#6F42C1;">.scrollTo</span><span style="color:#24292EFF;">({ top</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">100</span><span style="color:#212121;">,</span><span style="color:#24292EFF;"> behavior</span><span style="color:#D32F2F;">:</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'smooth'</span><span style="color:#24292EFF;"> })</span>
+</span></code></pre>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/community-git-aliases/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/community-git-aliases/"/>
