@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-02-12T07:24:31.000+00:00</updated>
+  <updated>2022-08-12T18:17:23.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,133 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/time-impact-of-kids/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/time-impact-of-kids/"/>
+    <published>2022-08-12T09:39:04.000-07:00</published>
+    <updated>2022-08-12T18:17:23.000+00:00</updated>
+    <title>time impact of kids</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="parenthood"/>
+    <content type="html"><![CDATA[<p>
+  As part of a recent reflection of my mental health and self care routines, and a desire to tighten up my work/life balance, I tracked how I spend my time over the course of a week. What became most clear was just how much time I spend on childcare of my two young sons (4yo and 1yo).
+</p>
+<p>
+  I repeated this from a typical week a few years ago, before we had our kids, which left a clear high-level comparison of how having kids has impacted the balance of my time.
+</p>
+<p>
+  <img src="../media/57a81e9591f85cd4.png" alt="TimeSpent">
+</p>
+<p>
+  To add a little bit of color:
+</p>
+<ul>
+  <li>
+    <p>
+      <strong>Work</strong> is the time I spend on my job and career. This is the portion of time which changed the least, mostly due to job expectations and my own desire to continue investing in having career impact.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Sleep</strong> took a significant hit. My brain chemistry seems to require a lot of sleep, I am definitely not one of those people who thrives on 4 hours a night, I need <em>at least</em> 6 hours. Anyone who has young kids can empathize with the struggle to maintain a healthy sleep schedule.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Social</strong> is the dedicated time I spend with my wife and my friends. The dramatic reduction has stress-tested my partnership and greatly limited my time with friends. This used to be even lower, but over the last few months has recovered a bit to where it is today.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Self</strong> is the time I spend on myself, either recharging and playing games or working on creative projects. This is the portion which has taken the greatest hit, and I believe is to blame for the pressure I’m feeling on my mental health. I’ve also found myself so tired from limited sleep, work pressure, and the toil of childcare that I spend all of this time on podcasts or mindless games (and bad habits like reading Reddit/News) and don’t have contiguous time to spend on creative projects.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Childcare</strong> is the time I spend with my kids, almost always with my wife as well. We’re privileged to have our older son in 9-5 preschool and an amazing nanny through the day for our baby. Despite this help, time spend on the morning routine, dinner, bedtime routine, and weekends sure adds up.
+    </p>
+  </li>
+</ul>
+<p>
+  I absolutely love my kids, and to be clear I’m thrilled to have the time to spend with them, especially when they’re young. However the impact on how I spend my time is real, and the reduction of time I can invest into myself has taken a toll. I don’t have any immediate ideas of how to recover that time (if you do, I’m all ears!), but the exercise in seeing it was helpful.
+</p>
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>
+        </th>
+        <th align="right">
+          Before Kids
+        </th>
+        <th align="right">
+          After Kids
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Work
+        </td>
+        <td align="right">
+          54 hr/wk
+        </td>
+        <td align="right">
+          47 hr/wk
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sleep
+        </td>
+        <td align="right">
+          58 hr/wk
+        </td>
+        <td align="right">
+          42 hr/wk
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Social
+        </td>
+        <td align="right">
+          22 hr/wk
+        </td>
+        <td align="right">
+          7 hr/wk
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Self
+        </td>
+        <td align="right">
+          34 hr/wk
+        </td>
+        <td align="right">
+          7 hr/wk
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Children
+        </td>
+        <td align="right">
+        </td>
+        <td align="right">
+          65 hr/wk
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/meetingbar/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/meetingbar/"/>
