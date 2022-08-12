@@ -178,11 +178,13 @@ blockquote {
 
 table {
   border-collapse: collapse;
+  margin: 0 auto;
 }
 
 .table-wrapper {
   width: fit-content;
   max-width: 100vw;
+  min-width: calc(100% + 2rem + var(--gutter));
   -webkit-overflow-scrolling: touch;
   overflow: scroll;
   margin: 0 -2rem 0 calc(-1 * var(--gutter));
@@ -198,6 +200,10 @@ td {
 
 th {
   background: #00000008;
+}
+
+td {
+  background: #ffffff28;
 }
 
 a[data-footnote-ref] {
