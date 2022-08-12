@@ -14,7 +14,7 @@ I repeated this from a typical week a few years ago, before we had our kids,
 which left a clear high-level comparison of how having kids has impacted the
 balance of my time.
 
-![TimeSpent](../media/57a81e9591f85cd4.png)
+![TimeSpent](../media/da86f2fd111a1d06.png)
 
 To add a little bit of color:
 
