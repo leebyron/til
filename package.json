@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "./bin/til --build",
-    "install": "ln -s \"$PWD/bin/til\" \"$HOME/.local/bin/til\""
+    "install": "mkdir -p \"$HOME/.local/bin\"; ln -sf \"$PWD/bin/til\" \"$HOME/.local/bin/til\""
   },
   "dependencies": {
     "context-eval": "^0.1.0",
