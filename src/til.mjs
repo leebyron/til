@@ -38,6 +38,7 @@ Other commands:
 
     \x1B[1mtil --help\x1B[0m        this lovely message right here
     \x1B[1mtil --build\x1B[0m       builds all documents to HTML files for distribution
+    \x1B[1mtil --sync\x1B[0m       ensures the local environment has all known changes
 
 Examples:
 
@@ -63,6 +64,11 @@ open all in fzf.`)
       case '--build':
         const { build } = await import('./build.mjs')
         await build()
+        return
+
+      case 'sync':
+      case '--sync':
+        await syncRepo()
         return
     }
 
@@ -94,18 +100,7 @@ open all in fzf.`)
   const title = args.join(' ')
 
   // Make sure the repo is up to date before making any changes.
-  await spin('Updating', async () => {
-    if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
-      throw 'dirty repo'
-    }
-    await run(
-      `git -C "${TIL_PATH}" fetch origin main -q &&` +
-        `git -C "${TIL_PATH}" rebase -q`,
-      {
-        timeout: 5000,
-      }
-    )
-  })
+  await syncRepo()
 
   // Either coerce the promptname to a filename, or show a fzf.
   let filename = title
@@ -347,6 +342,21 @@ tags: ${tags.length > 0 ? `[${tags.join()}]` : ''}
 
 
 `
+
+async function syncRepo() {
+  await spin('Syncing', async () => {
+    if (await exec(`git -C "${TIL_PATH}" status --porcelain`)) {
+      throw 'dirty repo, stash or commit changes?'
+    }
+    await run(
+      `git -C "${TIL_PATH}" fetch origin main -q &&` +
+        `git -C "${TIL_PATH}" rebase -q`,
+      {
+        timeout: 5000,
+      }
+    )
+  })
+}
 
 function sanitizeFilename(name) {
   return name
