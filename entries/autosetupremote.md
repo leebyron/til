@@ -5,7 +5,8 @@ date: 2022-08-20T20:53:16-07:00
 tags: git
 ---
 
-Ever seen this git error message while creating a new branch and opening a PR?
+Ever seen this git error message while creating and pushing a new branch before
+opening a PR?
 
 ```
 fatal: The current branch my-pr-change has no upstream branch.
