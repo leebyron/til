@@ -74,7 +74,8 @@ This works surprisingly well, but there are shortcomings:
 - (As of TS v4.5) Equality checks require explicit typecasts. For example
   `userEmail === "admin@site.co"` will fail tsc with "This condition will always
   return false". This example can be resolved with the typecast
-  `"admin@site.co" as Email`.
+  `("admin@site.co" as Email)`. This should ideally not be necessary since the
+  intent is to define a subtype, which should be comparable to the supertype.
 
 More examples of where opaque types are useful:
 
