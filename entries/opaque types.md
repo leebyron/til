@@ -71,6 +71,10 @@ This works surprisingly well, but there are shortcomings:
   Don't forget to include a comment explaining what this does.
 - There's still no concept of "module private" fields without going around the
   type compiler yet again.
+- (As of TS v4.5) Equality checks require explicit typecasts. For example
+  `userEmail === "admin@site.co"` will fail tsc with "This condition will always
+  return false". This example can be resolved with the typecast
+  `"admin@site.co" as Email`.
 
 More examples of where opaque types are useful:
 
@@ -84,6 +88,10 @@ More examples of where opaque types are useful:
   other strings or numbers.
 - Unique types for overlapping identifiers such as classic MySQL auto increments
   that you'd hate to mix up, like `UserID` and `MessageID`.
+
+I'd still love to see explicit support for this long-loved feature from Flow
+built into TypeScript, but this technique works reasonably well despite the
+shortcomings.
 
 [opaque types]: https://flow.org/en/docs/types/opaque-types/
 [private fields]:
