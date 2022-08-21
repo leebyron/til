@@ -17,7 +17,7 @@ To push the current branch and set the remote as upstream, use
 
 Perhaps you have a script you use which automates setting this upstream for your
 new branches, but as of
-[git v2.37](https://github.blog/2022-06-27-highlights-from-git-2-37/) which was
+[git v2.37](https://lore.kernel.org/git/xmqqy1xinf00.fsf@gitster.g/T/) which was
 released June 2022, Git can handle this directly.
 
 From your terminal, run:
