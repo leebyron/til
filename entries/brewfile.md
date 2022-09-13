@@ -33,3 +33,6 @@ happen automatically. Here are a few additional things I do:
 The final result is that setting up a new machine with a list of apps I use is
 pretty easy, as is keeping that install base the same across a few computers I
 use. Brew alias makes it easy to keep everything correct.
+
+For personal machines, this has been much more simple and useable than Vagrant,
+Ansible, or other more professional environment management tool.
