@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>til / noTunes — Lee Byron</title>
+    <meta property="og:url" content="https://leebyron.com/til/notunes/">
+    <meta property="og:title" content="til / noTunes — Lee Byron">
+    <meta property="og:description" content="There’s many things I love about Apple’s software and OS, but one thing that feels particularly… monopolistic, and also annoying, is how the Apple Music app opens automatically whenever you connect bluetooth headphones. I literally never want this. This is behavior that cannot be disabled, the Apple Music cannot be uninstalled. What to do?">
+    <meta property="og:type" content="article">
+    <meta property="article:author:first_name" content="Lee">
+    <meta property="article:author:last_name" content="Byron">
+    <meta property="article:published_time" content="2022-09-14T13:48:45.000-07:00">
+    <meta property="article:modified_time" content="2022-09-14T20:57:26.000+00:00">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@leeb">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LearningResource",
+  "name": "noTunes",
+  "description": "There’s many things I love about Apple’s software and OS, but one thing that feels particularly… monopolistic, and also annoying, is how the Apple Music app opens automatically whenever you connect bluetooth headphones. I literally never want this. This is behavior that cannot be disabled, the Apple Music cannot be uninstalled. What to do?",
+  "author": {
+    "@type": "Person",
+    "name": "Lee Byron",
+    "url": "http://leebyron.com"
+  },
+  "url": "https://leebyron.com/til/notunes/",
+  "datePublished": "2022-09-14T13:48:45.000-07:00",
+  "dateModified": "2022-09-14T20:57:26.000+00:00",
+  "keywords": "mac",
+  "isPartOf": "https://leebyron.com/til/",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://leebyron.com/til/notunes/">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Reader Feed" href="https://leebyron.com/til/feed.xml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61714711-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-61714711-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="https://leebyron.com"><img src="../assets/logo.svg" alt="Lee Byron"></a>
+    </header>
+    <article>
+      <h1>
+        <a href="../">til</a><span>noTunes</span>
+      </h1>
+      <p>
+        There’s many things I love about Apple’s software and OS, but one thing that feels particularly… monopolistic, and also annoying, is how the Apple Music app opens automatically whenever you connect bluetooth headphones. I literally never want this. This is behavior that cannot be disabled, the Apple Music cannot be uninstalled. What to do?
+      </p>
+      <p>
+        The <a href="https://github.com/tombonez/noTunes" target="_blank">noTunes</a> app is an incredibly simple (open source!) app which solves exactly this problem. More specifically it just keeps the Apple Music app from opening at all, or lets you launch a replacement app if you so choose.
+      </p>
+      <p>
+        Install it with <code>brew</code>, launch it, then add it to “Login Items” in System Preferences to ensure it launches automatically.
+      </p>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install --cask notunes</span>
+</span></code></pre>
+    </article>
+    <footer>
+      <div class="linkedlist">
+        <a href="../brewfile/" class="prev">Brewfile</a>
+      </div>
+      <div class="license" xmlns:cc="http://creativecommons.org/ns" xmlns:dct="http://purl.org/dc/terms/">
+        This <a property="dct:title" rel="cc:attributionURL" href="https://leebyron.com/til/notunes/">til</a> was created <span property="dct:created" content="2022-09-14T13:48:45.000-07:00">Wed, Sep 14, 2022, 1:48 PM</span> ⸱ <a href="https://raw.githubusercontent.com/leebyron/til/main/entries/notunes.md" target="_blank">raw</a> ⸱ <a href="https://github.com/leebyron/til/edit/main/entries/notunes.md#L8" target="_blank">edit</a><br>© <span rel="dct:dateCopyrighted">2022</span> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://leebyron.com">Lee Byron</a> ⸱ licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="cc:license license noopener noreferrer">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" aria-hidden="true"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" aria-hidden="true"></a> ⸱ <a href="https://leebyron.com/til/feed.xml" rel="alternate feed" type="application/atom+xml">feed</a>
+      </div>
+    </footer>
+  </body>
+</html>

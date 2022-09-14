@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-09-13T23:04:23.000+00:00</updated>
+  <updated>2022-09-14T20:57:26.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,30 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/notunes/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/notunes/"/>
+    <published>2022-09-14T13:48:45.000-07:00</published>
+    <updated>2022-09-14T20:57:26.000+00:00</updated>
+    <title>noTunes</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <content type="html"><![CDATA[<p>
+  There’s many things I love about Apple’s software and OS, but one thing that feels particularly… monopolistic, and also annoying, is how the Apple Music app opens automatically whenever you connect bluetooth headphones. I literally never want this. This is behavior that cannot be disabled, the Apple Music cannot be uninstalled. What to do?
+</p>
+<p>
+  The <a href="https://github.com/tombonez/noTunes" target="_blank">noTunes</a> app is an incredibly simple (open source!) app which solves exactly this problem. More specifically it just keeps the Apple Music app from opening at all, or lets you launch a replacement app if you so choose.
+</p>
+<p>
+  Install it with <code>brew</code>, launch it, then add it to “Login Items” in System Preferences to ensure it launches automatically.
+</p>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install --cask notunes</span>
+</span></code></pre>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/brewfile/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/brewfile/"/>
