@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-11-28T20:00:31.000+00:00</updated>
+  <updated>2022-11-28T20:02:31.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,14 +19,17 @@
     <id>https://leebyron.com/til/dont-escape-full-screen/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/dont-escape-full-screen/"/>
     <published>2022-11-28T11:51:17.000-08:00</published>
-    <updated>2022-11-28T20:00:31.000+00:00</updated>
+    <updated>2022-11-28T20:02:31.000+00:00</updated>
     <title>don't escape full screen</title>
     <author>
       <name>Lee Byron</name>
       <uri>https://leebyron.com</uri>
     </author>
     <content type="html"><![CDATA[<p>
-  I prefer small laptops and tidy screens, so keep most of my apps in full screen mode on my Mac. Lots of these apps, especially browsers, may have modals, forms, or other elements I need my Esc key to control. If I overzealously hit Esc one times too many, my window leaves full screen. Ugh.
+  I prefer small laptops and tidy screens, so keep most of my apps in full screen mode on my Mac. Lots of these apps, especially browsers, may have modals, forms, or other elements I need my Esc key to control. If I overzealously hit Esc one times too many, my window leaves full screen.
+</p>
+<p>
+  Ugh.
 </p>
 <p>
   A quick solution is to open the Keyboard Preferences, in the Shortcuts tab add a new App Shortcut for “Exit Full Screen” for all applications, and choose something a little more intentional. In my case, I use Control-Escape<a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
