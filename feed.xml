@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-09-14T20:57:26.000+00:00</updated>
+  <updated>2022-11-28T19:57:39.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,30 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/dont-escape-full-screen/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/dont-escape-full-screen/"/>
+    <published>2022-11-28T11:51:17.000-08:00</published>
+    <updated>2022-11-28T19:57:39.000+00:00</updated>
+    <title>Don't Escape Full Screen</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <content type="html"><![CDATA[<p>
+  I prefer small laptops and tidy screens, so keep most of my apps in full screen mode on my Mac. Lots of these apps, especially browsers, may have modals, forms, or other elements I need my Esc key to control. If I overzealously hit Esc one times too many, my window leaves full screen. Ugh.
+</p>
+<p>
+  A quick solution is to open the Keyboard Preferences, in the Shortcuts tab add a new App Shortcut for “Exit Full Screen” for all applications, and choose something a little more intentional. In my case, I use Control-Escape[1].
+</p>
+<p>
+  <img src="../media/37edfc1b13554f26.png" alt="Screen Shot 2022-11-28 at 11.47.16 AM">
+</p>
+<p>
+  [1]: Especially helpful as I have <a href="https://leebyron.com/til/remap-caps-lock/" target="_blank">remapped Caps Lock</a> to be Control.
+</p>]]></content>
+    <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/notunes/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/notunes/"/>
