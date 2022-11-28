@@ -1,5 +1,5 @@
 ---
-title: Don't Escape Full Screen
+title: don't escape full screen
 permalink: dont-escape-full-screen
 date: 2022-11-28T11:51:17-08:00
 tags:
