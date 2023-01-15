@@ -136,6 +136,18 @@ hr {
 
 img {
   max-width: 100%;
+  margin: 0 auto;
+}
+
+figure {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 1em auto;
+  padding: 0 1em;
+}
+
+figcaption {
+  text-align: center;
 }
 
 ol,

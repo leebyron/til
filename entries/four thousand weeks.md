@@ -21,11 +21,9 @@ I liked this book so much that I decided to build something of a
 salient excerpts, quotes, and themes quotes from the book. I hope you enjoy it
 and does a small part in helping you make the most of your own finitude.
 
-<center>
-  <a href="https://leebyron.com/4000/" target="_blank">
-    <figure>
-      <img src="../media/269d4ece86e479ae.png" />
-      <figcaption>leebyron.com/4000</figcaption>
-    </figure>
-  </a>
-</center>
+<a href="https://leebyron.com/4000/" target="_blank">
+  <figure>
+    <img src="../media/269d4ece86e479ae.png" style="box-shadow: 0 0.5rem 1rem #00000022;" />
+    <figcaption>leebyron.com/4000</figcaption>
+  </figure>
+</a>
