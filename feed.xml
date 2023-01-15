@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2022-11-28T20:02:31.000+00:00</updated>
+  <updated>2023-01-15T00:36:53.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,33 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/four-thousand-weeks/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/four-thousand-weeks/"/>
+    <published>2023-01-14T16:27:26.000-08:00</published>
+    <updated>2023-01-15T00:36:53.000+00:00</updated>
+    <title>four thousand weeks</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="philosophy"/>
+    <content type="html"><![CDATA[<p>
+  We live our lives week by week. A week feels frustratingly limited and there are alarmingly few of them. Assuming you live to eighty, you’ll have had about four thousand weeks.
+</p>
+<p>
+  Reflecting on the books I read last year, <a href="https://amzn.to/3GnJlR9" target="_blank">four thousand weeks</a> by Oliver Burkeman stuck with me the most. While pitched as yet another productivity management book, it’s something of a bait-and-switch tricking you into reading about philosophy. In particular directly acknowledging our own mortality and in fact pushing back on the idea of optimizing yourself to accomplish more.
+</p>
+<p>
+  I liked this book so much that I decided to build something of a <a href="https://leebyron.com/4000/" target="_blank">digital book report</a>. It contains some of the most salient excerpts, quotes, and themes quotes from the book. I hope you enjoy it and does a small part in helping you make the most of your own finitude.
+</p>
+<center>
+  <p>
+    <a href="https://leebyron.com/4000/">leebyron.com/4000</a>
+  </p>
+</center>]]></content>
+    <rights>© 2023 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/dont-escape-full-screen/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/dont-escape-full-screen/"/>
