@@ -22,5 +22,10 @@ salient excerpts, quotes, and themes quotes from the book. I hope you enjoy it
 and does a small part in helping you make the most of your own finitude.
 
 <center>
-  <a href="https://leebyron.com/4000/">leebyron.com/4000</a>
+  <a href="https://leebyron.com/4000/" target="_blank">
+    <figure>
+      <img src="../media/269d4ece86e479ae.png" />
+      <figcaption>leebyron.com/4000</figcaption>
+    </figure>
+  </a>
 </center>
