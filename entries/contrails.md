@@ -9,7 +9,7 @@ Air flights have a surprisingly complex impact on climate warming. In addition
 to burning jet fuel emitting CO₂ and other greenhouse gasses, the contrails left
 behind linger as artificial clouds. These contrails act as a blanket both
 trapping thermal heat as well as reflecting away solar radiation. The net effect
-of which could be warming or _cooling_[^1].
+of which could be warming _or cooling_[^1].
 
 Many factors impact this net effect including the duration, path of flight,
 changes in altitude, wind speed, and most significantly time of day. The physics
@@ -31,8 +31,12 @@ And yes, this is just one more reason why red eye flights are awful.
     <img
       src="../media/b9131a06528b711b.png"
       style="box-shadow: 0 0.5rem 1rem #00000022;"
+      alt="map showing cooling and warming flight contrails"
     />
-    <figcaption>map.contrails.org</figcaption>
+    <figcaption>
+      Flights departing in the morning leaving net-cooling contrails in the
+      afternoon. — map.contrails.org
+    </figcaption>
   </figure>
 </a>
 
