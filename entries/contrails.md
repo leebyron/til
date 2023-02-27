@@ -34,8 +34,7 @@ And yes, this is just one more reason why red eye flights are awful.
       alt="map showing cooling and warming flight contrails"
     />
     <figcaption>
-      Flights departing in the morning leaving net-cooling contrails in the
-      afternoon. — map.contrails.org
+      Early flights leaving net-cooling contrails in the afternoon
     </figcaption>
   </figure>
 </a>
