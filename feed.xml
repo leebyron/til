@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-01-15T19:34:52.000+00:00</updated>
+  <updated>2023-02-27T19:57:25.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -15,6 +15,51 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/contrails/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/contrails/"/>
+    <published>2023-02-27T11:40:15.000-08:00</published>
+    <updated>2023-02-27T19:57:25.000+00:00</updated>
+    <title>contrails</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="climate"/>
+    <content type="html"><![CDATA[<p>
+  Air flights have a surprisingly complex impact on climate warming. In addition to burning jet fuel emitting CO₂ and other greenhouse gasses, the contrails left behind linger as artificial clouds. These contrails act as a blanket both trapping thermal heat as well as reflecting away solar radiation. The net effect of which could be warming or <em>cooling</em><a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+</p>
+<p>
+  Many factors impact this net effect including the duration, path of flight, changes in altitude, wind speed, and most significantly time of day. The physics involved mean the sunlight reflective effects of a contrail can only occur in the daytime; without this a contrail can only have a warming effect. To maximize reflectivity and have a net-cooling effect, contrails need to be formed early in the day so the reflect for their duration.
+</p>
+<p>
+  Factoring the effects of contrails into the overall climate impact of air travel means that all flights are not equal. The top 5% of flights contribute roughly a third of the overall climate warming effect. Modest routing and timing adjustments could have an outsized impact on the overall climate impact of air travel.
+</p>
+<p>
+  And yes, this is just one more reason why red eye flights are awful.
+</p>
+<a href="https://map.contrails.org/">
+  <figure>
+    <img src="../media/b9131a06528b711b.png" style="box-shadow: 0 0.5rem 1rem #00000022;">
+    <p>
+      <figcaption>
+        map.contrails.org
+      </figcaption>
+    </p>
+  </figure>
+</a>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>
+        For a far more nuanced understanding of the effect of contrails, see the incredible resource at <a href="https://map.contrails.org/" target="_blank">contrails.org</a>.
+      </p>
+      <a href="#fn:1.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2023 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/four-thousand-weeks/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/four-thousand-weeks/"/>
