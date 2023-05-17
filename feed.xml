@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-05-17T19:00:13.000+00:00</updated>
+  <updated>2023-05-17T19:01:43.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/torus/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/torus/"/>
     <published>2023-05-17T11:30:27.000-07:00</published>
-    <updated>2023-05-17T19:00:13.000+00:00</updated>
+    <updated>2023-05-17T19:01:43.000+00:00</updated>
     <title>torus</title>
     <author>
       <name>Lee Byron</name>
@@ -51,7 +51,7 @@
   <ol>
     <li id="fn:1">
       <p>
-        This homeomorphism famously leads dedicated topologists to confuse their mug and doughnut.
+        This homeomorphism famously leads dedicated topologists to confuse their mug for their doughnut. Classic messy situation.
       </p>
       <a href="#fn:1.ref" data-footnote-backref aria-label="return">↩</a>
     </li>
