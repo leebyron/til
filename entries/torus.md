@@ -21,11 +21,11 @@ flat[^2].
 Later used to describe architectural decoration that reminded them of that
 shape, in particular the rounded molding at the base of some Doric columns.
 
+![torus-column](../media/611e56ceb553030d.jpg)
+
 I find it fascinating how words we consider academic and sterile have roots in
 everyday things. "That column base looks like a fluffy pillow, let's call it so"
 led to a defined term as mathematics provided architectural rigor.
-
-![torus-column](../media/611e56ceb553030d.jpg)
 
 [^1]:
     This homeomorphism famously leads dedicated topologists to confuse their mug
