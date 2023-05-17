@@ -29,6 +29,6 @@ led to a defined term as mathematics provided architectural rigor.
 
 [^1]:
     This homeomorphism famously leads dedicated topologists to confuse their mug
-    and doughnut.
+    for their doughnut. Classic messy situation.
 
 [^2]: Pillows lack a hole and are decidedly a non-toroidal "torus".
