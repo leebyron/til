@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-05-17T18:59:14.000+00:00</updated>
+  <updated>2023-05-17T19:00:13.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Today I Learned: A bunch of brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/torus/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/torus/"/>
     <published>2023-05-17T11:30:27.000-07:00</published>
-    <updated>2023-05-17T18:59:14.000+00:00</updated>
+    <updated>2023-05-17T19:00:13.000+00:00</updated>
     <title>torus</title>
     <author>
       <name>Lee Byron</name>
@@ -28,6 +28,9 @@
     <category term="math"/>
     <content type="html"><![CDATA[<p>
   One of my favorite mathematical shapes is the torus. Not only does it remind me of a doughnut (mmm), but it’s the first step into topology with the introduction of a hole. Not only is a doughnut topologically a torus, but so is your accompanying coffee mug<a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>!
+</p>
+<p>
+  <img src="../media/855427377f7b5a4f.webp" alt="torus-mug-donut">
 </p>
 <p>
   But where does this word <em>“torus”</em> come from? It happens to be the Latin word for… a pillow. The classic round poof with a pin through the middle to keep it flat<a href="#fn:2" id="fn:2.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>.
@@ -40,6 +43,9 @@
 </p>
 <p>
   I find it fascinating how words we consider academic and sterile have roots in everyday things. “That column base looks like a fluffy pillow, let’s call it so” led to a defined term as mathematics provided architectural rigor.
+</p>
+<p>
+  <img src="../media/611e56ceb553030d.jpg" alt="torus-column">
 </p>
 <section data-footnotes aria-label="footnotes">
   <ol>
