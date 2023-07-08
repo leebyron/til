@@ -18,22 +18,23 @@ export function Index({ frontmatters, Content }) {
   return (
     h(Path, { value: '/' },
       h(Document,
-        h('title', 'Today I Learned / Lee Byron'),
+        h('title', 'Things I\'ve Learned / Lee Byron'),
         ...OpenGraph({
           'og:url': canonicalRoot,
           'og:title': 'Lee Byron / til',
-          'og:description': 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.',
+          'og:description': 'Things I\'ve Learned: brief blurbs on miscellaneous matter.',
           'twitter:card': 'summary',
-          'twitter:title': 'Lee Byron / til: A bunch of brief blurbs on miscellaneous matter.',
+          'twitter:title': 'Lee Byron / til: brief blurbs on miscellaneous matter.',
           'twitter:creator': '@leeb',
         }),
         JSONLD({
           '@type': 'Collection',
-          name: 'Today I Learned',
+          name: 'Things I\'ve Learned',
           author: {
             '@type': 'Person',
             name: 'Lee Byron',
-            url: 'http://leebyron.com' },
+            url: 'http://leebyron.com'
+          },
           url: canonicalRoot,
           collectionSize: frontmatters.length,
           license: 'https://creativecommons.org/licenses/by/4.0/',
@@ -42,7 +43,7 @@ export function Index({ frontmatters, Content }) {
           h(Content, { components }),
           h('h2', { id: 'entry-log' },
             h('a', { href: '#entry-log', 'data-anchor': true },
-               'entry log')),
+              'entry log')),
           frontmatters.map(frontmatter =>
             h('div', { class: 'entrylog' },
               h('a', { href: `${frontmatter.permalink}/` }, frontmatter.title),
@@ -71,7 +72,7 @@ export function Feed({ entries }) {
       h('link', { rel: 'alternate', type: 'text/html', href: canonicalRoot }),
       h('updated', entries.map(e => e.lastModified).sort((a, b) => a - b).pop().toISO()),
       h('title', 'Lee Byron / til'),
-      h('subtitle', 'Today I Learned: A bunch of brief blurbs on miscellaneous matter.'),
+      h('subtitle', 'Things I\'ve Learned: brief blurbs on miscellaneous matter.'),
       h('icon', canonicalPath('/assets/favicon.png')),
       h('author', h('name', 'Lee Byron'), h('uri', 'https://leebyron.com')),
       h('rights', '© 2022 Lee Byron ⸱ licensed under CC BY 4.0'),
@@ -85,9 +86,10 @@ export function Feed({ entries }) {
           h('title', frontmatter.title),
           h('author', h('name', 'Lee Byron'), h('uri', 'https://leebyron.com')),
           frontmatter.tags.map(tag => h('category', { term: tag })),
-          h('content', { type: 'html', innerHTML: `<![CDATA[${
-            render(mdjsx(markdown, { components }))
-          }]]>` }),
+          h('content', {
+            type: 'html', innerHTML: `<![CDATA[${render(mdjsx(markdown, { components }))
+              }]]>`
+          }),
           h('rights', `© ${frontmatter.date.year} Lee Byron ⸱ licensed under CC BY 4.0`)
         )
       )
@@ -109,7 +111,7 @@ export function Page({ filename, lastModified, frontmatter, markdown, Content, p
     h(Path, { value: path },
       h(Document,
         frontmatter.published === false &&
-          h('meta', { name: 'robots', content: 'noindex' }),
+        h('meta', { name: 'robots', content: 'noindex' }),
         h('title', pageTitle),
         ...OpenGraph({
           'og:url': canonicalUrl,
@@ -133,7 +135,8 @@ export function Page({ filename, lastModified, frontmatter, markdown, Content, p
           author: {
             '@type': 'Person',
             name: 'Lee Byron',
-            url: 'http://leebyron.com' },
+            url: 'http://leebyron.com'
+          },
           url: canonicalUrl,
           datePublished,
           dateModified,
@@ -170,7 +173,7 @@ function Document({ children }) {
       h('head',
         h('meta', { charset: 'UTF-8' }),
         children.filter(isHeadElement),
-        h('meta', { name: 'viewport', content:'width=device-width, initial-scale=1'}),
+        h('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }),
         h('link', { rel: 'canonical', href: useCanonical() }),
         h('link', { rel: 'shortcut icon', href: useRelPath('/assets/favicon.png') }),
         h('link', { rel: 'stylesheet', href: useRelPath('/assets/style.css') }),
@@ -201,7 +204,7 @@ function isHeadElement(element) {
 }
 
 function OpenGraph(data) {
-  return Object.entries(data) .map(([name, content]) => content && h('meta', {
+  return Object.entries(data).map(([name, content]) => content && h('meta', {
     [name.startsWith('twitter:') ? 'name' : 'property']: name,
     content
   }))
@@ -218,7 +221,8 @@ function JSONLD(data) {
 function GTag() {
   return [
     h('script', { async: true, src: "https://www.googletagmanager.com/gtag/js?id=UA-61714711-1" }),
-    h('script', { innerHTML: `
+    h('script', {
+      innerHTML: `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -234,7 +238,8 @@ function Attribution({ filename, frontmatter: { permalink, date } }) {
     h('a', {
       property: "dct:title",
       rel: "cc:attributionURL",
-      href: useCanonical() },
+      href: useCanonical()
+    },
       'til'),
 
     // time
@@ -267,7 +272,8 @@ function License({ year, children }) {
   return h('div', {
     class: 'license',
     'xmlns:cc': "http://creativecommons.org/ns",
-    'xmlns:dct': "http://purl.org/dc/terms/" },
+    'xmlns:dct': "http://purl.org/dc/terms/"
+  },
 
     children,
     children && h('br'),
@@ -279,7 +285,8 @@ function License({ year, children }) {
     h('a', {
       rel: "cc:attributionURL dct:creator",
       property: "cc:attributionName",
-      href: "https://leebyron.com" },
+      href: "https://leebyron.com"
+    },
       'Lee Byron'),
 
     ' ⸱ ',
@@ -289,7 +296,8 @@ function License({ year, children }) {
     h('a', {
       href: "http://creativecommons.org/licenses/by/4.0/",
       target: "_blank",
-      rel: "cc:license license noopener noreferrer" },
+      rel: "cc:license license noopener noreferrer"
+    },
       'CC BY 4.0',
       h('img', {
         src: "https://mirrors.creativecommons.org/presskit/icons/cc.svg",
@@ -315,13 +323,14 @@ const components = {
 function YouTube({ v, aspectRatio }) {
   return h('div', {
     class: 'yt-player',
-    style: { '--aspectRatio': aspectRatio }},
+    style: { '--aspectRatio': aspectRatio }
+  },
     h('iframe', {
-      src:`https://www.youtube.com/embed/${v}`,
-      title:"YouTube video player",
-      frameborder:"0",
-      allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
-      allowfullscreen:true
+      src: `https://www.youtube.com/embed/${v}`,
+      title: "YouTube video player",
+      frameborder: "0",
+      allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+      allowfullscreen: true
     })
   )
 }

@@ -1,14 +1,10 @@
-# today i learned
+# things i've learned
 
-A bunch of brief blurbs on miscellaneous matter; everyday things I learn, things
-I know but often forget, and anything else I care to write down. They're not
-always definitive nor novel but hopefully helpful or at least interesting.
+Brief blurbs on miscellaneous matter; everyday things I learn, things
+I know but often forget, and anything else I care to write down as I 
+[learn in public]. They're not always definitive nor novel but hopefully helpful
+or at least interesting.
 
-This collection began as a New Year's resolution inspired by a [similar
-resource][jbranchaud/til] by Josh Branchaud from which this project gets its
-name and the fantastic [Learn in Public] essay by Shawn Wang.
-
-[jbranchaud/til]: https://github.com/jbranchaud/til
 [learn in public]: https://www.swyx.io/learn-in-public/
 
 ---
