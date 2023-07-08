@@ -2,7 +2,7 @@
 
 Brief blurbs on miscellaneous matter; everyday things I learn, things
 I know but often forget, and anything else I care to write down as I 
-[learn in public]. They're not always definitive nor novel but hopefully helpful
+[learn in public]. Not always definitive nor novel but hopefully helpful
 or at least interesting.
 
 [learn in public]: https://www.swyx.io/learn-in-public/
