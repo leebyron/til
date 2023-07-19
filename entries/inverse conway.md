@@ -27,5 +27,5 @@ so, you ensure your organization best serves the users of the system
     is a form of [Muda][], or a way to define "waste" as inefficiencies in
     serving customer value.
 
-[conways law]: https://en.wikipedia.org/wiki/Conway%27s_law
+[conway's law]: https://en.wikipedia.org/wiki/Conway%27s_law
 [muda]: https://en.wikipedia.org/wiki/Muda_(Japanese_term)
