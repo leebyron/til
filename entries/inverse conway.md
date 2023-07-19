@@ -2,7 +2,7 @@
 title: inverse conway
 permalink: inverse-conway
 date: 2023-07-19T14:36:51-07:00
-tags:
+tags: engineering management
 ---
 
 [Conway's law][] is an expression from the computer scientist Melvin Conway upon
@@ -18,6 +18,14 @@ organizations.
 
 However the _inverse_ can be a useful tool when building organizations when you
 can do so downwind of a desired saliently designed system, and thus use the
-resulting org structure to accelerate towards the desired architecture.
+resulting org structure to accelerate towards the desired architecture. In doing
+so, you ensure your organization best serves the users of the system
+(presumably, your customers) rather than being self-serving[^1].
+
+[^1]:
+    It might seem reasonable to want your org design to serve yourself, but this
+    is a form of [Muda][], or a way to define "waste" as inefficiencies in
+    serving customer value.
 
 [conways law]: https://en.wikipedia.org/wiki/Conway%27s_law
+[muda]: https://en.wikipedia.org/wiki/Muda_(Japanese_term)
