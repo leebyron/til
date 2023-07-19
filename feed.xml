@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-07-19T21:46:04.000+00:00</updated>
+  <updated>2023-07-19T21:51:31.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,12 +19,14 @@
     <id>https://leebyron.com/til/inverse-conway/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/inverse-conway/"/>
     <published>2023-07-19T14:36:51.000-07:00</published>
-    <updated>2023-07-19T21:46:04.000+00:00</updated>
+    <updated>2023-07-19T21:51:31.000+00:00</updated>
     <title>inverse conway</title>
     <author>
       <name>Lee Byron</name>
       <uri>https://leebyron.com</uri>
     </author>
+    <category term="engineering"/>
+    <category term="management"/>
     <content type="html"><![CDATA[<p>
   [Conway’s law][] is an expression from the computer scientist Melvin Conway upon noticing that companies tend to design software in a way which directly mirrors their organization structure.
 </p>
@@ -37,8 +39,18 @@
   This is often used as an observation of poor software quality. Overlay complex and disconnected software corresponds with similarly dysfunctional organizations.
 </p>
 <p>
-  However the <em>inverse</em> can be a useful tool when building organizations when you can do so downwind of a desired saliently designed system, and thus use the resulting org structure to accelerate towards the desired architecture.
-</p>]]></content>
+  However the <em>inverse</em> can be a useful tool when building organizations when you can do so downwind of a desired saliently designed system, and thus use the resulting org structure to accelerate towards the desired architecture. In doing so, you ensure your organization best serves the users of the system (presumably, your customers) rather than being self-serving<a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>
+        It might seem reasonable to want your org design to serve yourself, but this is a form of <a href="https://en.wikipedia.org/wiki/Muda_(Japanese_term)" target="_blank">Muda</a>, or a way to define “waste” as inefficiencies in serving customer value.
+      </p>
+      <a href="#fn:1.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
     <rights>© 2023 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
   <entry>
