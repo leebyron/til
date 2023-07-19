@@ -5,12 +5,14 @@ date: 2023-07-19T14:36:51-07:00
 tags: engineering management
 ---
 
-[Conway's law][] is an expression from the computer scientist Melvin Conway upon
-noticing that companies tend to design software in a way which directly mirrors
-their organization structure.
+[Conway's law][] is an expression coined by computer scientist Melvin Conway as
+an observation that companies tend to design software in a way which directly
+mirrors their organization and communication structures.
 
-> Any organization that designs a system will produce a design whose structure
-> is a copy of the organization's communication structure.
+> Any organization that designs a system (defined broadly) will produce a design
+> whose structure is a copy of the organization's communication structure.
+>
+> — Melvin Conway (1967)
 
 This is often used as an observation of poor software quality. Overlay complex
 and disconnected software corresponds with similarly dysfunctional
@@ -27,5 +29,5 @@ so, you ensure your organization best serves the users of the system
     is a form of [Muda][], or a way to define "waste" as inefficiencies in
     serving customer value.
 
-[conway's law]: https://en.wikipedia.org/wiki/Conway%27s_law
+[conway's law]: http://www.melconway.com/Home/Conways_Law.html
 [muda]: https://en.wikipedia.org/wiki/Muda_(Japanese_term)
