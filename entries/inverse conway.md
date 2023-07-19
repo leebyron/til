@@ -14,7 +14,7 @@ mirrors their organization and communication structures.
 >
 > — Melvin Conway (1967)
 
-This is often used as an observation of poor software quality. Overlay complex
+This is often used as an observation of poor software quality. Overly complex
 and disconnected software corresponds with similarly dysfunctional
 organizations.
 
