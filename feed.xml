@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-07-19T21:57:32.000+00:00</updated>
+  <updated>2023-07-19T22:38:05.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/inverse-conway/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/inverse-conway/"/>
     <published>2023-07-19T14:36:51.000-07:00</published>
-    <updated>2023-07-19T21:57:32.000+00:00</updated>
+    <updated>2023-07-19T22:38:05.000+00:00</updated>
     <title>inverse conway</title>
     <author>
       <name>Lee Byron</name>
@@ -39,7 +39,7 @@
   </p>
 </blockquote>
 <p>
-  This is often used as an observation of poor software quality. Overlay complex and disconnected software corresponds with similarly dysfunctional organizations.
+  This is often used as an observation of poor software quality. Overly complex and disconnected software corresponds with similarly dysfunctional organizations.
 </p>
 <p>
   However the <em>inverse</em> can be a useful tool when building organizations when you can do so downwind of a desired saliently designed system, and thus use the resulting org structure to accelerate towards the desired architecture. In doing so, you ensure your organization best serves the users of the system (presumably, your customers) rather than being self-serving<a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
