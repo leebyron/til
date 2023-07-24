@@ -34,7 +34,7 @@ While "forgiveness, not permission" considers what you're asking, it says
 nothing about what you're telling. If you anticipate needing to ask forgiveness
 after taking action then its best to get ahead of it by explaining the decision
 clearly immediately after you've made it. Even better, explain _before_ you act
-then radiate it. Share far and wide.
+then radiate it: share far and wide.
 
 ![intent](../media/222f597868763d3e.svg)
 
