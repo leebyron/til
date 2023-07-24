@@ -57,5 +57,5 @@ editorialized):
 - Sets the example that bold action is encouraged from everyone, not just
   organizational higher-ups.
 
-If it's a good idea, go ahead and do it. But loudly say what you are doing along
-the way. _Radiate intent!_
+If it's a good idea, go ahead and do it. Say loudly what you are doing along the
+way. _Radiate intent!_
