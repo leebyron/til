@@ -60,3 +60,28 @@ editorialized):
 
 If it's a good idea, go ahead and do it. Say loudly what you are doing along the
 way. _Radiate intent!_
+
+### Addendum: How to Radiate Intent
+
+- Write it down. Start with a short description of what you intend to do, and
+  why. Keep the bottom line at the top. Expand your thinking from there:
+  document assumptions, options and trade-offs. This will help you communicate
+  clearly, create a single source of truth, and avoid repeating yourself.
+
+- Make timelines clear. When do you plan to begin? Are there significant moments
+  worth noting? If others want to participate they need to know when. If there
+  is urgency, make it known.
+
+- Share visibly and broadly. Start in whatever channel your team uses most.
+  Share in the channels your stakeholders use. If you're in a smaller
+  organization, just send it to everyone. As you share ask "can you think of
+  anyone who should know about this?"
+
+- Share often. Share when you decide on your intention. Share a reminder. Share
+  when you begin. Share when you reach milestones. Share when you complete.
+  Share outcomes and lessons learned (and only here might you need to ask for
+  forgiveness!).
+
+- Scale volume with impact. Radiating intent matters most when those around you
+  will be impacted most. Share broader more frequently in situations that demand
+  it, and narrower otherwise.
