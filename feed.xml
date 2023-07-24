@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-07-24T23:06:48.000+00:00</updated>
+  <updated>2023-07-24T23:32:23.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/intent/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/intent/"/>
     <published>2023-07-24T12:02:27.000-07:00</published>
-    <updated>2023-07-24T23:06:48.000+00:00</updated>
+    <updated>2023-07-24T23:32:23.000+00:00</updated>
     <title>radiate intent</title>
     <author>
       <name>Lee Byron</name>
@@ -83,6 +83,36 @@
 <p>
   If it’s a good idea, go ahead and do it. Say loudly what you are doing along the way. <em>Radiate intent!</em>
 </p>
+<h3 id="addendum-how-to-radiate-intent">
+  <a href="#addendum-how-to-radiate-intent" data-anchor>Addendum: How to Radiate Intent</a>
+</h3>
+<ul>
+  <li>
+    <p>
+      Write it down. Start with a short description of what you intend to do, and why. Keep the bottom line at the top. Expand your thinking from there: document assumptions, options and trade-offs. This will help you communicate clearly, create a single source of truth, and avoid repeating yourself.
+    </p>
+  </li>
+  <li>
+    <p>
+      Make timelines clear. When do you plan to begin? Are there significant moments worth noting? If others want to participate they need to know when. If there is urgency, make it known.
+    </p>
+  </li>
+  <li>
+    <p>
+      Share visibly and broadly. Start in whatever channel your team uses most. Share in the channels your stakeholders use. If you’re in a smaller organization, just send it to everyone. As you share ask “can you think of anyone who should know about this?”
+    </p>
+  </li>
+  <li>
+    <p>
+      Share often. Share when you decide on your intention. Share a reminder. Share when you begin. Share when you reach milestones. Share when you complete. Share outcomes and lessons learned (and only here might you need to ask for forgiveness!).
+    </p>
+  </li>
+  <li>
+    <p>
+      Scale volume with impact. Radiating intent matters most when those around you will be impacted most. Share broader more frequently in situations that demand it, and narrower otherwise.
+    </p>
+  </li>
+</ul>
 <section data-footnotes aria-label="footnotes">
   <ol>
     <li id="fn:1">
