@@ -5,7 +5,7 @@ date: 2022-01-09T23:49:50-08:00
 tags:
 ---
 
-The [ASCII] 7-bit character encoding is ubiquitous[^actually utf8] and
+The [ASCII] 7-bit character encoding is ubiquitous[^actually-utf8] and
 foundational to how computers talk to each other. It has an absolutely
 fascinating history that dates surprisingly far back. The ASCII standard started
 in 1963, and was iterated until 1986. ASCII was based on ITA2, a telegraph
@@ -52,7 +52,7 @@ the beginning of digital communication (the namesake for "baud" speed).
   everywhere, and all should work in your terminal! Try `⌃H` for a home-row
   oriented backspace.
 
-[^actually utf8]: These days it's really UTF-8 thats ubiquitous.
+[^actually-utf8]: These days it's really UTF-8 thats ubiquitous.
 
 [ascii]: https://en.wikipedia.org/wiki/ASCII
 [baudot code]: https://en.wikipedia.org/wiki/Baudot_code

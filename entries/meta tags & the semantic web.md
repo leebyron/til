@@ -32,8 +32,8 @@ along the way:
   use[^rdfa]. There is also [microformats] which still has some use, but is no
   longer preferred.
 - [Open Graph] is a standard proposed by Facebook which addressed the mess that
-  was the web at the time[^og deck]. It has a surprisingly broad schema and some
-  quirks[^og non standard]. Since then, [JSON-LD] has become the preferred tool.
+  was the web at the time[^og-deck]. It has a surprisingly broad schema and some
+  quirks[^og-non-standard]. Since then, [JSON-LD] has become the preferred tool.
   JSON is way easier for representing data, and there's a huge set of
   [available schema](https://schema.org/docs/schemas.html).
 - [Facebook] (and other Meta apps, like Messenger) use Open Graph with some
@@ -67,11 +67,11 @@ inconsistencies or other problems.
     licensing data in the footer! Check it out in the
     [structured data linter](http://linter.structured-data.org/?url=https:%2F%2Fleebyron.com%2Ftil%2Fmeta-tags-and-the-semantic-web%2F).
 
-[^og deck]: Facebook made an interesting
+[^og-deck]: Facebook made an interesting
 [deck on the design decisions](https://www.scribd.com/doc/30715288/The-Open-Graph-Protocol-Design-Decisions)
 of Open Graph that details these problems. It's an interesting read.
 
-[^og non standard]: Open Graph uses `<meta>` tags, but annoyingly uses a
+[^og-non-standard]: Open Graph uses `<meta>` tags, but annoyingly uses a
 `property=` attribute which was borrowed from RDF but is non standard for a
 `<meta>` tag. It ideally should have used [`name=`] (which Twitter cards does).
 Someone should have caught that in code review.
