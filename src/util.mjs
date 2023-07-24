@@ -1,6 +1,7 @@
 import * as child_process from 'child_process'
 import * as fs from 'fs/promises'
 import * as path from 'path'
+import * as readline from 'readline/promises'
 import * as url from 'url'
 import * as util from 'util'
 import { DateTime } from 'luxon'
@@ -52,7 +53,7 @@ export const fileExists = exists(stats => stats.isFile())
 export const directoryExists = exists(stats => stats.isDirectory())
 
 // Show a spinner while running an async `doing` function.
-export const spin = async (name, doing) => {
+export async function spin(name, doing) {
   if (!doing) [name, doing] = [doing, name]
   let frame = 0
   const SPINNER = [
@@ -80,6 +81,17 @@ export const spin = async (name, doing) => {
     clearSpinner()
     clearInterval(spinner)
   }
+}
+
+// Ask for confirmation before continuing
+export async function confirm(query) {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  })
+  const response = (await rl.question(query + ' (Y/n): ')).trim().toLowerCase()
+  rl.close()
+  return response === 'y' || response === ''
 }
 
 function handleInterrupt(event, code) {

@@ -14,6 +14,7 @@ import {
   exec,
   fileExists,
   spin,
+  confirm,
 } from './util.mjs'
 
 export default async function til(args) {
@@ -38,7 +39,8 @@ Other commands:
 
     \x1B[1mtil --help\x1B[0m        this lovely message right here
     \x1B[1mtil --build\x1B[0m       builds all documents to HTML files for distribution
-    \x1B[1mtil --sync\x1B[0m       ensures the local environment has all known changes
+    \x1B[1mtil --sync\x1B[0m        ensures the local environment has all known changes
+    \x1B[1mtil --gc\x1B[0m          removes unused files
 
 Examples:
 
@@ -70,6 +72,11 @@ open all in fzf.`)
       case '--sync':
         await syncRepo()
         return
+
+      case 'gc':
+      case '--gc':
+        await garbageCollect()
+        return
     }
 
   // Almost certainly a mistake
@@ -100,7 +107,7 @@ open all in fzf.`)
   const title = args.join(' ')
 
   // Make sure the repo is up to date before making any changes.
-  await syncRepo()
+  // await syncRepo()
 
   // Either coerce the promptname to a filename, or show a fzf.
   let filename = title
@@ -180,30 +187,7 @@ open all in fzf.`)
       await exec(`mkdir -p ${ENTRIES_PATH}`)
 
       // Get all existing tags
-      const allTags = await spin(
-        'Tagging',
-        async () =>
-          new Set(
-            (
-              await Promise.all(
-                (
-                  await fs.readdir(ENTRIES_PATH)
-                ).map(async filename =>
-                  yamlTags(
-                    yaml.parse(
-                      (
-                        await fs.readFile(
-                          path.resolve(ENTRIES_PATH, filename),
-                          'utf8'
-                        )
-                      ).match(/---\n(.+?)\n---\n/s)?.[1] || ''
-                    )?.tags
-                  )
-                )
-              )
-            ).flat()
-          )
-      )
+      const allTags = await spin('Tagging', getAllTags)
 
       // Write a template to a tmp file and fill it into the editor buffer.
       // This way you can quit without saving and not alter the repo state.
@@ -257,6 +241,9 @@ open all in fzf.`)
     }
     break
   }
+
+  // Clean up any unreferenced files
+  await garbageCollect()
 
   // Update the repo
   await spin('Publish', async () => {
@@ -356,6 +343,47 @@ async function syncRepo() {
       }
     )
   })
+}
+
+async function garbageCollect() {
+  const mediaRefs = new Set(
+    (await getAllEntries()).flatMap(({ contents }) =>
+      contents.match(/[0-9a-f]{8,32}\.[a-z]+/g) || []
+    )
+  )
+
+  const medias = new Set(await fs.readdir(MEDIA_PATH))
+
+  // Remove all medias which have a reference leaving only unreferenced media
+  // to remain.
+  for (const ref of mediaRefs) {
+    medias.delete(ref)
+  }
+
+  for (const filename of medias) {
+    if (await confirm(`Remove unused media ${filename}?`)) {
+      await fs.unlink(path.resolve(MEDIA_PATH, filename))
+    }
+  }
+}
+
+async function getAllEntries() {
+  return await Promise.all(
+    (await fs.readdir(ENTRIES_PATH)).map(async filename => ({
+      filename,
+      contents: await fs.readFile(path.resolve(ENTRIES_PATH, filename), 'utf8')
+    }))
+  )
+}
+
+async function getAllTags() {
+  return new Set(
+    (await getAllEntries()).flatMap(({ contents }) =>
+      yamlTags(
+        yaml.parse(contents.match(/---\n(.+?)\n---\n/s)?.[1] || '')?.tags
+      )
+    )
+  )
 }
 
 function sanitizeFilename(name) {
