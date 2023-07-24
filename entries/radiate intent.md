@@ -19,7 +19,7 @@ This is classic advice when operating in a large organization. You see a problem
 to be solved, have a bold solution in mind, and have everything necessary to
 take action, but there will be very real costs felt broadly. You think the
 tradeoff is worth it, but will your higher-ups agree? Or will they simply blame
-you for the costs without appreciating the larger problem solved?
+you for the costs without appreciating the problem solved?
 
 You likely have the best information on the decision but might assume you need
 permission to incur the costs. If your higher-ups assume the same then analysis
@@ -28,7 +28,7 @@ encouraged a bias to action; to do the right thing for the org whether or not
 they know it to be. If you're wrong or get flak for the costs: ask forgiveness;
 you acted in good faith.
 
-This advice is missing one critical thing: _radiating intent_.
+This good advice is missing one critical thing: _radiating intent_.
 
 While "forgiveness, not permission" considers what you're asking, it says
 nothing about what you're telling. If you anticipate needing to ask forgiveness
@@ -48,14 +48,14 @@ Elizabeth Ayer, in her
 on radiating intent explains why it's a superior approach (which I've
 editorialized):
 
-- Invites participation from those with critical information or a desire to help
-- If you're wrong, it gives a chance for someone to stop you _before_ hand
-- Leaves evidence of good faith action. Better to be seen as predictable than
+- Invites participation from those with critical info or desire to help
+- If you're wrong, it gives a chance for someone to stop you _before hand_
+- Leaves evidence of good faith. Better to be known as predictable than
   underhanded.
 - You keep responsibility and own the outcome, good or bad. Doesn’t transfer
   blame as seeking permission does.
-- Sets the example that bold action and taking risks is encouraged from
-  everyone, not just organizational higher-ups.
+- Sets the example that bold action is encouraged from everyone, not just
+  organizational higher-ups.
 
 If it's a good idea, go ahead and do it. But loudly say what you are doing along
 the way. _Radiate intent!_
