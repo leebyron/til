@@ -38,7 +38,7 @@ after taking action then its best to get ahead of it by explaining the decision
 clearly immediately after you've made it. Even better, explain the decision
 _before_ you make it then radiate it, sharing it far and wide.
 
-![intent](../media/d952123032e51b0f.svg)
+![intent](../media/222f597868763d3e.svg)
 
 With this frame in mind it becomes more clear that rather than shifting your ask
 from before until after you act, instead shift from asking to telling.
