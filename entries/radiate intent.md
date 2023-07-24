@@ -45,17 +45,18 @@ you do it.
 
 Elizabeth Ayer, in her
 [excellent article](https://medium.com/@ElizAyer/dont-ask-forgiveness-radiate-intent-d36fd22393a3)
-on radiating intent explains why it's a superior approach (which I've
+on radiating intent explains why it's superior to asking forgiveness (which I've
 editorialized):
 
-- Invites participation from those with critical info or desire to help
-- If you're wrong, it gives a chance for someone to stop you _before hand_
-- Leaves evidence of good faith. Better to be known as predictable than
-  underhanded.
-- You keep responsibility and own the outcome, good or bad. Doesn’t transfer
-  blame as seeking permission does.
-- Sets the example that bold action is encouraged from everyone, not just
-  organizational higher-ups.
+1. Invites participation from those with critical info or desire to help
+2. If wrong it gives a chance for someone to stop you as you begin. You're not
+   left waiting as when asking permission.
+3. Leaves evidence of good faith. Better to be known as predictable than
+   underhanded.
+4. Keep responsibility and own the outcome, good or bad. Doesn’t transfer blame
+   as asking permission does.
+5. Sets the example that bold action is encouraged from everyone, not just
+   organizational higher-ups.
 
 If it's a good idea, go ahead and do it. Say loudly what you are doing along the
 way. _Radiate intent!_
