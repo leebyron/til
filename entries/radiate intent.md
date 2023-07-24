@@ -5,8 +5,8 @@ date: 2023-07-24T12:02:27-07:00
 tags: leadership management
 ---
 
-> It's easier to ask forgiveness than it is to get permission.<br/> — Grace
-> Hopper[^1]
+> It's easier to ask forgiveness than it is to get permission.\
+> — Grace Hopper[^1]
 
 [^1]:
     This advice as quoted was popularized by all around badass Grace Hopper.
