@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-07-25T22:37:12.000+00:00</updated>
+  <updated>2023-07-25T22:44:15.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/intent/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/intent/"/>
     <published>2023-07-24T12:02:27.000-07:00</published>
-    <updated>2023-07-25T22:37:12.000+00:00</updated>
+    <updated>2023-07-25T22:44:15.000+00:00</updated>
     <title>radiate intent</title>
     <author>
       <name>Lee Byron</name>
@@ -32,7 +32,7 @@
   </p>
 </blockquote>
 <p>
-  This is classic advice when operating in a large organization. There’s a problem to be solved, you have a bold solution in mind and have everything necessary to take action, but there will be very real costs felt broadly. You think the tradeoff is worth it, but will your higher-ups agree?
+  This is classic advice when operating in a large organization. There’s a problem to be solved, you have a bold solution in mind and everything necessary to take action, but there will be very real costs felt broadly. You think the tradeoff is worth it, but will your higher-ups agree?
 </p>
 <p>
   You likely have the best information on the decision but might assume you need permission to incur the costs. If your higher-ups assume the same then analysis paralysis sets in. If it’s a good idea, <em>go ahead and do it</em>. Grace Hopper encouraged a bias to action; to do the right thing for the org whether or not they know it to be. If you’re wrong or get flak for the costs: ask forgiveness; you acted in good faith.
@@ -57,7 +57,7 @@
   </li>
   <li>
     <p>
-      If wrong it gives a chance for someone to stop you, however you’re not left waiting as when asking permission.
+      If wrong it gives a chance for someone to stop you without leaving you waiting to begin.
     </p>
   </li>
   <li>
@@ -79,9 +79,9 @@
 <p>
   If it’s a good idea, go ahead and do it. Say loudly what you are doing along the way. <em>Radiate intent!</em>
 </p>
-<h3 id="addendum-how-to-radiate-intent">
-  <a href="#addendum-how-to-radiate-intent" data-anchor>Addendum: How to Radiate Intent</a>
-</h3>
+<h2 id="how-to-radiate-intent">
+  <a href="#how-to-radiate-intent" data-anchor>How to radiate intent</a>
+</h2>
 <ul>
   <li>
     <p>
