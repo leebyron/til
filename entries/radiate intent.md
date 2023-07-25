@@ -19,12 +19,11 @@ to be solved, you have a bold solution in mind and everything necessary to take
 action, but there will be very real costs felt broadly. You think the tradeoff
 is worth it, but will your higher-ups agree?
 
-You likely have the best information on the decision but might assume you need
-permission to incur the costs. If your higher-ups assume the same then analysis
-paralysis sets in. If it's a good idea, _go ahead and do it_. Grace Hopper
-encouraged a bias to action; to do the right thing for the org whether or not
-they know it to be. If you're wrong or get flak for the costs: ask forgiveness;
-you acted in good faith.
+You might assume you need permission to incur the costs, but you likely have the
+best information on the decision. If it's a good idea, _go ahead and do it_.
+Grace Hopper encouraged doing the right thing whether or not your higher-ups
+know it to be. If you're wrong or get flak for the costs: ask forgiveness; you
+acted in good faith.
 
 This good advice is missing one critical thing: _radiating intent_.
 
