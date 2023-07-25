@@ -15,9 +15,9 @@ tags: leadership
     been organized human society.
 
 This is classic advice when operating in a large organization. There's a problem
-to be solved, you have a bold solution in mind and have everything necessary to
-take action, but there will be very real costs felt broadly. You think the
-tradeoff is worth it, but will your higher-ups agree?
+to be solved, you have a bold solution in mind and everything necessary to take
+action, but there will be very real costs felt broadly. You think the tradeoff
+is worth it, but will your higher-ups agree?
 
 You likely have the best information on the decision but might assume you need
 permission to incur the costs. If your higher-ups assume the same then analysis
@@ -39,8 +39,8 @@ Elizabeth Ayer, in her [excellent article][elizayer article] on radiating intent
 explains why it's superior to asking forgiveness (which I've editorialized):
 
 1. Invites participation from those with critical info or a desire to help.
-2. If wrong it gives a chance for someone to stop you, however you're not left
-   waiting as when asking permission.
+2. If wrong it gives a chance for someone to stop you without leaving you
+   waiting to begin.
 3. Leaves evidence of good faith. Better to be known as predictable than
    underhanded.
 4. Keep responsibility and own the outcome, good or bad. Doesn’t transfer blame
@@ -51,7 +51,7 @@ explains why it's superior to asking forgiveness (which I've editorialized):
 If it's a good idea, go ahead and do it. Say loudly what you are doing along the
 way. _Radiate intent!_
 
-### Addendum: How to Radiate Intent
+## How to radiate intent
 
 - **Write it down.** Start with a short description of what you intend to do,
   and why. Don't bury the lede. Expand your thinking from there: document
