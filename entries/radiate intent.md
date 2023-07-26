@@ -17,7 +17,7 @@ tags: leadership
 This is classic advice when operating in a large organization. There's a problem
 to be solved, you have a bold solution in mind and everything necessary to take
 action, but there will be very real costs felt broadly. You think the tradeoff
-is worth it, but will your higher-ups agree?
+is worth it, but will your team or higher-ups agree?
 
 You might assume you need permission to incur the costs, but you likely have the
 best information on the decision. If it's a good idea, _go ahead and do it_.
@@ -25,7 +25,12 @@ Grace Hopper encouraged doing the right thing whether or not your higher-ups
 know it to be. If you're wrong or get flak for the costs: ask forgiveness; you
 acted in good faith.
 
-This good advice is missing one critical thing: _radiating intent_.
+This good advice is missing one critical thing: _radiating intent_[^2].
+
+[^2]:
+    This idea of clearly stating intent was popularized by L. David Marquet who
+    in his book ["Turn the Ship Around!"][turn the ship around] suggests that
+    giving intent, not instructions, gives control and creates leaders.
 
 ![intention is telling not asking](../media/222f597868763d3e.svg)
 
@@ -77,3 +82,5 @@ way. _Radiate intent!_
 [forgive quote]: https://quoteinvestigator.com/2018/06/19/forgive/
 [elizayer article]:
   https://medium.com/@ElizAyer/dont-ask-forgiveness-radiate-intent-d36fd22393a3
+[turn the ship around]:
+  https://www.amazon.com/Turn-Ship-Around-Turning-Followers/dp/1591846404/
