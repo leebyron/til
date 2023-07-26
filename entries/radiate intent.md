@@ -30,22 +30,21 @@ This good advice is missing one critical thing: _radiating intent_.
 ![intention is telling not asking](../media/222f597868763d3e.svg)
 
 Rather than shifting from permission before to forgiveness after, shift from
-asking permission to telling as many as you can about your intention. Radiating
-intent is telling what you will do before you do it loudly and clearly so that
-no one will be surprised.
+asking permission to telling as many as you can about your intention. Radiate it
+loudly and clearly before you act so that no one will be surprised.
 
 Elizabeth Ayer, in her [excellent article][elizayer article] on radiating intent
 explains why it's superior to asking forgiveness (which I've editorialized):
 
 1. Invites participation from those with critical info or a desire to help.
 2. If wrong it gives a chance for someone to stop you without leaving you
-   waiting to begin.
+   waiting to begin as you control the timeline. 
 3. Leaves evidence of good faith. Better to be known as predictable than
    underhanded.
 4. Keep responsibility and own the outcome, good or bad. Doesn’t transfer blame
-   as asking permission does.
+   (or credit) as asking permission does.
 5. Sets the example that bold action is encouraged from everyone, not just
-   organizational higher-ups.
+   higher-ups.
 
 If it's a good idea, go ahead and do it. Say loudly what you are doing along the
 way. _Radiate intent!_
@@ -58,13 +57,13 @@ way. _Radiate intent!_
   create a single source of truth, and avoid repeating yourself.
 
 - **Make timelines clear.** When do you plan to begin? Are there significant
-  moments worth noting? If others want to participate they need to know when. If
-  there is urgency, make it known.
+  milestones worth noting? If others want to participate they need to know when.
+  If there is urgency, make it known.
 
 - **Share visibly and broadly.** Start in whatever channel your team uses most.
   Share in the channels your stakeholders use. If you're in a smaller
-  organization, just send it to everyone. As you share ask "can you think of
-  anyone who should know about this?"
+  organization, just send it to everyone. As you share ask "who else should
+  know about this?"
 
 - **Share often.** Share when you decide on your intention. Share a reminder.
   Share when you begin. Share when you reach milestones. Share when you
