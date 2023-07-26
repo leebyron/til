@@ -38,7 +38,7 @@ explains why it's superior to asking forgiveness (which I've editorialized):
 
 1. Invites participation from those with critical info or a desire to help.
 2. If wrong it gives a chance for someone to stop you without leaving you
-   waiting to begin as you control the timeline. 
+   waiting to begin. You control the timeline. 
 3. Leaves evidence of good faith. Better to be known as predictable than
    underhanded.
 4. Keep responsibility and own the outcome, good or bad. Doesn’t transfer blame
@@ -67,8 +67,8 @@ way. _Radiate intent!_
 
 - **Share often.** Share when you decide on your intention. Share a reminder.
   Share when you begin. Share when you reach milestones. Share when you
-  complete. Share outcomes and lessons learned (and only here might you need to
-  ask for forgiveness!).
+  complete. Share outcomes and lessons learned (and only then might you ask
+  forgiveness!)
 
 - **Scale volume with impact.** Radiating intent matters most when those around
   you will be impacted most. Share broader and more frequently in situations
