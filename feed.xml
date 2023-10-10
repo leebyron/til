@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-07-31T18:18:17.000+00:00</updated>
+  <updated>2023-10-10T19:20:45.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -15,6 +15,53 @@
   </author>
   <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/pace-layers/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/pace-layers/"/>
+    <published>2023-10-10T11:51:58.000-07:00</published>
+    <updated>2023-10-10T19:20:45.000+00:00</updated>
+    <title>pace layers</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="design"/>
+    <content type="html"><![CDATA[<p>
+  Stewart Brand<a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>, in his book The Clock of Long Now, described the concept of pace layers: that within a society different groups move at different speeds. The relationship between layers creates both internal tension and desirable systemic effects, allowing for society to innovate and disrupt while simultaneously providing consistency and stability.
+</p>
+<p>
+  <img src="../media/76b976f9e5a85ece.jpg" alt="pace_layering">
+</p>
+<p>
+  This is a mental model and framework for understanding society at large, but applies equally well for many large dynamic systems of people, software, architecture, and nature. Faster layers tend to be at the visible surface and change discontinuously, innovating when faced with new input. Slower layers are more powerful, integrating and codifying lessons from faster layers while providing inertial continuity that constrains them.
+</p>
+<p>
+  <img src="../media/9cd64fbfb36b5e1f.jpg" alt="pace_layers-slide2">
+</p>
+<p>
+  When struggling to weigh fast with slow, balancing allowing change with providing continuity, consider how Pace Layers can help you think about the system you’re working within.
+</p>
+<p>
+  To change is to lose identity; yet to change is to be alive<a href="#fn:2" id="fn:2.ref" data-footnote-ref aria-label="note"><sup>2</sup></a>
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Stewart_Brand" target="_blank">Stewart Brand</a> is an overall fascinating and polarizing person. 1960s San Francisco counter-culture leader, editor of the Whole Earth Catalog, president of the Long Now Foundation, and friend of Douglas Engelbart, Steve Jobs, Buckminster Fuller, and Brian Eno.
+      </p>
+      <a href="#fn:1.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+    <li id="fn:2">
+      <p>
+        This and many other great moments from Brand’s <a href="https://longnow.org/ideas/pace-layers-stewart-brand-paul-saffos-conversations-at-the-interval/" target="_blank">lecture</a> at The Long Now’s Interval.
+      </p>
+      <a href="#fn:2.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2023 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/intent/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/intent/"/>
