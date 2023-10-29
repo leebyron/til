@@ -83,6 +83,10 @@ export async function spin(name, doing) {
   }
 }
 
+export function currentYear() {
+  return new Date().getFullYear().toString()
+}
+
 // Ask for confirmation before continuing
 export async function confirm(query) {
   const rl = readline.createInterface({
