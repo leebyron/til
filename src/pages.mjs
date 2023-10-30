@@ -293,6 +293,12 @@ function License({ year, children }) {
 
     ' ⸱ ',
 
+    // Designed by Lee Byron
+    'designed by ',
+    h('a', { href: 'https://github.com/leebyron/til' }, 'Lee Byron'),
+
+    ' ⸱ ',
+
     // license
     'licensed under ',
     h('a', {
@@ -310,7 +316,6 @@ function License({ year, children }) {
         'aria-hidden': true
       })
     ),
-
     ' ⸱ ',
 
     h('a', { href: canonicalPath('/feed.xml'), rel: 'alternate feed', type: 'application/atom+xml' }, 'feed')
