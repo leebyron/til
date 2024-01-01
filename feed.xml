@@ -326,11 +326,9 @@
 <a href="https://leebyron.com/4000/" target="_blank">
   <figure>
     <img src="../media/269d4ece86e479ae.png" style="box-shadow: 0 0.5rem 1rem #00000022;">
-    <p>
-      <figcaption>
-        leebyron.com/4000
-      </figcaption>
-    </p>
+    <figcaption>
+      leebyron.com/4000
+    </figcaption>
   </figure>
 </a>]]></content>
     <rights>© 2023 Lee Byron ⸱ licensed under CC BY 4.0</rights>
@@ -389,7 +387,7 @@
 <p>
   Install it with <code>brew</code>, launch it, then add it to “Login Items” in System Preferences to ensure it launches automatically.
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install --cask notunes</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">brew</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">install</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--cask</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">notunes</span>
 </span></code></pre>]]></content>
     <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
@@ -613,7 +611,7 @@ To push the current branch and set the remote as upstream, use
 <p>
   There are quite a few nice details beyond this, but that’s the gist. Oh, and it’s open source and can be installed with brew:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install meetingbar</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">brew</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">install</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">meetingbar</span>
 </span></code></pre>]]></content>
     <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
@@ -768,7 +766,7 @@ To push the current branch and set the remote as upstream, use
 <p>
   For example, while <code>git show</code> is useful, sometimes you just want the last commit information and not the entire contents of the commit. Consider adding <code>git last</code>
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.last </span><span style="color:#22863A;">'log -1 HEAD'</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.last</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'log -1 HEAD'</span>
 </span></code></pre>
 <p>
   Now running <code>git last</code> is equivalent to <code>git log -1 HEAD</code>! This gets included into git help and shell completion.
@@ -776,23 +774,23 @@ To push the current branch and set the remote as upstream, use
 <p>
   Another useful alias is <code>git unstage</code> to remove a file from the staged commit, and <code>git discard</code> to remove the changes altogether.
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.unstage </span><span style="color:#22863A;">'restore --staged'</span>
-</span><span data-line="2"><span style="color:#24292EFF;">git config --global alias.discard </span><span style="color:#22863A;">'checkout HEAD --'</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.unstage</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'restore --staged'</span>
+</span><span data-line="2"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.discard</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'checkout HEAD --'</span>
 </span></code></pre>
 <p>
   My most used alias is one which stages all changes and then prints the current status, which I simply call <code>git s</code>. To run multiple commands, prefix with <code>!</code> so the alias runs as a shell script.
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.s </span><span style="color:#22863A;">'!git add -A; git status'</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.s</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'!git add -A; git status'</span>
 </span></code></pre>
 <p>
   I use this so frequently, that I have an alias <code>gs</code> set up in my shell config:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">alias</span><span style="color:#24292EFF;"> gs=</span><span style="color:#22863A;">'git s'</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#D32F2F;">alias</span><span style="color:#24292EFF;"> gs</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">'git s'</span>
 </span></code></pre>
 <p>
   Finally, you might want more complex positional arguments. To do this, define then invoke a shell function. I have an alias <code>git fixup</code> which has almost the same API as <code>git commit</code> but takes an existing commit as the first argument. That will apply the staged change to that commit and rebase all later commits atop it. Useful when working in a stacked PR and fixing an issue in one of the earliest commits:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.fixup </span><span style="color:#22863A;">'!f() { TARGET=$(git rev-parse &quot;$1&quot;); git commit --fixup=$TARGET ${@:2} &amp;&amp; EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f'</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.fixup</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'!f() { TARGET=$(git rev-parse &quot;$1&quot;); git commit --fixup=$TARGET ${@:2} &amp;&amp; EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f'</span>
 </span></code></pre>]]></content>
     <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
@@ -1281,7 +1279,7 @@ To push the current branch and set the remote as upstream, use
 <p>
   Do yourself a favor and install it:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install ripgrep</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">brew</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">install</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">ripgrep</span>
 </span></code></pre>
 <p>
   Want to learn more? Check out the <a href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep</a> project page, this very <a href="https://blog.burntsushi.net/ripgrep/" target="_blank">in depth article</a> explaining why it’s fast and how it works, or this fantastic resource <a href="https://beyondgrep.com/feature-comparison/" target="_blank">comparing many grep replacements</a>.
@@ -1336,7 +1334,7 @@ To push the current branch and set the remote as upstream, use
 <p>
   Learn more about <code>bat</code> at <a href="https://github.com/sharkdp/bat" target="_blank">github.com/sharkdp/bat</a>, and install with <a href="https://formulae.brew.sh/formula/bat" target="_blank">Homebrew</a>:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">brew install bat</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">brew</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">install</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">bat</span>
 </span></code></pre>
 <p>
   One more thing. Combine <code>bat</code> with <code>prettier</code> as <a href="https://github.com/eth-p/bat-extras/blob/master/doc/prettybat.md" target="_blank"><code>prettybat</code></a>, or with <code>man</code> as <a href="https://github.com/eth-p/bat-extras/blob/master/doc/batman.md" target="_blank"><code>batman</code></a>, a few of many bonus tools that comes with <a href="https://github.com/eth-p/bat-extras/blob/master/README.md#installation" target="_blank"><code>bat-extras</code></a>.
@@ -1391,12 +1389,12 @@ To push the current branch and set the remote as upstream, use
 <p>
   Finally, tell launch control about this service. You’ll need to know your uid number (which you can find by running the <code>id</code> command). Replace “500” here with whatever your uid happens to be.
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootstrap gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">launchctl</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">bootstrap</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">gui/500/</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
 </span></code></pre>
 <p>
   To remove this service, replace <code>bootstrap</code> with <code>bootout</code>:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootout gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">launchctl</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">bootout</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">gui/500/</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
 </span></code></pre>]]></content>
     <rights>© 2022 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
@@ -1490,12 +1488,12 @@ To push the current branch and set the remote as upstream, use
 <p>
   To do so for a specific app:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.googlecode.iterm2 ApplePressAndHoldEnabled -bool </span><span style="color:#6F42C1;">false</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">com.googlecode.iterm2</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">ApplePressAndHoldEnabled</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-bool</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">false</span>
 </span></code></pre>
 <p>
   Or to disable system wide:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write -g ApplePressAndHoldEnabled -bool </span><span style="color:#6F42C1;">false</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-g</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">ApplePressAndHoldEnabled</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-bool</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">false</span>
 </span></code></pre>
 <p>
   After changing this setting, you need to restart the app or sign in session.
@@ -1597,8 +1595,8 @@ To push the current branch and set the remote as upstream, use
     <p>
       Disable the Desktop folder from the desktop, and restart Finder
     </p>
-    <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
-</span><span data-line="2"><span style="color:#24292EFF;">Killall Finder</span>
+    <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">com.apple.finder</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">CreateDesktop</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">false</span>
+</span><span data-line="2"><span style="color:#6F42C1;">Killall</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">Finder</span>
 </span></code></pre>
   </li>
   <li>
@@ -1610,9 +1608,9 @@ To push the current branch and set the remote as upstream, use
 <p>
   You can’t actually delete the Desktop folder itself, because Finder will just recreate it upon finding it missing. You can instead render it useless by symlinking it back to your home directory<a href="#fn:symlink" id="fn:symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-</span><span data-line="2"><span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-</span><span data-line="3"><span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">rm</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-rf</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
+</span><span data-line="2"><span style="color:#6F42C1;">ln</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-s</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
+</span><span data-line="3"><span style="color:#6F42C1;">sudo</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">chflags</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-h</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">schg</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span></code></pre>
 <p>
   This last step stops Finder from replacing the symlink with an empty directory.
@@ -1684,12 +1682,12 @@ To push the current branch and set the remote as upstream, use
 <p>
   Alternatively, you can use the <code>defaults</code> terminal command:
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.apple.screencapture location </span><span style="color:#22863A;">&quot;~/Dropbox/Screenshots&quot;</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">com.apple.screencapture</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">location</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">&quot;~/Dropbox/Screenshots&quot;</span>
 </span></code></pre>
 <p>
   To make sure it worked (and check your other settings):
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults </span><span style="color:#6F42C1;">read</span><span style="color:#24292EFF;"> com.apple.screencapture</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">read</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">com.apple.screencapture</span>
 </span></code></pre>
 <p>
   <img src="../media/5d29319e337e0664.png" alt="Screenshot.app Options">

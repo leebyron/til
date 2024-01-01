@@ -90,12 +90,12 @@
       <p>
         Finally, tell launch control about this service. You’ll need to know your uid number (which you can find by running the <code>id</code> command). Replace “500” here with whatever your uid happens to be.
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootstrap gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">launchctl</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">bootstrap</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">gui/500/</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
 </span></code></pre>
       <p>
         To remove this service, replace <code>bootstrap</code> with <code>bootout</code>:
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">launchctl bootout gui/500/ </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">launchctl</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">bootout</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">gui/500/</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Library/LaunchAgents/com.leebyron.website-agent.plist</span>
 </span></code></pre>
     </article>
     <footer>

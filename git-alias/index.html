@@ -59,7 +59,7 @@
       <p>
         For example, while <code>git show</code> is useful, sometimes you just want the last commit information and not the entire contents of the commit. Consider adding <code>git last</code>
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.last </span><span style="color:#22863A;">'log -1 HEAD'</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.last</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'log -1 HEAD'</span>
 </span></code></pre>
       <p>
         Now running <code>git last</code> is equivalent to <code>git log -1 HEAD</code>! This gets included into git help and shell completion.
@@ -67,23 +67,23 @@
       <p>
         Another useful alias is <code>git unstage</code> to remove a file from the staged commit, and <code>git discard</code> to remove the changes altogether.
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.unstage </span><span style="color:#22863A;">'restore --staged'</span>
-</span><span data-line="2"><span style="color:#24292EFF;">git config --global alias.discard </span><span style="color:#22863A;">'checkout HEAD --'</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.unstage</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'restore --staged'</span>
+</span><span data-line="2"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.discard</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'checkout HEAD --'</span>
 </span></code></pre>
       <p>
         My most used alias is one which stages all changes and then prints the current status, which I simply call <code>git s</code>. To run multiple commands, prefix with <code>!</code> so the alias runs as a shell script.
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.s </span><span style="color:#22863A;">'!git add -A; git status'</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.s</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'!git add -A; git status'</span>
 </span></code></pre>
       <p>
         I use this so frequently, that I have an alias <code>gs</code> set up in my shell config:
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">alias</span><span style="color:#24292EFF;"> gs=</span><span style="color:#22863A;">'git s'</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#D32F2F;">alias</span><span style="color:#24292EFF;"> gs</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">'git s'</span>
 </span></code></pre>
       <p>
         Finally, you might want more complex positional arguments. To do this, define then invoke a shell function. I have an alias <code>git fixup</code> which has almost the same API as <code>git commit</code> but takes an existing commit as the first argument. That will apply the staged change to that commit and rebase all later commits atop it. Useful when working in a stacked PR and fixing an issue in one of the earliest commits:
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">git config --global alias.fixup </span><span style="color:#22863A;">'!f() { TARGET=$(git rev-parse &quot;$1&quot;); git commit --fixup=$TARGET ${@:2} &amp;&amp; EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f'</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">git</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">config</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">--global</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">alias.fixup</span><span style="color:#24292EFF;"> </span><span style="color:#22863A;">'!f() { TARGET=$(git rev-parse &quot;$1&quot;); git commit --fixup=$TARGET ${@:2} &amp;&amp; EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f'</span>
 </span></code></pre>
     </article>
     <footer>

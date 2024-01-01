@@ -59,12 +59,12 @@
       <p>
         To do so for a specific app:
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.googlecode.iterm2 ApplePressAndHoldEnabled -bool </span><span style="color:#6F42C1;">false</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">com.googlecode.iterm2</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">ApplePressAndHoldEnabled</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-bool</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">false</span>
 </span></code></pre>
       <p>
         Or to disable system wide:
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write -g ApplePressAndHoldEnabled -bool </span><span style="color:#6F42C1;">false</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-g</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">ApplePressAndHoldEnabled</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-bool</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">false</span>
 </span></code></pre>
       <p>
         After changing this setting, you need to restart the app or sign in session.

@@ -74,8 +74,8 @@
           <p>
             Disable the Desktop folder from the desktop, and restart Finder
           </p>
-          <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">defaults write com.apple.finder CreateDesktop </span><span style="color:#6F42C1;">false</span>
-</span><span data-line="2"><span style="color:#24292EFF;">Killall Finder</span>
+          <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">defaults</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">write</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">com.apple.finder</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">CreateDesktop</span><span style="color:#24292EFF;"> </span><span style="color:#1976D2;">false</span>
+</span><span data-line="2"><span style="color:#6F42C1;">Killall</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">Finder</span>
 </span></code></pre>
         </li>
         <li>
@@ -87,9 +87,9 @@
       <p>
         You can’t actually delete the Desktop folder itself, because Finder will just recreate it upon finding it missing. You can instead render it useless by symlinking it back to your home directory<a href="#fn:symlink" id="fn:symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#24292EFF;">rm -rf </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-</span><span data-line="2"><span style="color:#24292EFF;">ln -s </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;"> </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
-</span><span data-line="3"><span style="color:#24292EFF;">sudo chflags -h schg </span><span style="color:#D32F2F;">~</span><span style="color:#24292EFF;">/Desktop</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">rm</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-rf</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
+</span><span data-line="2"><span style="color:#6F42C1;">ln</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-s</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
+</span><span data-line="3"><span style="color:#6F42C1;">sudo</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">chflags</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-h</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">schg</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span></code></pre>
       <p>
         This last step stops Finder from replacing the symlink with an empty directory.
