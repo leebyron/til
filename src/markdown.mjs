@@ -18,6 +18,7 @@ export function parseMarkdown(markdown) {
     .use(remarkFrontmatter)
     .use(remarkGfm)
     .parse(markdown)
+  mdxUnwrapP(ast)
   yamlFrontmatter(ast)
   smartypants(ast)
   collapseWhitespace(ast)
@@ -33,7 +34,25 @@ function remarkMdx() {
   const add = (field, value) =>
     (data[field] ? data[field] : (data[field] = [])).push(value)
   add('micromarkExtensions', mdx())
-  add('fromMarkdownExtensions', mdxFromMarkdown)
+  add('fromMarkdownExtensions', mdxFromMarkdown())
+}
+
+function mdxUnwrapP(ast) {
+  // https://github.com/mdx-js/mdx/issues/1451
+  visit(ast, (node, _, parent) => {
+    if (
+      parent?.type === 'mdxJsxFlowElement' &&
+      node.type === 'paragraph' &&
+      node.children.length === 1 &&
+      node.children.every(
+        child =>
+          child.type === 'mdxJsxTextElement' ||
+          child.type === 'mdxTextExpression'
+      )
+    ) {
+      return node.children
+    }
+  })
 }
 
 function yamlFrontmatter(ast) {
@@ -200,7 +219,7 @@ function slugify(str) {
 }
 
 function visit(ast, mapFn) {
-  return dst(ast)[0]
+  return dst(ast, 0)[0]
   function dst(node, index, parent) {
     const rtn = mapFn(node, index, parent)
     if (rtn === undefined) {

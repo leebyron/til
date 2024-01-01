@@ -7,23 +7,25 @@
     "install": "mkdir -p \"$HOME/.local/bin\"; ln -sf \"$PWD/bin/til\" \"$HOME/.local/bin/til\""
   },
   "prettier": {
-    "semi": false
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid"
   },
   "dependencies": {
     "context-eval": "^0.1.0",
     "hyperjsx": "^1.0.12",
-    "luxon": "^2.3.0",
-    "mdast-util-mdx": "^1.1.0",
-    "micromark-extension-mdx": "^1.0.0",
-    "prettier": "^2.5.1",
+    "luxon": "^3.4.4",
+    "mdast-util-mdx": "^3.0.0",
+    "micromark-extension-mdx": "^2.1.0",
+    "prettier": "^3.1.1",
     "remark-comment": "^1.0.0",
-    "remark-frontmatter": "^4.0.1",
-    "remark-gfm": "^3.0.1",
-    "remark-parse": "^10.0.1",
-    "retext": "^8.1.0",
-    "retext-smartypants": "^5.1.0",
-    "shiki": "^0.10.0",
-    "unified": "^10.1.1",
-    "yaml": "^1.10.2"
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "retext": "^9.0.0",
+    "retext-smartypants": "^6.0.0",
+    "shiki": "^0.14.7",
+    "unified": "^11.0.4",
+    "yaml": "^2.3.4"
   }
 }
