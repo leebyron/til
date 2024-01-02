@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2023-10-10T19:20:45.000+00:00</updated>
+  <updated>2024-01-02T05:47:46.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -15,6 +15,50 @@
   </author>
   <rights>© 2024 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/resolutions/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/resolutions/"/>
+    <published>2024-01-01T20:54:31.000-08:00</published>
+    <updated>2024-01-02T05:47:46.000+00:00</updated>
+    <title>resolutions</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="personal,"/>
+    <category term="habits"/>
+    <content type="html"><![CDATA[<p>
+  Most New Year’s resolutions fail. Gym memberships spike in January followed by a surge of cancellations weeks later. There’s some <a href="https://pubmed.ncbi.nlm.nih.gov/2980864/" target="_blank">research</a> suggesting that fewer than one in five have resolutions that last through a second year. Creating new habits is hard, kicking existing ones is even harder.
+</p>
+<p>
+  I’m approaching 2024 with two variations on a resolution: a motif and fortnights.
+</p>
+<h2 id="motif">
+  <a href="#motif" data-anchor>Motif</a>
+</h2>
+<p>
+  I’m choosing a single word as a motif representing the year ahead. It should be somewhat aspirational and intentionally non-concrete. It is not a goal in itself but should guide decision making, inform habits and goals. It’s intentional <a href="https://en.wikipedia.org/wiki/Priming_(psychology)" target="_blank">psychological priming</a>.
+</p>
+<p>
+  This year’s motif is <em>restoration</em>.
+</p>
+<p>
+  Restoration is meant to be interpreted broadly. It involves anything aimed at renewing or revitalizing myself physically, mentally, emotionally, or spiritually, going beyond mere rest to replenish energy, balance, and overall well-being.
+</p>
+<h2 id="fortnights">
+  <a href="#fortnights" data-anchor>Fortnights</a>
+</h2>
+<p>
+  Rather than choose one habit or goal for the year, I’m taking on a new one every fortnight, or every two weeks. Each fortnight’s goal will relate to the restoration motif. I’m going to approach this as a scientist. What is restorative to me? The goal is not to change my habits (though I hope at least a few stick) but to learn, fail often, and attempt to answer this question.
+</p>
+<p>
+  I’ll do six of these experiments per season, with one week breaks interspersed.
+</p>
+<p>
+  Have ideas for what I should try? <a href="https://leebyron.com" target="_blank">Get in touch</a>!
+</p>]]></content>
+    <rights>© 2024 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/pace-layers/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/pace-layers/"/>
