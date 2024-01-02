@@ -39,3 +39,26 @@ few stick) but to learn, fail often, and attempt to answer this question.
 I'll do six of these experiments per season, with one week breaks interspersed.
 
 Have ideas for what I should try? [Get in touch](https://leebyron.com)!
+
+## Addendum: Restoration framework
+
+To help explore ideas for restoration experiments, I've created a five-axis
+framework inspired by
+[Maslow's Heirarchy](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs),
+[Ikigai](https://leebyron.com/til/ikigai/), and
+[Dimensional Wellness](<https://en.wikipedia.org/wiki/Wellness_(alternative_medicine)>):
+
+1. **Physiological**: Rejuvenate the body and replenish energy. Includes sleep,
+   diet, and fitness.
+2. **Cognitive**: Reduce cognitive stress and fatigue, enhance executive
+   function, foster mental well-being, satisfy creativity and curiosity.
+3. **Sensory**: Reduce external stress, enrich senses, seek beauty, and create
+   or be in harmonious environments.
+4. **Social-emotional**: Foster emotional resilience, social belonging, high
+   esteem and self-respect.
+5. **Purpose**: Be impactful, grow professionally, parent well.
+
+I'll interpret each axis along an _active/passive_ spectrum. Each will be
+interpreted in slightly different ways, but active actions should push
+boundaries and present worthwhile challenges while passive ones should be
+restful and at times indulgent.
