@@ -273,7 +273,7 @@ open all in fzf.`)
     // format the file first
     const prettier = path.resolve(TIL_PATH, 'node_modules/.bin/prettier')
     await run(
-      `${prettier} -w --loglevel silent --parser mdx --prose-wrap always --trailing-comma none "${quot(
+      `${prettier} -w --log-level silent --parser mdx --prose-wrap always --trailing-comma none "${quot(
         filepath
       )}"`
     )
