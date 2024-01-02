@@ -1,0 +1,16 @@
+export default {
+  canonicalRoot: "https://leebyron.com/til/",
+  title: "til",
+  githubRepo: "leebyron/til",
+  authorName: "Lee Byron",
+  authorURL: "https://leebyron.com",
+  pageTitle: `Things I've Learned / Lee Byron`,
+  ogTitle: `Lee Byron / til`,
+  ogDescription: `Things I've Learned: brief blurbs on miscellaneous matter.`,
+  twitterTitle: `Lee Byron / til: brief blurbs on miscellaneous matter.`,
+  twitterCreator: "@leeb",
+  googleName: `Things I've Learned`,
+  feedTitle: `Lee Byron / til`,
+  feedSubtitle: `Things I've Learned: brief blurbs on miscellaneous matter.`,
+  gtag: "UA-61714711-1",
+}

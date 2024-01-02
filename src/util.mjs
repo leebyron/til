@@ -26,6 +26,10 @@ export function dateTo3339(date) {
     .toISO({ suppressMilliseconds: true })
 }
 
+export function currentYear() {
+  return DateTime.now().year.toString()
+}
+
 // Run a command and print the results to stdout
 export const run = async (...args) => {
   const result = await exec(...args)
