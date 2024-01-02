@@ -1,23 +1,16 @@
-export const Config = (() => {
-  const firstName = "Lee"
-  const lastName = "Byron"
-
-  const fullName = firstName + " " + lastName
-  const domainRoot = "https://leebyron.com"
-  const canonicalRoot = domainRoot + "/til/"
-  const twitterAt = "@leeb"
-
-  const githubUsername = "leebyron"
-  const githubRepo = "til"
-
-  return {
-    FIRST_NAME: firstName,
-    LAST_NAME: lastName,
-    FULL_NAME: fullName,
-    DOMAIN_ROOT: domainRoot,
-    CANONICAL_ROOT: canonicalRoot,
-    TWITTER_AT: twitterAt,
-    GITHUB_USERNAME: githubUsername,
-    GITHUB_REPO: githubRepo,
-  }
-})()
+export default {
+  canonicalRoot: "https://leebyron.com/til/",
+  title: "til",
+  githubRepo: "leebyron/til",
+  authorName: "Lee Byron",
+  authorURL: "https://leebyron.com",
+  pageTitle: `Things I've Learned / Lee Byron`,
+  ogTitle: `Lee Byron / til`,
+  ogDescription: `Things I've Learned: brief blurbs on miscellaneous matter.`,
+  twitterTitle: `Lee Byron / til: brief blurbs on miscellaneous matter.`,
+  twitterCreator: "@leeb",
+  googleName: `Things I've Learned`,
+  feedTitle: `Lee Byron / til`,
+  feedSubtitle: `Things I've Learned: brief blurbs on miscellaneous matter.`,
+  gtag: "UA-61714711-1",
+}

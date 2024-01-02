@@ -3,15 +3,15 @@ import { resolve } from 'url'
 import { render, h, createContext, useContext } from 'hyperjsx'
 import { mdjsx } from './mdjsx.mjs'
 import { findNode, textContent } from './markdown.mjs'
-import { Config } from '../config.mjs'
 import { currentYear } from './util.mjs'
+
+import Config from '../config.mjs'
 
 const relativeUrl =
   // Adds back trailing / which resolve() removes.
   (from, to) => relative(from, to) + (to.endsWith('/') ? '/' : '')
 
-const canonicalRoot = Config.CANONICAL_ROOT
-const canonicalPath = to => resolve(canonicalRoot, relativeUrl('/', to))
+const canonicalPath = to => resolve(Config.canonicalRoot, relativeUrl('/', to))
 const Path = createContext()
 const useCanonical = () => canonicalPath(useContext(Path))
 const useRelPath = to => relativeUrl(useContext(Path), to)
@@ -20,24 +20,24 @@ export function Index({ frontmatters, Content }) {
   return (
     h(Path, { value: '/' },
       h(Document,
-        h('title', `Things I\'ve Learned / ${Config.FULL_NAME}`),
+        h('title', Config.pageTitle),
         ...OpenGraph({
-          'og:url': canonicalRoot,
-          'og:title': `${Config.FULL_NAME} / til`,
-          'og:description': 'Things I\'ve Learned: brief blurbs on miscellaneous matter.',
+          'og:url': Config.canonicalRoot,
+          'og:title': Config.ogTitle,
+          'og:description': Config.ogDescription,
           'twitter:card': 'summary',
-          'twitter:title': `${Config.FULL_NAME} / til: brief blurbs on miscellaneous matter.`,
-          'twitter:creator':  Config.TWITTER_AT,
+          'twitter:title': Config.twitterTitle,
+          'twitter:creator': Config.twitterCreator,
         }),
         JSONLD({
           '@type': 'Collection',
-          name: 'Things I\'ve Learned',
+          name: Config.googleName,
           author: {
             '@type': 'Person',
-            name: Config.FULL_NAME,
-            url: Config.DOMAIN_ROOT
+            name: Config.authorName,
+            url: Config.authorURL,
           },
-          url: canonicalRoot,
+          url: Config.canonicalRoot,
           collectionSize: frontmatters.length,
           license: 'https://creativecommons.org/licenses/by/4.0/',
         }),
@@ -59,7 +59,7 @@ export function Index({ frontmatters, Content }) {
           )
         ),
         h('footer',
-          h(License, { year: currentYear()})
+          h(License, { year: currentYear() })
         )
       )
     )
@@ -71,14 +71,14 @@ export function Feed({ entries }) {
     h('feed', { xmlns: 'http://www.w3.org/2005/Atom', 'xml:lang': 'en-us' },
       h('id', canonicalPath('/feed.xml')),
       h('link', { rel: 'self', type: 'application/atom+xml', href: canonicalPath('/feed.xml') }),
-      h('link', { rel: 'alternate', type: 'text/html', href: canonicalRoot }),
+      h('link', { rel: 'alternate', type: 'text/html', href: Config.canonicalRoot }),
       h('updated', entries.map(e => e.lastModified).sort((a, b) => a - b).pop().toISO()),
-      h('title', `${Config.FULL_NAME} / til`),
-      h('subtitle', 'Things I\'ve Learned: brief blurbs on miscellaneous matter.'),
+      h('title', Config.feedTitle),
+      h('subtitle', Config.feedSubtitle),
       h('icon', canonicalPath('/assets/favicon.png')),
-      h('author', h('name', Config.FULL_NAME), h('uri', Config.DOMAIN_ROOT)),
-      h('rights', `© ${currentYear()} ${Config.FULL_NAME} ⸱ licensed under CC BY 4.0`),
-      h('generator', { uri: `https://github.com/${Config.GITHUB_USERNAME}/${Config.GITHUB_REPO}` }, 'til'),
+      h('author', h('name', Config.authorName), h('uri', Config.authorURL)),
+      h('rights', `© ${currentYear()} ${Config.authorName} ⸱ licensed under CC BY 4.0`),
+      h('generator', { uri: `https://github.com/${Config.githubRepo}` }, 'til'),
       entries.map(({ markdown, frontmatter, lastModified }) =>
         h('entry',
           h('id', canonicalPath(`/${frontmatter.permalink}/`)),
@@ -86,13 +86,10 @@ export function Feed({ entries }) {
           h('published', frontmatter.date.toISO()),
           h('updated', lastModified.toISO()),
           h('title', frontmatter.title),
-          h('author', h('name', Config.FULL_NAME), h('uri', Config.DOMAIN_ROOT)),
+          h('author', h('name', Config.authorName), h('uri', Config.authorURL)),
           frontmatter.tags.map(tag => h('category', { term: tag })),
-          h('content', {
-            type: 'html', innerHTML: `<![CDATA[${render(mdjsx(markdown, { components }))
-              }]]>`
-          }),
-          h('rights', `© ${frontmatter.date.year} ${Config.FULL_NAME} ⸱ licensed under CC BY 4.0`)
+          h('content', { type: 'html', innerHTML: `<![CDATA[${render(mdjsx(markdown, { components }))}]]>` }),
+          h('rights', `© ${frontmatter.date.year} ${Config.authorName} ⸱ licensed under CC BY 4.0`),
         )
       )
     )
@@ -102,7 +99,7 @@ export function Feed({ entries }) {
 export function Page({ filename, lastModified, frontmatter, markdown, Content, prev, next }) {
   const path = `/${frontmatter.permalink}/`
   const canonicalUrl = canonicalPath(path)
-  const pageTitle = `til / ${frontmatter.title} — ${Config.FULL_NAME}`
+  const pageTitle = `${Config.title} / ${frontmatter.title} — ${Config.authorName}`
   const description = textContent(findNode(markdown, 'paragraph'))
   const imageNode = findNode(markdown, 'image')
   const image = imageNode && resolve(canonicalUrl, imageNode.url)
@@ -122,12 +119,11 @@ export function Page({ filename, lastModified, frontmatter, markdown, Content, p
           'og:image': image,
           'og:image:alt': imageNode?.alt,
           'og:type': 'article',
-          'article:author:first_name': Config.FIRST_NAME,
-          'article:author:last_name': Config.LAST_NAME,
+          'article:author': Config.authorURL,
           'article:published_time': datePublished,
           'article:modified_time': dateModified,
           'twitter:card': 'summary',
-          'twitter:creator': Config.TWITTER_AT,
+          'twitter:creator': Config.twitterCreator,
         }),
         JSONLD({
           '@type': 'LearningResource',
@@ -136,19 +132,19 @@ export function Page({ filename, lastModified, frontmatter, markdown, Content, p
           image,
           author: {
             '@type': 'Person',
-            name: Config.FULL_NAME,
-            url: Config.DOMAIN_ROOT
+            name: Config.authorName,
+            url: Config.authorURL,
           },
           url: canonicalUrl,
           datePublished,
           dateModified,
           keywords: frontmatter.tags.join(', ') || undefined,
-          isPartOf: canonicalRoot,
+          isPartOf: Config.canonicalRoot,
           license: 'https://creativecommons.org/licenses/by/4.0/',
         }),
         h('article',
           h('h1',
-            h('a', { href: '../' }, 'til'),
+            h('a', { href: '../' }, Config.title),
             h('span', frontmatter.title)
           ),
           h(Content, { components }),
@@ -184,8 +180,8 @@ function Document({ children }) {
       ),
       h('body',
         h('header',
-          h('a', { href: Config.DOMAIN_ROOT },
-            h('img', { src: useRelPath('/assets/logo.svg'), alt: Config.FULL_NAME })
+          h('a', { href: Config.authorURL },
+            h('img', { src: useRelPath('/assets/logo.svg'), alt: Config.authorName }),
           )
         ),
         children.filter(child => !isHeadElement(child)),
@@ -221,14 +217,14 @@ function JSONLD(data) {
 }
 
 function GTag() {
-  return [
-    h('script', { async: true, src: "https://www.googletagmanager.com/gtag/js?id=UA-61714711-1" }),
+  return Config.gtag && [
+    h('script', { async: true, src: `https://www.googletagmanager.com/gtag/js?id=${Config.gtag}` }),
     h('script', {
       innerHTML: `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-61714711-1');
+      gtag('config', '${Config.gtag}');
     ` })
   ]
 }
@@ -242,7 +238,7 @@ function Attribution({ filename, frontmatter: { permalink, date } }) {
       rel: "cc:attributionURL",
       href: useCanonical()
     },
-      'til'),
+      Config.title),
 
     // time
     ' was created ',
@@ -259,13 +255,13 @@ function Attribution({ filename, frontmatter: { permalink, date } }) {
     ' ⸱ ',
 
     // edit
-    h('a', { href: `https://raw.githubusercontent.com/${Config.GITHUB_USERNAME}/${Config.GITHUB_REPO}/main/entries/${encodeURIComponent(filename)}`, target: '_blank' },
+    h('a', { href: `https://raw.githubusercontent.com/${Config.githubRepo}/main/entries/${encodeURIComponent(filename)}`, target: '_blank' },
       'raw'),
 
     ' ⸱ ',
 
     // edit
-    h('a', { href: `https://github.com/${Config.GITHUB_USERNAME}/${Config.GITHUB_REPO}/edit/main/entries/${encodeURIComponent(filename)}#L8`, target: '_blank' },
+    h('a', { href: `https://github.com/${Config.githubRepo}/edit/main/entries/${encodeURIComponent(filename)}#L8`, target: '_blank' },
       'edit'),
   ]
 }
@@ -287,17 +283,18 @@ function License({ year, children }) {
     h('a', {
       rel: "cc:attributionURL dct:creator",
       property: "cc:attributionName",
-      href: Config.DOMAIN_ROOT
+      href: Config.authorURL
     },
-      Config.FULL_NAME),
+      Config.authorName),
 
     ' ⸱ ',
 
     // Designed by Lee Byron
-    'designed by ',
-    h('a', { href: 'https://github.com/leebyron/til' }, 'Lee Byron'),
-
-    ' ⸱ ',
+    Config.authorName !== 'Lee Byron' && [
+      'designed by ',
+      h('a', { href: 'https://github.com/leebyron/til' }, 'Lee Byron'),
+      ' ⸱ ',
+    ],
 
     // license
     'licensed under ',
@@ -316,6 +313,7 @@ function License({ year, children }) {
         'aria-hidden': true
       })
     ),
+
     ' ⸱ ',
 
     h('a', { href: canonicalPath('/feed.xml'), rel: 'alternate feed', type: 'application/atom+xml' }, 'feed')
