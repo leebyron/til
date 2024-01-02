@@ -43,10 +43,8 @@ Have ideas for what I should try? [Get in touch](https://leebyron.com)!
 ## Addendum: Restoration framework
 
 To help explore ideas for restoration experiments, I've created a five-axis
-framework inspired by
-[Maslow's Heirarchy](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs),
-[Ikigai](https://leebyron.com/til/ikigai/), and
-[Dimensional Wellness](<https://en.wikipedia.org/wiki/Wellness_(alternative_medicine)>):
+framework inspired by [Maslow's Heirarchy][], [Ikigai][], and [Dimensional
+Wellness][]:
 
 1. **Physiological**: Rejuvenate the body and replenish energy. Includes sleep,
    diet, and fitness.
@@ -62,3 +60,9 @@ I'll interpret each axis along an _active/passive_ spectrum. Each will be
 interpreted in slightly different ways, but active actions should push
 boundaries and present worthwhile challenges while passive ones should be
 restful and at times indulgent.
+
+[Maslow's Heirarchy]:
+  https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs
+[Ikigai]: https://leebyron.com/til/ikigai/
+[Dimensional Wellness]:
+  https://en.wikipedia.org/wiki/Wellness_(alternative_medicine)
