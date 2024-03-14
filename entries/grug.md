@@ -39,6 +39,6 @@ grug share favorite part:
 young grug too will face big brain, t-rex, shaman, complexity demon. grug tales
 full of oops and ouch. young grug learn. young grug will do okay and to young
 grug must be true. grug tale like map to hidden shiney rock. young grug make
-shiney rock pile, young grug become old grug. young grug choose give rock pile
-for better cave and drumstick or give rock pile for better club and tool. just
-be careful when grug give shiney rock to shaman.
+shiney rock pile, young grug become old grug, then choose give rock pile for
+better cave and drumstick or give rock pile for better club and tool. just be
+careful when give shiney rock to shaman.
