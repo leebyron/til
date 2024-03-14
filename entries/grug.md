@@ -7,8 +7,8 @@ tags: [engineering, career]
 
 ![grug brain developer](https://grugbrain.dev/grug.png)
 
-meet [grug](https://grugbrain.dev/). grug no big brain, but grug survive many
-code winter. grug wise.
+meet [grug brain developer](https://grugbrain.dev/). grug no big brain, but grug
+survive many code winter. grug wise.
 
 grug tell many secret for young grug. young grug go read grug story, but old
 grug share favorite part:
