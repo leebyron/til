@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2024-01-02T07:05:48.000+00:00</updated>
+  <updated>2024-03-14T22:01:17.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -15,6 +15,64 @@
   </author>
   <rights>© 2024 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/grug/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/grug/"/>
+    <published>2024-03-14T15:00:27.000-07:00</published>
+    <updated>2024-03-14T22:01:17.000+00:00</updated>
+    <title>grug</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="engineering"/>
+    <category term="career"/>
+    <content type="html"><![CDATA[<p>
+  <img src="https://grugbrain.dev/grug.png" alt="grug brain developer">
+</p>
+<p>
+  meet <a href="https://grugbrain.dev/" target="_blank">grug</a>. grug no big brain, but grug survive many code winter. grug wise.
+</p>
+<p>
+  grug tell many secret for young grug. young grug go read grug story, but old grug share favorite part:
+</p>
+<ul>
+  <li>
+    <p>
+      grug fear apex predator complexity. complexity <em>bad</em>. complexity come in many form, no always see, but sense. complexity <em>very bad</em>. grug often swing club but just hit grug. complexity <em>worse than t-rex</em>. grug favorite club “no”, but sometimes “ok” save tribe. grug build code cave strong, no let complexity demon in.
+    </p>
+  </li>
+  <li>
+    <p>
+      grug no get lost in big brain fog. big brain want think-think. grug no want think, grug want build. grug must build to think.
+    </p>
+  </li>
+  <li>
+    <p>
+      grug think test, agile, refactor, architecture all like old berry in forest — some taste good, some make tummy ouch. grug grow cautious, but grug still like berry.
+    </p>
+  </li>
+  <li>
+    <p>
+      grug dubious of shaman. shaman make idol. shaman claim know all good berry. grug lose many shiney rock to shaman. grug reach slowly for club, but grug try stay calm.
+    </p>
+  </li>
+  <li>
+    <p>
+      grug love tool. tool separate grug from dinosaur. grug use tool to build while think less. grug favorite tool ide, type system, debugger. grug trade all shiney rock for good tool.
+    </p>
+  </li>
+  <li>
+    <p>
+      grug often feel like grug have no idea what doing. grug fear look dumb by big brains. young grug feel this, old grug feel this. when grug confused grug just say so. grug ask help. grug fall down grug not swing club, just make joke. nobody impostor if everybody impostor. except you, young grug! young grug impostor! that bad joke. grug sorry.
+    </p>
+  </li>
+</ul>
+<p>
+  young grug too will face big brain, t-rex, shaman, complexity demon. grug tales full of oops and ouch. young grug learn. young grug do okay and to young grug be true. grug tale like map to hidden shiney rock. young grug make shiney rock pile, young grug become old grug. young grug will choose give rock pile for club and tool or give rock pile shaman.
+</p>]]></content>
+    <rights>© 2024 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/resolutions/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/resolutions/"/>
