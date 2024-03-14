@@ -30,12 +30,12 @@ part:
 - grug love tool. tool separate grug from dinosaur. grug use tool to build while
   think less. grug favorite tool ide, type system, debugger. grug trade all
   shiney rock for good tool.
-- grug often feel like grug have no idea what grug doing. grug fear look dumb by
-  big brains. young grug feel this, old grug feel this. grug stay calm. when
-  grug confused grug just say so. grug ask for help. when grug fall down grug
-  not swing club, just make joke. grug see big brain fall down too. grug help.
-  nobody impostor if everybody impostor. except you, young grug! young grug
-  impostor! that bad joke. grug sorry.
+- grug often feel like grug have no idea what grug doing. grug fear look dumb in
+  front of big brains. young grug feel this, old grug feel this. grug stay calm.
+  when grug confused grug just say so. grug ask for help. when grug fall down
+  grug not swing club, just make joke. grug see big brain fall down too, grug
+  help. nobody impostor if everybody impostor. except you, young grug! young
+  grug impostor! that bad joke. grug sorry.
 
 young grug too will face big brain, t-rex, shaman, complexity demon. grug tales
 full of oops and ouch. young grug learn. young grug will do okay and to young
