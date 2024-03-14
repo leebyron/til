@@ -23,9 +23,9 @@ grug share favorite part:
 - grug think test, agile, refactor, architecture all like old berry in forest —
   some taste good, some make tummy ouch. grug grow cautious, but grug still like
   berry.
-- grug dubious of shaman. shaman make idol. shaman claim know all good berry.
-  grug lose many shiney rock to shaman. grug reach slowly for club, but grug try
-  stay calm.
+- grug dubious of shamans like test shaman, agile shaman, architect shaman.
+  shaman make idol not club. shaman claim know all good berry. grug lose many
+  shiney rock to shaman. grug reach slowly for club, but grug try stay calm.
 - grug love tool. tool separate grug from dinosaur. grug use tool to build while
   think less. grug favorite tool ide, type system, debugger. grug trade all
   shiney rock for good tool.
