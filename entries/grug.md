@@ -10,8 +10,9 @@ tags: [engineering, career]
 meet [grug brain developer](https://grugbrain.dev/). grug no big brain, but grug
 survive many code winter. grug self-aware smol brain — grug wise.
 
-grug tell many secret for young grug. young grug go read grug story, but old
-grug share favorite part:
+grug tell many secret for young grug (also mostly for grug, grug forgets
+important things). young grug go read grug story, but old grug share favorite
+part:
 
 - grug fear apex predator complexity. complexity _bad_. complexity come in many
   form, no always see, but sense. complexity _very bad_. grug often swing club
