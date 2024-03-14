@@ -1,5 +1,5 @@
 ---
-title: grug
+title: grug brain developer
 permalink: grug
 date: 2024-03-14T15:00:27-07:00
 tags: [engineering, career]
@@ -7,8 +7,8 @@ tags: [engineering, career]
 
 ![grug brain developer](https://grugbrain.dev/grug.png)
 
-meet [grug brain developer](https://grugbrain.dev/). grug no big brain, but grug
-survive many code winter. grug self-aware smol brain — grug wise.
+meet [grug](https://grugbrain.dev/). grug no big brain, but grug survive many
+code winter. grug self-aware smol brain. grug wise.
 
 grug tell many secret for young grug (also mostly for grug, grug forgets
 important things). young grug go read grug story, but old grug share favorite
