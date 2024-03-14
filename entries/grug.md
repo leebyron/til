@@ -30,13 +30,15 @@ grug share favorite part:
   think less. grug favorite tool ide, type system, debugger. grug trade all
   shiney rock for good tool.
 - grug often feel like grug have no idea what doing. grug fear look dumb by big
-  brains. young grug feel this, old grug feel this. when grug confused grug just
-  say so. grug ask help. grug fall down grug not swing club, just make joke.
+  brains. young grug feel this, old grug feel this. grug stay calm. when grug
+  confused grug just say so. grug ask for help. when grug fall down grug not
+  swing club, just make joke. grug see big brain fall down too. grug help.
   nobody impostor if everybody impostor. except you, young grug! young grug
   impostor! that bad joke. grug sorry.
 
 young grug too will face big brain, t-rex, shaman, complexity demon. grug tales
-full of oops and ouch. young grug learn. young grug do okay and to young grug be
-true. grug tale like map to hidden shiney rock. young grug make shiney rock
-pile, young grug become old grug. young grug will choose give rock pile for club
-and tool or give rock pile shaman.
+full of oops and ouch. young grug learn. young grug will do okay and to young
+grug must be true. grug tale like map to hidden shiney rock. young grug make
+shiney rock pile, young grug become old grug. young grug choose give rock pile
+for better cave and drumstick or give rock pile for better club and tool. just
+be careful when grug give shiney rock to shaman.
