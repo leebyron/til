@@ -32,7 +32,7 @@ so old grug share favorite part:
   think less. grug favorite tool ide, type system, debugger. grug trade all
   shiney rock for good tool.
 - grug often feel like grug have no idea what grug doing, grug feel like
-  impostor. grug fear look dumb in front of big brain. grug realized young grug
+  impostor. grug fear look dumb in front of big brain. grug realize young grug
   feel this, old grug feel this. grug stay calm. when grug confused grug just
   say so. grug ask for help. when grug fall down grug not swing club, just make
   joke. grug see big brain fall down too, grug help. nobody impostor if
