@@ -10,7 +10,7 @@ tags: [engineering, career]
 meet [grug](https://grugbrain.dev/). grug no big brain, but grug survive many
 code winter. grug self-aware smol brain. grug wise.
 
-grug tell many secret for young grug (also mostly for grug, grug forgets
+grug tell many secret for young grug (also mostly for grug, grug forget
 important things). young grug should read whole grug story, but grug story long
 so old grug share favorite part:
 
