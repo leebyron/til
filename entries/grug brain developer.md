@@ -11,8 +11,13 @@ meet [grug](https://grugbrain.dev/). grug no big brain, but grug survive many
 code winter. grug self-aware smol brain. grug wise.
 
 grug tell many secret for young grug (also mostly for grug, grug forget
-important things). young grug should read whole grug story, but grug story long
-so old grug share favorite part:
+important things). young grug should read
+[whole grug story](https://grugbrain.dev/)[^1], but grug story long so old grug
+share favorite part:
+
+[^1]:
+    old grug big thank htmx for sharing grug story, and
+    [many other good story](https://htmx.org/essays/)
 
 - grug enemy apex predator complexity. complexity _bad_. complexity come in many
   form, no always see, but sense. complexity _very bad_. grug often swing club
