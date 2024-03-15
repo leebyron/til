@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2024-03-15T18:51:13.000+00:00</updated>
+  <updated>2024-03-15T19:30:59.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/grug/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/grug/"/>
     <published>2024-03-14T15:00:27.000-07:00</published>
-    <updated>2024-03-15T18:51:13.000+00:00</updated>
+    <updated>2024-03-15T19:30:59.000+00:00</updated>
     <title>grug brain developer</title>
     <author>
       <name>Lee Byron</name>
@@ -34,7 +34,7 @@
   meet <a href="https://grugbrain.dev/" target="_blank">grug</a>. grug no big brain, but grug survive many code winter. grug self-aware smol brain. grug wise.
 </p>
 <p>
-  grug tell many secret for young grug (also mostly for grug, grug forget important things). young grug should read whole grug story, but grug story long so old grug share favorite part:
+  grug tell many secret for young grug (also mostly for grug, grug forget important things). young grug should read <a href="https://grugbrain.dev/" target="_blank">whole grug story</a><a href="#fn:1" id="fn:1.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>, but grug story long so old grug share favorite part:
 </p>
 <ul>
   <li>
@@ -70,7 +70,17 @@
 </ul>
 <p>
   young grug too face big brain, t-rex, shaman, complexity demon. grug tale full of oops and ouch. grug whole tale like map to hidden shiney rock. young grug learn and will do okay, make shiney rock pile. young grug become old grug, then choose give rock pile for better cave and dino drumstick or give rock pile for better club and tool. just be careful when give shiney rock to shaman.
-</p>]]></content>
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>
+        old grug big thank htmx for sharing grug story, and <a href="https://htmx.org/essays/" target="_blank">many other good story</a>
+      </p>
+      <a href="#fn:1.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
     <rights>© 2024 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
   <entry>
