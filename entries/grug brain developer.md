@@ -41,7 +41,7 @@ share favorite part:
   feel this, old grug feel this. grug stay calm. when grug confused grug just
   say so. grug ask for help. when grug fall down grug not swing club, just make
   joke. grug see big brain fall down too, grug help. nobody impostor if
-  everybody impostor. except you, young grug! young grug impostor! that bad
+  everybody impostor. except you, young grug. young grug impostor! that bad
   joke. grug sorry.
 
 young grug too face big brain, t-rex, shaman, complexity demon. grug tale full
