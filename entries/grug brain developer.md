@@ -27,7 +27,7 @@ share favorite part:
 - grug no get lost in big brain fog. big brain want think-think. grug no want
   think, grug want build. grug must build to think.
 - grug think test, agile, refactor, architecture all like old berry in forest —
-  some taste good, some make tummy ouch. grug learn to be cautious ...but grug
+  some taste good, some make tummy ouch. grug learn be cautious ...but grug
   still like berry.
 - grug dubious of shamans like test shaman, agile shaman, architect shaman.
   shaman make idol not club. shaman claim know all good berry, but still make
