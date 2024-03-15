@@ -22,8 +22,8 @@ share favorite part:
 - grug enemy apex predator complexity. complexity _bad_. complexity come in many
   form, no always see, but sense. complexity _very bad_. grug often swing club
   but just hit grug own head. complexity _worse than t-rex_. grug favorite club
-  "no", but sometimes "ok" save tribe. grug build code cave strong, try no let
-  complexity demon in.
+  "no", but sometimes use "ok" club to save tribe. grug build code cave strong,
+  try no let complexity demon in.
 - grug no get lost in big brain fog. big brain want think-think. grug no want
   think, grug want build. grug must build to think.
 - grug think test, agile, refactor, architecture all like old berry in forest —
