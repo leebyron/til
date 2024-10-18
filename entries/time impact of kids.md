@@ -53,4 +53,4 @@ you do, I'm all ears!), but the exercise in seeing it was helpful.
 | Sleep    |    58 hr/wk |   42 hr/wk |
 | Social   |    22 hr/wk |    7 hr/wk |
 | Self     |    34 hr/wk |    7 hr/wk |
-| Children |             |   65 hr/wk |
+| Kids     |             |   65 hr/wk |
