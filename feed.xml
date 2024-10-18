@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2024-03-15T22:43:32.000+00:00</updated>
+  <updated>2024-10-18T22:10:13.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -613,7 +613,7 @@ To push the current branch and set the remote as upstream, use
     <id>https://leebyron.com/til/time-impact-of-kids/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/time-impact-of-kids/"/>
     <published>2022-08-12T09:39:04.000-07:00</published>
-    <updated>2022-08-12T18:25:56.000+00:00</updated>
+    <updated>2024-10-18T22:10:13.000+00:00</updated>
     <title>time impact of kids</title>
     <author>
       <name>Lee Byron</name>
@@ -723,7 +723,7 @@ To push the current branch and set the remote as upstream, use
       </tr>
       <tr>
         <td>
-          Children
+          Kids
         </td>
         <td align="right">
         </td>
