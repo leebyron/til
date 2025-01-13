@@ -31,7 +31,7 @@ symlinking it back to your home directory[^symlink].
     just change the linked location.
 
 ```sh
-rm -rf ~/Desktop
+sudo rm -rf ~/Desktop
 ln -s ~ ~/Desktop
 sudo chflags -h schg ~/Desktop
 ```
