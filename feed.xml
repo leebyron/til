@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2024-10-18T22:10:13.000+00:00</updated>
+  <updated>2025-01-13T06:40:02.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -13,7 +13,7 @@
     <name>Lee Byron</name>
     <uri>https://leebyron.com</uri>
   </author>
-  <rights>© 2024 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  <rights>© 2025 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
   <entry>
     <id>https://leebyron.com/til/grug/</id>
@@ -1715,7 +1715,7 @@ To push the current branch and set the remote as upstream, use
     <id>https://leebyron.com/til/remove-mac-desktop/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/remove-mac-desktop/"/>
     <published>2022-01-13T21:32:26.000-08:00</published>
-    <updated>2022-01-14T07:31:43.000+00:00</updated>
+    <updated>2025-01-13T06:40:02.000+00:00</updated>
     <title>how to remove the mac desktop</title>
     <author>
       <name>Lee Byron</name>
@@ -1756,7 +1756,7 @@ To push the current branch and set the remote as upstream, use
 <p>
   You can’t actually delete the Desktop folder itself, because Finder will just recreate it upon finding it missing. You can instead render it useless by symlinking it back to your home directory<a href="#fn:symlink" id="fn:symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
 </p>
-<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">rm</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-rf</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">sudo</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">rm</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-rf</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span><span data-line="2"><span style="color:#6F42C1;">ln</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-s</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span><span data-line="3"><span style="color:#6F42C1;">sudo</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">chflags</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-h</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">schg</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span></code></pre>

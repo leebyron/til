@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="article:author" content="https://leebyron.com">
     <meta property="article:published_time" content="2022-01-13T21:32:26.000-08:00">
-    <meta property="article:modified_time" content="2022-01-14T07:31:43.000+00:00">
+    <meta property="article:modified_time" content="2025-01-13T06:40:02.000+00:00">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@leeb">
     <script type="application/ld+json">
@@ -25,7 +25,7 @@
   },
   "url": "https://leebyron.com/til/remove-mac-desktop/",
   "datePublished": "2022-01-13T21:32:26.000-08:00",
-  "dateModified": "2022-01-14T07:31:43.000+00:00",
+  "dateModified": "2025-01-13T06:40:02.000+00:00",
   "keywords": "mac",
   "isPartOf": "https://leebyron.com/til/",
   "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -86,7 +86,7 @@
       <p>
         You can’t actually delete the Desktop folder itself, because Finder will just recreate it upon finding it missing. You can instead render it useless by symlinking it back to your home directory<a href="#fn:symlink" id="fn:symlink.ref" data-footnote-ref aria-label="note"><sup>1</sup></a>.
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">rm</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-rf</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
+      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#6F42C1;">sudo</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">rm</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-rf</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span><span data-line="2"><span style="color:#6F42C1;">ln</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-s</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span><span data-line="3"><span style="color:#6F42C1;">sudo</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">chflags</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">-h</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">schg</span><span style="color:#24292EFF;"> </span><span style="color:#2B5581;">~/Desktop</span>
 </span></code></pre>
