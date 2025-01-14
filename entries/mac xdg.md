@@ -15,13 +15,16 @@ environment variables that many programs will look for to determine where they
 read and write files. This is particularly nice for keeping your `~` home
 directory from becoming littered with various dot-file config scripts.
 
+[xdg-base-dirs-standard]:
+    https://specifications.freedesktop.org/basedir-spec/latest/
+
 This is a growing standard on Linux but not the default on macOS. However it's
 easy to set up!
 
 Create (with `sudo`) the file `/etc/zshenv`[^or-alternatives] (or `~/.zshenv`
 for your user only) with the following contents:
 
-```sh
+```zsh
 # Define XDG Base directory environment variables
 export XDG_BIN_HOME="$HOME/.local/bin"
 export XDG_CACHE_HOME="$HOME/Library/Caches"
@@ -43,8 +46,9 @@ Many programs will now automatically start using these directories, and
 existing config files can be moved into the `~/.cache/{program}/` folders.
 
 If you're writing distributing your own program which defines local
-configuration files, please do check if `$XDG_CONFIG_HOME` is set and if so
-prefer using XDG paths for your config files.
+configuration files, please do check if `$XDG_CONFIG_HOME` or
+`$XDG_CONFIG_DIRS` is set and if so prefer using XDG paths for your config
+files.
 
 [^or-alternatives]: Assuming you are using the default zsh as your shell. If
 using a different shell then sub in the equivalent environment config file.
