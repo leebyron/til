@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="article:author" content="https://leebyron.com">
     <meta property="article:published_time" content="2025-01-13T23:11:42.000-08:00">
-    <meta property="article:modified_time" content="2025-01-14T07:54:12.000+00:00">
+    <meta property="article:modified_time" content="2025-01-14T08:13:45.000+00:00">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@leeb">
     <script type="application/ld+json">
@@ -25,7 +25,7 @@
   },
   "url": "https://leebyron.com/til/mac-xdg/",
   "datePublished": "2025-01-13T23:11:42.000-08:00",
-  "dateModified": "2025-01-14T07:54:12.000+00:00",
+  "dateModified": "2025-01-14T08:13:45.000+00:00",
   "keywords": "mac",
   "isPartOf": "https://leebyron.com/til/",
   "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -76,9 +76,10 @@
 </span><span data-line="10"><span style="color:#C2C3C5;"># Define paths for common programs not using XDG</span>
 </span><span data-line="11"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> ZDOTDIR</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/zsh&quot;</span>
 </span><span data-line="12"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> GNUPGHOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/gnupg&quot;</span>
-</span><span data-line="13"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_CACHE</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CACHE_HOME/npm&quot;</span>
-</span><span data-line="14"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_TMP</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_RUNTIME_DIR/npm&quot;</span>
-</span><span data-line="15"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_USERCONFIG</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/npm/config&quot;</span>
+</span><span data-line="13"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NODE_REPL_HISTORY</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_STATE_HOME/node/repl_history&quot;</span><span style="color:#24292EFF;">;</span>
+</span><span data-line="14"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_CACHE</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CACHE_HOME/npm&quot;</span>
+</span><span data-line="15"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_TMP</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_RUNTIME_DIR/npm&quot;</span>
+</span><span data-line="16"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_USERCONFIG</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/npm/config&quot;</span>
 </span></code></pre>
       <p>
         Many programs will now automatically start using these directories, and existing config files can be moved into the <code>~/.cache/{program}/</code> folders.
