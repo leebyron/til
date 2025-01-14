@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2025-01-13T06:40:02.000+00:00</updated>
+  <updated>2025-01-14T07:48:54.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -15,6 +15,63 @@
   </author>
   <rights>© 2025 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   <generator uri="https://github.com/leebyron/til">til</generator>
+  <entry>
+    <id>https://leebyron.com/til/mac-xdg/</id>
+    <link rel="alternate" type="text/html" href="https://leebyron.com/til/mac-xdg/"/>
+    <published>2025-01-13T23:11:42.000-08:00</published>
+    <updated>2025-01-14T07:48:54.000+00:00</updated>
+    <title>mac xdg</title>
+    <author>
+      <name>Lee Byron</name>
+      <uri>https://leebyron.com</uri>
+    </author>
+    <category term="mac"/>
+    <content type="html"><![CDATA[<p>
+  I like a tidy computer. I <a href="./remove-mac-desktop/">don’t have a desktop</a> and I <a href="https://github.com/leebyron/dotfiles" target="_blank">organize my config files</a> within XDG base directories.
+</p>
+<p>
+  XDG base directories defines a [standard][xdg-base-dirs-standard] way to layout a user directory that’s portable across environments and defines a set of environment variables that many programs will look for to determine where they read and write files. This is particularly nice for keeping your <code>~</code> home directory from becoming littered with various dot-file config scripts.
+</p>
+<p>
+  This is a growing standard on Linux but not the default on macOS. However it’s easy to set up!
+</p>
+<p>
+  Create (with <code>sudo</code>) the file <code>/etc/zshenv</code><a href="#fn:or-alternatives" id="fn:or-alternatives.ref" data-footnote-ref aria-label="note"><sup>1</sup></a> (or <code>~/.zshenv</code> for your user only) with the following contents:
+</p>
+<pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#C2C3C5;"># Define XDG Base directory environment variables</span>
+</span><span data-line="2"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_BIN_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.local/bin&quot;</span>
+</span><span data-line="3"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_CACHE_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/Library/Caches&quot;</span>
+</span><span data-line="4"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_CONFIG_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.config&quot;</span>
+</span><span data-line="5"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_DATA_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.local/share&quot;</span>
+</span><span data-line="6"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_RUNTIME_DIR</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;/tmp/$USER&quot;</span>
+</span><span data-line="7"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_STATE_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.local/state&quot;</span>
+</span><span data-line="8"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> PATH</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_BIN_HOME:$PATH&quot;</span>
+</span><span data-line="9">
+</span><span data-line="10"><span style="color:#C2C3C5;"># Define paths for common programs not using XDG</span>
+</span><span data-line="11"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> ZDOTDIR</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/zsh&quot;</span>
+</span><span data-line="12"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> GNUPGHOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/gnupg&quot;</span>
+</span><span data-line="13"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_CACHE</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CACHE_HOME/npm&quot;</span>
+</span><span data-line="14"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_TMP</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_RUNTIME_DIR/npm&quot;</span>
+</span><span data-line="15"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> NPM_CONFIG_USERCONFIG</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_CONFIG_HOME/npm/config&quot;</span>
+</span></code></pre>
+<p>
+  Many programs will now automatically start using these directories, and existing config files can be moved into the <code>~/.cache/{program}/</code> folders.
+</p>
+<p>
+  If you’re writing distributing your own program which defines local configuration files, please do check if <code>$XDG_CONFIG_HOME</code> is set and if so prefer using XDG paths for your config files.
+</p>
+<section data-footnotes aria-label="footnotes">
+  <ol>
+    <li id="fn:or-alternatives">
+      <p>
+        Assuming you are using the default zsh as your shell. If using a different shell then sub in the equivalent environment config file.
+      </p>
+      <a href="#fn:or-alternatives.ref" data-footnote-backref aria-label="return">↩</a>
+    </li>
+  </ol>
+</section>]]></content>
+    <rights>© 2025 Lee Byron ⸱ licensed under CC BY 4.0</rights>
+  </entry>
   <entry>
     <id>https://leebyron.com/til/grug/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/grug/"/>
