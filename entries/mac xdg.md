@@ -37,6 +37,7 @@ export PATH="$XDG_BIN_HOME:$PATH"
 # Define paths for common programs not using XDG
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node/repl_history";
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
 export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR/npm"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/config"
