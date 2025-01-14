@@ -9,7 +9,7 @@
     <meta property="og:type" content="article">
     <meta property="article:author" content="https://leebyron.com">
     <meta property="article:published_time" content="2025-01-13T23:11:42.000-08:00">
-    <meta property="article:modified_time" content="2025-01-14T07:48:54.000+00:00">
+    <meta property="article:modified_time" content="2025-01-14T07:54:12.000+00:00">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@leeb">
     <script type="application/ld+json">
@@ -25,7 +25,7 @@
   },
   "url": "https://leebyron.com/til/mac-xdg/",
   "datePublished": "2025-01-13T23:11:42.000-08:00",
-  "dateModified": "2025-01-14T07:48:54.000+00:00",
+  "dateModified": "2025-01-14T07:54:12.000+00:00",
   "keywords": "mac",
   "isPartOf": "https://leebyron.com/til/",
   "license": "https://creativecommons.org/licenses/by/4.0/"
@@ -56,7 +56,7 @@
         I like a tidy computer. I <a href="./remove-mac-desktop/">don’t have a desktop</a> and I <a href="https://github.com/leebyron/dotfiles" target="_blank">organize my config files</a> within XDG base directories.
       </p>
       <p>
-        XDG base directories defines a [standard][xdg-base-dirs-standard] way to layout a user directory that’s portable across environments and defines a set of environment variables that many programs will look for to determine where they read and write files. This is particularly nice for keeping your <code>~</code> home directory from becoming littered with various dot-file config scripts.
+        XDG base directories defines a <a href="https://specifications.freedesktop.org/basedir-spec/latest/" target="_blank">standard</a> way to layout a user directory that’s portable across environments and defines a set of environment variables that many programs will look for to determine where they read and write files. This is particularly nice for keeping your <code>~</code> home directory from becoming littered with various dot-file config scripts.
       </p>
       <p>
         This is a growing standard on Linux but not the default on macOS. However it’s easy to set up!
@@ -64,7 +64,7 @@
       <p>
         Create (with <code>sudo</code>) the file <code>/etc/zshenv</code><a href="#fn:or-alternatives" id="fn:or-alternatives.ref" data-footnote-ref aria-label="note"><sup>1</sup></a> (or <code>~/.zshenv</code> for your user only) with the following contents:
       </p>
-      <pre data-code-block data-lang="sh"><code><span data-line="1"><span style="color:#C2C3C5;"># Define XDG Base directory environment variables</span>
+      <pre data-code-block data-lang="zsh"><code><span data-line="1"><span style="color:#C2C3C5;"># Define XDG Base directory environment variables</span>
 </span><span data-line="2"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_BIN_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.local/bin&quot;</span>
 </span><span data-line="3"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_CACHE_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/Library/Caches&quot;</span>
 </span><span data-line="4"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_CONFIG_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.config&quot;</span>
@@ -84,7 +84,7 @@
         Many programs will now automatically start using these directories, and existing config files can be moved into the <code>~/.cache/{program}/</code> folders.
       </p>
       <p>
-        If you’re writing distributing your own program which defines local configuration files, please do check if <code>$XDG_CONFIG_HOME</code> is set and if so prefer using XDG paths for your config files.
+        If you’re writing distributing your own program which defines local configuration files, please do check if <code>$XDG_CONFIG_HOME</code> or <code>$XDG_CONFIG_DIRS</code> is set and if so prefer using XDG paths for your config files.
       </p>
       <section data-footnotes aria-label="footnotes">
         <ol>
