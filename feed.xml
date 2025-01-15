@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2025-01-14T08:13:45.000+00:00</updated>
+  <updated>2025-01-15T07:32:34.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/mac-xdg/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/mac-xdg/"/>
     <published>2025-01-13T23:11:42.000-08:00</published>
-    <updated>2025-01-14T08:13:45.000+00:00</updated>
+    <updated>2025-01-15T07:32:34.000+00:00</updated>
     <title>mac xdg</title>
     <author>
       <name>Lee Byron</name>
@@ -43,7 +43,7 @@
 </span><span data-line="3"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_CACHE_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/Library/Caches&quot;</span>
 </span><span data-line="4"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_CONFIG_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.config&quot;</span>
 </span><span data-line="5"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_DATA_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.local/share&quot;</span>
-</span><span data-line="6"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_RUNTIME_DIR</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;/tmp/$USER&quot;</span>
+</span><span data-line="6"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_RUNTIME_DIR</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$TMPDIR/runtime-$UID&quot;</span>
 </span><span data-line="7"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> XDG_STATE_HOME</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$HOME/.local/state&quot;</span>
 </span><span data-line="8"><span style="color:#D32F2F;">export</span><span style="color:#24292EFF;"> PATH</span><span style="color:#D32F2F;">=</span><span style="color:#22863A;">&quot;$XDG_BIN_HOME:$PATH&quot;</span>
 </span><span data-line="9">
