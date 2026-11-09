@@ -28,3 +28,8 @@ purples and teals of mushrooms and bacteria.
 Hayao Miyazaki is most known for his richer solarpunk-friendly style, but
 Nausicaä of the Valley of the Wind-his first film before founding
 Ghibli-explores a lot of this lunarpunk concepts.
+
+[![ambio](../media/983e1d2e543336b3.jpg)](https://www.teresavandongen.com/Ambio)
+
+A lamp powered by bioluminescent bacteria. A beautiful object by designer Teresa
+van Dongen
