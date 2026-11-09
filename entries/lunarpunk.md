@@ -56,6 +56,12 @@ and a darker fantasy where humanity is at nature's will instead of the other way
 around. The same dark luminant aesthetic gives nature a sense of dangerous power
 that could be wielded or surrendered to.
 
+[![Scavengers Reign](../media/dbfb2c444a53f04f.jpg)](https://www.imdb.com/title/tt21056886/?_ssoLoop=1)
+
+The absolutely stunning series Scavengers Reign explores this idea most deeply,
+following travelers lost on a foriegn world. The Mœbius-inspired illustration
+style is a best in class iteration of solarpunk and lunarpunk aesthetics.
+
 [![Annihilation](../media/2748447464524dd1.webp)](https://www.imdb.com/title/tt2798920/)
 
 Possibly Lunarpunk adjacent, the movie Annihilation leverages this aesthetic for
