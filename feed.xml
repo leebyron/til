@@ -3,7 +3,7 @@
   <id>https://leebyron.com/til/feed.xml</id>
   <link rel="self" type="application/atom+xml" href="https://leebyron.com/til/feed.xml"/>
   <link rel="alternate" type="text/html" href="https://leebyron.com/til/"/>
-  <updated>2026-11-09T22:52:18.000+00:00</updated>
+  <updated>2026-11-09T23:04:47.000+00:00</updated>
   <title>Lee Byron / til</title>
   <subtitle>
     Things I've Learned: brief blurbs on miscellaneous matter.
@@ -19,7 +19,7 @@
     <id>https://leebyron.com/til/lunarpunk/</id>
     <link rel="alternate" type="text/html" href="https://leebyron.com/til/lunarpunk/"/>
     <published>2026-11-09T14:22:49.000-08:00</published>
-    <updated>2026-11-09T22:52:18.000+00:00</updated>
+    <updated>2026-11-09T23:04:47.000+00:00</updated>
     <title>lunarpunk</title>
     <author>
       <name>Lee Byron</name>
@@ -27,7 +27,7 @@
     </author>
     <category term="aesthetic"/>
     <content type="html"><![CDATA[<p>
-  I recently learned about <a href="https://aesthetics.fandom.com/wiki/Lunarpunk" target="_blank">lunarpunk</a> and I can’t stop thinking about it.
+  I recently learned about <a href="https://aesthetics.fandom.com/wiki/Lunarpunk" target="_blank">lunarpunk</a> and I can’t stop thinking about it. It’s solarpunk’s nocturnal brethren, cyberpunk’s more utopian twin.
 </p>
 <p>
   I’ve always been a fan of <a href="https://re-des.org/a-solarpunk-manifesto/" target="_blank">solarpunk</a> ethos and aesthetic. It has this mix of sun-drenched anarchy and verdant optimism. Sustainability, solar panels, solutions for false scarcity, smart cities, self-sustaining societies. That’s solarpunk. It looks washed out, contrasting, dominated by greens and blues.
@@ -48,7 +48,10 @@
   <a href="https://www.teresavandongen.com/Ambio" target="_blank"><img src="../media/983e1d2e543336b3.jpg" alt="ambio"></a>
 </p>
 <p>
-  A lamp powered by bioluminescent bacteria. A beautiful object by designer Teresa van Dongen
+  A lamp powered by bioluminescent bacteria. A beautiful object by designer Teresa van Dongen.
+</p>
+<p>
+  Lunarpunk shares a lot of visual common ground with cyberpunk. The etherial glow against a dark background and individualistic rebellion. Cyberpunk is fascinated by self-reliance, assembled computers (cyberdecks), and a blurred boundary between man and machine. Lunarpunk shares the self-reliance, but with a focus on sustainable balance and a blurred boundary between man and nature. It replaces cyberpunk’s alienation with belonging, domination with decentralization, survival with sanctuary, dystopia with utopia. Instead of imagining living covertly within corporate-dominated mile-high neon advertisements, it imagines living integrated into a decentralized commune with a very-alive nature.
 </p>]]></content>
     <rights>© 2026 Lee Byron ⸱ licensed under CC BY 4.0</rights>
   </entry>
