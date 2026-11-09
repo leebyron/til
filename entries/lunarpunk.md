@@ -49,3 +49,14 @@ living integrated into a decentralized commune with a very-alive nature.
 
 Ori and the Will of the Wisps leverages a lunarpunk aesthetic to build an entire
 world.
+
+Lunarpunk doesn't have to be utopian or optimistic in nature. In fact, the
+visceral feeling of nature around you being alive lends itself well to horror
+and a darker fantasy where humanity is at nature's will instead of the other way
+around. The same dark luminant aesthetic gives nature a sense of dangerous power
+that could be wielded or surrendered to.
+
+[![Annihilation](../media/2748447464524dd1.webp)](https://www.imdb.com/title/tt2798920/)
+
+Possibly Lunarpunk adjacent, the movie Annihilation leverages this aesthetic for
+a darker world where nature is no longer in balance with the people around it.
