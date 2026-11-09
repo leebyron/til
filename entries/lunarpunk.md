@@ -72,3 +72,8 @@ style is a best in class iteration of solarpunk and lunarpunk aesthetics.
 
 Possibly Lunarpunk adjacent, the movie Annihilation leverages this aesthetic for
 a darker world where nature is no longer in balance with the people around it.
+
+Lunarpunk's discordant tension of utopian ideals, individualistic focus, and a
+powerfully-alive nature presents a lot of interesting aesthetic and
+philosophical opportunities that, while not new, feels fresh against the flat
+cyber-corporate aesthetic we're constantly surrounded by.
