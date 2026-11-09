@@ -44,3 +44,8 @@ cyberpunk's alienation with belonging, domination with decentralization,
 survival with sanctuary, dystopia with utopia. Instead of imagining living
 covertly within corporate-dominated mile-high neon advertisements, it imagines
 living integrated into a decentralized commune with a very-alive nature.
+
+[![Ori and the Will of the Wisps](../media/4a1673fa14fcb9de.jpg)](https://www.orithegame.com/)
+
+Ori and the Will of the Wisps leverages a lunarpunk aesthetic to build an entire
+world.
