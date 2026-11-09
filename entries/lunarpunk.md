@@ -50,6 +50,12 @@ living integrated into a decentralized commune with a very-alive nature.
 Ori and the Will of the Wisps leverages a lunarpunk aesthetic to build an entire
 world.
 
+[![Crystal Starwatcher by Mœbius](../media/e170135f7a058999.jpg)](https://comics.ha.com/itm/memorabilia/comic-related/moebius-jean-giraud-crystal-starwatcher-limited-edition-lithograph-224-500-stabur-graphics-/a/7231-96296.s)
+
+Of course the great Mœbius (Jean Giraud) has explored this magic-adjacent
+naturally luminous aesthetic as well. Many of his illustrations fit, but this
+from his crystal series fits nicely.
+
 Lunarpunk doesn't have to be utopian or optimistic in nature. In fact, the
 visceral feeling of nature around you being alive lends itself well to horror
 and a darker fantasy where humanity is at nature's will instead of the other way
